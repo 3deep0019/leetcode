@@ -368,6 +368,21 @@ globalThis.climbStairs = function(n) {
     return second;
 };
 
+// 136-single-number (singleNumber)
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+globalThis.singleNumber = function(nums) {
+    let res = 0;
+
+    for (let n of nums) {
+        res ^= n;
+    }
+
+    return res;  
+};
+
 // 169-majority-element (majorityElement)
 /**
  * @param {number[]} nums
@@ -909,6 +924,13 @@ const PROBLEM_TESTS = [
         "expected": 3
       }
     ]
+  },
+  {
+    "id": "136-single-number",
+    "fn": "singleNumber",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": []
   },
   {
     "id": "169-majority-element",

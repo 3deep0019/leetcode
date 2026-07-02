@@ -1,1 +1,0 @@
-<h2>find-a-safe-walk-through-a-grid Notes</h2><hr>[ Time taken: 40m 29s ]

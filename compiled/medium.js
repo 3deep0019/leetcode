@@ -89,6 +89,42 @@ globalThis.groupAnagrams = function(strs) {
     return Object.values(map);
 };
 
+// 636-exclusive-time-of-functions (exclusiveTime)
+/**
+ * @param {number} n
+ * @param {string[]} logs
+ * @return {number[]}
+ */
+globalThis.exclusiveTime = function(n, logs) {
+    const result = new Array(n).fill(0);
+    const stack = [];
+
+    let prevTime = 0;
+
+    for (const log of logs) {
+        const [idStr, type, timeStr] = log.split(":");
+
+        const id = Number(idStr);
+        const time = Number(timeStr);
+
+        if (type === "start") {
+            if (stack.length) {
+                result[stack[stack.length - 1]] += time - prevTime;
+            }
+
+            stack.push(id);
+            prevTime = time;
+        } else {
+            result[stack[stack.length - 1]] += time - prevTime + 1;
+
+            stack.pop();
+            prevTime = time + 1;
+        }
+    }
+
+    return result;
+};
+
 // 686-repeated-string-match (repeatedStringMatch)
 /**
  * @param {string} a
@@ -296,6 +332,40 @@ const PROBLEM_TESTS = [
     "usesListNode": false,
     "mutatesInput": false,
     "cases": []
+  },
+  {
+    "id": "636-exclusive-time-of-functions",
+    "fn": "exclusiveTime",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": [
+      {
+        "args": [
+          2
+        ],
+        "expected": [
+          3,
+          4
+        ]
+      },
+      {
+        "args": [
+          1
+        ],
+        "expected": [
+          8
+        ]
+      },
+      {
+        "args": [
+          2
+        ],
+        "expected": [
+          7,
+          1
+        ]
+      }
+    ]
   },
   {
     "id": "686-repeated-string-match",

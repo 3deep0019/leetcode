@@ -1,0 +1,1931 @@
+{
+  "problems": [
+    {
+      "id": "1-two-sum",
+      "number": 1,
+      "title": "Two Sum",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/two-sum",
+      "description": "Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`.\n\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.\n\nYou can return the answer in any order.\n\nExample 1:\n\nInput: nums = [2,7,11,15], target = 9\nOutput: [0,1]\nExplanation: Because nums[0] + nums[1] == 9, we return [0, 1].\n\nExample 2:\n\nInput: nums = [3,2,4], target = 6\nOutput: [1,2]\n\nExample 3:\n\nInput: nums = [3,3], target = 6\nOutput: [0,1]\n\nConstraints:\n\n\t- `2 <= nums.length <= 10^4`\n\n\t- `-10^9 <= nums[i] <= 10^9`\n\n\t- `-10^9 <= target <= 10^9`\n\n\t- Only one valid answer exists.\n\nFollow-up: Can you come up with an algorithm that is less than `O(n^2)` time complexity?",
+      "functionName": "twoSum",
+      "starterCode": "/**\n * @param {number[]} nums\n * @param {number} target\n * @return {number[]}\n */\n\nglobalThis.twoSum = function(nums, target) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              2,
+              7,
+              11,
+              15
+            ],
+            9
+          ],
+          "expected": [
+            0,
+            1
+          ]
+        },
+        {
+          "args": [
+            [
+              3,
+              2,
+              4
+            ],
+            6
+          ],
+          "expected": [
+            1,
+            2
+          ]
+        },
+        {
+          "args": [
+            [
+              3,
+              3
+            ],
+            6
+          ],
+          "expected": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2-add-two-numbers",
+      "number": 2,
+      "title": "Add Two Numbers",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/add-two-numbers",
+      "description": "You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.\n\nYou may assume the two numbers do not contain any leading zero, except the number 0 itself.\n\nExample 1:\n\nInput: l1 = [2,4,3], l2 = [5,6,4]\nOutput: [7,0,8]\nExplanation: 342 + 465 = 807.\n\nExample 2:\n\nInput: l1 = [0], l2 = [0]\nOutput: [0]\n\nExample 3:\n\nInput: l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]\nOutput: [8,9,9,9,0,0,0,1]\n\nConstraints:\n\n\t- The number of nodes in each linked list is in the range `[1, 100]`.\n\n\t- `0 <= Node.val <= 9`\n\n\t- It is guaranteed that the list represents a number that does not have leading zeros.",
+      "functionName": "addTwoNumbers",
+      "starterCode": "/**\n * Definition for singly-linked list.\n * function ListNode(val, next) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.next = (next===undefined ? null : next)\n * }\n */\n\n/**\n * @param {ListNode} l1\n * @param {ListNode} l2\n * @return {ListNode}\n */\n\nglobalThis.addTwoNumbers = function(l1, l2) {\n  // Write your solution here\n};",
+      "usesListNode": true,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              2,
+              4,
+              3
+            ],
+            [
+              5,
+              6,
+              4
+            ]
+          ],
+          "expected": [
+            7,
+            0,
+            8
+          ]
+        },
+        {
+          "args": [
+            [
+              0
+            ],
+            [
+              0
+            ]
+          ],
+          "expected": [
+            0
+          ]
+        },
+        {
+          "args": [
+            [
+              9,
+              9,
+              9,
+              9,
+              9,
+              9,
+              9
+            ],
+            [
+              9,
+              9,
+              9,
+              9
+            ]
+          ],
+          "expected": [
+            8,
+            9,
+            9,
+            9,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9-palindrome-number",
+      "number": 9,
+      "title": "Palindrome Number",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/palindrome-number",
+      "description": "Given an integer `x`, return `true` if `x` is a palindrome, and `false` otherwise.\n\nExample 1:\n\nInput: x = 121\nOutput: true\nExplanation: 121 reads as 121 from left to right and from right to left.\n\nExample 2:\n\nInput: x = -121\nOutput: false\nExplanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.\n\nExample 3:\n\nInput: x = 10\nOutput: false\nExplanation: Reads 01 from right to left. Therefore it is not a palindrome.\n\nConstraints:\n\n\t- `-2^31 <= x <= 2^31 - 1`\n\nFollow up: Could you solve it without converting the integer to a string?",
+      "functionName": "isPalindrome",
+      "starterCode": "/**\n * @param {number} x\n * @return {boolean}\n */\n\nglobalThis.isPalindrome = function(x) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            121
+          ],
+          "expected": true
+        },
+        {
+          "args": [
+            -121
+          ],
+          "expected": false
+        },
+        {
+          "args": [
+            10
+          ],
+          "expected": false
+        }
+      ]
+    },
+    {
+      "id": "13-roman-to-integer",
+      "number": 13,
+      "title": "Roman to Integer",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/roman-to-integer",
+      "description": "Roman numerals are represented by seven different symbols: `I`, `V`, `X`, `L`, `C`, `D` and `M`.\n\nSymbol       Value\nI             1\nV             5\nX             10\nL             50\nC             100\nD             500\nM             1000\n\nFor example, `2` is written as `II` in Roman numeral, just two ones added together. `12` is written as `XII`, which is simply `X + II`. The number `27` is written as `XXVII`, which is `XX + V + II`.\n\nRoman numerals are usually written largest to smallest from left to right. However, the numeral for four is not `IIII`. Instead, the number four is written as `IV`. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as `IX`. There are six instances where subtraction is used:\n\n\t- `I` can be placed before `V` (5) and `X` (10) to make 4 and 9.\n\n\t- `X` can be placed before `L` (50) and `C` (100) to make 40 and 90.\n\n\t- `C` can be placed before `D` (500) and `M` (1000) to make 400 and 900.\n\nGiven a roman numeral, convert it to an integer.\n\nExample 1:\n\nInput: s = \"III\"\nOutput: 3\nExplanation: III = 3.\n\nExample 2:\n\nInput: s = \"LVIII\"\nOutput: 58\nExplanation: L = 50, V= 5, III = 3.\n\nExample 3:\n\nInput: s = \"MCMXCIV\"\nOutput: 1994\nExplanation: M = 1000, CM = 900, XC = 90 and IV = 4.\n\nConstraints:\n\n\t- `1 <= s.length <= 15`\n\n\t- `s` contains only the characters `('I', 'V', 'X', 'L', 'C', 'D', 'M')`.\n\n\t- It is guaranteed that `s` is a valid roman numeral in the range `[1, 3999]`.",
+      "functionName": "romanToInt",
+      "starterCode": "/**\n * @param {string} s\n * @return {number}\n */\n\nglobalThis.romanToInt = function(s) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "14-longest-common-prefix",
+      "number": 14,
+      "title": "Longest Common Prefix",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/longest-common-prefix",
+      "description": "Write a function to find the longest common prefix string amongst an array of strings.\n\nIf there is no common prefix, return an empty string `\"\"`.\n\nExample 1:\n\nInput: strs = [\"flower\",\"flow\",\"flight\"]\nOutput: \"fl\"\n\nExample 2:\n\nInput: strs = [\"dog\",\"racecar\",\"car\"]\nOutput: \"\"\nExplanation: There is no common prefix among the input strings.\n\nConstraints:\n\n\t- `1 <= strs.length <= 200`\n\n\t- `0 <= strs[i].length <= 200`\n\n\t- `strs[i]` consists of only lowercase English letters if it is non-empty.",
+      "functionName": "longestCommonPrefix",
+      "starterCode": "/**\n * @param {string[]} strs\n * @return {string}\n */\n\nglobalThis.longestCommonPrefix = function(strs) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "20-valid-parentheses",
+      "number": 20,
+      "title": "Valid Parentheses",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/valid-parentheses",
+      "description": "Given a string `s` containing just the characters `'('`, `')'`, `'{'`, `'}'`, `'['` and `']'`, determine if the input string is valid.\n\nAn input string is valid if:\n\n\t- Open brackets must be closed by the same type of brackets.\n\n\t- Open brackets must be closed in the correct order.\n\n\t- Every close bracket has a corresponding open bracket of the same type.\n\nExample 1:\n\nInput: s = \"()\"\n\nOutput: true\n\nExample 2:\n\nInput: s = \"()[]{}\"\n\nOutput: true\n\nExample 3:\n\nInput: s = \"(]\"\n\nOutput: false\n\nExample 4:\n\nInput: s = \"([])\"\n\nOutput: true\n\nExample 5:\n\nInput: s = \"([)]\"\n\nOutput: false\n\nConstraints:\n\n\t- `1 <= s.length <= 10^4`\n\n\t- `s` consists of parentheses only `'()[]{}'`.",
+      "functionName": "isValid",
+      "starterCode": "/**\n * @param {string} s\n * @return {boolean}\n */\n\nglobalThis.isValid = function(s) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "21-merge-two-sorted-lists",
+      "number": 21,
+      "title": "Merge Two Sorted Lists",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/merge-two-sorted-lists",
+      "description": "You are given the heads of two sorted linked lists `list1` and `list2`.\n\nMerge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.\n\nReturn the head of the merged linked list.\n\nExample 1:\n\nInput: list1 = [1,2,4], list2 = [1,3,4]\nOutput: [1,1,2,3,4,4]\n\nExample 2:\n\nInput: list1 = [], list2 = []\nOutput: []\n\nExample 3:\n\nInput: list1 = [], list2 = [0]\nOutput: [0]\n\nConstraints:\n\n\t- The number of nodes in both lists is in the range `[0, 50]`.\n\n\t- `-100 <= Node.val <= 100`\n\n\t- Both `list1` and `list2` are sorted in non-decreasing order.",
+      "functionName": "mergeTwoLists",
+      "starterCode": "/**\n * Definition for singly-linked list.\n * function ListNode(val, next) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.next = (next===undefined ? null : next)\n * }\n */\n\n/**\n * @param {ListNode} list1\n * @param {ListNode} list2\n * @return {ListNode}\n */\n\nglobalThis.mergeTwoLists = function(list1, list2) {\n  // Write your solution here\n};",
+      "usesListNode": true,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              4
+            ],
+            [
+              1,
+              3,
+              4
+            ]
+          ],
+          "expected": [
+            1,
+            1,
+            2,
+            3,
+            4,
+            4
+          ]
+        },
+        {
+          "args": [
+            [],
+            []
+          ],
+          "expected": []
+        },
+        {
+          "args": [
+            [],
+            [
+              0
+            ]
+          ],
+          "expected": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "26-remove-duplicates-from-sorted-array",
+      "number": 26,
+      "title": "Remove Duplicates from Sorted Array",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-array",
+      "description": "Given an integer array `nums` sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same.\n\nConsider the number of unique elements in `nums` to be `k​​​​​​​`​​​​​​​. After removing duplicates, return the number of unique elements `k`.\n\nThe first `k` elements of `nums` should contain the unique numbers in sorted order. The remaining elements beyond index `k - 1` can be ignored.\n\nCustom Judge:\n\nThe judge will test your solution with the following code:\n\nint[] nums = [...]; // Input array\nint[] expectedNums = [...]; // The expected answer with correct length\n\nint k = removeDuplicates(nums); // Calls your implementation\n\nassert k == expectedNums.length;\nfor (int i = 0; i < k; i++) {\n    assert nums[i] == expectedNums[i];\n}\n\nIf all assertions pass, then your solution will be accepted.\n\nExample 1:\n\nInput: nums = [1,1,2]\nOutput: 2, nums = [1,2,_]\nExplanation: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n\nExample 2:\n\nInput: nums = [0,0,1,1,1,2,2,3,3,4]\nOutput: 5, nums = [0,1,2,3,4,_,_,_,_,_]\nExplanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n\nConstraints:\n\n\t- `1 <= nums.length <= 3 * 10^4`\n\n\t- `-100 <= nums[i] <= 100`\n\n\t- `nums` is sorted in non-decreasing order.",
+      "functionName": "removeDuplicates",
+      "starterCode": "/**\n * @param {number[]} nums\n * @return {number}\n */\n\nglobalThis.removeDuplicates = function(nums) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              1,
+              1,
+              2
+            ]
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            [
+              0,
+              0,
+              1,
+              1,
+              1,
+              2,
+              2,
+              3,
+              3,
+              4
+            ]
+          ],
+          "expected": 5
+        }
+      ]
+    },
+    {
+      "id": "27-remove-element",
+      "number": 27,
+      "title": "Remove Element",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/remove-element",
+      "description": "Given an integer array `nums` and an integer `val`, remove all occurrences of `val` in `nums` in-place. The order of the elements may be changed. Then return the number of elements in `nums` which are not equal to `val`.\n\nConsider the number of elements in `nums` which are not equal to `val` be `k`, to get accepted, you need to do the following things:\n\n\t- Change the array `nums` such that the first `k` elements of `nums` contain the elements which are not equal to `val`. The remaining elements of `nums` are not important as well as the size of `nums`.\n\n\t- Return `k`.\n\nCustom Judge:\n\nThe judge will test your solution with the following code:\n\nint[] nums = [...]; // Input array\nint val = ...; // Value to remove\nint[] expectedNums = [...]; // The expected answer with correct length.\n                            // It is sorted with no values equaling val.\n\nint k = removeElement(nums, val); // Calls your implementation\n\nassert k == expectedNums.length;\nsort(nums, 0, k); // Sort the first k elements of nums\nfor (int i = 0; i < actualLength; i++) {\n    assert nums[i] == expectedNums[i];\n}\n\nIf all assertions pass, then your solution will be accepted.\n\nExample 1:\n\nInput: nums = [3,2,2,3], val = 3\nOutput: 2, nums = [2,2,_,_]\nExplanation: Your function should return k = 2, with the first two elements of nums being 2.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n\nExample 2:\n\nInput: nums = [0,1,2,2,3,0,4,2], val = 2\nOutput: 5, nums = [0,1,4,0,3,_,_,_]\nExplanation: Your function should return k = 5, with the first five elements of nums containing 0, 0, 1, 3, and 4.\nNote that the five elements can be returned in any order.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n\nConstraints:\n\n\t- `0 <= nums.length <= 100`\n\n\t- `0 <= nums[i] <= 50`\n\n\t- `0 <= val <= 100`",
+      "functionName": "removeElement",
+      "starterCode": "/**\n * @param {number[]} nums\n * @param {number} val\n * @return {number}\n */\n\nglobalThis.removeElement = function(nums, val) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              3,
+              2,
+              2,
+              3
+            ],
+            3
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            [
+              0,
+              1,
+              2,
+              2,
+              3,
+              0,
+              4,
+              2
+            ],
+            2
+          ],
+          "expected": 5
+        }
+      ]
+    },
+    {
+      "id": "28-find-the-index-of-the-first-occurrence-in-a-string",
+      "number": 28,
+      "title": "Find the Index of the First Occurrence in a String",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string",
+      "description": "Given two strings `needle` and `haystack`, return the index of the first occurrence of `needle` in `haystack`, or `-1` if `needle` is not part of `haystack`.\n\nExample 1:\n\nInput: haystack = \"sadbutsad\", needle = \"sad\"\nOutput: 0\nExplanation: \"sad\" occurs at index 0 and 6.\nThe first occurrence is at index 0, so we return 0.\n\nExample 2:\n\nInput: haystack = \"leetcode\", needle = \"leeto\"\nOutput: -1\nExplanation: \"leeto\" did not occur in \"leetcode\", so we return -1.\n\nConstraints:\n\n\t- `1 <= haystack.length, needle.length <= 10^4`\n\n\t- `haystack` and `needle` consist of only lowercase English characters.",
+      "functionName": "strStr",
+      "starterCode": "/**\n * @param {string} haystack\n * @param {string} needle\n * @return {number}\n */\n\nglobalThis.strStr = function(haystack, needle) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "35-search-insert-position",
+      "number": 35,
+      "title": "Search Insert Position",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/search-insert-position",
+      "description": "Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.\n\nYou must write an algorithm with `O(log n)` runtime complexity.\n\nExample 1:\n\nInput: nums = [1,3,5,6], target = 5\nOutput: 2\n\nExample 2:\n\nInput: nums = [1,3,5,6], target = 2\nOutput: 1\n\nExample 3:\n\nInput: nums = [1,3,5,6], target = 7\nOutput: 4\n\nConstraints:\n\n\t- `1 <= nums.length <= 10^4`\n\n\t- `-10^4 <= nums[i] <= 10^4`\n\n\t- `nums` contains distinct values sorted in ascending order.\n\n\t- `-10^4 <= target <= 10^4`",
+      "functionName": "searchInsert",
+      "starterCode": "/**\n * @param {number[]} nums\n * @param {number} target\n * @return {number}\n */\n\nglobalThis.searchInsert = function(nums, target) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              1,
+              3,
+              5,
+              6
+            ],
+            5
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            [
+              1,
+              3,
+              5,
+              6
+            ],
+            2
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            [
+              1,
+              3,
+              5,
+              6
+            ],
+            7
+          ],
+          "expected": 4
+        }
+      ]
+    },
+    {
+      "id": "49-group-anagrams",
+      "number": 49,
+      "title": "Group Anagrams",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/group-anagrams",
+      "description": "Given an array of strings `strs`, group the anagrams together. You can return the answer in any order.\n\nExample 1:\n\nInput: strs = [\"eat\",\"tea\",\"tan\",\"ate\",\"nat\",\"bat\"]\n\nOutput: [[\"bat\"],[\"nat\",\"tan\"],[\"ate\",\"eat\",\"tea\"]]\n\nExplanation:\n\n\t- There is no string in strs that can be rearranged to form `\"bat\"`.\n\n\t- The strings `\"nat\"` and `\"tan\"` are anagrams as they can be rearranged to form each other.\n\n\t- The strings `\"ate\"`, `\"eat\"`, and `\"tea\"` are anagrams as they can be rearranged to form each other.\n\nExample 2:\n\nInput: strs = [\"\"]\n\nOutput: [[\"\"]]\n\nExample 3:\n\nInput: strs = [\"a\"]\n\nOutput: [[\"a\"]]\n\nConstraints:\n\n\t- `1 <= strs.length <= 10^4`\n\n\t- `0 <= strs[i].length <= 100`\n\n\t- `strs[i]` consists of lowercase English letters.",
+      "functionName": "groupAnagrams",
+      "starterCode": "/**\n * @param {string[]} strs\n * @return {string[][]}\n */\n\nglobalThis.groupAnagrams = function(strs) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "58-length-of-last-word",
+      "number": 58,
+      "title": "Length of Last Word",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/length-of-last-word",
+      "description": "Given a string `s` consisting of words and spaces, return the length of the last word in the string.\n\nA word is a maximal substring consisting of non-space characters only.\n\nExample 1:\n\nInput: s = \"Hello World\"\nOutput: 5\nExplanation: The last word is \"World\" with length 5.\n\nExample 2:\n\nInput: s = \"   fly me   to   the moon  \"\nOutput: 4\nExplanation: The last word is \"moon\" with length 4.\n\nExample 3:\n\nInput: s = \"luffy is still joyboy\"\nOutput: 6\nExplanation: The last word is \"joyboy\" with length 6.\n\nConstraints:\n\n\t- `1 <= s.length <= 10^4`\n\n\t- `s` consists of only English letters and spaces `' '`.\n\n\t- There will be at least one word in `s`.",
+      "functionName": "lengthOfLastWord",
+      "starterCode": "/**\n * @param {string} s\n * @return {number}\n */\n\nglobalThis.lengthOfLastWord = function(s) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "66-plus-one",
+      "number": 66,
+      "title": "Plus One",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/plus-one",
+      "description": "You are given a large integer represented as an integer array `digits`, where each `digits[i]` is the `i^th` digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading `0`'s.\n\nIncrement the large integer by one and return the resulting array of digits.\n\nExample 1:\n\nInput: digits = [1,2,3]\nOutput: [1,2,4]\nExplanation: The array represents the integer 123.\nIncrementing by one gives 123 + 1 = 124.\nThus, the result should be [1,2,4].\n\nExample 2:\n\nInput: digits = [4,3,2,1]\nOutput: [4,3,2,2]\nExplanation: The array represents the integer 4321.\nIncrementing by one gives 4321 + 1 = 4322.\nThus, the result should be [4,3,2,2].\n\nExample 3:\n\nInput: digits = [9]\nOutput: [1,0]\nExplanation: The array represents the integer 9.\nIncrementing by one gives 9 + 1 = 10.\nThus, the result should be [1,0].\n\nConstraints:\n\n\t- `1 <= digits.length <= 100`\n\n\t- `0 <= digits[i] <= 9`\n\n\t- `digits` does not contain any leading `0`'s.",
+      "functionName": "plusOne",
+      "starterCode": "/**\n * @param {number[]} digits\n * @return {number[]}\n */\n\nglobalThis.plusOne = function(digits) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "expected": [
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "args": [
+            [
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "expected": [
+            4,
+            3,
+            2,
+            2
+          ]
+        },
+        {
+          "args": [
+            [
+              9
+            ]
+          ],
+          "expected": [
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "67-add-binary",
+      "number": 67,
+      "title": "Add Binary",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/add-binary",
+      "description": "Given two binary strings `a` and `b`, return their sum as a binary string.\n\nExample 1:\n\nInput: a = \"11\", b = \"1\"\nOutput: \"100\"\n\nExample 2:\n\nInput: a = \"1010\", b = \"1011\"\nOutput: \"10101\"\n\nConstraints:\n\n\t- `1 <= a.length, b.length <= 10^4`\n\n\t- `a` and `b` consist only of `'0'` or `'1'` characters.\n\n\t- Each string does not contain leading zeros except for the zero itself.",
+      "functionName": "addBinary",
+      "starterCode": "/**\n * @param {string} a\n * @param {string} b\n * @return {string}\n */\n\nglobalThis.addBinary = function(a, b) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            "11",
+            "1"
+          ],
+          "expected": "100"
+        },
+        {
+          "args": [
+            "1010",
+            "1011"
+          ],
+          "expected": "10101"
+        }
+      ]
+    },
+    {
+      "id": "69-sqrtx",
+      "number": 69,
+      "title": "Sqrt(x)",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/sqrtx",
+      "description": "Given a non-negative integer `x`, return the square root of `x` rounded down to the nearest integer. The returned integer should be non-negative as well.\n\nYou must not use any built-in exponent function or operator.\n\n\t- For example, do not use `pow(x, 0.5)` in c++ or `x ** 0.5` in python.\n\nExample 1:\n\nInput: x = 4\nOutput: 2\nExplanation: The square root of 4 is 2, so we return 2.\n\nExample 2:\n\nInput: x = 8\nOutput: 2\nExplanation: The square root of 8 is 2.82842..., and since we round it down to the nearest integer, 2 is returned.\n\nConstraints:\n\n\t- `0 <= x <= 2^31 - 1`",
+      "functionName": "mySqrt",
+      "starterCode": "/**\n * @param {number} x\n * @return {number}\n */\n\nglobalThis.mySqrt = function(x) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            4
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            8
+          ],
+          "expected": 2
+        }
+      ]
+    },
+    {
+      "id": "70-climbing-stairs",
+      "number": 70,
+      "title": "Climbing Stairs",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/climbing-stairs",
+      "description": "You are climbing a staircase. It takes `n` steps to reach the top.\n\nEach time you can either climb `1` or `2` steps. In how many distinct ways can you climb to the top?\n\nExample 1:\n\nInput: n = 2\nOutput: 2\nExplanation: There are two ways to climb to the top.\n1. 1 step + 1 step\n2. 2 steps\n\nExample 2:\n\nInput: n = 3\nOutput: 3\nExplanation: There are three ways to climb to the top.\n1. 1 step + 1 step + 1 step\n2. 1 step + 2 steps\n3. 2 steps + 1 step\n\nConstraints:\n\n\t- `1 <= n <= 45`",
+      "functionName": "climbStairs",
+      "starterCode": "/**\n * @param {number} n\n * @return {number}\n */\n\nglobalThis.climbStairs = function(n) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            2
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            3
+          ],
+          "expected": 3
+        }
+      ]
+    },
+    {
+      "id": "125-valid-palindrome",
+      "number": 125,
+      "title": "Valid Palindrome",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/valid-palindrome",
+      "description": "A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.\n\nGiven a string `s`, return `true` if it is a palindrome, or `false` otherwise.\n\nExample 1:\n\nInput: s = \"A man, a plan, a canal: Panama\"\nOutput: true\nExplanation: \"amanaplanacanalpanama\" is a palindrome.\n\nExample 2:\n\nInput: s = \"race a car\"\nOutput: false\nExplanation: \"raceacar\" is not a palindrome.\n\nExample 3:\n\nInput: s = \" \"\nOutput: true\nExplanation: s is an empty string \"\" after removing non-alphanumeric characters.\nSince an empty string reads the same forward and backward, it is a palindrome.\n\nConstraints:\n\n\t- `1 <= s.length <= 2 * 10^5`\n\n\t- `s` consists only of printable ASCII characters.",
+      "functionName": "isPalindrome",
+      "starterCode": "/**\n * @param {string} s\n * @return {boolean}\n */\n\nglobalThis.isPalindrome = function(s) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "136-single-number",
+      "number": 136,
+      "title": "Single Number",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/single-number",
+      "description": "Given a non-empty array of integers `nums`, every element appears twice except for one. Find that single one.\n\nYou must implement a solution with a linear runtime complexity and use only constant extra space.\n\nExample 1:\n\nInput: nums = [2,2,1]\n\nOutput: 1\n\nExample 2:\n\nInput: nums = [4,1,2,1,2]\n\nOutput: 4\n\nExample 3:\n\nInput: nums = [1]\n\nOutput: 1\n\nConstraints:\n\n\t- `1 <= nums.length <= 3 * 10^4`\n\n\t- `-3 * 10^4 <= nums[i] <= 3 * 10^4`\n\n\t- Each element in the array appears twice except for one element which appears only once.",
+      "functionName": "singleNumber",
+      "starterCode": "/**\n * @param {number[]} nums\n * @return {number}\n */\n\nglobalThis.singleNumber = function(nums) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "150-evaluate-reverse-polish-notation",
+      "number": 150,
+      "title": "Evaluate Reverse Polish Notation",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/evaluate-reverse-polish-notation",
+      "description": "You are given an array of strings `tokens` that represents an arithmetic expression in a Reverse Polish Notation.\n\nEvaluate the expression. Return an integer that represents the value of the expression.\n\nNote that:\n\n\t- The valid operators are `'+'`, `'-'`, `'*'`, and `'/'`.\n\n\t- Each operand may be an integer or another expression.\n\n\t- The division between two integers always truncates toward zero.\n\n\t- There will not be any division by zero.\n\n\t- The input represents a valid arithmetic expression in a reverse polish notation.\n\n\t- The answer and all the intermediate calculations can be represented in a 32-bit integer.\n\nExample 1:\n\nInput: tokens = [\"2\",\"1\",\"+\",\"3\",\"*\"]\nOutput: 9\nExplanation: ((2 + 1) * 3) = 9\n\nExample 2:\n\nInput: tokens = [\"4\",\"13\",\"5\",\"/\",\"+\"]\nOutput: 6\nExplanation: (4 + (13 / 5)) = 6\n\nExample 3:\n\nInput: tokens = [\"10\",\"6\",\"9\",\"3\",\"+\",\"-11\",\"*\",\"/\",\"*\",\"17\",\"+\",\"5\",\"+\"]\nOutput: 22\nExplanation: ((10 * (6 / ((9 + 3) * -11))) + 17) + 5\n= ((10 * (6 / (12 * -11))) + 17) + 5\n= ((10 * (6 / -132)) + 17) + 5\n= ((10 * 0) + 17) + 5\n= (0 + 17) + 5\n= 17 + 5\n= 22\n\nConstraints:\n\n\t- `1 <= tokens.length <= 10^4`\n\n\t- `tokens[i]` is either an operator: `\"+\"`, `\"-\"`, `\"*\"`, or `\"/\"`, or an integer in the range `[-200, 200]`.",
+      "functionName": "evalRPN",
+      "starterCode": "/**\n * @param {string[]} tokens\n * @return {number}\n */\n\nglobalThis.evalRPN = function(tokens) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "169-majority-element",
+      "number": 169,
+      "title": "Majority Element",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/majority-element",
+      "description": "Given an array `nums` of size `n`, return the majority element.\n\nThe majority element is the element that appears more than `&lfloor;n / 2&rfloor;` times. You may assume that the majority element always exists in the array.\n\nExample 1:\n\nInput: nums = [3,2,3]\nOutput: 3\n\nExample 2:\n\nInput: nums = [2,2,1,1,1,2,2]\nOutput: 2\n\nConstraints:\n\n\t- `n == nums.length`\n\n\t- `1 <= n <= 5 * 10^4`\n\n\t- `-10^9 <= nums[i] <= 10^9`\n\n\t- The input is generated such that a majority element will exist in the array.\n\nFollow-up: Could you solve the problem in linear time and in `O(1)` space?",
+      "functionName": "majorityElement",
+      "starterCode": "/**\n * @param {number[]} nums\n * @return {number}\n */\n\nglobalThis.majorityElement = function(nums) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              3,
+              2,
+              3
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            [
+              2,
+              2,
+              1,
+              1,
+              1,
+              2,
+              2
+            ]
+          ],
+          "expected": 2
+        }
+      ]
+    },
+    {
+      "id": "217-contains-duplicate",
+      "number": 217,
+      "title": "Contains Duplicate",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/contains-duplicate",
+      "description": "Given an integer array `nums`, return `true` if any value appears at least twice in the array, and return `false` if every element is distinct.\n\nExample 1:\n\nInput: nums = [1,2,3,1]\n\nOutput: true\n\nExplanation:\n\nThe element 1 occurs at the indices 0 and 3.\n\nExample 2:\n\nInput: nums = [1,2,3,4]\n\nOutput: false\n\nExplanation:\n\nAll elements are distinct.\n\nExample 3:\n\nInput: nums = [1,1,1,3,3,4,3,2,4,2]\n\nOutput: true\n\nConstraints:\n\n\t- `1 <= nums.length <= 10^5`\n\n\t- `-10^9 <= nums[i] <= 10^9`",
+      "functionName": "containsDuplicate",
+      "starterCode": "/**\n * @param {number[]} nums\n * @return {boolean}\n */\n\nglobalThis.containsDuplicate = function(nums) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "219-contains-duplicate-ii",
+      "number": 219,
+      "title": "Contains Duplicate II",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/contains-duplicate-ii",
+      "description": "Given an integer array `nums` and an integer `k`, return `true` if there are two distinct indices `i` and `j` in the array such that `nums[i] == nums[j]` and `abs(i - j) <= k`.\n\nExample 1:\n\nInput: nums = [1,2,3,1], k = 3\nOutput: true\n\nExample 2:\n\nInput: nums = [1,0,1,1], k = 1\nOutput: true\n\nExample 3:\n\nInput: nums = [1,2,3,1,2,3], k = 2\nOutput: false\n\nConstraints:\n\n\t- `1 <= nums.length <= 10^5`\n\n\t- `-10^9 <= nums[i] <= 10^9`\n\n\t- `0 <= k <= 10^5`",
+      "functionName": null,
+      "starterCode": null,
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "220-contains-duplicate-iii",
+      "number": 220,
+      "title": "Contains Duplicate III",
+      "difficulty": "Hard",
+      "url": "https://leetcode.com/problems/contains-duplicate-iii",
+      "description": "You are given an integer array `nums` and two integers `indexDiff` and `valueDiff`.\n\nFind a pair of indices `(i, j)` such that:\n\n\t- `i != j`,\n\n\t- `abs(i - j) <= indexDiff`.\n\n\t- `abs(nums[i] - nums[j]) <= valueDiff`, and\n\nReturn `true` if such pair exists or `false` otherwise.\n\nExample 1:\n\nInput: nums = [1,2,3,1], indexDiff = 3, valueDiff = 0\nOutput: true\nExplanation: We can choose (i, j) = (0, 3).\nWe satisfy the three conditions:\ni != j --> 0 != 3\nabs(i - j) <= indexDiff --> abs(0 - 3) <= 3\nabs(nums[i] - nums[j]) <= valueDiff --> abs(1 - 1) <= 0\n\nExample 2:\n\nInput: nums = [1,5,9,1,5,9], indexDiff = 2, valueDiff = 3\nOutput: false\nExplanation: After trying all the possible pairs (i, j), we cannot satisfy the three conditions, so we return false.\n\nConstraints:\n\n\t- `2 <= nums.length <= 10^5`\n\n\t- `-10^9 <= nums[i] <= 10^9`\n\n\t- `1 <= indexDiff <= nums.length`\n\n\t- `0 <= valueDiff <= 10^9`",
+      "functionName": "containsNearbyAlmostDuplicate",
+      "starterCode": "/**\n * @param {number[]} nums\n * @param {number} indexDiff\n * @param {number} valueDiff\n * @return {boolean}\n */\n\nglobalThis.containsNearbyAlmostDuplicate = function(nums, indexDiff, valueDiff) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3,
+              1
+            ],
+            3,
+            0
+          ],
+          "expected": true
+        },
+        {
+          "args": [
+            [
+              1,
+              5,
+              9,
+              1,
+              5,
+              9
+            ],
+            2,
+            3
+          ],
+          "expected": false
+        }
+      ]
+    },
+    {
+      "id": "242-valid-anagram",
+      "number": 242,
+      "title": "Valid Anagram",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/valid-anagram",
+      "description": "Given two strings `s` and `t`, return `true` if `t` is an anagram of `s`, and `false` otherwise.\n\nExample 1:\n\nInput: s = \"anagram\", t = \"nagaram\"\n\nOutput: true\n\nExample 2:\n\nInput: s = \"rat\", t = \"car\"\n\nOutput: false\n\nConstraints:\n\n\t- `1 <= s.length, t.length <= 5 * 10^4`\n\n\t- `s` and `t` consist of lowercase English letters.\n\nFollow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?",
+      "functionName": "isAnagram",
+      "starterCode": "/**\n * @param {string} s\n * @param {string} t\n * @return {boolean}\n */\n\nglobalThis.isAnagram = function(s, t) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "283-move-zeroes",
+      "number": 283,
+      "title": "Move Zeroes",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/move-zeroes",
+      "description": "Given an integer array `nums`, move all `0`'s to the end of it while maintaining the relative order of the non-zero elements.\n\nNote that you must do this in-place without making a copy of the array.\n\nExample 1:\n\nInput: nums = [0,1,0,3,12]\nOutput: [1,3,12,0,0]\n\nExample 2:\n\nInput: nums = [0]\nOutput: [0]\n\nConstraints:\n\n\t- `1 <= nums.length <= 10^4`\n\n\t- `-2^31 <= nums[i] <= 2^31 - 1`\n\nFollow up: Could you minimize the total number of operations done?",
+      "functionName": "moveZeroes",
+      "starterCode": "/**\n * @param {number[]} nums\n * @return {void} Do not return anything, modify nums in-place instead.\n */\n\nglobalThis.moveZeroes = function(nums) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": true,
+      "cases": [
+        {
+          "args": [
+            [
+              0,
+              1,
+              0,
+              3,
+              12
+            ]
+          ],
+          "expected": [
+            1,
+            3,
+            12,
+            0,
+            0
+          ]
+        },
+        {
+          "args": [
+            [
+              0
+            ]
+          ],
+          "expected": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "344-reverse-string",
+      "number": 344,
+      "title": "Reverse String",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/reverse-string",
+      "description": "Write a function that reverses a string. The input string is given as an array of characters `s`.\n\nYou must do this by modifying the input array in-place with `O(1)` extra memory.\n\nExample 1:\n\nInput: s = [\"h\",\"e\",\"l\",\"l\",\"o\"]\nOutput: [\"o\",\"l\",\"l\",\"e\",\"h\"]\n\nExample 2:\n\nInput: s = [\"H\",\"a\",\"n\",\"n\",\"a\",\"h\"]\nOutput: [\"h\",\"a\",\"n\",\"n\",\"a\",\"H\"]\n\nConstraints:\n\n\t- `1 <= s.length <= 10^5`\n\n\t- `s[i]` is a printable ascii character.",
+      "functionName": "reverseString",
+      "starterCode": "/**\n * @param {character[]} s\n * @return {void} Do not return anything, modify s in-place instead.\n */\n\nglobalThis.reverseString = function(s) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": true,
+      "cases": [
+        {
+          "args": [
+            [
+              "h",
+              "e",
+              "l",
+              "l",
+              "o"
+            ]
+          ],
+          "expected": [
+            "o",
+            "l",
+            "l",
+            "e",
+            "h"
+          ]
+        },
+        {
+          "args": [
+            [
+              "H",
+              "a",
+              "n",
+              "n",
+              "a",
+              "h"
+            ]
+          ],
+          "expected": [
+            "h",
+            "a",
+            "n",
+            "n",
+            "a",
+            "H"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "392-is-subsequence",
+      "number": 392,
+      "title": "Is Subsequence",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/is-subsequence",
+      "description": "Given two strings `s` and `t`, return `true` if `s` is a subsequence of `t`, or `false` otherwise.\n\nA subsequence of a string is a new string that is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters. (i.e., `\"ace\"` is a subsequence of `\"abcde\"` while `\"aec\"` is not).\n\nExample 1:\n\nInput: s = \"abc\", t = \"ahbgdc\"\nOutput: true\n\nExample 2:\n\nInput: s = \"axc\", t = \"ahbgdc\"\nOutput: false\n\nConstraints:\n\n\t- `0 <= s.length <= 100`\n\n\t- `0 <= t.length <= 10^4`\n\n\t- `s` and `t` consist only of lowercase English letters.\n\nFollow up: Suppose there are lots of incoming `s`, say `s1, s2, ..., sk` where `k >= 10^9`, and you want to check one by one to see if `t` has its subsequence. In this scenario, how would you change your code?",
+      "functionName": "isSubsequence",
+      "starterCode": "/**\n * @param {string} s\n * @param {string} t\n * @return {boolean}\n */\n\nglobalThis.isSubsequence = function(s, t) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            "abc",
+            "ahbgdc"
+          ],
+          "expected": true
+        },
+        {
+          "args": [
+            "axc",
+            "ahbgdc"
+          ],
+          "expected": false
+        }
+      ]
+    },
+    {
+      "id": "415-add-strings",
+      "number": 415,
+      "title": "Add Strings",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/add-strings",
+      "description": "Given two non-negative integers, `num1` and `num2` represented as string, return the sum of `num1` and `num2` as a string.\n\nYou must solve the problem without using any built-in library for handling large integers (such as `BigInteger`). You must also not convert the inputs to integers directly.\n\nExample 1:\n\nInput: num1 = \"11\", num2 = \"123\"\nOutput: \"134\"\n\nExample 2:\n\nInput: num1 = \"456\", num2 = \"77\"\nOutput: \"533\"\n\nExample 3:\n\nInput: num1 = \"0\", num2 = \"0\"\nOutput: \"0\"\n\nConstraints:\n\n\t- `1 <= num1.length, num2.length <= 10^4`\n\n\t- `num1` and `num2` consist of only digits.\n\n\t- `num1` and `num2` don't have any leading zeros except for the zero itself.",
+      "functionName": "addStrings",
+      "starterCode": "/**\n * @param {string} num1\n * @param {string} num2\n * @return {string}\n */\n\nglobalThis.addStrings = function(num1, num2) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "448-find-all-numbers-disappeared-in-an-array",
+      "number": 448,
+      "title": "Find All Numbers Disappeared in an Array",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array",
+      "description": "Given an array `nums` of `n` integers where `nums[i]` is in the range `[1, n]`, return an array of all the integers in the range `[1, n]` that do not appear in `nums`.\n\nExample 1:\n\nInput: nums = [4,3,2,7,8,2,3,1]\nOutput: [5,6]\n\nExample 2:\n\nInput: nums = [1,1]\nOutput: [2]\n\nConstraints:\n\n\t- `n == nums.length`\n\n\t- `1 <= n <= 10^5`\n\n\t- `1 <= nums[i] <= n`\n\nFollow up: Could you do it without extra space and in `O(n)` runtime? You may assume the returned list does not count as extra space.",
+      "functionName": "findDisappearedNumbers",
+      "starterCode": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\n\nglobalThis.findDisappearedNumbers = function(nums) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              4,
+              3,
+              2,
+              7,
+              8,
+              2,
+              3,
+              1
+            ]
+          ],
+          "expected": [
+            5,
+            6
+          ]
+        },
+        {
+          "args": [
+            [
+              1,
+              1
+            ]
+          ],
+          "expected": [
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "459-repeated-substring-pattern",
+      "number": 459,
+      "title": "Repeated Substring Pattern",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/repeated-substring-pattern",
+      "description": "Given a string `s`, check if it can be constructed by taking a substring of it and appending multiple copies of the substring together.\n\nExample 1:\n\nInput: s = \"abab\"\nOutput: true\nExplanation: It is the substring \"ab\" twice.\n\nExample 2:\n\nInput: s = \"aba\"\nOutput: false\n\nExample 3:\n\nInput: s = \"abcabcabcabc\"\nOutput: true\nExplanation: It is the substring \"abc\" four times or the substring \"abcabc\" twice.\n\nConstraints:\n\n\t- `1 <= s.length <= 10^4`\n\n\t- `s` consists of lowercase English letters.",
+      "functionName": "repeatedSubstringPattern",
+      "starterCode": "/**\n * @param {string} s\n * @return {boolean}\n */\n\nglobalThis.repeatedSubstringPattern = function(s) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "485-max-consecutive-ones",
+      "number": 485,
+      "title": "Max Consecutive Ones",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/max-consecutive-ones",
+      "description": "Given a binary array `nums`, return the maximum number of consecutive `1`'s in the array.\n\nExample 1:\n\nInput: nums = [1,1,0,1,1,1]\nOutput: 3\nExplanation: The first two digits or the last three digits are consecutive 1s. The maximum number of consecutive 1s is 3.\n\nExample 2:\n\nInput: nums = [1,0,1,1,0,1]\nOutput: 2\n\nConstraints:\n\n\t- `1 <= nums.length <= 10^5`\n\n\t- `nums[i]` is either `0` or `1`.",
+      "functionName": "findMaxConsecutiveOnes",
+      "starterCode": "/**\n * @param {number[]} nums\n * @return {number}\n */\n\nglobalThis.findMaxConsecutiveOnes = function(nums) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              1,
+              1,
+              0,
+              1,
+              1,
+              1
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            [
+              1,
+              0,
+              1,
+              1,
+              0,
+              1
+            ]
+          ],
+          "expected": 2
+        }
+      ]
+    },
+    {
+      "id": "636-exclusive-time-of-functions",
+      "number": 636,
+      "title": "Exclusive Time of Functions",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/exclusive-time-of-functions",
+      "description": "On a single-threaded CPU, we execute a program containing `n` functions. Each function has a unique ID between 0 and `n - 1`.\n\nFunction calls are stored in a call stack: when a function call starts, its ID is pushed onto the stack, and when a function call ends, its ID is popped off the stack. The function whose ID is at the top of the stack is the current function being executed. Each time a function starts or ends, we write a log with the ID, whether it started or ended, and the timestamp.\n\nYou are given a list `logs`, where `logs[i]` represents the `i^th` log message formatted as a string `\"{function_id}:{\"start\" | \"end\"}:{timestamp}\"`. For example, `\"0:start:3\"` means a function call with function ID 0 started at the beginning of timestamp 3, and `\"1:end:2\"` means a function call with function ID 1 ended at the end of timestamp 2. Note that a function can be called multiple times, possibly recursively.\n\nA function's exclusive time is the sum of execution times for all function calls in the program. For example, if a function is called twice, one call executing for 2 time units and another call executing for 1 time unit, the exclusive time is `2 + 1 = 3`.\n\nReturn the exclusive time of each function in an array, where the value at the `i^th` index represents the exclusive time for the function with ID `i`.\n\nExample 1:\n\nInput: n = 2, logs = [\"0:start:0\",\"1:start:2\",\"1:end:5\",\"0:end:6\"]\nOutput: [3,4]\nExplanation:\nFunction 0 starts at the beginning of time 0, then it executes 2 for units of time and reaches the end of time 1.\nFunction 1 starts at the beginning of time 2, executes for 4 units of time, and ends at the end of time 5.\nFunction 0 resumes execution at the beginning of time 6 and executes for 1 unit of time.\nSo function 0 spends 2 + 1 = 3 units of total time executing, and function 1 spends 4 units of total time executing.\n\nExample 2:\n\nInput: n = 1, logs = [\"0:start:0\",\"0:start:2\",\"0:end:5\",\"0:start:6\",\"0:end:6\",\"0:end:7\"]\nOutput: [8]\nExplanation:\nFunction 0 starts at the beginning of time 0, executes for 2 units of time, and recursively calls itself.\nFunction 0 (recursive call) starts at the beginning of time 2 and executes for 4 units of time.\nFunction 0 (initial call) resumes execution then immediately calls itself again.\nFunction 0 (2nd recursive call) starts at the beginning of time 6 and executes for 1 unit of time.\nFunction 0 (initial call) resumes execution at the beginning of time 7 and executes for 1 unit of time.\nSo function 0 spends 2 + 4 + 1 + 1 = 8 units of total time executing.\n\nExample 3:\n\nInput: n = 2, logs = [\"0:start:0\",\"0:start:2\",\"0:end:5\",\"1:start:6\",\"1:end:6\",\"0:end:7\"]\nOutput: [7,1]\nExplanation:\nFunction 0 starts at the beginning of time 0, executes for 2 units of time, and recursively calls itself.\nFunction 0 (recursive call) starts at the beginning of time 2 and executes for 4 units of time.\nFunction 0 (initial call) resumes execution then immediately calls function 1.\nFunction 1 starts at the beginning of time 6, executes 1 unit of time, and ends at the end of time 6.\nFunction 0 resumes execution at the beginning of time 7 and executes for 1 unit of time.\nSo function 0 spends 2 + 4 + 1 = 7 units of total time executing, and function 1 spends 1 unit of total time executing.\n\nConstraints:\n\n\t- `1 <= n <= 100`\n\n\t- `2 <= logs.length <= 500`\n\n\t- `0 <= function_id < n`\n\n\t- `0 <= timestamp <= 10^9`\n\n\t- No two start events will happen at the same timestamp.\n\n\t- No two end events will happen at the same timestamp.\n\n\t- Each function has an `\"end\"` log for each `\"start\"` log.",
+      "functionName": "exclusiveTime",
+      "starterCode": "/**\n * @param {number} n\n * @param {string[]} logs\n * @return {number[]}\n */\n\nglobalThis.exclusiveTime = function(n, logs) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            2
+          ],
+          "expected": [
+            3,
+            4
+          ]
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": [
+            8
+          ]
+        },
+        {
+          "args": [
+            2
+          ],
+          "expected": [
+            7,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "645-set-mismatch",
+      "number": 645,
+      "title": "Set Mismatch",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/set-mismatch",
+      "description": "You have a set of integers `s`, which originally contains all the numbers from `1` to `n`. Unfortunately, due to some error, one of the numbers in `s` got duplicated to another number in the set, which results in repetition of one number and loss of another number.\n\nYou are given an integer array `nums` representing the data status of this set after the error.\n\nFind the number that occurs twice and the number that is missing and return them in the form of an array.\n\nExample 1:\n\nInput: nums = [1,2,2,4]\nOutput: [2,3]\n\nExample 2:\n\nInput: nums = [1,1]\nOutput: [1,2]\n\nConstraints:\n\n\t- `2 <= nums.length <= 10^4`\n\n\t- `1 <= nums[i] <= 10^4`",
+      "functionName": "findErrorNums",
+      "starterCode": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\n\nglobalThis.findErrorNums = function(nums) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              2,
+              4
+            ]
+          ],
+          "expected": [
+            2,
+            3
+          ]
+        },
+        {
+          "args": [
+            [
+              1,
+              1
+            ]
+          ],
+          "expected": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "686-repeated-string-match",
+      "number": 686,
+      "title": "Repeated String Match",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/repeated-string-match",
+      "description": "Given two strings `a` and `b`, return the minimum number of times you should repeat string `a` so that string `b` is a substring of it. If it is impossible for `b`​​​​​​ to be a substring of `a` after repeating it, return `-1`.\n\nNotice: string `\"abc\"` repeated 0 times is `\"\"`, repeated 1 time is `\"abc\"` and repeated 2 times is `\"abcabc\"`.\n\nExample 1:\n\nInput: a = \"abcd\", b = \"cdabcdab\"\nOutput: 3\nExplanation: We return 3 because by repeating a three times \"abcdabcdabcd\", b is a substring of it.\n\nExample 2:\n\nInput: a = \"a\", b = \"aa\"\nOutput: 2\n\nConstraints:\n\n\t- `1 <= a.length, b.length <= 10^4`\n\n\t- `a` and `b` consist of lowercase English letters.",
+      "functionName": "repeatedStringMatch",
+      "starterCode": "/**\n * @param {string} a\n * @param {string} b\n * @return {number}\n */\n\nglobalThis.repeatedStringMatch = function(a, b) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "739-daily-temperatures",
+      "number": 739,
+      "title": "Daily Temperatures",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/daily-temperatures",
+      "description": "Given an array of integers `temperatures` represents the daily temperatures, return an array `answer` such that `answer[i]` is the number of days you have to wait after the `i^th` day to get a warmer temperature. If there is no future day for which this is possible, keep `answer[i] == 0` instead.\n\nExample 1:\n\nInput: temperatures = [73,74,75,71,69,72,76,73]\nOutput: [1,1,4,2,1,1,0,0]\n\nExample 2:\n\nInput: temperatures = [30,40,50,60]\nOutput: [1,1,1,0]\n\nExample 3:\n\nInput: temperatures = [30,60,90]\nOutput: [1,1,0]\n\nConstraints:\n\n\t- `1 <= temperatures.length <= 10^5`\n\n\t- `30 <= temperatures[i] <= 100`",
+      "functionName": "dailyTemperatures",
+      "starterCode": "/**\n * @param {number[]} temperatures\n * @return {number[]}\n */\n\nglobalThis.dailyTemperatures = function(temperatures) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              73,
+              74,
+              75,
+              71,
+              69,
+              72,
+              76,
+              73
+            ]
+          ],
+          "expected": [
+            1,
+            1,
+            4,
+            2,
+            1,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "args": [
+            [
+              30,
+              40,
+              50,
+              60
+            ]
+          ],
+          "expected": [
+            1,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "args": [
+            [
+              30,
+              60,
+              90
+            ]
+          ],
+          "expected": [
+            1,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1222-remove-covered-intervals",
+      "number": 1222,
+      "title": "Remove Covered Intervals",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/remove-covered-intervals",
+      "description": "Given an array `intervals` where `intervals[i] = [li, ri]` represent the interval `[li, ri)`, remove all intervals that are covered by another interval in the list.\n\nThe interval `[a, b)` is covered by the interval `[c, d)` if and only if `c <= a` and `b <= d`.\n\nReturn the number of remaining intervals.\n\nExample 1:\n\nInput: intervals = [[1,4],[3,6],[2,8]]\nOutput: 2\nExplanation: Interval [3,6] is covered by [2,8], therefore it is removed.\n\nExample 2:\n\nInput: intervals = [[1,4],[2,3]]\nOutput: 1\n\nConstraints:\n\n\t- `1 <= intervals.length <= 1000`\n\n\t- `intervals[i].length == 2`\n\n\t- `0 <= li < ri <= 10^5`\n\n\t- All the given intervals are unique.",
+      "functionName": "removeCoveredIntervals",
+      "starterCode": "/**\n * @param {number[][]} intervals\n * @return {number}\n */\n\nglobalThis.removeCoveredIntervals = function(intervals) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              [
+                1,
+                4
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                2,
+                8
+              ]
+            ]
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            [
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                3
+              ]
+            ]
+          ],
+          "expected": 1
+        }
+      ]
+    },
+    {
+      "id": "1234-number-of-paths-with-max-score",
+      "number": 1234,
+      "title": "Number of Paths with Max Score",
+      "difficulty": "Hard",
+      "url": "https://leetcode.com/problems/number-of-paths-with-max-score",
+      "description": "You are given a square `board` of characters. You can move on the board starting at the bottom right square marked with the character `'S'`.\n\nYou need to reach the top left square marked with the character `'E'`. The rest of the squares are labeled either with a numeric character `1, 2, ..., 9` or with an obstacle `'X'`. In one move you can go up, left or up-left (diagonally) only if there is no obstacle there.\n\nReturn a list of two integers: the first integer is the maximum sum of numeric characters you can collect, and the second is the number of such paths that you can take to get that maximum sum, taken modulo `10^9 + 7`.\n\nIn case there is no path, return `[0, 0]`.\n\nExample 1:\n\nInput: board = [\"E23\",\"2X2\",\"12S\"]\nOutput: [7,1]\n\nExample 2:\n\nInput: board = [\"E12\",\"1X1\",\"21S\"]\nOutput: [4,2]\n\nExample 3:\n\nInput: board = [\"E11\",\"XXX\",\"11S\"]\nOutput: [0,0]\n\nConstraints:\n\n\t- `2 <= board.length == board[i].length <= 100`",
+      "functionName": "pathsWithMaxScore",
+      "starterCode": "/**\n * @param {string[]} board\n * @return {number[]}\n */\n\nglobalThis.pathsWithMaxScore = function(board) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              "E23",
+              "2X2",
+              "12S"
+            ]
+          ],
+          "expected": [
+            7,
+            1
+          ]
+        },
+        {
+          "args": [
+            [
+              "E12",
+              "1X1",
+              "21S"
+            ]
+          ],
+          "expected": [
+            4,
+            2
+          ]
+        },
+        {
+          "args": [
+            [
+              "E11",
+              "XXX",
+              "11S"
+            ]
+          ],
+          "expected": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1444-number-of-steps-to-reduce-a-number-to-zero",
+      "number": 1444,
+      "title": "Number of Steps to Reduce a Number to Zero",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero",
+      "description": "Given an integer `num`, return the number of steps to reduce it to zero.\n\nIn one step, if the current number is even, you have to divide it by `2`, otherwise, you have to subtract `1` from it.\n\nExample 1:\n\nInput: num = 14\nOutput: 6\nExplanation:\nStep 1) 14 is even; divide by 2 and obtain 7.\nStep 2) 7 is odd; subtract 1 and obtain 6.\nStep 3) 6 is even; divide by 2 and obtain 3.\nStep 4) 3 is odd; subtract 1 and obtain 2.\nStep 5) 2 is even; divide by 2 and obtain 1.\nStep 6) 1 is odd; subtract 1 and obtain 0.\n\nExample 2:\n\nInput: num = 8\nOutput: 4\nExplanation:\nStep 1) 8 is even; divide by 2 and obtain 4.\nStep 2) 4 is even; divide by 2 and obtain 2.\nStep 3) 2 is even; divide by 2 and obtain 1.\nStep 4) 1 is odd; subtract 1 and obtain 0.\n\nExample 3:\n\nInput: num = 123\nOutput: 12\n\nConstraints:\n\n\t- `0 <= num <= 10^6`",
+      "functionName": "numberOfSteps",
+      "starterCode": "/**\n * @param {number} num\n * @return {number}\n */\n\nglobalThis.numberOfSteps = function(num) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            14
+          ],
+          "expected": 6
+        },
+        {
+          "args": [
+            8
+          ],
+          "expected": 4
+        },
+        {
+          "args": [
+            123
+          ],
+          "expected": 12
+        }
+      ]
+    },
+    {
+      "id": "1460-number-of-substrings-containing-all-three-characters",
+      "number": 1460,
+      "title": "Number of Substrings Containing All Three Characters",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/number-of-substrings-containing-all-three-characters",
+      "description": "Given a string `s` consisting only of characters a, b and c.\n\nReturn the number of substrings containing at least one occurrence of all these characters a, b and c.\n\nExample 1:\n\nInput: s = \"abcabc\"\nOutput: 10\nExplanation: The substrings containing at least one occurrence of the characters a, b and c are \"abc\", \"abca\", \"abcab\", \"abcabc\", \"bca\", \"bcab\", \"bcabc\", \"cab\", \"cabc\" and \"abc\" (again).\n\nExample 2:\n\nInput: s = \"aaacb\"\nOutput: 3\nExplanation: The substrings containing at least one occurrence of the characters a, b and c are \"aaacb\", \"aacb\" and \"acb\".\n\nExample 3:\n\nInput: s = \"abc\"\nOutput: 1\n\nConstraints:\n\n\t- `3 <= s.length <= 5 x 10^4`\n\n\t- `s` only consists of a, b or c characters.",
+      "functionName": "numberOfSubstrings",
+      "starterCode": "/**\n * @param {string} s\n * @return {number}\n */\n\nglobalThis.numberOfSubstrings = function(s) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "1482-how-many-numbers-are-smaller-than-the-current-number",
+      "number": 1482,
+      "title": "How Many Numbers Are Smaller Than the Current Number",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number",
+      "description": "Given the array `nums`, for each `nums[i]` find out how many numbers in the array are smaller than it. That is, for each `nums[i]` you have to count the number of valid `j's` such that `j != i` and `nums[j] < nums[i]`.\n\nReturn the answer in an array.\n\nExample 1:\n\nInput: nums = [8,1,2,2,3]\nOutput: [4,0,1,1,3]\nExplanation:\nFor nums[0]=8 there exist four smaller numbers than it (1, 2, 2 and 3).\nFor nums[1]=1 does not exist any smaller number than it.\nFor nums[2]=2 there exist one smaller number than it (1).\nFor nums[3]=2 there exist one smaller number than it (1).\nFor nums[4]=3 there exist three smaller numbers than it (1, 2 and 2).\n\nExample 2:\n\nInput: nums = [6,5,4,8]\nOutput: [2,1,0,3]\n\nExample 3:\n\nInput: nums = [7,7,7,7]\nOutput: [0,0,0,0]\n\nConstraints:\n\n\t- `2 <= nums.length <= 500`\n\n\t- `0 <= nums[i] <= 100`",
+      "functionName": "smallerNumbersThanCurrent",
+      "starterCode": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\n\nglobalThis.smallerNumbersThanCurrent = function(nums) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              8,
+              1,
+              2,
+              2,
+              3
+            ]
+          ],
+          "expected": [
+            4,
+            0,
+            1,
+            1,
+            3
+          ]
+        },
+        {
+          "args": [
+            [
+              6,
+              5,
+              4,
+              8
+            ]
+          ],
+          "expected": [
+            2,
+            1,
+            0,
+            3
+          ]
+        },
+        {
+          "args": [
+            [
+              7,
+              7,
+              7,
+              7
+            ]
+          ],
+          "expected": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1552-build-an-array-with-stack-operations",
+      "number": 1552,
+      "title": "Build an Array With Stack Operations",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/build-an-array-with-stack-operations",
+      "description": "You are given an integer array `target` and an integer `n`.\n\nYou have an empty stack with the two following operations:\n\n\t- `\"Push\"`: pushes an integer to the top of the stack.\n\n\t- `\"Pop\"`: removes the integer on the top of the stack.\n\nYou also have a stream of the integers in the range `[1, n]`.\n\nUse the two stack operations to make the numbers in the stack (from the bottom to the top) equal to `target`. You should follow the following rules:\n\n\t- If the stream of the integers is not empty, pick the next integer from the stream and push it to the top of the stack.\n\n\t- If the stack is not empty, pop the integer at the top of the stack.\n\n\t- If, at any moment, the elements in the stack (from the bottom to the top) are equal to `target`, do not read new integers from the stream and do not do more operations on the stack.\n\nReturn the stack operations needed to build `target` following the mentioned rules. If there are multiple valid answers, return any of them.\n\nExample 1:\n\nInput: target = [1,3], n = 3\nOutput: [\"Push\",\"Push\",\"Pop\",\"Push\"]\nExplanation: Initially the stack s is empty. The last element is the top of the stack.\nRead 1 from the stream and push it to the stack. s = [1].\nRead 2 from the stream and push it to the stack. s = [1,2].\nPop the integer on the top of the stack. s = [1].\nRead 3 from the stream and push it to the stack. s = [1,3].\n\nExample 2:\n\nInput: target = [1,2,3], n = 3\nOutput: [\"Push\",\"Push\",\"Push\"]\nExplanation: Initially the stack s is empty. The last element is the top of the stack.\nRead 1 from the stream and push it to the stack. s = [1].\nRead 2 from the stream and push it to the stack. s = [1,2].\nRead 3 from the stream and push it to the stack. s = [1,2,3].\n\nExample 3:\n\nInput: target = [1,2], n = 4\nOutput: [\"Push\",\"Push\"]\nExplanation: Initially the stack s is empty. The last element is the top of the stack.\nRead 1 from the stream and push it to the stack. s = [1].\nRead 2 from the stream and push it to the stack. s = [1,2].\nSince the stack (from the bottom to the top) is equal to target, we stop the stack operations.\nThe answers that read integer 3 from the stream are not accepted.\n\nConstraints:\n\n\t- `1 <= target.length <= 100`\n\n\t- `1 <= n <= 100`\n\n\t- `1 <= target[i] <= n`\n\n\t- `target` is strictly increasing.",
+      "functionName": "buildArray",
+      "starterCode": "/**\n * @param {number[]} target\n * @param {number} n\n * @return {string[]}\n */\n\nglobalThis.buildArray = function(target, n) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "1570-final-prices-with-a-special-discount-in-a-shop",
+      "number": 1570,
+      "title": "Final Prices With a Special Discount in a Shop",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop",
+      "description": "You are given an integer array `prices` where `prices[i]` is the price of the `i^th` item in a shop.\n\nThere is a special discount for items in the shop. If you buy the `i^th` item, then you will receive a discount equivalent to `prices[j]` where `j` is the minimum index such that `j > i` and `prices[j] <= prices[i]`. Otherwise, you will not receive any discount at all.\n\nReturn an integer array `answer` where `answer[i]` is the final price you will pay for the `i^th` item of the shop, considering the special discount.\n\nExample 1:\n\nInput: prices = [8,4,6,2,3]\nOutput: [4,2,4,2,3]\nExplanation:\nFor item 0 with price[0]=8 you will receive a discount equivalent to prices[1]=4, therefore, the final price you will pay is 8 - 4 = 4.\nFor item 1 with price[1]=4 you will receive a discount equivalent to prices[3]=2, therefore, the final price you will pay is 4 - 2 = 2.\nFor item 2 with price[2]=6 you will receive a discount equivalent to prices[3]=2, therefore, the final price you will pay is 6 - 2 = 4.\nFor items 3 and 4 you will not receive any discount at all.\n\nExample 2:\n\nInput: prices = [1,2,3,4,5]\nOutput: [1,2,3,4,5]\nExplanation: In this case, for all items, you will not receive any discount at all.\n\nExample 3:\n\nInput: prices = [10,1,1,6]\nOutput: [9,0,1,6]\n\nConstraints:\n\n\t- `1 <= prices.length <= 500`\n\n\t- `1 <= prices[i] <= 1000`",
+      "functionName": "finalPrices",
+      "starterCode": "/**\n * @param {number[]} prices\n * @return {number[]}\n */\n\nglobalThis.finalPrices = function(prices) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              8,
+              4,
+              6,
+              2,
+              3
+            ]
+          ],
+          "expected": [
+            4,
+            2,
+            4,
+            2,
+            3
+          ]
+        },
+        {
+          "args": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "expected": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "args": [
+            [
+              10,
+              1,
+              1,
+              6
+            ]
+          ],
+          "expected": [
+            9,
+            0,
+            1,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1580-shuffle-the-array",
+      "number": 1580,
+      "title": "Shuffle the Array",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/shuffle-the-array",
+      "description": "Given the array `nums` consisting of `2n` elements in the form `[x1,x2,...,xn,y1,y2,...,yn]`.\n\nReturn the array in the form `[x1,y1,x2,y2,...,xn,yn]`.\n\nExample 1:\n\nInput: nums = [2,5,1,3,4,7], n = 3\nOutput: [2,3,5,4,1,7]\nExplanation: Since x1=2, x2=5, x3=1, y1=3, y2=4, y3=7 then the answer is [2,3,5,4,1,7].\n\nExample 2:\n\nInput: nums = [1,2,3,4,4,3,2,1], n = 4\nOutput: [1,4,2,3,3,2,4,1]\n\nExample 3:\n\nInput: nums = [1,1,2,2], n = 2\nOutput: [1,2,1,2]\n\nConstraints:\n\n\t- `1 <= n <= 500`\n\n\t- `nums.length == 2n`\n\n\t- `1 <= nums[i] <= 10^3`",
+      "functionName": "shuffle",
+      "starterCode": "/**\n * @param {number[]} nums\n * @param {number} n\n * @return {number[]}\n */\n\nglobalThis.shuffle = function(nums, n) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              2,
+              5,
+              1,
+              3,
+              4,
+              7
+            ],
+            3
+          ],
+          "expected": [
+            2,
+            3,
+            5,
+            4,
+            1,
+            7
+          ]
+        },
+        {
+          "args": [
+            [
+              1,
+              2,
+              3,
+              4,
+              4,
+              3,
+              2,
+              1
+            ],
+            4
+          ],
+          "expected": [
+            1,
+            4,
+            2,
+            3,
+            3,
+            2,
+            4,
+            1
+          ]
+        },
+        {
+          "args": [
+            [
+              1,
+              1,
+              2,
+              2
+            ],
+            2
+          ],
+          "expected": [
+            1,
+            2,
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1603-running-sum-of-1d-array",
+      "number": 1603,
+      "title": "Running Sum of 1d Array",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/running-sum-of-1d-array",
+      "description": "Given an array `nums`. We define a running sum of an array as `runningSum[i] = sum(nums[0]...nums[i])`.\n\nReturn the running sum of `nums`.\n\nExample 1:\n\nInput: nums = [1,2,3,4]\nOutput: [1,3,6,10]\nExplanation: Running sum is obtained as follows: [1, 1+2, 1+2+3, 1+2+3+4].\n\nExample 2:\n\nInput: nums = [1,1,1,1,1]\nOutput: [1,2,3,4,5]\nExplanation: Running sum is obtained as follows: [1, 1+1, 1+1+1, 1+1+1+1, 1+1+1+1+1].\n\nExample 3:\n\nInput: nums = [3,1,2,10,1]\nOutput: [3,4,6,16,17]\n\nConstraints:\n\n\t- `1 <= nums.length <= 1000`\n\n\t- `-10^6 <= nums[i] <= 10^6`",
+      "functionName": "runningSum",
+      "starterCode": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\n\nglobalThis.runningSum = function(nums) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "expected": [
+            1,
+            3,
+            6,
+            10
+          ]
+        },
+        {
+          "args": [
+            [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "expected": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "args": [
+            [
+              3,
+              1,
+              2,
+              10,
+              1
+            ]
+          ],
+          "expected": [
+            3,
+            4,
+            6,
+            16,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1791-richest-customer-wealth",
+      "number": 1791,
+      "title": "Richest Customer Wealth",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/richest-customer-wealth",
+      "description": "You are given an `m x n` integer grid `accounts` where `accounts[i][j]` is the amount of money the `i​​​​​^​​​​​​th​​​​` customer has in the `j​​​​​^​​​​​​th`​​​​ bank. Return the wealth that the richest customer has.\n\nA customer's wealth is the amount of money they have in all their bank accounts. The richest customer is the customer that has the maximum wealth.\n\nExample 1:\n\nInput: accounts = [[1,2,3],[3,2,1]]\nOutput: 6\nExplanation:\n`1st customer has wealth = 1 + 2 + 3 = 6\n``2nd customer has wealth = 3 + 2 + 1 = 6\n`Both customers are considered the richest with a wealth of 6 each, so return 6.\n\nExample 2:\n\nInput: accounts = [[1,5],[7,3],[3,5]]\nOutput: 10\nExplanation:\n1st customer has wealth = 6\n2nd customer has wealth = 10\n3rd customer has wealth = 8\nThe 2nd customer is the richest with a wealth of 10.\n\nExample 3:\n\nInput: accounts = [[2,8,7],[7,1,3],[1,9,5]]\nOutput: 17\n\nConstraints:\n\n\t- `m == accounts.length`\n\n\t- `n == accounts[i].length`\n\n\t- `1 <= m, n <= 50`\n\n\t- `1 <= accounts[i][j] <= 100`",
+      "functionName": "maximumWealth",
+      "starterCode": "/**\n * @param {number[][]} accounts\n * @return {number}\n */\n\nglobalThis.maximumWealth = function(accounts) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              [
+                1,
+                2,
+                3
+              ],
+              [
+                3,
+                2,
+                1
+              ]
+            ]
+          ],
+          "expected": 6
+        },
+        {
+          "args": [
+            [
+              [
+                1,
+                5
+              ],
+              [
+                7,
+                3
+              ],
+              [
+                3,
+                5
+              ]
+            ]
+          ],
+          "expected": 10
+        },
+        {
+          "args": [
+            [
+              [
+                2,
+                8,
+                7
+              ],
+              [
+                7,
+                1,
+                3
+              ],
+              [
+                1,
+                9,
+                5
+              ]
+            ]
+          ],
+          "expected": 17
+        }
+      ]
+    },
+    {
+      "id": "1960-check-if-the-sentence-is-pangram",
+      "number": 1960,
+      "title": "Check if the Sentence Is Pangram",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/check-if-the-sentence-is-pangram",
+      "description": "A pangram is a sentence where every letter of the English alphabet appears at least once.\n\nGiven a string `sentence` containing only lowercase English letters, return `true` if `sentence` is a pangram, or `false` otherwise.\n\nExample 1:\n\nInput: sentence = \"thequickbrownfoxjumpsoverthelazydog\"\nOutput: true\nExplanation: sentence contains at least one of every letter of the English alphabet.\n\nExample 2:\n\nInput: sentence = \"leetcode\"\nOutput: false\n\nConstraints:\n\n\t- `1 <= sentence.length <= 1000`\n\n\t- `sentence` consists of lowercase English letters.",
+      "functionName": "checkIfPangram",
+      "starterCode": "/**\n * @param {string} sentence\n * @return {boolean}\n */\n\nglobalThis.checkIfPangram = function(sentence) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "2058-concatenation-of-array",
+      "number": 2058,
+      "title": "Concatenation of Array",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/concatenation-of-array",
+      "description": "Given an integer array `nums` of length `n`, you want to create an array `ans` of length `2n` where `ans[i] == nums[i]` and `ans[i + n] == nums[i]` for `0 <= i < n` (0-indexed).\n\nSpecifically, `ans` is the concatenation of two `nums` arrays.\n\nReturn the array `ans`.\n\nExample 1:\n\nInput: nums = [1,2,1]\nOutput: [1,2,1,1,2,1]\nExplanation: The array ans is formed as follows:\n- ans = [nums[0],nums[1],nums[2],nums[0],nums[1],nums[2]]\n- ans = [1,2,1,1,2,1]\n\nExample 2:\n\nInput: nums = [1,3,2,1]\nOutput: [1,3,2,1,1,3,2,1]\nExplanation: The array ans is formed as follows:\n- ans = [nums[0],nums[1],nums[2],nums[3],nums[0],nums[1],nums[2],nums[3]]\n- ans = [1,3,2,1,1,3,2,1]\n\nConstraints:\n\n\t- `n == nums.length`\n\n\t- `1 <= n <= 1000`\n\n\t- `1 <= nums[i] <= 1000`",
+      "functionName": "getConcatenation",
+      "starterCode": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\n\nglobalThis.getConcatenation = function(nums) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              1
+            ]
+          ],
+          "expected": [
+            1,
+            2,
+            1,
+            1,
+            2,
+            1
+          ]
+        },
+        {
+          "args": [
+            [
+              1,
+              3,
+              2,
+              1
+            ]
+          ],
+          "expected": [
+            1,
+            3,
+            2,
+            1,
+            1,
+            3,
+            2,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2099-number-of-strings-that-appear-as-substrings-in-word",
+      "number": 2099,
+      "title": "Number of Strings That Appear as Substrings in Word",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/number-of-strings-that-appear-as-substrings-in-word",
+      "description": "Given an array of strings `patterns` and a string `word`, return the number of strings in `patterns` that exist as a substring in `word`.\n\nA substring is a contiguous sequence of characters within a string.\n\nExample 1:\n\nInput: patterns = [\"a\",\"abc\",\"bc\",\"d\"], word = \"abc\"\nOutput: 3\nExplanation:\n- \"a\" appears as a substring in \"abc\".\n- \"abc\" appears as a substring in \"abc\".\n- \"bc\" appears as a substring in \"abc\".\n- \"d\" does not appear as a substring in \"abc\".\n3 of the strings in patterns appear as a substring in word.\n\nExample 2:\n\nInput: patterns = [\"a\",\"b\",\"c\"], word = \"aaaaabbbbb\"\nOutput: 2\nExplanation:\n- \"a\" appears as a substring in \"aaaaabbbbb\".\n- \"b\" appears as a substring in \"aaaaabbbbb\".\n- \"c\" does not appear as a substring in \"aaaaabbbbb\".\n2 of the strings in patterns appear as a substring in word.\n\nExample 3:\n\nInput: patterns = [\"a\",\"a\",\"a\"], word = \"ab\"\nOutput: 3\nExplanation: Each of the patterns appears as a substring in word \"ab\".\n\nConstraints:\n\n\t- `1 <= patterns.length <= 100`\n\n\t- `1 <= patterns[i].length <= 100`\n\n\t- `1 <= word.length <= 100`\n\n\t- `patterns[i]` and `word` consist of lowercase English letters.",
+      "functionName": "numOfStrings",
+      "starterCode": "/**\n * @param {string[]} patterns\n * @param {string} word\n * @return {number}\n */\n\nglobalThis.numOfStrings = function(patterns, word) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "2582-minimum-score-of-a-path-between-two-cities",
+      "number": 2582,
+      "title": "Minimum Score of a Path Between Two Cities",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/minimum-score-of-a-path-between-two-cities",
+      "description": "You are given a positive integer `n` representing `n` cities numbered from `1` to `n`. You are also given a 2D array `roads` where `roads[i] = [ai, bi, distancei]` indicates that there is a bidirectional road between cities `ai` and `bi` with a distance equal to `distancei`. The cities graph is not necessarily connected.\n\nThe score of a path between two cities is defined as the minimum distance of a road in this path.\n\nReturn the minimum possible score of a path between cities `1` and `n`.\n\nNote:\n\n\t- A path is a sequence of roads between two cities.\n\n\t- It is allowed for a path to contain the same road multiple times, and you can visit cities `1` and `n` multiple times along the path.\n\n\t- The test cases are generated such that there is at least one path between `1` and `n`.\n\nExample 1:\n\nInput: n = 4, roads = [[1,2,9],[2,3,6],[2,4,5],[1,4,7]]\nOutput: 5\nExplanation: The path from city 1 to 4 with the minimum score is: 1 -> 2 -> 4. The score of this path is min(9,5) = 5.\nIt can be shown that no other path has less score.\n\nExample 2:\n\nInput: n = 4, roads = [[1,2,2],[1,3,4],[3,4,7]]\nOutput: 2\nExplanation: The path from city 1 to 4 with the minimum score is: 1 -> 2 -> 1 -> 3 -> 4. The score of this path is min(2,2,4,7) = 2.\n\nConstraints:\n\n\t- `2 <= n <= 10^5`\n\n\t- `1 <= roads.length <= 10^5`\n\n\t- `roads[i].length == 3`\n\n\t- `1 <= ai, bi <= n`\n\n\t- `ai != bi`\n\n\t- `1 <= distancei <= 10^4`\n\n\t- There are no repeated edges.\n\n\t- There is at least one path between `1` and `n`.",
+      "functionName": "minScore",
+      "starterCode": "/**\n * @param {number} n\n * @param {number[][]} roads\n * @return {number}\n */\n\nglobalThis.minScore = function(n, roads) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            4,
+            [
+              [
+                1,
+                2,
+                9
+              ],
+              [
+                2,
+                3,
+                6
+              ],
+              [
+                2,
+                4,
+                5
+              ],
+              [
+                1,
+                4,
+                7
+              ]
+            ]
+          ],
+          "expected": 5
+        },
+        {
+          "args": [
+            4,
+            [
+              [
+                1,
+                2,
+                2
+              ],
+              [
+                1,
+                3,
+                4
+              ],
+              [
+                3,
+                4,
+                7
+              ]
+            ]
+          ],
+          "expected": 2
+        }
+      ]
+    },
+    {
+      "id": "2605-count-anagrams",
+      "number": 2605,
+      "title": "Count Anagrams",
+      "difficulty": "Hard",
+      "url": "https://leetcode.com/problems/count-anagrams",
+      "description": "You are given a string `s` containing one or more words. Every consecutive pair of words is separated by a single space `' '`.\n\nA string `t` is an anagram of string `s` if the `i^th` word of `t` is a permutation of the `i^th` word of `s`.\n\n\t- For example, `\"acb dfe\"` is an anagram of `\"abc def\"`, but `\"def cab\"` and `\"adc bef\"` are not.\n\nReturn the number of distinct anagrams of `s`. Since the answer may be very large, return it modulo `10^9 + 7`.\n\nExample 1:\n\nInput: s = \"too hot\"\nOutput: 18\nExplanation: Some of the anagrams of the given string are \"too hot\", \"oot hot\", \"oto toh\", \"too toh\", and \"too oht\".\n\nExample 2:\n\nInput: s = \"aa\"\nOutput: 1\nExplanation: There is only one anagram possible for the given string.\n\nConstraints:\n\n\t- `1 <= s.length <= 10^5`\n\n\t- `s` consists of lowercase English letters and spaces `' '`.\n\n\t- There is single space between consecutive words.",
+      "functionName": "countAnagrams",
+      "starterCode": "/**\n * @param {string} s\n * @return {number}\n */\n\nglobalThis.countAnagrams = function(s) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "2914-find-the-safest-path-in-a-grid",
+      "number": 2914,
+      "title": "Find the Safest Path in a Grid",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/find-the-safest-path-in-a-grid",
+      "description": "You are given a 0-indexed 2D matrix `grid` of size `n x n`, where `(r, c)` represents:\n\n\t- A cell containing a thief if `grid[r][c] = 1`\n\n\t- An empty cell if `grid[r][c] = 0`\n\nYou are initially positioned at cell `(0, 0)`. In one move, you can move to any adjacent cell in the grid, including cells containing thieves.\n\nThe safeness factor of a path on the grid is defined as the minimum manhattan distance from any cell in the path to any thief in the grid.\n\nReturn the maximum safeness factor of all paths leading to cell `(n - 1, n - 1)`.\n\nAn adjacent cell of cell `(r, c)`, is one of the cells `(r, c + 1)`, `(r, c - 1)`, `(r + 1, c)` and `(r - 1, c)` if it exists.\n\nThe Manhattan distance between two cells `(a, b)` and `(x, y)` is equal to `|a - x| + |b - y|`, where `|val|` denotes the absolute value of val.\n\nExample 1:\n\nInput: grid = [[1,0,0],[0,0,0],[0,0,1]]\nOutput: 0\nExplanation: All paths from (0, 0) to (n - 1, n - 1) go through the thieves in cells (0, 0) and (n - 1, n - 1).\n\nExample 2:\n\nInput: grid = [[0,0,1],[0,0,0],[0,0,0]]\nOutput: 2\nExplanation: The path depicted in the picture above has a safeness factor of 2 since:\n- The closest cell of the path to the thief at cell (0, 2) is cell (0, 0). The distance between them is | 0 - 0 | + | 0 - 2 | = 2.\nIt can be shown that there are no other paths with a higher safeness factor.\n\nExample 3:\n\nInput: grid = [[0,0,0,1],[0,0,0,0],[0,0,0,0],[1,0,0,0]]\nOutput: 2\nExplanation: The path depicted in the picture above has a safeness factor of 2 since:\n- The closest cell of the path to the thief at cell (0, 3) is cell (1, 2). The distance between them is | 0 - 1 | + | 3 - 2 | = 2.\n- The closest cell of the path to the thief at cell (3, 0) is cell (3, 2). The distance between them is | 3 - 3 | + | 0 - 2 | = 2.\nIt can be shown that there are no other paths with a higher safeness factor.\n\nConstraints:\n\n\t- `1 <= grid.length == n <= 400`\n\n\t- `grid[i].length == n`\n\n\t- `grid[i][j]` is either `0` or `1`.\n\n\t- There is at least one thief in the `grid`.",
+      "functionName": "maximumSafenessFactor",
+      "starterCode": "/**\n * @param {number[][]} grid\n * @return {number}\n */\n\nglobalThis.maximumSafenessFactor = function(grid) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ]
+            ]
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            [
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ]
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            [
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0
+              ]
+            ]
+          ],
+          "expected": 2
+        }
+      ]
+    },
+    {
+      "id": "3236-smallest-missing-integer-greater-than-sequential-prefix-sum",
+      "number": 3236,
+      "title": "Smallest Missing Integer Greater Than Sequential Prefix Sum",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/smallest-missing-integer-greater-than-sequential-prefix-sum",
+      "description": "You are given a 0-indexed array of integers `nums`.\n\nA prefix `nums[0..i]` is sequential if, for all `1 <= j <= i`, `nums[j] = nums[j - 1] + 1`. In particular, the prefix consisting only of `nums[0]` is sequential.\n\nReturn the smallest integer `x` missing from `nums` such that `x` is greater than or equal to the sum of the longest sequential prefix.\n\nExample 1:\n\nInput: nums = [1,2,3,2,5]\nOutput: 6\nExplanation: The longest sequential prefix of nums is [1,2,3] with a sum of 6. 6 is not in the array, therefore 6 is the smallest missing integer greater than or equal to the sum of the longest sequential prefix.\n\nExample 2:\n\nInput: nums = [3,4,5,1,12,14,13]\nOutput: 15\nExplanation: The longest sequential prefix of nums is [3,4,5] with a sum of 12. 12, 13, and 14 belong to the array while 15 does not. Therefore 15 is the smallest missing integer greater than or equal to the sum of the longest sequential prefix.\n\nConstraints:\n\n\t- `1 <= nums.length <= 50`\n\n\t- `1 <= nums[i] <= 50`",
+      "functionName": "missingInteger",
+      "starterCode": "/**\n * @param {number[]} nums\n * @return {number}\n */\n\nglobalThis.missingInteger = function(nums) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3,
+              2,
+              5
+            ]
+          ],
+          "expected": 6
+        },
+        {
+          "args": [
+            [
+              3,
+              4,
+              5,
+              1,
+              12,
+              14,
+              13
+            ]
+          ],
+          "expected": 15
+        }
+      ]
+    },
+    {
+      "id": "3558-find-a-safe-walk-through-a-grid",
+      "number": 3558,
+      "title": "Find a Safe Walk Through a Grid",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/find-a-safe-walk-through-a-grid",
+      "description": "You are given an `m x n` binary matrix `grid` and an integer `health`.\n\nYou start on the upper-left corner `(0, 0)` and would like to get to the lower-right corner `(m - 1, n - 1)`.\n\nYou can move up, down, left, or right from one cell to another adjacent cell as long as your health remains positive.\n\nCells `(i, j)` with `grid[i][j] = 1` are considered unsafe and reduce your health by 1.\n\nReturn `true` if you can reach the final cell with a health value of 1 or more, and `false` otherwise.\n\nExample 1:\n\nInput: grid = [[0,1,0,0,0],[0,1,0,1,0],[0,0,0,1,0]], health = 1\n\nOutput: true\n\nExplanation:\n\nThe final cell can be reached safely by walking along the gray cells below.\n\nExample 2:\n\nInput: grid = [[0,1,1,0,0,0],[1,0,1,0,0,0],[0,1,1,1,0,1],[0,0,1,0,1,0]], health = 3\n\nOutput: false\n\nExplanation:\n\nA minimum of 4 health points is needed to reach the final cell safely.\n\nExample 3:\n\nInput: grid = [[1,1,1],[1,0,1],[1,1,1]], health = 5\n\nOutput: true\n\nExplanation:\n\nThe final cell can be reached safely by walking along the gray cells below.\n\nAny path that does not go through the cell `(1, 1)` is unsafe since your health will drop to 0 when reaching the final cell.\n\nConstraints:\n\n\t- `m == grid.length`\n\n\t- `n == grid[i].length`\n\n\t- `1 <= m, n <= 50`\n\n\t- `2 <= m * n`\n\n\t- `1 <= health <= m + n`\n\n\t- `grid[i][j]` is either 0 or 1.",
+      "functionName": "findSafeWalk",
+      "starterCode": "/**\n * @param {number[][]} grid\n * @param {number} health\n * @return {boolean}\n */\n\nglobalThis.findSafeWalk = function(grid, health) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "3919-network-recovery-pathways",
+      "number": 3919,
+      "title": "Network Recovery Pathways",
+      "difficulty": "Hard",
+      "url": "https://leetcode.com/problems/network-recovery-pathways",
+      "description": "You are given a directed acyclic graph of `n` nodes numbered from 0 to `n &minus; 1`. This is represented by a 2D array edges of length `m`, where edges[i] = [ui, vi, costi] indicates a one‑way communication from node ui to node vi with a recovery cost of costi.\n\nSome nodes may be offline. You are given a boolean array online where online[i] = true means node i is online. Nodes 0 and `n &minus; 1` are always online.\n\nA path from 0 to `n &minus; 1` is valid if:\n\n\t- All intermediate nodes on the path are online.\n\n\tThe total recovery cost of all edges on the path does not exceed `k`.\n\nFor each valid path, define its score as the minimum edge‑cost along that path.\n\nReturn the maximum path score (i.e., the largest minimum-edge cost) among all valid paths. If no valid path exists, return -1.\n\nExample 1:\n\nInput: edges = [[0,1,5],[1,3,10],[0,2,3],[2,3,4]], online = [true,true,true,true], k = 10\n\nOutput: 3\n\nExplanation:\n\nThe graph has two possible routes from node 0 to node 3:\n\nPath `0 &rarr; 1 &rarr; 3`\n\nTotal cost = `5 + 10 = 15`, which exceeds k (`15 > 10`), so this path is invalid.\n\nPath `0 &rarr; 2 &rarr; 3`\n\nTotal cost = `3 + 4 = 7 <= k`, so this path is valid.\n\nThe minimum edge‐cost along this path is `min(3, 4) = 3`.\n\nThere are no other valid paths. Hence, the maximum among all valid path‐scores is 3.\n\nExample 2:\n\nInput: edges = [[0,1,7],[1,4,5],[0,2,6],[2,3,6],[3,4,2],[2,4,6]], online = [true,true,true,false,true], k = 12\n\nOutput: 6\n\nExplanation:\n\nNode 3 is offline, so any path passing through 3 is invalid.\n\nConsider the remaining routes from 0 to 4:\n\nPath `0 &rarr; 1 &rarr; 4`\n\nTotal cost = `7 + 5 = 12 <= k`, so this path is valid.\n\nThe minimum edge‐cost along this path is `min(7, 5) = 5`.\n\nPath `0 &rarr; 2 &rarr; 3 &rarr; 4`\n\nNode 3 is offline, so this path is invalid regardless of cost.\n\nPath `0 &rarr; 2 &rarr; 4`\n\nTotal cost = `6 + 6 = 12 <= k`, so this path is valid.\n\nThe minimum edge‐cost along this path is `min(6, 6) = 6`.\n\nAmong the two valid paths, their scores are 5 and 6. Therefore, the answer is 6.\n\nConstraints:\n\n\tn == online.length\n\t2 <= n <= 5 * 10^4\n\t0 <= m == edges.length <= `min(10^5, n * (n - 1) / 2)`\n\tedges[i] = [ui, vi, costi]\n\t0 <= ui, vi < n\n\tui != vi\n\t0 <= costi <= 10^9\n\t0 <= k <= 5 * 10^13\n\tonline[i] is either true or false, and both online[0] and online[n &minus; 1] are true.\n\tThe given graph is a directed acyclic graph.",
+      "functionName": "findMaxPathScore",
+      "starterCode": "/**\n * @param {number[][]} edges\n * @param {boolean[]} online\n * @param {number} k\n * @return {number}\n */\n\nglobalThis.findMaxPathScore = function(edges, online, k) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    }
+  ]
+}

@@ -89,6 +89,35 @@ globalThis.groupAnagrams = function(strs) {
     return Object.values(map);
 };
 
+// 150-evaluate-reverse-polish-notation (evalRPN)
+/**
+ * @param {string[]} tokens
+ * @return {number}
+ */
+globalThis.evalRPN = function(tokens) {
+    let stack = [];
+
+    for (let c of tokens) {
+        if (c === "+") {
+            stack.push(stack.pop() + stack.pop());
+        } else if (c === "-") {
+            let second = stack.pop();
+            let first = stack.pop();
+            stack.push(first - second);
+        } else if (c === "*") {
+            stack.push(stack.pop() * stack.pop());
+        } else if (c === "/") {
+            let second = stack.pop();
+            let first = stack.pop();
+            stack.push(parseInt(first / second));
+        } else {
+            stack.push(parseInt(c));
+        }
+    }
+
+    return stack[0]; 
+};
+
 // 636-exclusive-time-of-functions (exclusiveTime)
 /**
  * @param {number} n
@@ -140,6 +169,31 @@ globalThis.repeatedStringMatch = function(a, b) {
     return -1;
 };
 
+// 739-daily-temperatures (dailyTemperatures)
+/**
+ * @param {number[]} temperatures
+ * @return {number[]}
+ */
+globalThis.dailyTemperatures = function(temperatures) {
+    const n = temperatures.length;
+    const answer = new Array(n).fill(0);
+    const stack = []; // stores indices
+
+    for (let i = 0; i < n; i++) {
+        while (
+            stack.length &&
+            temperatures[i] > temperatures[stack[stack.length - 1]]
+        ) {
+            const prevIndex = stack.pop();
+            answer[prevIndex] = i - prevIndex;
+        }
+
+        stack.push(i);
+    }
+
+    return answer;
+};
+
 // 1460-number-of-substrings-containing-all-three-characters (numberOfSubstrings)
 /**
  * @param {string} s
@@ -158,6 +212,29 @@ globalThis.numberOfSubstrings = function(s) {
         }
     }
     return ans;
+};
+
+// 1552-build-an-array-with-stack-operations (buildArray)
+/**
+ * @param {number[]} target
+ * @param {number} n
+ * @return {string[]}
+ */
+globalThis.buildArray = function(target, n) {
+    const result = [];
+    let i = 0;
+
+    for (let num = 1; num <= n && i < target.length; num++) {
+        if (num === target[i]) {
+            result.push('Push');
+            i++;
+        } else {
+            result.push('Push');
+            result.push('Pop');
+        }
+    }
+
+    return result;
 };
 
 // 2582-minimum-score-of-a-path-between-two-cities (minScore)
@@ -371,6 +448,13 @@ const PROBLEM_TESTS = [
     "cases": []
   },
   {
+    "id": "150-evaluate-reverse-polish-notation",
+    "fn": "evalRPN",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": []
+  },
+  {
     "id": "636-exclusive-time-of-functions",
     "fn": "exclusiveTime",
     "usesListNode": false,
@@ -412,8 +496,77 @@ const PROBLEM_TESTS = [
     "cases": []
   },
   {
+    "id": "739-daily-temperatures",
+    "fn": "dailyTemperatures",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": [
+      {
+        "args": [
+          [
+            73,
+            74,
+            75,
+            71,
+            69,
+            72,
+            76,
+            73
+          ]
+        ],
+        "expected": [
+          1,
+          1,
+          4,
+          2,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "args": [
+          [
+            30,
+            40,
+            50,
+            60
+          ]
+        ],
+        "expected": [
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "args": [
+          [
+            30,
+            60,
+            90
+          ]
+        ],
+        "expected": [
+          1,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
     "id": "1460-number-of-substrings-containing-all-three-characters",
     "fn": "numberOfSubstrings",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": []
+  },
+  {
+    "id": "1552-build-an-array-with-stack-operations",
+    "fn": "buildArray",
     "usesListNode": false,
     "mutatesInput": false,
     "cases": []

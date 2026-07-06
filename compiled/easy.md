@@ -1,6 +1,6 @@
 # LeetCode Easy Problems
 
-36 problem(s)
+39 problem(s)
 
 ## 1-two-sum
 
@@ -1386,6 +1386,68 @@ _No solution file found._
 
 ---
 
+## 242-valid-anagram
+
+### Problem
+
+<h2><a href="https://leetcode.com/problems/valid-anagram">Valid Anagram</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given two strings <code>s</code> and <code>t</code>, return <code>true</code> if <code>t</code> is an <span data-keyword="anagram">anagram</span> of <code>s</code>, and <code>false</code> otherwise.</p>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+
+<div class="example-block">
+<p><strong>Input:</strong> <span class="example-io">s = &quot;anagram&quot;, t = &quot;nagaram&quot;</span></p>
+
+<p><strong>Output:</strong> <span class="example-io">true</span></p>
+</div>
+
+<p><strong class="example">Example 2:</strong></p>
+
+<div class="example-block">
+<p><strong>Input:</strong> <span class="example-io">s = &quot;rat&quot;, t = &quot;car&quot;</span></p>
+
+<p><strong>Output:</strong> <span class="example-io">false</span></p>
+</div>
+
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>1 &lt;= s.length, t.length &lt;= 5 * 10<sup>4</sup></code></li>
+	<li><code>s</code> and <code>t</code> consist of lowercase English letters.</li>
+</ul>
+
+<p>&nbsp;</p>
+<p><strong>Follow up:</strong> What if the inputs contain Unicode characters? How would you adapt your solution to such a case?</p>
+
+### Solution
+
+```javascript
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
+ */
+var isAnagram = function(s, t) {
+    if (s.length !== t.length) return false;
+
+    const count = {};
+
+    for (let char of s) {
+        count[char] = (count[char] || 0) + 1;
+    }
+
+    for (let char of t) {
+        if (!count[char]) return false;
+        count[char]--;
+    }
+
+    return true;
+};
+```
+
+---
+
 ## 283-move-zeroes
 
 ### Problem
@@ -1586,6 +1648,60 @@ var isSubsequence = function(s, t) {
 var addStrings = function(num1, num2) {
     ans = BigInt(num1) + BigInt(num2);
     return ans.toString();
+};
+```
+
+---
+
+## 448-find-all-numbers-disappeared-in-an-array
+
+### Problem
+
+<h2><a href="https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array">Find All Numbers Disappeared in an Array</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given an array <code>nums</code> of <code>n</code> integers where <code>nums[i]</code> is in the range <code>[1, n]</code>, return <em>an array of all the integers in the range</em> <code>[1, n]</code> <em>that do not appear in</em> <code>nums</code>.</p>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+<pre><strong>Input:</strong> nums = [4,3,2,7,8,2,3,1]
+<strong>Output:</strong> [5,6]
+</pre><p><strong class="example">Example 2:</strong></p>
+<pre><strong>Input:</strong> nums = [1,1]
+<strong>Output:</strong> [2]
+</pre>
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>n == nums.length</code></li>
+	<li><code>1 &lt;= n &lt;= 10<sup>5</sup></code></li>
+	<li><code>1 &lt;= nums[i] &lt;= n</code></li>
+</ul>
+
+<p>&nbsp;</p>
+<p><strong>Follow up:</strong> Could you do it without extra space and in <code>O(n)</code> runtime? You may assume the returned list does not count as extra space.</p>
+
+### Solution
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var findDisappearedNumbers = function(nums) {
+    const n = nums.length;
+    const freq = new Array(n + 1).fill(0);
+    const result = []
+
+    for (const num of nums) {
+        freq[num]++;
+    }
+
+    for (let i = 1; i <= n; i++){
+        if (freq[i] == 0) {
+            result.push(i)
+        }
+    }
+    
+    return result
 };
 ```
 
@@ -1901,6 +2017,82 @@ var smallerNumbersThanCurrent = function(nums) {
     }
 
     return count;
+};
+```
+
+---
+
+## 1570-final-prices-with-a-special-discount-in-a-shop
+
+### Problem
+
+<h2><a href="https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop">Final Prices With a Special Discount in a Shop</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>You are given an integer array <code>prices</code> where <code>prices[i]</code> is the price of the <code>i<sup>th</sup></code> item in a shop.</p>
+
+<p>There is a special discount for items in the shop. If you buy the <code>i<sup>th</sup></code> item, then you will receive a discount equivalent to <code>prices[j]</code> where <code>j</code> is the minimum index such that <code>j &gt; i</code> and <code>prices[j] &lt;= prices[i]</code>. Otherwise, you will not receive any discount at all.</p>
+
+<p>Return an integer array <code>answer</code> where <code>answer[i]</code> is the final price you will pay for the <code>i<sup>th</sup></code> item of the shop, considering the special discount.</p>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+
+<pre>
+<strong>Input:</strong> prices = [8,4,6,2,3]
+<strong>Output:</strong> [4,2,4,2,3]
+<strong>Explanation:</strong> 
+For item 0 with price[0]=8 you will receive a discount equivalent to prices[1]=4, therefore, the final price you will pay is 8 - 4 = 4.
+For item 1 with price[1]=4 you will receive a discount equivalent to prices[3]=2, therefore, the final price you will pay is 4 - 2 = 2.
+For item 2 with price[2]=6 you will receive a discount equivalent to prices[3]=2, therefore, the final price you will pay is 6 - 2 = 4.
+For items 3 and 4 you will not receive any discount at all.
+</pre>
+
+<p><strong class="example">Example 2:</strong></p>
+
+<pre>
+<strong>Input:</strong> prices = [1,2,3,4,5]
+<strong>Output:</strong> [1,2,3,4,5]
+<strong>Explanation:</strong> In this case, for all items, you will not receive any discount at all.
+</pre>
+
+<p><strong class="example">Example 3:</strong></p>
+
+<pre>
+<strong>Input:</strong> prices = [10,1,1,6]
+<strong>Output:</strong> [9,0,1,6]
+</pre>
+
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>1 &lt;= prices.length &lt;= 500</code></li>
+	<li><code>1 &lt;= prices[i] &lt;= 1000</code></li>
+</ul>
+
+### Solution
+
+```javascript
+/**
+ * @param {number[]} prices
+ * @return {number[]}
+ */
+var finalPrices = function(prices) {
+    const n = prices.length;
+    const result = [...prices];
+    const stack = [];
+
+    for (let i = 0; i < n; i++) {
+        while (
+            stack.length &&
+            prices[stack[stack.length - 1]] >= prices[i]
+        ) {
+            const idx = stack.pop();
+            result[idx] -= prices[i];
+        }
+
+        stack.push(i);
+    }
+
+    return result;
 };
 ```
 

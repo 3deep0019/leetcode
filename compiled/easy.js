@@ -444,6 +444,29 @@ globalThis.containsDuplicate = function(nums) {
 // 219-contains-duplicate-ii — no solution file
 // Add your solution here
 
+// 242-valid-anagram (isAnagram)
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
+ */
+globalThis.isAnagram = function(s, t) {
+    if (s.length !== t.length) return false;
+
+    const count = {};
+
+    for (let char of s) {
+        count[char] = (count[char] || 0) + 1;
+    }
+
+    for (let char of t) {
+        if (!count[char]) return false;
+        count[char]--;
+    }
+
+    return true;
+};
+
 // 283-move-zeroes (moveZeroes)
 /**
  * @param {number[]} nums
@@ -505,6 +528,29 @@ globalThis.isSubsequence = function(s, t) {
 globalThis.addStrings = function(num1, num2) {
     ans = BigInt(num1) + BigInt(num2);
     return ans.toString();
+};
+
+// 448-find-all-numbers-disappeared-in-an-array (findDisappearedNumbers)
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+globalThis.findDisappearedNumbers = function(nums) {
+    const n = nums.length;
+    const freq = new Array(n + 1).fill(0);
+    const result = []
+
+    for (const num of nums) {
+        freq[num]++;
+    }
+
+    for (let i = 1; i <= n; i++){
+        if (freq[i] == 0) {
+            result.push(i)
+        }
+    }
+    
+    return result
 };
 
 // 459-repeated-substring-pattern (repeatedSubstringPattern)
@@ -608,6 +654,31 @@ globalThis.smallerNumbersThanCurrent = function(nums) {
     }
 
     return count;
+};
+
+// 1570-final-prices-with-a-special-discount-in-a-shop (finalPrices)
+/**
+ * @param {number[]} prices
+ * @return {number[]}
+ */
+globalThis.finalPrices = function(prices) {
+    const n = prices.length;
+    const result = [...prices];
+    const stack = [];
+
+    for (let i = 0; i < n; i++) {
+        while (
+            stack.length &&
+            prices[stack[stack.length - 1]] >= prices[i]
+        ) {
+            const idx = stack.pop();
+            result[idx] -= prices[i];
+        }
+
+        stack.push(i);
+    }
+
+    return result;
 };
 
 // 1580-shuffle-the-array (shuffle)
@@ -1164,6 +1235,13 @@ const PROBLEM_TESTS = [
     "cases": []
   },
   {
+    "id": "242-valid-anagram",
+    "fn": "isAnagram",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": []
+  },
+  {
     "id": "283-move-zeroes",
     "fn": "moveZeroes",
     "usesListNode": false,
@@ -1273,6 +1351,43 @@ const PROBLEM_TESTS = [
     "usesListNode": false,
     "mutatesInput": false,
     "cases": []
+  },
+  {
+    "id": "448-find-all-numbers-disappeared-in-an-array",
+    "fn": "findDisappearedNumbers",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": [
+      {
+        "args": [
+          [
+            4,
+            3,
+            2,
+            7,
+            8,
+            2,
+            3,
+            1
+          ]
+        ],
+        "expected": [
+          5,
+          6
+        ]
+      },
+      {
+        "args": [
+          [
+            1,
+            1
+          ]
+        ],
+        "expected": [
+          2
+        ]
+      }
+    ]
   },
   {
     "id": "459-repeated-substring-pattern",
@@ -1429,6 +1544,66 @@ const PROBLEM_TESTS = [
           0,
           0,
           0
+        ]
+      }
+    ]
+  },
+  {
+    "id": "1570-final-prices-with-a-special-discount-in-a-shop",
+    "fn": "finalPrices",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": [
+      {
+        "args": [
+          [
+            8,
+            4,
+            6,
+            2,
+            3
+          ]
+        ],
+        "expected": [
+          4,
+          2,
+          4,
+          2,
+          3
+        ]
+      },
+      {
+        "args": [
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        ],
+        "expected": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "args": [
+          [
+            10,
+            1,
+            1,
+            6
+          ]
+        ],
+        "expected": [
+          9,
+          0,
+          1,
+          6
         ]
       }
     ]

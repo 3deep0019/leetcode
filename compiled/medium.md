@@ -1,6 +1,6 @@
 # LeetCode Medium Problems
 
-8 problem(s)
+11 problem(s)
 
 ## 2-add-two-numbers
 
@@ -150,6 +150,98 @@ var groupAnagrams = function(strs) {
     }
 
     return Object.values(map);
+};
+```
+
+---
+
+## 150-evaluate-reverse-polish-notation
+
+### Problem
+
+<h2><a href="https://leetcode.com/problems/evaluate-reverse-polish-notation">Evaluate Reverse Polish Notation</a></h2> <img src='https://img.shields.io/badge/Difficulty-Medium-orange' alt='Difficulty: Medium' /><hr><p>You are given an array of strings <code>tokens</code> that represents an arithmetic expression in a <a href="http://en.wikipedia.org/wiki/Reverse_Polish_notation" target="_blank">Reverse Polish Notation</a>.</p>
+
+<p>Evaluate the expression. Return <em>an integer that represents the value of the expression</em>.</p>
+
+<p><strong>Note</strong> that:</p>
+
+<ul>
+	<li>The valid operators are <code>&#39;+&#39;</code>, <code>&#39;-&#39;</code>, <code>&#39;*&#39;</code>, and <code>&#39;/&#39;</code>.</li>
+	<li>Each operand may be an integer or another expression.</li>
+	<li>The division between two integers always <strong>truncates toward zero</strong>.</li>
+	<li>There will not be any division by zero.</li>
+	<li>The input represents a valid arithmetic expression in a reverse polish notation.</li>
+	<li>The answer and all the intermediate calculations can be represented in a <strong>32-bit</strong> integer.</li>
+</ul>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+
+<pre>
+<strong>Input:</strong> tokens = [&quot;2&quot;,&quot;1&quot;,&quot;+&quot;,&quot;3&quot;,&quot;*&quot;]
+<strong>Output:</strong> 9
+<strong>Explanation:</strong> ((2 + 1) * 3) = 9
+</pre>
+
+<p><strong class="example">Example 2:</strong></p>
+
+<pre>
+<strong>Input:</strong> tokens = [&quot;4&quot;,&quot;13&quot;,&quot;5&quot;,&quot;/&quot;,&quot;+&quot;]
+<strong>Output:</strong> 6
+<strong>Explanation:</strong> (4 + (13 / 5)) = 6
+</pre>
+
+<p><strong class="example">Example 3:</strong></p>
+
+<pre>
+<strong>Input:</strong> tokens = [&quot;10&quot;,&quot;6&quot;,&quot;9&quot;,&quot;3&quot;,&quot;+&quot;,&quot;-11&quot;,&quot;*&quot;,&quot;/&quot;,&quot;*&quot;,&quot;17&quot;,&quot;+&quot;,&quot;5&quot;,&quot;+&quot;]
+<strong>Output:</strong> 22
+<strong>Explanation:</strong> ((10 * (6 / ((9 + 3) * -11))) + 17) + 5
+= ((10 * (6 / (12 * -11))) + 17) + 5
+= ((10 * (6 / -132)) + 17) + 5
+= ((10 * 0) + 17) + 5
+= (0 + 17) + 5
+= 17 + 5
+= 22
+</pre>
+
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>1 &lt;= tokens.length &lt;= 10<sup>4</sup></code></li>
+	<li><code>tokens[i]</code> is either an operator: <code>&quot;+&quot;</code>, <code>&quot;-&quot;</code>, <code>&quot;*&quot;</code>, or <code>&quot;/&quot;</code>, or an integer in the range <code>[-200, 200]</code>.</li>
+</ul>
+
+### Solution
+
+```javascript
+/**
+ * @param {string[]} tokens
+ * @return {number}
+ */
+var evalRPN = function(tokens) {
+    let stack = [];
+
+    for (let c of tokens) {
+        if (c === "+") {
+            stack.push(stack.pop() + stack.pop());
+        } else if (c === "-") {
+            let second = stack.pop();
+            let first = stack.pop();
+            stack.push(first - second);
+        } else if (c === "*") {
+            stack.push(stack.pop() * stack.pop());
+        } else if (c === "/") {
+            let second = stack.pop();
+            let first = stack.pop();
+            stack.push(parseInt(first / second));
+        } else {
+            stack.push(parseInt(c));
+        }
+    }
+
+    return stack[0]; 
 };
 ```
 
@@ -320,6 +412,61 @@ var repeatedStringMatch = function(a, b) {
 
 ---
 
+## 739-daily-temperatures
+
+### Problem
+
+<h2><a href="https://leetcode.com/problems/daily-temperatures">Daily Temperatures</a></h2> <img src='https://img.shields.io/badge/Difficulty-Medium-orange' alt='Difficulty: Medium' /><hr><p>Given an array of integers <code>temperatures</code> represents the daily temperatures, return <em>an array</em> <code>answer</code> <em>such that</em> <code>answer[i]</code> <em>is the number of days you have to wait after the</em> <code>i<sup>th</sup></code> <em>day to get a warmer temperature</em>. If there is no future day for which this is possible, keep <code>answer[i] == 0</code> instead.</p>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+<pre><strong>Input:</strong> temperatures = [73,74,75,71,69,72,76,73]
+<strong>Output:</strong> [1,1,4,2,1,1,0,0]
+</pre><p><strong class="example">Example 2:</strong></p>
+<pre><strong>Input:</strong> temperatures = [30,40,50,60]
+<strong>Output:</strong> [1,1,1,0]
+</pre><p><strong class="example">Example 3:</strong></p>
+<pre><strong>Input:</strong> temperatures = [30,60,90]
+<strong>Output:</strong> [1,1,0]
+</pre>
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>1 &lt;=&nbsp;temperatures.length &lt;= 10<sup>5</sup></code></li>
+	<li><code>30 &lt;=&nbsp;temperatures[i] &lt;= 100</code></li>
+</ul>
+
+### Solution
+
+```javascript
+/**
+ * @param {number[]} temperatures
+ * @return {number[]}
+ */
+var dailyTemperatures = function(temperatures) {
+    const n = temperatures.length;
+    const answer = new Array(n).fill(0);
+    const stack = []; // stores indices
+
+    for (let i = 0; i < n; i++) {
+        while (
+            stack.length &&
+            temperatures[i] > temperatures[stack[stack.length - 1]]
+        ) {
+            const prevIndex = stack.pop();
+            answer[prevIndex] = i - prevIndex;
+        }
+
+        stack.push(i);
+    }
+
+    return answer;
+};
+```
+
+---
+
 ## 1460-number-of-substrings-containing-all-three-characters
 
 ### Problem
@@ -386,6 +533,105 @@ var numberOfSubstrings = function(s) {
 ### Notes
 
 <h2>number-of-substrings-containing-all-three-characters Notes</h2><hr>[ Time taken: 19m 15s ]
+
+---
+
+## 1552-build-an-array-with-stack-operations
+
+### Problem
+
+<h2><a href="https://leetcode.com/problems/build-an-array-with-stack-operations">Build an Array With Stack Operations</a></h2> <img src='https://img.shields.io/badge/Difficulty-Medium-orange' alt='Difficulty: Medium' /><hr><p>You are given an integer array <code>target</code> and an integer <code>n</code>.</p>
+
+<p>You have an empty stack with the two following operations:</p>
+
+<ul>
+	<li><strong><code>&quot;Push&quot;</code></strong>: pushes an integer to the top of the stack.</li>
+	<li><strong><code>&quot;Pop&quot;</code></strong>: removes the integer on the top of the stack.</li>
+</ul>
+
+<p>You also have a stream of the integers in the range <code>[1, n]</code>.</p>
+
+<p>Use the two stack operations to make the numbers in the stack (from the bottom to the top) equal to <code>target</code>. You should follow the following rules:</p>
+
+<ul>
+	<li>If the stream of the integers is not empty, pick the next integer from the stream and push it to the top of the stack.</li>
+	<li>If the stack is not empty, pop the integer at the top of the stack.</li>
+	<li>If, at any moment, the elements in the stack (from the bottom to the top) are equal to <code>target</code>, do not read new integers from the stream and do not do more operations on the stack.</li>
+</ul>
+
+<p>Return <em>the stack operations needed to build </em><code>target</code> following the mentioned rules. If there are multiple valid answers, return <strong>any of them</strong>.</p>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+
+<pre>
+<strong>Input:</strong> target = [1,3], n = 3
+<strong>Output:</strong> [&quot;Push&quot;,&quot;Push&quot;,&quot;Pop&quot;,&quot;Push&quot;]
+<strong>Explanation:</strong> Initially the stack s is empty. The last element is the top of the stack.
+Read 1 from the stream and push it to the stack. s = [1].
+Read 2 from the stream and push it to the stack. s = [1,2].
+Pop the integer on the top of the stack. s = [1].
+Read 3 from the stream and push it to the stack. s = [1,3].
+</pre>
+
+<p><strong class="example">Example 2:</strong></p>
+
+<pre>
+<strong>Input:</strong> target = [1,2,3], n = 3
+<strong>Output:</strong> [&quot;Push&quot;,&quot;Push&quot;,&quot;Push&quot;]
+<strong>Explanation:</strong> Initially the stack s is empty. The last element is the top of the stack.
+Read 1 from the stream and push it to the stack. s = [1].
+Read 2 from the stream and push it to the stack. s = [1,2].
+Read 3 from the stream and push it to the stack. s = [1,2,3].
+</pre>
+
+<p><strong class="example">Example 3:</strong></p>
+
+<pre>
+<strong>Input:</strong> target = [1,2], n = 4
+<strong>Output:</strong> [&quot;Push&quot;,&quot;Push&quot;]
+<strong>Explanation:</strong> Initially the stack s is empty. The last element is the top of the stack.
+Read 1 from the stream and push it to the stack. s = [1].
+Read 2 from the stream and push it to the stack. s = [1,2].
+Since the stack (from the bottom to the top) is equal to target, we stop the stack operations.
+The answers that read integer 3 from the stream are not accepted.
+</pre>
+
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>1 &lt;= target.length &lt;= 100</code></li>
+	<li><code>1 &lt;= n &lt;= 100</code></li>
+	<li><code>1 &lt;= target[i] &lt;= n</code></li>
+	<li><code>target</code> is strictly increasing.</li>
+</ul>
+
+### Solution
+
+```javascript
+/**
+ * @param {number[]} target
+ * @param {number} n
+ * @return {string[]}
+ */
+var buildArray = function(target, n) {
+    const result = [];
+    let i = 0;
+
+    for (let num = 1; num <= n && i < target.length; num++) {
+        if (num === target[i]) {
+            result.push('Push');
+            i++;
+        } else {
+            result.push('Push');
+            result.push('Pop');
+        }
+    }
+
+    return result;
+};
+```
 
 ---
 

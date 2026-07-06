@@ -1,6 +1,6 @@
 # LeetCode Hard Problems
 
-3 problem(s)
+4 problem(s)
 
 ## 220-contains-duplicate-iii
 
@@ -91,6 +91,120 @@ var containsNearbyAlmostDuplicate = function(nums, indexDiff, valueDiff) {
     return false;
 };
 ```
+
+---
+
+## 1234-number-of-paths-with-max-score
+
+### Problem
+
+<h2><a href="https://leetcode.com/problems/number-of-paths-with-max-score">Number of Paths with Max Score</a></h2> <img src='https://img.shields.io/badge/Difficulty-Hard-red' alt='Difficulty: Hard' /><hr><p>You are given a square <code>board</code>&nbsp;of characters. You can move on the board starting at the bottom right square marked with the character&nbsp;<code>&#39;S&#39;</code>.</p>
+
+<p>You need&nbsp;to reach the top left square marked with the character <code>&#39;E&#39;</code>. The rest of the squares are labeled either with a numeric character&nbsp;<code>1, 2, ..., 9</code> or with an obstacle <code>&#39;X&#39;</code>. In one move you can go up, left or up-left (diagonally) only if there is no obstacle there.</p>
+
+<p>Return a list of two integers: the first integer is the maximum sum of numeric characters you can collect, and the second is the number of such paths that you can take to get that maximum sum, <strong>taken modulo <code>10^9 + 7</code></strong>.</p>
+
+<p>In case there is no path, return&nbsp;<code>[0, 0]</code>.</p>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+<pre><strong>Input:</strong> board = ["E23","2X2","12S"]
+<strong>Output:</strong> [7,1]
+</pre><p><strong class="example">Example 2:</strong></p>
+<pre><strong>Input:</strong> board = ["E12","1X1","21S"]
+<strong>Output:</strong> [4,2]
+</pre><p><strong class="example">Example 3:</strong></p>
+<pre><strong>Input:</strong> board = ["E11","XXX","11S"]
+<strong>Output:</strong> [0,0]
+</pre>
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>2 &lt;= board.length == board[i].length &lt;= 100</code></li>
+</ul>
+
+### Solution
+
+```javascript
+/**
+ * @param {string[]} board
+ * @return {number[]}
+ */
+var pathsWithMaxScore = function(board) {
+    const MOD = 1000000007;
+    const n = board.length;
+
+    const score = Array.from({ length: n }, () =>
+        Array(n).fill(-1)
+    );
+
+    const ways = Array.from({ length: n }, () =>
+        Array(n).fill(0)
+    );
+
+    score[0][0] = 0;
+    ways[0][0] = 1;
+
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n; j++) {
+            if (board[i][j] === 'X') continue;
+            if (score[i][j] === -1) continue;
+
+            const directions = [
+                [1, 0],  // down
+                [0, 1],  // right
+                [1, 1]   // diagonal
+            ];
+
+            for (const [dx, dy] of directions) {
+                const ni = i + dx;
+                const nj = j + dy;
+
+                if (
+                    ni >= n ||
+                    nj >= n ||
+                    board[ni][nj] === 'X'
+                ) {
+                    continue;
+                }
+
+                let value = 0;
+
+                if (
+                    board[ni][nj] !== 'S' &&
+                    board[ni][nj] !== 'E'
+                ) {
+                    value = Number(board[ni][nj]);
+                }
+
+                const newScore = score[i][j] + value;
+
+                if (newScore > score[ni][nj]) {
+                    score[ni][nj] = newScore;
+                    ways[ni][nj] = ways[i][j];
+                } else if (newScore === score[ni][nj]) {
+                    ways[ni][nj] =
+                        (ways[ni][nj] + ways[i][j]) % MOD;
+                }
+            }
+        }
+    }
+
+    if (ways[n - 1][n - 1] === 0) {
+        return [0, 0];
+    }
+
+    return [
+        score[n - 1][n - 1],
+        ways[n - 1][n - 1]
+    ];
+};
+```
+
+### Notes
+
+<h2>number-of-paths-with-max-score Notes</h2><hr>[ Time taken: 1hr 54m 1s ]
 
 ---
 

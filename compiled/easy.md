@@ -1,6 +1,6 @@
 # LeetCode Easy Problems
 
-26 problem(s)
+36 problem(s)
 
 ## 1-two-sum
 
@@ -1090,6 +1090,72 @@ var climbStairs = function(n) {
 
 ---
 
+## 125-valid-palindrome
+
+### Problem
+
+<h2><a href="https://leetcode.com/problems/valid-palindrome">Valid Palindrome</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>A phrase is a <strong>palindrome</strong> if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.</p>
+
+<p>Given a string <code>s</code>, return <code>true</code><em> if it is a <strong>palindrome</strong>, or </em><code>false</code><em> otherwise</em>.</p>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+
+<pre>
+<strong>Input:</strong> s = &quot;A man, a plan, a canal: Panama&quot;
+<strong>Output:</strong> true
+<strong>Explanation:</strong> &quot;amanaplanacanalpanama&quot; is a palindrome.
+</pre>
+
+<p><strong class="example">Example 2:</strong></p>
+
+<pre>
+<strong>Input:</strong> s = &quot;race a car&quot;
+<strong>Output:</strong> false
+<strong>Explanation:</strong> &quot;raceacar&quot; is not a palindrome.
+</pre>
+
+<p><strong class="example">Example 3:</strong></p>
+
+<pre>
+<strong>Input:</strong> s = &quot; &quot;
+<strong>Output:</strong> true
+<strong>Explanation:</strong> s is an empty string &quot;&quot; after removing non-alphanumeric characters.
+Since an empty string reads the same forward and backward, it is a palindrome.
+</pre>
+
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>1 &lt;= s.length &lt;= 2 * 10<sup>5</sup></code></li>
+	<li><code>s</code> consists only of printable ASCII characters.</li>
+</ul>
+
+### Solution
+
+```javascript
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var isPalindrome = function(s) {
+    if (!s) return true;
+    s = s.toLowerCase().replace(/[^a-zA-Z0-9]/g, '');
+
+    let left = 0,
+        right = s.length - 1;
+    while (left < right) {
+        if (s[left] !== s[right]) return false;
+        left++;
+        right--;
+    }
+    return true;
+};
+```
+
+---
+
 ## 136-single-number
 
 ### Problem
@@ -1320,6 +1386,59 @@ _No solution file found._
 
 ---
 
+## 283-move-zeroes
+
+### Problem
+
+<h2><a href="https://leetcode.com/problems/move-zeroes">Move Zeroes</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given an integer array <code>nums</code>, move all <code>0</code>&#39;s to the end of it while maintaining the relative order of the non-zero elements.</p>
+
+<p><strong>Note</strong> that you must do this in-place without making a copy of the array.</p>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+<pre><strong>Input:</strong> nums = [0,1,0,3,12]
+<strong>Output:</strong> [1,3,12,0,0]
+</pre><p><strong class="example">Example 2:</strong></p>
+<pre><strong>Input:</strong> nums = [0]
+<strong>Output:</strong> [0]
+</pre>
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>1 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>
+	<li><code>-2<sup>31</sup> &lt;= nums[i] &lt;= 2<sup>31</sup> - 1</code></li>
+</ul>
+
+<p>&nbsp;</p>
+<strong>Follow up:</strong> Could you minimize the total number of operations done?
+
+### Solution
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+var moveZeroes = function(nums) {
+    let insertPos = 0;
+
+    for (const num of nums) {
+        if (num !== 0) {
+            nums[insertPos] = num;
+            insertPos++;
+        }
+    }
+
+    while (insertPos < nums.length) {
+        nums[insertPos] = 0;
+        insertPos++;
+    }
+};
+```
+
+---
+
 ## 344-reverse-string
 
 ### Problem
@@ -1417,6 +1536,61 @@ var isSubsequence = function(s, t) {
 
 ---
 
+## 415-add-strings
+
+### Problem
+
+<h2><a href="https://leetcode.com/problems/add-strings">Add Strings</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given two non-negative integers, <code>num1</code> and <code>num2</code> represented as string, return <em>the sum of</em> <code>num1</code> <em>and</em> <code>num2</code> <em>as a string</em>.</p>
+
+<p>You must solve the problem without using any built-in library for handling large integers (such as <code>BigInteger</code>). You must also not convert the inputs to integers directly.</p>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+
+<pre>
+<strong>Input:</strong> num1 = &quot;11&quot;, num2 = &quot;123&quot;
+<strong>Output:</strong> &quot;134&quot;
+</pre>
+
+<p><strong class="example">Example 2:</strong></p>
+
+<pre>
+<strong>Input:</strong> num1 = &quot;456&quot;, num2 = &quot;77&quot;
+<strong>Output:</strong> &quot;533&quot;
+</pre>
+
+<p><strong class="example">Example 3:</strong></p>
+
+<pre>
+<strong>Input:</strong> num1 = &quot;0&quot;, num2 = &quot;0&quot;
+<strong>Output:</strong> &quot;0&quot;
+</pre>
+
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>1 &lt;= num1.length, num2.length &lt;= 10<sup>4</sup></code></li>
+	<li><code>num1</code> and <code>num2</code> consist of only digits.</li>
+	<li><code>num1</code> and <code>num2</code> don&#39;t have any leading zeros except for the zero itself.</li>
+</ul>
+
+### Solution
+
+```javascript
+/**
+ * @param {string} num1
+ * @param {string} num2
+ * @return {string}
+ */
+var addStrings = function(num1, num2) {
+    ans = BigInt(num1) + BigInt(num2);
+    return ans.toString();
+};
+```
+
+---
+
 ## 459-repeated-substring-pattern
 
 ### Problem
@@ -1480,6 +1654,319 @@ var repeatedSubstringPattern = function(s) {
 
 ---
 
+## 485-max-consecutive-ones
+
+### Problem
+
+<h2><a href="https://leetcode.com/problems/max-consecutive-ones">Max Consecutive Ones</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given a binary array <code>nums</code>, return <em>the maximum number of consecutive </em><code>1</code><em>&#39;s in the array</em>.</p>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+
+<pre>
+<strong>Input:</strong> nums = [1,1,0,1,1,1]
+<strong>Output:</strong> 3
+<strong>Explanation:</strong> The first two digits or the last three digits are consecutive 1s. The maximum number of consecutive 1s is 3.
+</pre>
+
+<p><strong class="example">Example 2:</strong></p>
+
+<pre>
+<strong>Input:</strong> nums = [1,0,1,1,0,1]
+<strong>Output:</strong> 2
+</pre>
+
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>
+	<li><code>nums[i]</code> is either <code>0</code> or <code>1</code>.</li>
+</ul>
+
+### Solution
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var findMaxConsecutiveOnes = function(nums) {
+    let maxCounts = 0;
+    let temp = 0;
+    for (let i = 0; i < nums.length;i++){
+        if (nums[i] == 1) {
+            temp++
+            if (temp > maxCounts) {
+                maxCounts = temp
+            }
+        } else {
+            temp=0
+        }
+    }
+    return maxCounts;
+};
+```
+
+---
+
+## 645-set-mismatch
+
+### Problem
+
+<h2><a href="https://leetcode.com/problems/set-mismatch">Set Mismatch</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>You have a set of integers <code>s</code>, which originally contains all the numbers from <code>1</code> to <code>n</code>. Unfortunately, due to some error, one of the numbers in <code>s</code> got duplicated to another number in the set, which results in <strong>repetition of one</strong> number and <strong>loss of another</strong> number.</p>
+
+<p>You are given an integer array <code>nums</code> representing the data status of this set after the error.</p>
+
+<p>Find the number that occurs twice and the number that is missing and return <em>them in the form of an array</em>.</p>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+<pre><strong>Input:</strong> nums = [1,2,2,4]
+<strong>Output:</strong> [2,3]
+</pre><p><strong class="example">Example 2:</strong></p>
+<pre><strong>Input:</strong> nums = [1,1]
+<strong>Output:</strong> [1,2]
+</pre>
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>2 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>
+	<li><code>1 &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>
+</ul>
+
+### Solution
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var findErrorNums = function(nums) {
+    const n = nums.length;
+    const freq = new Array(n + 1).fill(0);
+
+    for (const num of nums) {
+        freq[num]++;
+    }
+
+    let duplicate = -1;
+    let missing = -1;
+
+    for (let i = 1; i <= n; i++) {
+        if (freq[i] === 2) {
+            duplicate = i;
+        } else if (freq[i] === 0) {
+            missing = i;
+        }
+    }
+
+    return [duplicate, missing];
+};
+```
+
+---
+
+## 1444-number-of-steps-to-reduce-a-number-to-zero
+
+### Problem
+
+<h2><a href="https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero">Number of Steps to Reduce a Number to Zero</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given an integer <code>num</code>, return <em>the number of steps to reduce it to zero</em>.</p>
+
+<p>In one step, if the current number is even, you have to divide it by <code>2</code>, otherwise, you have to subtract <code>1</code> from it.</p>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+
+<pre>
+<strong>Input:</strong> num = 14
+<strong>Output:</strong> 6
+<strong>Explanation:</strong>&nbsp;
+Step 1) 14 is even; divide by 2 and obtain 7.&nbsp;
+Step 2) 7 is odd; subtract 1 and obtain 6.
+Step 3) 6 is even; divide by 2 and obtain 3.&nbsp;
+Step 4) 3 is odd; subtract 1 and obtain 2.&nbsp;
+Step 5) 2 is even; divide by 2 and obtain 1.&nbsp;
+Step 6) 1 is odd; subtract 1 and obtain 0.
+</pre>
+
+<p><strong class="example">Example 2:</strong></p>
+
+<pre>
+<strong>Input:</strong> num = 8
+<strong>Output:</strong> 4
+<strong>Explanation:</strong>&nbsp;
+Step 1) 8 is even; divide by 2 and obtain 4.&nbsp;
+Step 2) 4 is even; divide by 2 and obtain 2.&nbsp;
+Step 3) 2 is even; divide by 2 and obtain 1.&nbsp;
+Step 4) 1 is odd; subtract 1 and obtain 0.
+</pre>
+
+<p><strong class="example">Example 3:</strong></p>
+
+<pre>
+<strong>Input:</strong> num = 123
+<strong>Output:</strong> 12
+</pre>
+
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>0 &lt;= num &lt;= 10<sup>6</sup></code></li>
+</ul>
+
+### Solution
+
+```javascript
+/**
+ * @param {number} num
+ * @return {number}
+ */
+var numberOfSteps = function(num) {
+    let step = 0;
+
+    while (num !== 0) {
+        num % 2 === 0 ? num /= 2 : num--;
+        step++;
+    }
+    return step;
+};
+```
+
+---
+
+## 1482-how-many-numbers-are-smaller-than-the-current-number
+
+### Problem
+
+<h2><a href="https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number">How Many Numbers Are Smaller Than the Current Number</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given the array <code>nums</code>, for each <code>nums[i]</code> find out how many numbers in the array are smaller than it. That is, for each <code>nums[i]</code> you have to count the number of valid <code>j&#39;s</code>&nbsp;such that&nbsp;<code>j != i</code> <strong>and</strong> <code>nums[j] &lt; nums[i]</code>.</p>
+
+<p>Return the answer in an array.</p>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+
+<pre>
+<strong>Input:</strong> nums = [8,1,2,2,3]
+<strong>Output:</strong> [4,0,1,1,3]
+<strong>Explanation:</strong> 
+For nums[0]=8 there exist four smaller numbers than it (1, 2, 2 and 3). 
+For nums[1]=1 does not exist any smaller number than it.
+For nums[2]=2 there exist one smaller number than it (1). 
+For nums[3]=2 there exist one smaller number than it (1). 
+For nums[4]=3 there exist three smaller numbers than it (1, 2 and 2).
+</pre>
+
+<p><strong class="example">Example 2:</strong></p>
+
+<pre>
+<strong>Input:</strong> nums = [6,5,4,8]
+<strong>Output:</strong> [2,1,0,3]
+</pre>
+
+<p><strong class="example">Example 3:</strong></p>
+
+<pre>
+<strong>Input:</strong> nums = [7,7,7,7]
+<strong>Output:</strong> [0,0,0,0]
+</pre>
+
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>2 &lt;= nums.length &lt;= 500</code></li>
+	<li><code>0 &lt;= nums[i] &lt;= 100</code></li>
+</ul>
+
+### Solution
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var smallerNumbersThanCurrent = function(nums) {
+    const n = nums.length;
+    const count = new Array(n).fill(0);
+
+    for (let i = 0; i < n; i++){
+        for (let j = 0; j < n; j++){
+            if (nums[i] > nums[j]) {
+                count[i]++
+            }
+        }
+    }
+
+    return count;
+};
+```
+
+---
+
+## 1580-shuffle-the-array
+
+### Problem
+
+<h2><a href="https://leetcode.com/problems/shuffle-the-array">Shuffle the Array</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given the array <code>nums</code> consisting of <code>2n</code> elements in the form <code>[x<sub>1</sub>,x<sub>2</sub>,...,x<sub>n</sub>,y<sub>1</sub>,y<sub>2</sub>,...,y<sub>n</sub>]</code>.</p>
+
+<p><em>Return the array in the form</em> <code>[x<sub>1</sub>,y<sub>1</sub>,x<sub>2</sub>,y<sub>2</sub>,...,x<sub>n</sub>,y<sub>n</sub>]</code>.</p>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+
+<pre>
+<strong>Input:</strong> nums = [2,5,1,3,4,7], n = 3
+<strong>Output:</strong> [2,3,5,4,1,7] 
+<strong>Explanation:</strong> Since x<sub>1</sub>=2, x<sub>2</sub>=5, x<sub>3</sub>=1, y<sub>1</sub>=3, y<sub>2</sub>=4, y<sub>3</sub>=7 then the answer is [2,3,5,4,1,7].
+</pre>
+
+<p><strong class="example">Example 2:</strong></p>
+
+<pre>
+<strong>Input:</strong> nums = [1,2,3,4,4,3,2,1], n = 4
+<strong>Output:</strong> [1,4,2,3,3,2,4,1]
+</pre>
+
+<p><strong class="example">Example 3:</strong></p>
+
+<pre>
+<strong>Input:</strong> nums = [1,1,2,2], n = 2
+<strong>Output:</strong> [1,2,1,2]
+</pre>
+
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>1 &lt;= n &lt;= 500</code></li>
+	<li><code>nums.length == 2n</code></li>
+	<li><code>1 &lt;= nums[i] &lt;= 10^3</code></li>
+</ul>
+
+### Solution
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @param {number} n
+ * @return {number[]}
+ */
+var shuffle = function(nums, n) {
+    const newArr = [];
+    for(let i=0;i<nums.length/2;i++){
+        newArr.push(nums[i]);
+        newArr.push(nums[i+n]);
+    }
+
+    return newArr
+};
+```
+
+---
+
 ## 1603-running-sum-of-1d-array
 
 ### Problem
@@ -1535,6 +2022,82 @@ var runningSum = function(nums) {
 
 ---
 
+## 1791-richest-customer-wealth
+
+### Problem
+
+<h2><a href="https://leetcode.com/problems/richest-customer-wealth">Richest Customer Wealth</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>You are given an <code>m x n</code> integer grid <code>accounts</code> where <code>accounts[i][j]</code> is the amount of money the <code>i​​​​​<sup>​​​​​​th</sup>​​​​</code> customer has in the <code>j​​​​​<sup>​​​​​​th</sup></code>​​​​ bank. Return<em> the <strong>wealth</strong> that the richest customer has.</em></p>
+
+<p>A customer&#39;s <strong>wealth</strong> is the amount of money they have in all their bank accounts. The richest customer is the customer that has the maximum <strong>wealth</strong>.</p>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+
+<pre>
+<strong>Input:</strong> accounts = [[1,2,3],[3,2,1]]
+<strong>Output:</strong> 6
+<strong>Explanation</strong><strong>:</strong>
+<code>1st customer has wealth = 1 + 2 + 3 = 6
+</code><code>2nd customer has wealth = 3 + 2 + 1 = 6
+</code>Both customers are considered the richest with a wealth of 6 each, so return 6.
+</pre>
+
+<p><strong class="example">Example 2:</strong></p>
+
+<pre>
+<strong>Input:</strong> accounts = [[1,5],[7,3],[3,5]]
+<strong>Output:</strong> 10
+<strong>Explanation</strong>: 
+1st customer has wealth = 6
+2nd customer has wealth = 10 
+3rd customer has wealth = 8
+The 2nd customer is the richest with a wealth of 10.</pre>
+
+<p><strong class="example">Example 3:</strong></p>
+
+<pre>
+<strong>Input:</strong> accounts = [[2,8,7],[7,1,3],[1,9,5]]
+<strong>Output:</strong> 17
+</pre>
+
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>m ==&nbsp;accounts.length</code></li>
+	<li><code>n ==&nbsp;accounts[i].length</code></li>
+	<li><code>1 &lt;= m, n &lt;= 50</code></li>
+	<li><code>1 &lt;= accounts[i][j] &lt;= 100</code></li>
+</ul>
+
+### Solution
+
+```javascript
+/**
+ * @param {number[][]} accounts
+ * @return {number}
+ */
+var maximumWealth = function(accounts) {
+    let max = 0;
+    for(let i =0;i<accounts.length;i++){
+        let sum = 0;
+        for(let j = 0; j<accounts[i].length;j++){
+            sum+=accounts[i][j]
+        }
+        if(sum>max){
+            max = sum
+        }
+    }
+    return max
+};
+```
+
+### Notes
+
+<h2>richest-customer-wealth Notes</h2><hr>[ Time taken: 1hr 58m 46s ]
+
+---
+
 ## 1960-check-if-the-sentence-is-pangram
 
 ### Problem
@@ -1585,6 +2148,59 @@ var checkIfPangram = function(sentence) {
 ### Notes
 
 <h2>check-if-the-sentence-is-pangram Notes</h2><hr>[ Time taken: 19m 11s ]
+
+---
+
+## 2058-concatenation-of-array
+
+### Problem
+
+<h2><a href="https://leetcode.com/problems/concatenation-of-array">Concatenation of Array</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given an integer array <code>nums</code> of length <code>n</code>, you want to create an array <code>ans</code> of length <code>2n</code> where <code>ans[i] == nums[i]</code> and <code>ans[i + n] == nums[i]</code> for <code>0 &lt;= i &lt; n</code> (<strong>0-indexed</strong>).</p>
+
+<p>Specifically, <code>ans</code> is the <strong>concatenation</strong> of two <code>nums</code> arrays.</p>
+
+<p>Return <em>the array </em><code>ans</code>.</p>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+
+<pre>
+<strong>Input:</strong> nums = [1,2,1]
+<strong>Output:</strong> [1,2,1,1,2,1]
+<strong>Explanation:</strong> The array ans is formed as follows:
+- ans = [nums[0],nums[1],nums[2],nums[0],nums[1],nums[2]]
+- ans = [1,2,1,1,2,1]</pre>
+
+<p><strong class="example">Example 2:</strong></p>
+
+<pre>
+<strong>Input:</strong> nums = [1,3,2,1]
+<strong>Output:</strong> [1,3,2,1,1,3,2,1]
+<strong>Explanation:</strong> The array ans is formed as follows:
+- ans = [nums[0],nums[1],nums[2],nums[3],nums[0],nums[1],nums[2],nums[3]]
+- ans = [1,3,2,1,1,3,2,1]
+</pre>
+
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>n == nums.length</code></li>
+	<li><code>1 &lt;= n &lt;= 1000</code></li>
+	<li><code>1 &lt;= nums[i] &lt;= 1000</code></li>
+</ul>
+
+### Solution
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var getConcatenation = function(nums) {
+    return [...nums,...nums]
+};
+```
 
 ---
 

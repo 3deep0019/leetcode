@@ -368,6 +368,25 @@ globalThis.climbStairs = function(n) {
     return second;
 };
 
+// 125-valid-palindrome (isPalindrome)
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+globalThis.isPalindrome = function(s) {
+    if (!s) return true;
+    s = s.toLowerCase().replace(/[^a-zA-Z0-9]/g, '');
+
+    let left = 0,
+        right = s.length - 1;
+    while (left < right) {
+        if (s[left] !== s[right]) return false;
+        left++;
+        right--;
+    }
+    return true;
+};
+
 // 136-single-number (singleNumber)
 /**
  * @param {number[]} nums
@@ -425,6 +444,27 @@ globalThis.containsDuplicate = function(nums) {
 // 219-contains-duplicate-ii — no solution file
 // Add your solution here
 
+// 283-move-zeroes (moveZeroes)
+/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+globalThis.moveZeroes = function(nums) {
+    let insertPos = 0;
+
+    for (const num of nums) {
+        if (num !== 0) {
+            nums[insertPos] = num;
+            insertPos++;
+        }
+    }
+
+    while (insertPos < nums.length) {
+        nums[insertPos] = 0;
+        insertPos++;
+    }
+};
+
 // 344-reverse-string (reverseString)
 /**
  * @param {character[]} s
@@ -456,6 +496,17 @@ globalThis.isSubsequence = function(s, t) {
     return sCount == s.length
 };
 
+// 415-add-strings (addStrings)
+/**
+ * @param {string} num1
+ * @param {string} num2
+ * @return {string}
+ */
+globalThis.addStrings = function(num1, num2) {
+    ans = BigInt(num1) + BigInt(num2);
+    return ans.toString();
+};
+
 // 459-repeated-substring-pattern (repeatedSubstringPattern)
 /**
  * @param {string} s
@@ -476,6 +527,105 @@ globalThis.repeatedSubstringPattern = function(s) {
     return false;
 };
 
+// 485-max-consecutive-ones (findMaxConsecutiveOnes)
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+globalThis.findMaxConsecutiveOnes = function(nums) {
+    let maxCounts = 0;
+    let temp = 0;
+    for (let i = 0; i < nums.length;i++){
+        if (nums[i] == 1) {
+            temp++
+            if (temp > maxCounts) {
+                maxCounts = temp
+            }
+        } else {
+            temp=0
+        }
+    }
+    return maxCounts;
+};
+
+// 645-set-mismatch (findErrorNums)
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+globalThis.findErrorNums = function(nums) {
+    const n = nums.length;
+    const freq = new Array(n + 1).fill(0);
+
+    for (const num of nums) {
+        freq[num]++;
+    }
+
+    let duplicate = -1;
+    let missing = -1;
+
+    for (let i = 1; i <= n; i++) {
+        if (freq[i] === 2) {
+            duplicate = i;
+        } else if (freq[i] === 0) {
+            missing = i;
+        }
+    }
+
+    return [duplicate, missing];
+};
+
+// 1444-number-of-steps-to-reduce-a-number-to-zero (numberOfSteps)
+/**
+ * @param {number} num
+ * @return {number}
+ */
+globalThis.numberOfSteps = function(num) {
+    let step = 0;
+
+    while (num !== 0) {
+        num % 2 === 0 ? num /= 2 : num--;
+        step++;
+    }
+    return step;
+};
+
+// 1482-how-many-numbers-are-smaller-than-the-current-number (smallerNumbersThanCurrent)
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+globalThis.smallerNumbersThanCurrent = function(nums) {
+    const n = nums.length;
+    const count = new Array(n).fill(0);
+
+    for (let i = 0; i < n; i++){
+        for (let j = 0; j < n; j++){
+            if (nums[i] > nums[j]) {
+                count[i]++
+            }
+        }
+    }
+
+    return count;
+};
+
+// 1580-shuffle-the-array (shuffle)
+/**
+ * @param {number[]} nums
+ * @param {number} n
+ * @return {number[]}
+ */
+globalThis.shuffle = function(nums, n) {
+    const newArr = [];
+    for(let i=0;i<nums.length/2;i++){
+        newArr.push(nums[i]);
+        newArr.push(nums[i+n]);
+    }
+
+    return newArr
+};
+
 // 1603-running-sum-of-1d-array (runningSum)
 /**
  * @param {number[]} nums
@@ -488,6 +638,25 @@ globalThis.runningSum = function(nums) {
     return nums
 };
 
+// 1791-richest-customer-wealth (maximumWealth)
+/**
+ * @param {number[][]} accounts
+ * @return {number}
+ */
+globalThis.maximumWealth = function(accounts) {
+    let max = 0;
+    for(let i =0;i<accounts.length;i++){
+        let sum = 0;
+        for(let j = 0; j<accounts[i].length;j++){
+            sum+=accounts[i][j]
+        }
+        if(sum>max){
+            max = sum
+        }
+    }
+    return max
+};
+
 // 1960-check-if-the-sentence-is-pangram (checkIfPangram)
 /**
  * @param {string} sentence
@@ -498,6 +667,15 @@ globalThis.checkIfPangram = function(sentence) {
 
     const aplhabetSet = new Set(sentence)
     return aplhabetSet.size == 26 ? true: false
+};
+
+// 2058-concatenation-of-array (getConcatenation)
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+globalThis.getConcatenation = function(nums) {
+    return [...nums,...nums]
 };
 
 // 2099-number-of-strings-that-appear-as-substrings-in-word (numOfStrings)
@@ -926,6 +1104,13 @@ const PROBLEM_TESTS = [
     ]
   },
   {
+    "id": "125-valid-palindrome",
+    "fn": "isPalindrome",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": []
+  },
+  {
     "id": "136-single-number",
     "fn": "singleNumber",
     "usesListNode": false,
@@ -977,6 +1162,42 @@ const PROBLEM_TESTS = [
     "usesListNode": false,
     "mutatesInput": false,
     "cases": []
+  },
+  {
+    "id": "283-move-zeroes",
+    "fn": "moveZeroes",
+    "usesListNode": false,
+    "mutatesInput": true,
+    "cases": [
+      {
+        "args": [
+          [
+            0,
+            1,
+            0,
+            3,
+            12
+          ]
+        ],
+        "expected": [
+          1,
+          3,
+          12,
+          0,
+          0
+        ]
+      },
+      {
+        "args": [
+          [
+            0
+          ]
+        ],
+        "expected": [
+          0
+        ]
+      }
+    ]
   },
   {
     "id": "344-reverse-string",
@@ -1047,11 +1268,241 @@ const PROBLEM_TESTS = [
     ]
   },
   {
+    "id": "415-add-strings",
+    "fn": "addStrings",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": []
+  },
+  {
     "id": "459-repeated-substring-pattern",
     "fn": "repeatedSubstringPattern",
     "usesListNode": false,
     "mutatesInput": false,
     "cases": []
+  },
+  {
+    "id": "485-max-consecutive-ones",
+    "fn": "findMaxConsecutiveOnes",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": [
+      {
+        "args": [
+          [
+            1,
+            1,
+            0,
+            1,
+            1,
+            1
+          ]
+        ],
+        "expected": 3
+      },
+      {
+        "args": [
+          [
+            1,
+            0,
+            1,
+            1,
+            0,
+            1
+          ]
+        ],
+        "expected": 2
+      }
+    ]
+  },
+  {
+    "id": "645-set-mismatch",
+    "fn": "findErrorNums",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": [
+      {
+        "args": [
+          [
+            1,
+            2,
+            2,
+            4
+          ]
+        ],
+        "expected": [
+          2,
+          3
+        ]
+      },
+      {
+        "args": [
+          [
+            1,
+            1
+          ]
+        ],
+        "expected": [
+          1,
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": "1444-number-of-steps-to-reduce-a-number-to-zero",
+    "fn": "numberOfSteps",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": [
+      {
+        "args": [
+          14
+        ],
+        "expected": 6
+      },
+      {
+        "args": [
+          8
+        ],
+        "expected": 4
+      },
+      {
+        "args": [
+          123
+        ],
+        "expected": 12
+      }
+    ]
+  },
+  {
+    "id": "1482-how-many-numbers-are-smaller-than-the-current-number",
+    "fn": "smallerNumbersThanCurrent",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": [
+      {
+        "args": [
+          [
+            8,
+            1,
+            2,
+            2,
+            3
+          ]
+        ],
+        "expected": [
+          4,
+          0,
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "args": [
+          [
+            6,
+            5,
+            4,
+            8
+          ]
+        ],
+        "expected": [
+          2,
+          1,
+          0,
+          3
+        ]
+      },
+      {
+        "args": [
+          [
+            7,
+            7,
+            7,
+            7
+          ]
+        ],
+        "expected": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": "1580-shuffle-the-array",
+    "fn": "shuffle",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": [
+      {
+        "args": [
+          [
+            2,
+            5,
+            1,
+            3,
+            4,
+            7
+          ],
+          3
+        ],
+        "expected": [
+          2,
+          3,
+          5,
+          4,
+          1,
+          7
+        ]
+      },
+      {
+        "args": [
+          [
+            1,
+            2,
+            3,
+            4,
+            4,
+            3,
+            2,
+            1
+          ],
+          4
+        ],
+        "expected": [
+          1,
+          4,
+          2,
+          3,
+          3,
+          2,
+          4,
+          1
+        ]
+      },
+      {
+        "args": [
+          [
+            1,
+            1,
+            2,
+            2
+          ],
+          2
+        ],
+        "expected": [
+          1,
+          2,
+          1,
+          2
+        ]
+      }
+    ]
   },
   {
     "id": "1603-running-sum-of-1d-array",
@@ -1114,11 +1565,122 @@ const PROBLEM_TESTS = [
     ]
   },
   {
+    "id": "1791-richest-customer-wealth",
+    "fn": "maximumWealth",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": [
+      {
+        "args": [
+          [
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              3,
+              2,
+              1
+            ]
+          ]
+        ],
+        "expected": 6
+      },
+      {
+        "args": [
+          [
+            [
+              1,
+              5
+            ],
+            [
+              7,
+              3
+            ],
+            [
+              3,
+              5
+            ]
+          ]
+        ],
+        "expected": 10
+      },
+      {
+        "args": [
+          [
+            [
+              2,
+              8,
+              7
+            ],
+            [
+              7,
+              1,
+              3
+            ],
+            [
+              1,
+              9,
+              5
+            ]
+          ]
+        ],
+        "expected": 17
+      }
+    ]
+  },
+  {
     "id": "1960-check-if-the-sentence-is-pangram",
     "fn": "checkIfPangram",
     "usesListNode": false,
     "mutatesInput": false,
     "cases": []
+  },
+  {
+    "id": "2058-concatenation-of-array",
+    "fn": "getConcatenation",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": [
+      {
+        "args": [
+          [
+            1,
+            2,
+            1
+          ]
+        ],
+        "expected": [
+          1,
+          2,
+          1,
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "args": [
+          [
+            1,
+            3,
+            2,
+            1
+          ]
+        ],
+        "expected": [
+          1,
+          3,
+          2,
+          1,
+          1,
+          3,
+          2,
+          1
+        ]
+      }
+    ]
   },
   {
     "id": "2099-number-of-strings-that-appear-as-substrings-in-word",

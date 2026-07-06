@@ -259,13 +259,89 @@ function parseExamples(readme) {
   return examples;
 }
 
+function decodeHtmlEntities(text) {
+  return text
+    .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(Number(code)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, hex) => String.fromCharCode(parseInt(hex, 16)))
+    .replace(/&nbsp;/g, " ")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&hellip;/g, "...");
+}
+
+function stripAllTags(html) {
+  return html.replace(/<[^>]+>/g, "");
+}
+
+function cleanInlineHtml(html) {
+  let text = html;
+  text = text.replace(/<code>([\s\S]*?)<\/code>/gi, (_, content) => {
+    const inner = content.replace(
+      /<sup>([\s\S]*?)<\/sup>/gi,
+      (_, sup) => "^" + stripAllTags(sup)
+    );
+    return "`" + stripAllTags(inner) + "`";
+  });
+  text = text.replace(/<sup>([\s\S]*?)<\/sup>/gi, (_, content) => "^" + stripAllTags(content));
+  text = text.replace(/<strong[^>]*>([\s\S]*?)<\/strong>/gi, (_, content) => stripAllTags(content));
+  text = text.replace(/<em>([\s\S]*?)<\/em>/gi, (_, content) => stripAllTags(content));
+  text = text.replace(/<span[^>]*>([\s\S]*?)<\/span>/gi, "$1");
+  text = text.replace(/<a[^>]*>([\s\S]*?)<\/a>/gi, "$1");
+  text = text.replace(/<p[^>]*>/gi, "\n");
+  text = text.replace(/<\/p>/gi, "\n");
+  text = text.replace(/<br\s*\/?>/gi, "\n");
+  text = text.replace(/<font[^>]*>([\s\S]*?)<\/font>/gi, "$1");
+  text = text.replace(/<[^>]+>/g, "");
+  return text;
+}
+
+function normalizeWhitespace(text) {
+  return text
+    .split("\n")
+    .map((line) => line.trimEnd())
+    .join("\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
+function htmlToPlainText(html) {
+  let text = html.replace(/\r\n/g, "\n");
+
+  text = text.replace(/<img[^>]*\/?>/gi, "");
+  text = text.replace(/<hr\s*\/?>/gi, "\n");
+
+  text = text.replace(
+    /<h2>\s*<a[^>]*href="([^"]*)"[^>]*>([^<]*)<\/a>\s*<\/h2>/gi,
+    (_, url, title) => `\n${title}\n${url}\n`
+  );
+
+  const preBlocks = [];
+  text = text.replace(/<pre>([\s\S]*?)<\/pre>/gi, (_, content) => {
+    preBlocks.push(cleanInlineHtml(content).trim());
+    return `\n__PRE_${preBlocks.length - 1}__\n`;
+  });
+
+  text = text.replace(/<li>\s*([\s\S]*?)\s*<\/li>/gi, (_, content) => {
+    return `- ${cleanInlineHtml(content).trim()}\n`;
+  });
+  text = text.replace(/<\/?[uo]l>/gi, "\n");
+
+  text = cleanInlineHtml(text);
+  text = text.replace(/__PRE_(\d+)__/g, (_, index) => `\n${preBlocks[Number(index)]}\n`);
+
+  return normalizeWhitespace(decodeHtmlEntities(text));
+}
+
 function buildProblemSection(folderName, readme, solution, notes) {
   const sections = [
     `## ${folderName}`,
     "",
     "### Problem",
     "",
-    readme.trim(),
+    htmlToPlainText(readme),
     "",
   ];
 
@@ -311,40 +387,50 @@ function listToArray(head) {
 `;
 }
 
-function exposeSolution(solution, functionName) {
-  if (!functionName) return solution;
+function extractSignatureStub(solution, functionName) {
+  if (!solution || !functionName) return null;
 
-  const varPattern = new RegExp(
-    `^(\\s*)(?:var|const|let)\\s+(${functionName})\\s*=`,
+  const jsdocs = solution.match(/\/\*\*[\s\S]*?\*\//g) || [];
+  const fnPattern = new RegExp(
+    `(?:var|const|let)\\s+${functionName}\\s*=\\s*function\\s*\\([^)]*\\)\\s*\\{`,
     "m"
   );
-  if (varPattern.test(solution)) {
-    return solution.replace(varPattern, `$1globalThis.$2 =`);
-  }
+  const fnMatch = solution.match(fnPattern);
 
-  const fnPattern = new RegExp(`function\\s+(${functionName})\\s*\\(`, "m");
-  if (fnPattern.test(solution)) {
-    return solution.replace(fnPattern, `globalThis.$1 = function(`);
-  }
+  if (!fnMatch) return null;
 
-  return solution;
+  const signature =
+    fnMatch[0].replace(/^(?:var|const|let)\s+/, "globalThis.") +
+    "\n  // Write your solution here\n};";
+
+  return [...jsdocs, signature].join("\n\n");
+}
+
+function readmeToComment(readme, folderName) {
+  const plain = htmlToPlainText(readme);
+  const lines = plain.split("\n").map((line) => " * " + line.replace(/\*\//g, "* /"));
+  return ["/*", ` * ${folderName}`, " *", ...lines, " */"].join("\n");
 }
 
 function buildJsProblemBlock(problem) {
-  if (!problem.solution) {
-    return [
-      `// ${problem.folderName} — no solution file`,
-      "// Add your solution here",
-      "",
-    ].join("\n");
+  const parts = [readmeToComment(problem.readme, problem.folderName), ""];
+
+  if (problem.signatureStub) {
+    parts.push(problem.signatureStub);
+  } else {
+    parts.push(
+      `// ${problem.folderName} — implement your solution below`,
+      "// globalThis.myFunction = function(...) {",
+      "//   // your code",
+      "// };"
+    );
   }
 
-  const solution = exposeSolution(problem.solution, problem.functionName);
-  return [`// ${problem.folderName} (${problem.functionName})`, solution.trim(), ""].join("\n");
+  parts.push("");
+  return parts.join("\n");
 }
 
 function buildJsFile(difficulty, problems) {
-  const withSolutions = problems.filter((problem) => problem.solution);
   const tests = problems.map((problem) => ({
     id: problem.folderName,
     fn: problem.functionName,
@@ -358,14 +444,15 @@ function buildJsFile(difficulty, problems) {
     `/**`,
     ` * LeetCode ${difficulty} — practice file`,
     ` *`,
-    ` * Run all tests:  node compiled/${difficulty.toLowerCase()}.js`,
-    ` * Run one problem: node compiled/${difficulty.toLowerCase()}.js 1-two-sum`,
-    ` *                  node compiled/${difficulty.toLowerCase()}.js twoSum`,
+    ` * Implement each function below, then run tests:`,
+    ` *   node compiled/${difficulty.toLowerCase()}.js`,
+    ` *   node compiled/${difficulty.toLowerCase()}.js 1-two-sum`,
+    ` *   node compiled/${difficulty.toLowerCase()}.js twoSum`,
     ` */`,
     "",
     buildJsHelpers(),
     "",
-    "// --- Solutions ---",
+    "// --- Problems ---",
     "",
   ].join("\n");
 
@@ -408,9 +495,10 @@ function collectProblems() {
       solution,
       notes,
       functionName,
-      usesListNode: solution ? usesListNode(solution, readme) : false,
+      signatureStub: solution ? extractSignatureStub(solution, functionName) : null,
+      usesListNode: solution ? usesListNode(solution, readme) : usesListNode("", readme),
       mutatesInput: solution ? mutatesInput(solution) : false,
-      examples: solution && functionName ? parseExamples(readme) : [],
+      examples: functionName ? parseExamples(readme) : [],
       markdown: buildProblemSection(folderName, readme, solution, notes),
     });
   }

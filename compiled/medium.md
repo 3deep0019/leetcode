@@ -1,46 +1,41 @@
 # LeetCode Medium Problems
 
-11 problem(s)
+12 problem(s)
 
 ## 2-add-two-numbers
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/add-two-numbers">Add Two Numbers</a></h2> <img src='https://img.shields.io/badge/Difficulty-Medium-orange' alt='Difficulty: Medium' /><hr><p>You are given two <strong>non-empty</strong> linked lists representing two non-negative integers. The digits are stored in <strong>reverse order</strong>, and each of their nodes contains a single digit. Add the two numbers and return the sum&nbsp;as a linked list.</p>
+Add Two Numbers
+https://leetcode.com/problems/add-two-numbers
 
-<p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>
+You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2020/10/02/addtwonumber1.jpg" style="width: 483px; height: 342px;" />
-<pre>
-<strong>Input:</strong> l1 = [2,4,3], l2 = [5,6,4]
-<strong>Output:</strong> [7,0,8]
-<strong>Explanation:</strong> 342 + 465 = 807.
-</pre>
+You may assume the two numbers do not contain any leading zero, except the number 0 itself.
 
-<p><strong class="example">Example 2:</strong></p>
+Example 1:
 
-<pre>
-<strong>Input:</strong> l1 = [0], l2 = [0]
-<strong>Output:</strong> [0]
-</pre>
+Input: l1 = [2,4,3], l2 = [5,6,4]
+Output: [7,0,8]
+Explanation: 342 + 465 = 807.
 
-<p><strong class="example">Example 3:</strong></p>
+Example 2:
 
-<pre>
-<strong>Input:</strong> l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]
-<strong>Output:</strong> [8,9,9,9,0,0,0,1]
-</pre>
+Input: l1 = [0], l2 = [0]
+Output: [0]
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Example 3:
 
-<ul>
-	<li>The number of nodes in each linked list is in the range <code>[1, 100]</code>.</li>
-	<li><code>0 &lt;= Node.val &lt;= 9</code></li>
-	<li>It is guaranteed that the list represents a number that does not have leading zeros.</li>
-</ul>
+Input: l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]
+Output: [8,9,9,9,0,0,0,1]
+
+Constraints:
+
+	- The number of nodes in each linked list is in the range `[1, 100]`.
+
+	- `0 <= Node.val <= 9`
+
+	- It is guaranteed that the list represents a number that does not have leading zeros.
 
 ### Solution
 
@@ -86,49 +81,44 @@ var addTwoNumbers = function(l1, l2) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/group-anagrams">Group Anagrams</a></h2> <img src='https://img.shields.io/badge/Difficulty-Medium-orange' alt='Difficulty: Medium' /><hr><p>Given an array of strings <code>strs</code>, group the <span data-keyword="anagram">anagrams</span> together. You can return the answer in <strong>any order</strong>.</p>
+Group Anagrams
+https://leetcode.com/problems/group-anagrams
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+Given an array of strings `strs`, group the anagrams together. You can return the answer in any order.
 
-<div class="example-block">
-<p><strong>Input:</strong> <span class="example-io">strs = [&quot;eat&quot;,&quot;tea&quot;,&quot;tan&quot;,&quot;ate&quot;,&quot;nat&quot;,&quot;bat&quot;]</span></p>
+Example 1:
 
-<p><strong>Output:</strong> <span class="example-io">[[&quot;bat&quot;],[&quot;nat&quot;,&quot;tan&quot;],[&quot;ate&quot;,&quot;eat&quot;,&quot;tea&quot;]]</span></p>
+Input: strs = ["eat","tea","tan","ate","nat","bat"]
 
-<p><strong>Explanation:</strong></p>
+Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
 
-<ul>
-	<li>There is no string in strs that can be rearranged to form <code>&quot;bat&quot;</code>.</li>
-	<li>The strings <code>&quot;nat&quot;</code> and <code>&quot;tan&quot;</code> are anagrams as they can be rearranged to form each other.</li>
-	<li>The strings <code>&quot;ate&quot;</code>, <code>&quot;eat&quot;</code>, and <code>&quot;tea&quot;</code> are anagrams as they can be rearranged to form each other.</li>
-</ul>
-</div>
+Explanation:
 
-<p><strong class="example">Example 2:</strong></p>
+	- There is no string in strs that can be rearranged to form `"bat"`.
 
-<div class="example-block">
-<p><strong>Input:</strong> <span class="example-io">strs = [&quot;&quot;]</span></p>
+	- The strings `"nat"` and `"tan"` are anagrams as they can be rearranged to form each other.
 
-<p><strong>Output:</strong> <span class="example-io">[[&quot;&quot;]]</span></p>
-</div>
+	- The strings `"ate"`, `"eat"`, and `"tea"` are anagrams as they can be rearranged to form each other.
 
-<p><strong class="example">Example 3:</strong></p>
+Example 2:
 
-<div class="example-block">
-<p><strong>Input:</strong> <span class="example-io">strs = [&quot;a&quot;]</span></p>
+Input: strs = [""]
 
-<p><strong>Output:</strong> <span class="example-io">[[&quot;a&quot;]]</span></p>
-</div>
+Output: [[""]]
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Example 3:
 
-<ul>
-	<li><code>1 &lt;= strs.length &lt;= 10<sup>4</sup></code></li>
-	<li><code>0 &lt;= strs[i].length &lt;= 100</code></li>
-	<li><code>strs[i]</code> consists of lowercase English letters.</li>
-</ul>
+Input: strs = ["a"]
+
+Output: [["a"]]
+
+Constraints:
+
+	- `1 <= strs.length <= 10^4`
+
+	- `0 <= strs[i].length <= 100`
+
+	- `strs[i]` consists of lowercase English letters.
 
 ### Solution
 
@@ -159,59 +149,56 @@ var groupAnagrams = function(strs) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/evaluate-reverse-polish-notation">Evaluate Reverse Polish Notation</a></h2> <img src='https://img.shields.io/badge/Difficulty-Medium-orange' alt='Difficulty: Medium' /><hr><p>You are given an array of strings <code>tokens</code> that represents an arithmetic expression in a <a href="http://en.wikipedia.org/wiki/Reverse_Polish_notation" target="_blank">Reverse Polish Notation</a>.</p>
+Evaluate Reverse Polish Notation
+https://leetcode.com/problems/evaluate-reverse-polish-notation
 
-<p>Evaluate the expression. Return <em>an integer that represents the value of the expression</em>.</p>
+You are given an array of strings `tokens` that represents an arithmetic expression in a Reverse Polish Notation.
 
-<p><strong>Note</strong> that:</p>
+Evaluate the expression. Return an integer that represents the value of the expression.
 
-<ul>
-	<li>The valid operators are <code>&#39;+&#39;</code>, <code>&#39;-&#39;</code>, <code>&#39;*&#39;</code>, and <code>&#39;/&#39;</code>.</li>
-	<li>Each operand may be an integer or another expression.</li>
-	<li>The division between two integers always <strong>truncates toward zero</strong>.</li>
-	<li>There will not be any division by zero.</li>
-	<li>The input represents a valid arithmetic expression in a reverse polish notation.</li>
-	<li>The answer and all the intermediate calculations can be represented in a <strong>32-bit</strong> integer.</li>
-</ul>
+Note that:
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+	- The valid operators are `'+'`, `'-'`, `'*'`, and `'/'`.
 
-<pre>
-<strong>Input:</strong> tokens = [&quot;2&quot;,&quot;1&quot;,&quot;+&quot;,&quot;3&quot;,&quot;*&quot;]
-<strong>Output:</strong> 9
-<strong>Explanation:</strong> ((2 + 1) * 3) = 9
-</pre>
+	- Each operand may be an integer or another expression.
 
-<p><strong class="example">Example 2:</strong></p>
+	- The division between two integers always truncates toward zero.
 
-<pre>
-<strong>Input:</strong> tokens = [&quot;4&quot;,&quot;13&quot;,&quot;5&quot;,&quot;/&quot;,&quot;+&quot;]
-<strong>Output:</strong> 6
-<strong>Explanation:</strong> (4 + (13 / 5)) = 6
-</pre>
+	- There will not be any division by zero.
 
-<p><strong class="example">Example 3:</strong></p>
+	- The input represents a valid arithmetic expression in a reverse polish notation.
 
-<pre>
-<strong>Input:</strong> tokens = [&quot;10&quot;,&quot;6&quot;,&quot;9&quot;,&quot;3&quot;,&quot;+&quot;,&quot;-11&quot;,&quot;*&quot;,&quot;/&quot;,&quot;*&quot;,&quot;17&quot;,&quot;+&quot;,&quot;5&quot;,&quot;+&quot;]
-<strong>Output:</strong> 22
-<strong>Explanation:</strong> ((10 * (6 / ((9 + 3) * -11))) + 17) + 5
+	- The answer and all the intermediate calculations can be represented in a 32-bit integer.
+
+Example 1:
+
+Input: tokens = ["2","1","+","3","*"]
+Output: 9
+Explanation: ((2 + 1) * 3) = 9
+
+Example 2:
+
+Input: tokens = ["4","13","5","/","+"]
+Output: 6
+Explanation: (4 + (13 / 5)) = 6
+
+Example 3:
+
+Input: tokens = ["10","6","9","3","+","-11","*","/","*","17","+","5","+"]
+Output: 22
+Explanation: ((10 * (6 / ((9 + 3) * -11))) + 17) + 5
 = ((10 * (6 / (12 * -11))) + 17) + 5
 = ((10 * (6 / -132)) + 17) + 5
 = ((10 * 0) + 17) + 5
 = (0 + 17) + 5
 = 17 + 5
 = 22
-</pre>
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Constraints:
 
-<ul>
-	<li><code>1 &lt;= tokens.length &lt;= 10<sup>4</sup></code></li>
-	<li><code>tokens[i]</code> is either an operator: <code>&quot;+&quot;</code>, <code>&quot;-&quot;</code>, <code>&quot;*&quot;</code>, or <code>&quot;/&quot;</code>, or an integer in the range <code>[-200, 200]</code>.</li>
-</ul>
+	- `1 <= tokens.length <= 10^4`
+
+	- `tokens[i]` is either an operator: `"+"`, `"-"`, `"*"`, or `"/"`, or an integer in the range `[-200, 200]`.
 
 ### Solution
 
@@ -251,69 +238,68 @@ var evalRPN = function(tokens) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/exclusive-time-of-functions">Exclusive Time of Functions</a></h2> <img src='https://img.shields.io/badge/Difficulty-Medium-orange' alt='Difficulty: Medium' /><hr><p>On a <strong>single-threaded</strong> CPU, we execute a program containing <code>n</code> functions. Each function has a unique ID between 0 and <code>n - 1</code>.</p>
+Exclusive Time of Functions
+https://leetcode.com/problems/exclusive-time-of-functions
 
-<p>Function calls are <strong>stored in a <a href="https://en.wikipedia.org/wiki/Call_stack">call stack</a></strong>: when a function call starts, its ID is pushed onto the stack, and when a function call ends, its ID is popped off the stack. The function whose ID is at the top of the stack is <strong>the current function being executed</strong>. Each time a function starts or ends, we write a log with the ID, whether it started or ended, and the timestamp.</p>
+On a single-threaded CPU, we execute a program containing `n` functions. Each function has a unique ID between 0 and `n - 1`.
 
-<p>You are given a list <code>logs</code>, where <code>logs[i]</code> represents the <code>i<sup>th</sup></code> log message formatted as a string <code>&quot;{function_id}:{&quot;start&quot; | &quot;end&quot;}:{timestamp}&quot;</code>. For example, <code>&quot;0:start:3&quot;</code> means a function call with function ID 0 <strong>started at the beginning</strong> of timestamp 3, and <code>&quot;1:end:2&quot;</code> means a function call with function ID 1 <strong>ended at the end</strong> of timestamp 2. Note that a function can be called <b>multiple times, possibly recursively</b>.</p>
+Function calls are stored in a call stack: when a function call starts, its ID is pushed onto the stack, and when a function call ends, its ID is popped off the stack. The function whose ID is at the top of the stack is the current function being executed. Each time a function starts or ends, we write a log with the ID, whether it started or ended, and the timestamp.
 
-<p>A function&#39;s <strong>exclusive time</strong> is the sum of execution times for all function calls in the program. For example, if a function is called twice, one call executing for 2 time units and another call executing for 1 time unit, the <strong>exclusive time</strong> is <code>2 + 1 = 3</code>.</p>
+You are given a list `logs`, where `logs[i]` represents the `i^th` log message formatted as a string `"{function_id}:{"start" | "end"}:{timestamp}"`. For example, `"0:start:3"` means a function call with function ID 0 started at the beginning of timestamp 3, and `"1:end:2"` means a function call with function ID 1 ended at the end of timestamp 2. Note that a function can be called multiple times, possibly recursively.
 
-<p>Return <em>the <strong>exclusive time</strong> of each function in an array, where the value at the </em><code>i<sup>th</sup></code><em> index represents the exclusive time for the function with ID </em><code>i</code>.</p>
+A function's exclusive time is the sum of execution times for all function calls in the program. For example, if a function is called twice, one call executing for 2 time units and another call executing for 1 time unit, the exclusive time is `2 + 1 = 3`.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2019/04/05/diag1b.png" style="width: 550px; height: 239px;" />
-<pre>
-<strong>Input:</strong> n = 2, logs = [&quot;0:start:0&quot;,&quot;1:start:2&quot;,&quot;1:end:5&quot;,&quot;0:end:6&quot;]
-<strong>Output:</strong> [3,4]
-<strong>Explanation:</strong>
+Return the exclusive time of each function in an array, where the value at the `i^th` index represents the exclusive time for the function with ID `i`.
+
+Example 1:
+
+Input: n = 2, logs = ["0:start:0","1:start:2","1:end:5","0:end:6"]
+Output: [3,4]
+Explanation:
 Function 0 starts at the beginning of time 0, then it executes 2 for units of time and reaches the end of time 1.
 Function 1 starts at the beginning of time 2, executes for 4 units of time, and ends at the end of time 5.
 Function 0 resumes execution at the beginning of time 6 and executes for 1 unit of time.
 So function 0 spends 2 + 1 = 3 units of total time executing, and function 1 spends 4 units of total time executing.
-</pre>
 
-<p><strong class="example">Example 2:</strong></p>
+Example 2:
 
-<pre>
-<strong>Input:</strong> n = 1, logs = [&quot;0:start:0&quot;,&quot;0:start:2&quot;,&quot;0:end:5&quot;,&quot;0:start:6&quot;,&quot;0:end:6&quot;,&quot;0:end:7&quot;]
-<strong>Output:</strong> [8]
-<strong>Explanation:</strong>
+Input: n = 1, logs = ["0:start:0","0:start:2","0:end:5","0:start:6","0:end:6","0:end:7"]
+Output: [8]
+Explanation:
 Function 0 starts at the beginning of time 0, executes for 2 units of time, and recursively calls itself.
 Function 0 (recursive call) starts at the beginning of time 2 and executes for 4 units of time.
 Function 0 (initial call) resumes execution then immediately calls itself again.
 Function 0 (2nd recursive call) starts at the beginning of time 6 and executes for 1 unit of time.
 Function 0 (initial call) resumes execution at the beginning of time 7 and executes for 1 unit of time.
 So function 0 spends 2 + 4 + 1 + 1 = 8 units of total time executing.
-</pre>
 
-<p><strong class="example">Example 3:</strong></p>
+Example 3:
 
-<pre>
-<strong>Input:</strong> n = 2, logs = [&quot;0:start:0&quot;,&quot;0:start:2&quot;,&quot;0:end:5&quot;,&quot;1:start:6&quot;,&quot;1:end:6&quot;,&quot;0:end:7&quot;]
-<strong>Output:</strong> [7,1]
-<strong>Explanation:</strong>
+Input: n = 2, logs = ["0:start:0","0:start:2","0:end:5","1:start:6","1:end:6","0:end:7"]
+Output: [7,1]
+Explanation:
 Function 0 starts at the beginning of time 0, executes for 2 units of time, and recursively calls itself.
 Function 0 (recursive call) starts at the beginning of time 2 and executes for 4 units of time.
 Function 0 (initial call) resumes execution then immediately calls function 1.
 Function 1 starts at the beginning of time 6, executes 1 unit of time, and ends at the end of time 6.
 Function 0 resumes execution at the beginning of time 7 and executes for 1 unit of time.
 So function 0 spends 2 + 4 + 1 = 7 units of total time executing, and function 1 spends 1 unit of total time executing.
-</pre>
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Constraints:
 
-<ul>
-	<li><code>1 &lt;= n &lt;= 100</code></li>
-	<li><code>2 &lt;= logs.length &lt;= 500</code></li>
-	<li><code>0 &lt;= function_id &lt; n</code></li>
-	<li><code>0 &lt;= timestamp &lt;= 10<sup>9</sup></code></li>
-	<li>No two start events will happen at the same timestamp.</li>
-	<li>No two end events will happen at the same timestamp.</li>
-	<li>Each function has an <code>&quot;end&quot;</code> log for each <code>&quot;start&quot;</code> log.</li>
-</ul>
+	- `1 <= n <= 100`
+
+	- `2 <= logs.length <= 500`
+
+	- `0 <= function_id < n`
+
+	- `0 <= timestamp <= 10^9`
+
+	- No two start events will happen at the same timestamp.
+
+	- No two end events will happen at the same timestamp.
+
+	- Each function has an `"end"` log for each `"start"` log.
 
 ### Solution
 
@@ -360,33 +346,29 @@ var exclusiveTime = function(n, logs) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/repeated-string-match">Repeated String Match</a></h2> <img src='https://img.shields.io/badge/Difficulty-Medium-orange' alt='Difficulty: Medium' /><hr><p>Given two strings <code>a</code> and <code>b</code>, return <em>the minimum number of times you should repeat string </em><code>a</code><em> so that string</em> <code>b</code> <em>is a substring of it</em>. If it is impossible for <code>b</code>​​​​​​ to be a substring of <code>a</code> after repeating it, return <code>-1</code>.</p>
+Repeated String Match
+https://leetcode.com/problems/repeated-string-match
 
-<p><strong>Notice:</strong> string <code>&quot;abc&quot;</code> repeated 0 times is <code>&quot;&quot;</code>, repeated 1 time is <code>&quot;abc&quot;</code> and repeated 2 times is <code>&quot;abcabc&quot;</code>.</p>
+Given two strings `a` and `b`, return the minimum number of times you should repeat string `a` so that string `b` is a substring of it. If it is impossible for `b`​​​​​​ to be a substring of `a` after repeating it, return `-1`.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+Notice: string `"abc"` repeated 0 times is `""`, repeated 1 time is `"abc"` and repeated 2 times is `"abcabc"`.
 
-<pre>
-<strong>Input:</strong> a = &quot;abcd&quot;, b = &quot;cdabcdab&quot;
-<strong>Output:</strong> 3
-<strong>Explanation:</strong> We return 3 because by repeating a three times &quot;ab<strong>cdabcdab</strong>cd&quot;, b is a substring of it.
-</pre>
+Example 1:
 
-<p><strong class="example">Example 2:</strong></p>
+Input: a = "abcd", b = "cdabcdab"
+Output: 3
+Explanation: We return 3 because by repeating a three times "abcdabcdabcd", b is a substring of it.
 
-<pre>
-<strong>Input:</strong> a = &quot;a&quot;, b = &quot;aa&quot;
-<strong>Output:</strong> 2
-</pre>
+Example 2:
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Input: a = "a", b = "aa"
+Output: 2
 
-<ul>
-	<li><code>1 &lt;= a.length, b.length &lt;= 10<sup>4</sup></code></li>
-	<li><code>a</code> and <code>b</code> consist of lowercase English letters.</li>
-</ul>
+Constraints:
+
+	- `1 <= a.length, b.length <= 10^4`
+
+	- `a` and `b` consist of lowercase English letters.
 
 ### Solution
 
@@ -416,26 +398,31 @@ var repeatedStringMatch = function(a, b) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/daily-temperatures">Daily Temperatures</a></h2> <img src='https://img.shields.io/badge/Difficulty-Medium-orange' alt='Difficulty: Medium' /><hr><p>Given an array of integers <code>temperatures</code> represents the daily temperatures, return <em>an array</em> <code>answer</code> <em>such that</em> <code>answer[i]</code> <em>is the number of days you have to wait after the</em> <code>i<sup>th</sup></code> <em>day to get a warmer temperature</em>. If there is no future day for which this is possible, keep <code>answer[i] == 0</code> instead.</p>
+Daily Temperatures
+https://leetcode.com/problems/daily-temperatures
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
-<pre><strong>Input:</strong> temperatures = [73,74,75,71,69,72,76,73]
-<strong>Output:</strong> [1,1,4,2,1,1,0,0]
-</pre><p><strong class="example">Example 2:</strong></p>
-<pre><strong>Input:</strong> temperatures = [30,40,50,60]
-<strong>Output:</strong> [1,1,1,0]
-</pre><p><strong class="example">Example 3:</strong></p>
-<pre><strong>Input:</strong> temperatures = [30,60,90]
-<strong>Output:</strong> [1,1,0]
-</pre>
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Given an array of integers `temperatures` represents the daily temperatures, return an array `answer` such that `answer[i]` is the number of days you have to wait after the `i^th` day to get a warmer temperature. If there is no future day for which this is possible, keep `answer[i] == 0` instead.
 
-<ul>
-	<li><code>1 &lt;=&nbsp;temperatures.length &lt;= 10<sup>5</sup></code></li>
-	<li><code>30 &lt;=&nbsp;temperatures[i] &lt;= 100</code></li>
-</ul>
+Example 1:
+
+Input: temperatures = [73,74,75,71,69,72,76,73]
+Output: [1,1,4,2,1,1,0,0]
+
+Example 2:
+
+Input: temperatures = [30,40,50,60]
+Output: [1,1,1,0]
+
+Example 3:
+
+Input: temperatures = [30,60,90]
+Output: [1,1,0]
+
+Constraints:
+
+	- `1 <= temperatures.length <= 10^5`
+
+	- `30 <= temperatures[i] <= 100`
 
 ### Solution
 
@@ -467,45 +454,104 @@ var dailyTemperatures = function(temperatures) {
 
 ---
 
+## 1222-remove-covered-intervals
+
+### Problem
+
+Remove Covered Intervals
+https://leetcode.com/problems/remove-covered-intervals
+
+Given an array `intervals` where `intervals[i] = [li, ri]` represent the interval `[li, ri)`, remove all intervals that are covered by another interval in the list.
+
+The interval `[a, b)` is covered by the interval `[c, d)` if and only if `c <= a` and `b <= d`.
+
+Return the number of remaining intervals.
+
+Example 1:
+
+Input: intervals = [[1,4],[3,6],[2,8]]
+Output: 2
+Explanation: Interval [3,6] is covered by [2,8], therefore it is removed.
+
+Example 2:
+
+Input: intervals = [[1,4],[2,3]]
+Output: 1
+
+Constraints:
+
+	- `1 <= intervals.length <= 1000`
+
+	- `intervals[i].length == 2`
+
+	- `0 <= li < ri <= 10^5`
+
+	- All the given intervals are unique.
+
+### Solution
+
+```javascript
+/**
+ * @param {number[][]} intervals
+ * @return {number}
+ */
+var removeCoveredIntervals = function(intervals) {
+    intervals.sort((a, b) => {
+        if (a[0] === b[0]) {
+            return b[1] - a[1];
+        }
+        return a[0] - b[0];
+    });
+
+    let count = 0;
+    let maxEnd = 0;
+
+    for (const interval of intervals) {
+        if (interval[1] > maxEnd) {
+            count++;
+            maxEnd = interval[1];
+        }
+    }
+
+    return count;
+};
+```
+
+---
+
 ## 1460-number-of-substrings-containing-all-three-characters
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/number-of-substrings-containing-all-three-characters">Number of Substrings Containing All Three Characters</a></h2> <img src='https://img.shields.io/badge/Difficulty-Medium-orange' alt='Difficulty: Medium' /><hr><p>Given a string <code>s</code>&nbsp;consisting only of characters <em>a</em>, <em>b</em> and <em>c</em>.</p>
+Number of Substrings Containing All Three Characters
+https://leetcode.com/problems/number-of-substrings-containing-all-three-characters
 
-<p>Return the number of substrings containing <b>at least</b>&nbsp;one occurrence of all these characters <em>a</em>, <em>b</em> and <em>c</em>.</p>
+Given a string `s` consisting only of characters a, b and c.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+Return the number of substrings containing at least one occurrence of all these characters a, b and c.
 
-<pre>
-<strong>Input:</strong> s = &quot;abcabc&quot;
-<strong>Output:</strong> 10
-<strong>Explanation:</strong> The substrings containing&nbsp;at least&nbsp;one occurrence of the characters&nbsp;<em>a</em>,&nbsp;<em>b</em>&nbsp;and&nbsp;<em>c are &quot;</em>abc<em>&quot;, &quot;</em>abca<em>&quot;, &quot;</em>abcab<em>&quot;, &quot;</em>abcabc<em>&quot;, &quot;</em>bca<em>&quot;, &quot;</em>bcab<em>&quot;, &quot;</em>bcabc<em>&quot;, &quot;</em>cab<em>&quot;, &quot;</em>cabc<em>&quot; </em>and<em> &quot;</em>abc<em>&quot; </em>(<strong>again</strong>)<em>. </em>
-</pre>
+Example 1:
 
-<p><strong class="example">Example 2:</strong></p>
+Input: s = "abcabc"
+Output: 10
+Explanation: The substrings containing at least one occurrence of the characters a, b and c are "abc", "abca", "abcab", "abcabc", "bca", "bcab", "bcabc", "cab", "cabc" and "abc" (again).
 
-<pre>
-<strong>Input:</strong> s = &quot;aaacb&quot;
-<strong>Output:</strong> 3
-<strong>Explanation:</strong> The substrings containing&nbsp;at least&nbsp;one occurrence of the characters&nbsp;<em>a</em>,&nbsp;<em>b</em>&nbsp;and&nbsp;<em>c are &quot;</em>aaacb<em>&quot;, &quot;</em>aacb<em>&quot; </em>and<em> &quot;</em>acb<em>&quot;.</em><em> </em>
-</pre>
+Example 2:
 
-<p><strong class="example">Example 3:</strong></p>
+Input: s = "aaacb"
+Output: 3
+Explanation: The substrings containing at least one occurrence of the characters a, b and c are "aaacb", "aacb" and "acb".
 
-<pre>
-<strong>Input:</strong> s = &quot;abc&quot;
-<strong>Output:</strong> 1
-</pre>
+Example 3:
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Input: s = "abc"
+Output: 1
 
-<ul>
-	<li><code>3 &lt;= s.length &lt;= 5 x 10^4</code></li>
-	<li><code>s</code>&nbsp;only consists of&nbsp;<em>a</em>, <em>b</em> or <em>c&nbsp;</em>characters.</li>
-</ul>
+Constraints:
+
+	- `3 <= s.length <= 5 x 10^4`
+
+	- `s` only consists of a, b or c characters.
 
 ### Solution
 
@@ -540,72 +586,67 @@ var numberOfSubstrings = function(s) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/build-an-array-with-stack-operations">Build an Array With Stack Operations</a></h2> <img src='https://img.shields.io/badge/Difficulty-Medium-orange' alt='Difficulty: Medium' /><hr><p>You are given an integer array <code>target</code> and an integer <code>n</code>.</p>
+Build an Array With Stack Operations
+https://leetcode.com/problems/build-an-array-with-stack-operations
 
-<p>You have an empty stack with the two following operations:</p>
+You are given an integer array `target` and an integer `n`.
 
-<ul>
-	<li><strong><code>&quot;Push&quot;</code></strong>: pushes an integer to the top of the stack.</li>
-	<li><strong><code>&quot;Pop&quot;</code></strong>: removes the integer on the top of the stack.</li>
-</ul>
+You have an empty stack with the two following operations:
 
-<p>You also have a stream of the integers in the range <code>[1, n]</code>.</p>
+	- `"Push"`: pushes an integer to the top of the stack.
 
-<p>Use the two stack operations to make the numbers in the stack (from the bottom to the top) equal to <code>target</code>. You should follow the following rules:</p>
+	- `"Pop"`: removes the integer on the top of the stack.
 
-<ul>
-	<li>If the stream of the integers is not empty, pick the next integer from the stream and push it to the top of the stack.</li>
-	<li>If the stack is not empty, pop the integer at the top of the stack.</li>
-	<li>If, at any moment, the elements in the stack (from the bottom to the top) are equal to <code>target</code>, do not read new integers from the stream and do not do more operations on the stack.</li>
-</ul>
+You also have a stream of the integers in the range `[1, n]`.
 
-<p>Return <em>the stack operations needed to build </em><code>target</code> following the mentioned rules. If there are multiple valid answers, return <strong>any of them</strong>.</p>
+Use the two stack operations to make the numbers in the stack (from the bottom to the top) equal to `target`. You should follow the following rules:
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+	- If the stream of the integers is not empty, pick the next integer from the stream and push it to the top of the stack.
 
-<pre>
-<strong>Input:</strong> target = [1,3], n = 3
-<strong>Output:</strong> [&quot;Push&quot;,&quot;Push&quot;,&quot;Pop&quot;,&quot;Push&quot;]
-<strong>Explanation:</strong> Initially the stack s is empty. The last element is the top of the stack.
+	- If the stack is not empty, pop the integer at the top of the stack.
+
+	- If, at any moment, the elements in the stack (from the bottom to the top) are equal to `target`, do not read new integers from the stream and do not do more operations on the stack.
+
+Return the stack operations needed to build `target` following the mentioned rules. If there are multiple valid answers, return any of them.
+
+Example 1:
+
+Input: target = [1,3], n = 3
+Output: ["Push","Push","Pop","Push"]
+Explanation: Initially the stack s is empty. The last element is the top of the stack.
 Read 1 from the stream and push it to the stack. s = [1].
 Read 2 from the stream and push it to the stack. s = [1,2].
 Pop the integer on the top of the stack. s = [1].
 Read 3 from the stream and push it to the stack. s = [1,3].
-</pre>
 
-<p><strong class="example">Example 2:</strong></p>
+Example 2:
 
-<pre>
-<strong>Input:</strong> target = [1,2,3], n = 3
-<strong>Output:</strong> [&quot;Push&quot;,&quot;Push&quot;,&quot;Push&quot;]
-<strong>Explanation:</strong> Initially the stack s is empty. The last element is the top of the stack.
+Input: target = [1,2,3], n = 3
+Output: ["Push","Push","Push"]
+Explanation: Initially the stack s is empty. The last element is the top of the stack.
 Read 1 from the stream and push it to the stack. s = [1].
 Read 2 from the stream and push it to the stack. s = [1,2].
 Read 3 from the stream and push it to the stack. s = [1,2,3].
-</pre>
 
-<p><strong class="example">Example 3:</strong></p>
+Example 3:
 
-<pre>
-<strong>Input:</strong> target = [1,2], n = 4
-<strong>Output:</strong> [&quot;Push&quot;,&quot;Push&quot;]
-<strong>Explanation:</strong> Initially the stack s is empty. The last element is the top of the stack.
+Input: target = [1,2], n = 4
+Output: ["Push","Push"]
+Explanation: Initially the stack s is empty. The last element is the top of the stack.
 Read 1 from the stream and push it to the stack. s = [1].
 Read 2 from the stream and push it to the stack. s = [1,2].
 Since the stack (from the bottom to the top) is equal to target, we stop the stack operations.
 The answers that read integer 3 from the stream are not accepted.
-</pre>
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Constraints:
 
-<ul>
-	<li><code>1 &lt;= target.length &lt;= 100</code></li>
-	<li><code>1 &lt;= n &lt;= 100</code></li>
-	<li><code>1 &lt;= target[i] &lt;= n</code></li>
-	<li><code>target</code> is strictly increasing.</li>
-</ul>
+	- `1 <= target.length <= 100`
+
+	- `1 <= n <= 100`
+
+	- `1 <= target[i] <= n`
+
+	- `target` is strictly increasing.
 
 ### Solution
 
@@ -639,51 +680,53 @@ var buildArray = function(target, n) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/minimum-score-of-a-path-between-two-cities">Minimum Score of a Path Between Two Cities</a></h2> <img src='https://img.shields.io/badge/Difficulty-Medium-orange' alt='Difficulty: Medium' /><hr><p>You are given a positive integer <code>n</code> representing <code>n</code> cities numbered from <code>1</code> to <code>n</code>. You are also given a <strong>2D</strong> array <code>roads</code> where <code>roads[i] = [a<sub>i</sub>, b<sub>i</sub>, distance<sub>i</sub>]</code> indicates that there is a <strong>bidirectional </strong>road between cities <code>a<sub>i</sub></code> and <code>b<sub>i</sub></code> with a distance equal to <code>distance<sub>i</sub></code>. The cities graph is not necessarily connected.</p>
+Minimum Score of a Path Between Two Cities
+https://leetcode.com/problems/minimum-score-of-a-path-between-two-cities
 
-<p>The <strong>score</strong> of a path between two cities is defined as the <strong>minimum </strong>distance of a road in this path.</p>
+You are given a positive integer `n` representing `n` cities numbered from `1` to `n`. You are also given a 2D array `roads` where `roads[i] = [ai, bi, distancei]` indicates that there is a bidirectional road between cities `ai` and `bi` with a distance equal to `distancei`. The cities graph is not necessarily connected.
 
-<p>Return <em>the <strong>minimum </strong>possible score of a path between cities </em><code>1</code><em> and </em><code>n</code>.</p>
+The score of a path between two cities is defined as the minimum distance of a road in this path.
 
-<p><strong>Note</strong>:</p>
+Return the minimum possible score of a path between cities `1` and `n`.
 
-<ul>
-	<li>A path is a sequence of roads between two cities.</li>
-	<li>It is allowed for a path to contain the same road <strong>multiple</strong> times, and you can visit cities <code>1</code> and <code>n</code> multiple times along the path.</li>
-	<li>The test cases are generated such that there is <strong>at least</strong> one path between <code>1</code> and <code>n</code>.</li>
-</ul>
+Note:
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2022/10/12/graph11.png" style="width: 190px; height: 231px;" />
-<pre>
-<strong>Input:</strong> n = 4, roads = [[1,2,9],[2,3,6],[2,4,5],[1,4,7]]
-<strong>Output:</strong> 5
-<strong>Explanation:</strong> The path from city 1 to 4 with the minimum score is: 1 -&gt; 2 -&gt; 4. The score of this path is min(9,5) = 5.
+	- A path is a sequence of roads between two cities.
+
+	- It is allowed for a path to contain the same road multiple times, and you can visit cities `1` and `n` multiple times along the path.
+
+	- The test cases are generated such that there is at least one path between `1` and `n`.
+
+Example 1:
+
+Input: n = 4, roads = [[1,2,9],[2,3,6],[2,4,5],[1,4,7]]
+Output: 5
+Explanation: The path from city 1 to 4 with the minimum score is: 1 -> 2 -> 4. The score of this path is min(9,5) = 5.
 It can be shown that no other path has less score.
-</pre>
 
-<p><strong class="example">Example 2:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2022/10/12/graph22.png" style="width: 190px; height: 231px;" />
-<pre>
-<strong>Input:</strong> n = 4, roads = [[1,2,2],[1,3,4],[3,4,7]]
-<strong>Output:</strong> 2
-<strong>Explanation:</strong> The path from city 1 to 4 with the minimum score is: 1 -&gt; 2 -&gt; 1 -&gt; 3 -&gt; 4. The score of this path is min(2,2,4,7) = 2.
-</pre>
+Example 2:
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Input: n = 4, roads = [[1,2,2],[1,3,4],[3,4,7]]
+Output: 2
+Explanation: The path from city 1 to 4 with the minimum score is: 1 -> 2 -> 1 -> 3 -> 4. The score of this path is min(2,2,4,7) = 2.
 
-<ul>
-	<li><code>2 &lt;= n &lt;= 10<sup>5</sup></code></li>
-	<li><code>1 &lt;= roads.length &lt;= 10<sup>5</sup></code></li>
-	<li><code>roads[i].length == 3</code></li>
-	<li><code>1 &lt;= a<sub>i</sub>, b<sub>i</sub> &lt;= n</code></li>
-	<li><code>a<sub>i</sub> != b<sub>i</sub></code></li>
-	<li><code>1 &lt;= distance<sub>i</sub> &lt;= 10<sup>4</sup></code></li>
-	<li>There are no repeated edges.</li>
-	<li>There is at least one path between <code>1</code> and <code>n</code>.</li>
-</ul>
+Constraints:
+
+	- `2 <= n <= 10^5`
+
+	- `1 <= roads.length <= 10^5`
+
+	- `roads[i].length == 3`
+
+	- `1 <= ai, bi <= n`
+
+	- `ai != bi`
+
+	- `1 <= distancei <= 10^4`
+
+	- There are no repeated edges.
+
+	- There is at least one path between `1` and `n`.
 
 ### Solution
 
@@ -735,62 +778,57 @@ var minScore = function(n, roads) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/find-the-safest-path-in-a-grid">Find the Safest Path in a Grid</a></h2> <img src='https://img.shields.io/badge/Difficulty-Medium-orange' alt='Difficulty: Medium' /><hr><p>You are given a <strong>0-indexed</strong> 2D matrix <code>grid</code> of size <code>n x n</code>, where <code>(r, c)</code> represents:</p>
+Find the Safest Path in a Grid
+https://leetcode.com/problems/find-the-safest-path-in-a-grid
 
-<ul>
-	<li>A cell containing a thief if <code>grid[r][c] = 1</code></li>
-	<li>An empty cell if <code>grid[r][c] = 0</code></li>
-</ul>
+You are given a 0-indexed 2D matrix `grid` of size `n x n`, where `(r, c)` represents:
 
-<p>You are initially positioned at cell <code>(0, 0)</code>. In one move, you can move to any adjacent cell in the grid, including cells containing thieves.</p>
+	- A cell containing a thief if `grid[r][c] = 1`
 
-<p>The <strong>safeness factor</strong> of a path on the grid is defined as the <strong>minimum</strong> manhattan distance from any cell in the path to any thief in the grid.</p>
+	- An empty cell if `grid[r][c] = 0`
 
-<p>Return <em>the <strong>maximum safeness factor</strong> of all paths leading to cell </em><code>(n - 1, n - 1)</code><em>.</em></p>
+You are initially positioned at cell `(0, 0)`. In one move, you can move to any adjacent cell in the grid, including cells containing thieves.
 
-<p>An <strong>adjacent</strong> cell of cell <code>(r, c)</code>, is one of the cells <code>(r, c + 1)</code>, <code>(r, c - 1)</code>, <code>(r + 1, c)</code> and <code>(r - 1, c)</code> if it exists.</p>
+The safeness factor of a path on the grid is defined as the minimum manhattan distance from any cell in the path to any thief in the grid.
 
-<p>The <strong>Manhattan distance</strong> between two cells <code>(a, b)</code> and <code>(x, y)</code> is equal to <code>|a - x| + |b - y|</code>, where <code>|val|</code> denotes the absolute value of val.</p>
+Return the maximum safeness factor of all paths leading to cell `(n - 1, n - 1)`.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2023/07/02/example1.png" style="width: 362px; height: 242px;" />
-<pre>
-<strong>Input:</strong> grid = [[1,0,0],[0,0,0],[0,0,1]]
-<strong>Output:</strong> 0
-<strong>Explanation:</strong> All paths from (0, 0) to (n - 1, n - 1) go through the thieves in cells (0, 0) and (n - 1, n - 1).
-</pre>
+An adjacent cell of cell `(r, c)`, is one of the cells `(r, c + 1)`, `(r, c - 1)`, `(r + 1, c)` and `(r - 1, c)` if it exists.
 
-<p><strong class="example">Example 2:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2023/07/02/example2.png" style="width: 362px; height: 242px;" />
-<pre>
-<strong>Input:</strong> grid = [[0,0,1],[0,0,0],[0,0,0]]
-<strong>Output:</strong> 2
-<strong>Explanation:</strong> The path depicted in the picture above has a safeness factor of 2 since:
+The Manhattan distance between two cells `(a, b)` and `(x, y)` is equal to `|a - x| + |b - y|`, where `|val|` denotes the absolute value of val.
+
+Example 1:
+
+Input: grid = [[1,0,0],[0,0,0],[0,0,1]]
+Output: 0
+Explanation: All paths from (0, 0) to (n - 1, n - 1) go through the thieves in cells (0, 0) and (n - 1, n - 1).
+
+Example 2:
+
+Input: grid = [[0,0,1],[0,0,0],[0,0,0]]
+Output: 2
+Explanation: The path depicted in the picture above has a safeness factor of 2 since:
 - The closest cell of the path to the thief at cell (0, 2) is cell (0, 0). The distance between them is | 0 - 0 | + | 0 - 2 | = 2.
 It can be shown that there are no other paths with a higher safeness factor.
-</pre>
 
-<p><strong class="example">Example 3:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2023/07/02/example3.png" style="width: 362px; height: 242px;" />
-<pre>
-<strong>Input:</strong> grid = [[0,0,0,1],[0,0,0,0],[0,0,0,0],[1,0,0,0]]
-<strong>Output:</strong> 2
-<strong>Explanation:</strong> The path depicted in the picture above has a safeness factor of 2 since:
+Example 3:
+
+Input: grid = [[0,0,0,1],[0,0,0,0],[0,0,0,0],[1,0,0,0]]
+Output: 2
+Explanation: The path depicted in the picture above has a safeness factor of 2 since:
 - The closest cell of the path to the thief at cell (0, 3) is cell (1, 2). The distance between them is | 0 - 1 | + | 3 - 2 | = 2.
 - The closest cell of the path to the thief at cell (3, 0) is cell (3, 2). The distance between them is | 3 - 3 | + | 0 - 2 | = 2.
 It can be shown that there are no other paths with a higher safeness factor.
-</pre>
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Constraints:
 
-<ul>
-	<li><code>1 &lt;= grid.length == n &lt;= 400</code></li>
-	<li><code>grid[i].length == n</code></li>
-	<li><code>grid[i][j]</code> is either <code>0</code> or <code>1</code>.</li>
-	<li>There is at least one thief in the <code>grid</code>.</li>
-</ul>
+	- `1 <= grid.length == n <= 400`
+
+	- `grid[i].length == n`
+
+	- `grid[i][j]` is either `0` or `1`.
+
+	- There is at least one thief in the `grid`.
 
 ### Solution
 
@@ -853,68 +891,64 @@ var maximumSafenessFactor = function(grid) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/find-a-safe-walk-through-a-grid">Find a Safe Walk Through a Grid</a></h2> <img src='https://img.shields.io/badge/Difficulty-Medium-orange' alt='Difficulty: Medium' /><hr><p>You are given an <code>m x n</code> binary matrix <code>grid</code> and an integer <code>health</code>.</p>
+Find a Safe Walk Through a Grid
+https://leetcode.com/problems/find-a-safe-walk-through-a-grid
 
-<p>You start on the upper-left corner <code>(0, 0)</code> and would like to get to the lower-right corner <code>(m - 1, n - 1)</code>.</p>
+You are given an `m x n` binary matrix `grid` and an integer `health`.
 
-<p>You can move up, down, left, or right from one cell to another adjacent cell as long as your health <em>remains</em> <strong>positive</strong>.</p>
+You start on the upper-left corner `(0, 0)` and would like to get to the lower-right corner `(m - 1, n - 1)`.
 
-<p>Cells <code>(i, j)</code> with <code>grid[i][j] = 1</code> are considered <strong>unsafe</strong> and reduce your health by 1.</p>
+You can move up, down, left, or right from one cell to another adjacent cell as long as your health remains positive.
 
-<p>Return <code>true</code> if you can reach the final cell with a health value of 1 or more, and <code>false</code> otherwise.</p>
+Cells `(i, j)` with `grid[i][j] = 1` are considered unsafe and reduce your health by 1.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+Return `true` if you can reach the final cell with a health value of 1 or more, and `false` otherwise.
 
-<div class="example-block">
-<p><strong>Input:</strong> <span class="example-io">grid = [[0,1,0,0,0],[0,1,0,1,0],[0,0,0,1,0]], health = 1</span></p>
+Example 1:
 
-<p><strong>Output:</strong> <span class="example-io">true</span></p>
+Input: grid = [[0,1,0,0,0],[0,1,0,1,0],[0,0,0,1,0]], health = 1
 
-<p><strong>Explanation:</strong></p>
+Output: true
 
-<p>The final cell can be reached safely by walking along the gray cells below.</p>
-<img alt="" src="https://assets.leetcode.com/uploads/2024/08/04/3868_examples_1drawio.png" style="width: 301px; height: 121px;" /></div>
+Explanation:
 
-<p><strong class="example">Example 2:</strong></p>
+The final cell can be reached safely by walking along the gray cells below.
 
-<div class="example-block">
-<p><strong>Input:</strong> <span class="example-io">grid = [[0,1,1,0,0,0],[1,0,1,0,0,0],[0,1,1,1,0,1],[0,0,1,0,1,0]], health = 3</span></p>
+Example 2:
 
-<p><strong>Output:</strong> <span class="example-io">false</span></p>
+Input: grid = [[0,1,1,0,0,0],[1,0,1,0,0,0],[0,1,1,1,0,1],[0,0,1,0,1,0]], health = 3
 
-<p><strong>Explanation:</strong></p>
+Output: false
 
-<p>A minimum of 4 health points is needed to reach the final cell safely.</p>
-<img alt="" src="https://assets.leetcode.com/uploads/2024/08/04/3868_examples_2drawio.png" style="width: 361px; height: 161px;" /></div>
+Explanation:
 
-<p><strong class="example">Example 3:</strong></p>
+A minimum of 4 health points is needed to reach the final cell safely.
 
-<div class="example-block">
-<p><strong>Input:</strong> <span class="example-io">grid = [[1,1,1],[1,0,1],[1,1,1]], health = 5</span></p>
+Example 3:
 
-<p><strong>Output:</strong> <span class="example-io">true</span></p>
+Input: grid = [[1,1,1],[1,0,1],[1,1,1]], health = 5
 
-<p><strong>Explanation:</strong></p>
+Output: true
 
-<p>The final cell can be reached safely by walking along the gray cells below.</p>
+Explanation:
 
-<p><img alt="" src="https://assets.leetcode.com/uploads/2024/08/04/3868_examples_3drawio.png" style="width: 181px; height: 121px;" /></p>
+The final cell can be reached safely by walking along the gray cells below.
 
-<p>Any path that does not go through the cell <code>(1, 1)</code> is unsafe since your health will drop to 0 when reaching the final cell.</p>
-</div>
+Any path that does not go through the cell `(1, 1)` is unsafe since your health will drop to 0 when reaching the final cell.
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Constraints:
 
-<ul>
-	<li><code>m == grid.length</code></li>
-	<li><code>n == grid[i].length</code></li>
-	<li><code>1 &lt;= m, n &lt;= 50</code></li>
-	<li><code><font face="monospace">2 &lt;= m * n</font></code></li>
-	<li><code>1 &lt;= health &lt;= m + n</code></li>
-	<li><code>grid[i][j]</code> is either 0 or 1.</li>
-</ul>
+	- `m == grid.length`
+
+	- `n == grid[i].length`
+
+	- `1 <= m, n <= 50`
+
+	- `2 <= m * n`
+
+	- `1 <= health <= m + n`
+
+	- `grid[i][j]` is either 0 or 1.
 
 ### Solution
 

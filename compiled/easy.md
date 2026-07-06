@@ -6,47 +6,42 @@
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/two-sum">Two Sum</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given an array of integers <code>nums</code>&nbsp;and an integer <code>target</code>, return <em>indices of the two numbers such that they add up to <code>target</code></em>.</p>
+Two Sum
+https://leetcode.com/problems/two-sum
 
-<p>You may assume that each input would have <strong><em>exactly</em> one solution</strong>, and you may not use the <em>same</em> element twice.</p>
+Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`.
 
-<p>You can return the answer in any order.</p>
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+You can return the answer in any order.
 
-<pre>
-<strong>Input:</strong> nums = [2,7,11,15], target = 9
-<strong>Output:</strong> [0,1]
-<strong>Explanation:</strong> Because nums[0] + nums[1] == 9, we return [0, 1].
-</pre>
+Example 1:
 
-<p><strong class="example">Example 2:</strong></p>
+Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 
-<pre>
-<strong>Input:</strong> nums = [3,2,4], target = 6
-<strong>Output:</strong> [1,2]
-</pre>
+Example 2:
 
-<p><strong class="example">Example 3:</strong></p>
+Input: nums = [3,2,4], target = 6
+Output: [1,2]
 
-<pre>
-<strong>Input:</strong> nums = [3,3], target = 6
-<strong>Output:</strong> [0,1]
-</pre>
+Example 3:
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Input: nums = [3,3], target = 6
+Output: [0,1]
 
-<ul>
-	<li><code>2 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>
-	<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
-	<li><code>-10<sup>9</sup> &lt;= target &lt;= 10<sup>9</sup></code></li>
-	<li><strong>Only one valid answer exists.</strong></li>
-</ul>
+Constraints:
 
-<p>&nbsp;</p>
-<strong>Follow-up:&nbsp;</strong>Can you come up with an algorithm that is less than <code>O(n<sup>2</sup>)</code><font face="monospace">&nbsp;</font>time complexity?
+	- `2 <= nums.length <= 10^4`
+
+	- `-10^9 <= nums[i] <= 10^9`
+
+	- `-10^9 <= target <= 10^9`
+
+	- Only one valid answer exists.
+
+Follow-up: Can you come up with an algorithm that is less than `O(n^2)` time complexity?
 
 ### Solution
 
@@ -75,42 +70,34 @@ var twoSum = function(nums, target) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/palindrome-number">Palindrome Number</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given an integer <code>x</code>, return <code>true</code><em> if </em><code>x</code><em> is a </em><span data-keyword="palindrome-integer"><em><strong>palindrome</strong></em></span><em>, and </em><code>false</code><em> otherwise</em>.</p>
+Palindrome Number
+https://leetcode.com/problems/palindrome-number
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+Given an integer `x`, return `true` if `x` is a palindrome, and `false` otherwise.
 
-<pre>
-<strong>Input:</strong> x = 121
-<strong>Output:</strong> true
-<strong>Explanation:</strong> 121 reads as 121 from left to right and from right to left.
-</pre>
+Example 1:
 
-<p><strong class="example">Example 2:</strong></p>
+Input: x = 121
+Output: true
+Explanation: 121 reads as 121 from left to right and from right to left.
 
-<pre>
-<strong>Input:</strong> x = -121
-<strong>Output:</strong> false
-<strong>Explanation:</strong> From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
-</pre>
+Example 2:
 
-<p><strong class="example">Example 3:</strong></p>
+Input: x = -121
+Output: false
+Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
 
-<pre>
-<strong>Input:</strong> x = 10
-<strong>Output:</strong> false
-<strong>Explanation:</strong> Reads 01 from right to left. Therefore it is not a palindrome.
-</pre>
+Example 3:
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Input: x = 10
+Output: false
+Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 
-<ul>
-	<li><code>-2<sup>31</sup>&nbsp;&lt;= x &lt;= 2<sup>31</sup>&nbsp;- 1</code></li>
-</ul>
+Constraints:
 
-<p>&nbsp;</p>
-<strong>Follow up:</strong> Could you solve it without converting the integer to a string?
+	- `-2^31 <= x <= 2^31 - 1`
+
+Follow up: Could you solve it without converting the integer to a string?
 
 ### Solution
 
@@ -141,63 +128,57 @@ var isPalindrome = function(x) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/roman-to-integer">Roman to Integer</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Roman numerals are represented by seven different symbols:&nbsp;<code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code> and <code>M</code>.</p>
+Roman to Integer
+https://leetcode.com/problems/roman-to-integer
 
-<pre>
-<strong>Symbol</strong>       <strong>Value</strong>
+Roman numerals are represented by seven different symbols: `I`, `V`, `X`, `L`, `C`, `D` and `M`.
+
+Symbol       Value
 I             1
 V             5
 X             10
 L             50
 C             100
 D             500
-M             1000</pre>
+M             1000
 
-<p>For example,&nbsp;<code>2</code> is written as <code>II</code>&nbsp;in Roman numeral, just two ones added together. <code>12</code> is written as&nbsp;<code>XII</code>, which is simply <code>X + II</code>. The number <code>27</code> is written as <code>XXVII</code>, which is <code>XX + V + II</code>.</p>
+For example, `2` is written as `II` in Roman numeral, just two ones added together. `12` is written as `XII`, which is simply `X + II`. The number `27` is written as `XXVII`, which is `XX + V + II`.
 
-<p>Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not <code>IIII</code>. Instead, the number four is written as <code>IV</code>. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as <code>IX</code>. There are six instances where subtraction is used:</p>
+Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not `IIII`. Instead, the number four is written as `IV`. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as `IX`. There are six instances where subtraction is used:
 
-<ul>
-	<li><code>I</code> can be placed before <code>V</code> (5) and <code>X</code> (10) to make 4 and 9.&nbsp;</li>
-	<li><code>X</code> can be placed before <code>L</code> (50) and <code>C</code> (100) to make 40 and 90.&nbsp;</li>
-	<li><code>C</code> can be placed before <code>D</code> (500) and <code>M</code> (1000) to make 400 and 900.</li>
-</ul>
+	- `I` can be placed before `V` (5) and `X` (10) to make 4 and 9.
 
-<p>Given a roman numeral, convert it to an integer.</p>
+	- `X` can be placed before `L` (50) and `C` (100) to make 40 and 90.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+	- `C` can be placed before `D` (500) and `M` (1000) to make 400 and 900.
 
-<pre>
-<strong>Input:</strong> s = &quot;III&quot;
-<strong>Output:</strong> 3
-<strong>Explanation:</strong> III = 3.
-</pre>
+Given a roman numeral, convert it to an integer.
 
-<p><strong class="example">Example 2:</strong></p>
+Example 1:
 
-<pre>
-<strong>Input:</strong> s = &quot;LVIII&quot;
-<strong>Output:</strong> 58
-<strong>Explanation:</strong> L = 50, V= 5, III = 3.
-</pre>
+Input: s = "III"
+Output: 3
+Explanation: III = 3.
 
-<p><strong class="example">Example 3:</strong></p>
+Example 2:
 
-<pre>
-<strong>Input:</strong> s = &quot;MCMXCIV&quot;
-<strong>Output:</strong> 1994
-<strong>Explanation:</strong> M = 1000, CM = 900, XC = 90 and IV = 4.
-</pre>
+Input: s = "LVIII"
+Output: 58
+Explanation: L = 50, V= 5, III = 3.
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Example 3:
 
-<ul>
-	<li><code>1 &lt;= s.length &lt;= 15</code></li>
-	<li><code>s</code> contains only&nbsp;the characters <code>(&#39;I&#39;, &#39;V&#39;, &#39;X&#39;, &#39;L&#39;, &#39;C&#39;, &#39;D&#39;, &#39;M&#39;)</code>.</li>
-	<li>It is <strong>guaranteed</strong>&nbsp;that <code>s</code> is a valid roman numeral in the range <code>[1, 3999]</code>.</li>
-</ul>
+Input: s = "MCMXCIV"
+Output: 1994
+Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
+
+Constraints:
+
+	- `1 <= s.length <= 15`
+
+	- `s` contains only the characters `('I', 'V', 'X', 'L', 'C', 'D', 'M')`.
+
+	- It is guaranteed that `s` is a valid roman numeral in the range `[1, 3999]`.
 
 ### Solution
 
@@ -243,34 +224,31 @@ var romanToInt = function(s) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/longest-common-prefix">Longest Common Prefix</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Write a function to find the longest common prefix string amongst an array of strings.</p>
+Longest Common Prefix
+https://leetcode.com/problems/longest-common-prefix
 
-<p>If there is no common prefix, return an empty string <code>&quot;&quot;</code>.</p>
+Write a function to find the longest common prefix string amongst an array of strings.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+If there is no common prefix, return an empty string `""`.
 
-<pre>
-<strong>Input:</strong> strs = [&quot;flower&quot;,&quot;flow&quot;,&quot;flight&quot;]
-<strong>Output:</strong> &quot;fl&quot;
-</pre>
+Example 1:
 
-<p><strong class="example">Example 2:</strong></p>
+Input: strs = ["flower","flow","flight"]
+Output: "fl"
 
-<pre>
-<strong>Input:</strong> strs = [&quot;dog&quot;,&quot;racecar&quot;,&quot;car&quot;]
-<strong>Output:</strong> &quot;&quot;
-<strong>Explanation:</strong> There is no common prefix among the input strings.
-</pre>
+Example 2:
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Input: strs = ["dog","racecar","car"]
+Output: ""
+Explanation: There is no common prefix among the input strings.
 
-<ul>
-	<li><code>1 &lt;= strs.length &lt;= 200</code></li>
-	<li><code>0 &lt;= strs[i].length &lt;= 200</code></li>
-	<li><code>strs[i]</code> consists of only lowercase English letters if it is non-empty.</li>
-</ul>
+Constraints:
+
+	- `1 <= strs.length <= 200`
+
+	- `0 <= strs[i].length <= 200`
+
+	- `strs[i]` consists of only lowercase English letters if it is non-empty.
 
 ### Solution
 
@@ -298,64 +276,54 @@ var longestCommonPrefix = function(strs) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/valid-parentheses">Valid Parentheses</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given a string <code>s</code> containing just the characters <code>&#39;(&#39;</code>, <code>&#39;)&#39;</code>, <code>&#39;{&#39;</code>, <code>&#39;}&#39;</code>, <code>&#39;[&#39;</code> and <code>&#39;]&#39;</code>, determine if the input string is valid.</p>
+Valid Parentheses
+https://leetcode.com/problems/valid-parentheses
 
-<p>An input string is valid if:</p>
+Given a string `s` containing just the characters `'('`, `')'`, `'{'`, `'}'`, `'['` and `']'`, determine if the input string is valid.
 
-<ol>
-	<li>Open brackets must be closed by the same type of brackets.</li>
-	<li>Open brackets must be closed in the correct order.</li>
-	<li>Every close bracket has a corresponding open bracket of the same type.</li>
-</ol>
+An input string is valid if:
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+	- Open brackets must be closed by the same type of brackets.
 
-<div class="example-block">
-<p><strong>Input:</strong> <span class="example-io">s = &quot;()&quot;</span></p>
+	- Open brackets must be closed in the correct order.
 
-<p><strong>Output:</strong> <span class="example-io">true</span></p>
-</div>
+	- Every close bracket has a corresponding open bracket of the same type.
 
-<p><strong class="example">Example 2:</strong></p>
+Example 1:
 
-<div class="example-block">
-<p><strong>Input:</strong> <span class="example-io">s = &quot;()[]{}&quot;</span></p>
+Input: s = "()"
 
-<p><strong>Output:</strong> <span class="example-io">true</span></p>
-</div>
+Output: true
 
-<p><strong class="example">Example 3:</strong></p>
+Example 2:
 
-<div class="example-block">
-<p><strong>Input:</strong> <span class="example-io">s = &quot;(]&quot;</span></p>
+Input: s = "()[]{}"
 
-<p><strong>Output:</strong> <span class="example-io">false</span></p>
-</div>
+Output: true
 
-<p><strong class="example">Example 4:</strong></p>
+Example 3:
 
-<div class="example-block">
-<p><strong>Input:</strong> <span class="example-io">s = &quot;([])&quot;</span></p>
+Input: s = "(]"
 
-<p><strong>Output:</strong> <span class="example-io">true</span></p>
-</div>
+Output: false
 
-<p><strong class="example">Example 5:</strong></p>
+Example 4:
 
-<div class="example-block">
-<p><strong>Input:</strong> <span class="example-io">s = &quot;([)]&quot;</span></p>
+Input: s = "([])"
 
-<p><strong>Output:</strong> <span class="example-io">false</span></p>
-</div>
+Output: true
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Example 5:
 
-<ul>
-	<li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li>
-	<li><code>s</code> consists of parentheses only <code>&#39;()[]{}&#39;</code>.</li>
-</ul>
+Input: s = "([)]"
+
+Output: false
+
+Constraints:
+
+	- `1 <= s.length <= 10^4`
+
+	- `s` consists of parentheses only `'()[]{}'`.
 
 ### Solution
 
@@ -397,42 +365,37 @@ var isValid = function(s) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/merge-two-sorted-lists">Merge Two Sorted Lists</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>You are given the heads of two sorted linked lists <code>list1</code> and <code>list2</code>.</p>
+Merge Two Sorted Lists
+https://leetcode.com/problems/merge-two-sorted-lists
 
-<p>Merge the two lists into one <strong>sorted</strong> list. The list should be made by splicing together the nodes of the first two lists.</p>
+You are given the heads of two sorted linked lists `list1` and `list2`.
 
-<p>Return <em>the head of the merged linked list</em>.</p>
+Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2020/10/03/merge_ex1.jpg" style="width: 662px; height: 302px;" />
-<pre>
-<strong>Input:</strong> list1 = [1,2,4], list2 = [1,3,4]
-<strong>Output:</strong> [1,1,2,3,4,4]
-</pre>
+Return the head of the merged linked list.
 
-<p><strong class="example">Example 2:</strong></p>
+Example 1:
 
-<pre>
-<strong>Input:</strong> list1 = [], list2 = []
-<strong>Output:</strong> []
-</pre>
+Input: list1 = [1,2,4], list2 = [1,3,4]
+Output: [1,1,2,3,4,4]
 
-<p><strong class="example">Example 3:</strong></p>
+Example 2:
 
-<pre>
-<strong>Input:</strong> list1 = [], list2 = [0]
-<strong>Output:</strong> [0]
-</pre>
+Input: list1 = [], list2 = []
+Output: []
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Example 3:
 
-<ul>
-	<li>The number of nodes in both lists is in the range <code>[0, 50]</code>.</li>
-	<li><code>-100 &lt;= Node.val &lt;= 100</code></li>
-	<li>Both <code>list1</code> and <code>list2</code> are sorted in <strong>non-decreasing</strong> order.</li>
-</ul>
+Input: list1 = [], list2 = [0]
+Output: [0]
+
+Constraints:
+
+	- The number of nodes in both lists is in the range `[0, 50]`.
+
+	- `-100 <= Node.val <= 100`
+
+	- Both `list1` and `list2` are sorted in non-decreasing order.
 
 ### Solution
 
@@ -479,57 +442,52 @@ var mergeTwoLists = function(list1, list2) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array">Remove Duplicates from Sorted Array</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given an integer array <code>nums</code> sorted in <strong>non-decreasing order</strong>, remove the duplicates <a href="https://en.wikipedia.org/wiki/In-place_algorithm" target="_blank"><strong>in-place</strong></a> such that each unique element appears only <strong>once</strong>. The <strong>relative order</strong> of the elements should be kept the <strong>same</strong>.</p>
+Remove Duplicates from Sorted Array
+https://leetcode.com/problems/remove-duplicates-from-sorted-array
 
-<p>Consider the number of <em>unique elements</em> in&nbsp;<code>nums</code> to be <code>k<strong>​​​​​​​</strong></code>​​​​​​​. <meta charset="UTF-8" />After removing duplicates, return the number of unique elements&nbsp;<code>k</code>.</p>
+Given an integer array `nums` sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same.
 
-<p><meta charset="UTF-8" />The first&nbsp;<code>k</code>&nbsp;elements of&nbsp;<code>nums</code>&nbsp;should contain the unique numbers in <strong>sorted order</strong>. The remaining elements beyond index&nbsp;<code>k - 1</code>&nbsp;can be ignored.</p>
+Consider the number of unique elements in `nums` to be `k​​​​​​​`​​​​​​​. After removing duplicates, return the number of unique elements `k`.
 
-<p><strong>Custom Judge:</strong></p>
+The first `k` elements of `nums` should contain the unique numbers in sorted order. The remaining elements beyond index `k - 1` can be ignored.
 
-<p>The judge will test your solution with the following code:</p>
+Custom Judge:
 
-<pre>
+The judge will test your solution with the following code:
+
 int[] nums = [...]; // Input array
 int[] expectedNums = [...]; // The expected answer with correct length
 
 int k = removeDuplicates(nums); // Calls your implementation
 
 assert k == expectedNums.length;
-for (int i = 0; i &lt; k; i++) {
+for (int i = 0; i < k; i++) {
     assert nums[i] == expectedNums[i];
 }
-</pre>
 
-<p>If all assertions pass, then your solution will be <strong>accepted</strong>.</p>
+If all assertions pass, then your solution will be accepted.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+Example 1:
 
-<pre>
-<strong>Input:</strong> nums = [1,1,2]
-<strong>Output:</strong> 2, nums = [1,2,_]
-<strong>Explanation:</strong> Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
+Input: nums = [1,1,2]
+Output: 2, nums = [1,2,_]
+Explanation: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
 It does not matter what you leave beyond the returned k (hence they are underscores).
-</pre>
 
-<p><strong class="example">Example 2:</strong></p>
+Example 2:
 
-<pre>
-<strong>Input:</strong> nums = [0,0,1,1,1,2,2,3,3,4]
-<strong>Output:</strong> 5, nums = [0,1,2,3,4,_,_,_,_,_]
-<strong>Explanation:</strong> Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
+Input: nums = [0,0,1,1,1,2,2,3,3,4]
+Output: 5, nums = [0,1,2,3,4,_,_,_,_,_]
+Explanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
 It does not matter what you leave beyond the returned k (hence they are underscores).
-</pre>
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Constraints:
 
-<ul>
-	<li><code>1 &lt;= nums.length &lt;= 3 * 10<sup>4</sup></code></li>
-	<li><code>-100 &lt;= nums[i] &lt;= 100</code></li>
-	<li><code>nums</code> is sorted in <strong>non-decreasing</strong> order.</li>
-</ul>
+	- `1 <= nums.length <= 3 * 10^4`
+
+	- `-100 <= nums[i] <= 100`
+
+	- `nums` is sorted in non-decreasing order.
 
 ### Solution
 
@@ -564,20 +522,21 @@ var removeDuplicates = function(nums) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/remove-element">Remove Element</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given an integer array <code>nums</code> and an integer <code>val</code>, remove all occurrences of <code>val</code> in <code>nums</code> <a href="https://en.wikipedia.org/wiki/In-place_algorithm" target="_blank"><strong>in-place</strong></a>. The order of the elements may be changed. Then return <em>the number of elements in </em><code>nums</code><em> which are not equal to </em><code>val</code>.</p>
+Remove Element
+https://leetcode.com/problems/remove-element
 
-<p>Consider the number of elements in <code>nums</code> which are not equal to <code>val</code> be <code>k</code>, to get accepted, you need to do the following things:</p>
+Given an integer array `nums` and an integer `val`, remove all occurrences of `val` in `nums` in-place. The order of the elements may be changed. Then return the number of elements in `nums` which are not equal to `val`.
 
-<ul>
-	<li>Change the array <code>nums</code> such that the first <code>k</code> elements of <code>nums</code> contain the elements which are not equal to <code>val</code>. The remaining elements of <code>nums</code> are not important as well as the size of <code>nums</code>.</li>
-	<li>Return <code>k</code>.</li>
-</ul>
+Consider the number of elements in `nums` which are not equal to `val` be `k`, to get accepted, you need to do the following things:
 
-<p><strong>Custom Judge:</strong></p>
+	- Change the array `nums` such that the first `k` elements of `nums` contain the elements which are not equal to `val`. The remaining elements of `nums` are not important as well as the size of `nums`.
 
-<p>The judge will test your solution with the following code:</p>
+	- Return `k`.
 
-<pre>
+Custom Judge:
+
+The judge will test your solution with the following code:
+
 int[] nums = [...]; // Input array
 int val = ...; // Value to remove
 int[] expectedNums = [...]; // The expected answer with correct length.
@@ -587,41 +546,34 @@ int k = removeElement(nums, val); // Calls your implementation
 
 assert k == expectedNums.length;
 sort(nums, 0, k); // Sort the first k elements of nums
-for (int i = 0; i &lt; actualLength; i++) {
+for (int i = 0; i < actualLength; i++) {
     assert nums[i] == expectedNums[i];
 }
-</pre>
 
-<p>If all assertions pass, then your solution will be <strong>accepted</strong>.</p>
+If all assertions pass, then your solution will be accepted.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+Example 1:
 
-<pre>
-<strong>Input:</strong> nums = [3,2,2,3], val = 3
-<strong>Output:</strong> 2, nums = [2,2,_,_]
-<strong>Explanation:</strong> Your function should return k = 2, with the first two elements of nums being 2.
+Input: nums = [3,2,2,3], val = 3
+Output: 2, nums = [2,2,_,_]
+Explanation: Your function should return k = 2, with the first two elements of nums being 2.
 It does not matter what you leave beyond the returned k (hence they are underscores).
-</pre>
 
-<p><strong class="example">Example 2:</strong></p>
+Example 2:
 
-<pre>
-<strong>Input:</strong> nums = [0,1,2,2,3,0,4,2], val = 2
-<strong>Output:</strong> 5, nums = [0,1,4,0,3,_,_,_]
-<strong>Explanation:</strong> Your function should return k = 5, with the first five elements of nums containing 0, 0, 1, 3, and 4.
+Input: nums = [0,1,2,2,3,0,4,2], val = 2
+Output: 5, nums = [0,1,4,0,3,_,_,_]
+Explanation: Your function should return k = 5, with the first five elements of nums containing 0, 0, 1, 3, and 4.
 Note that the five elements can be returned in any order.
 It does not matter what you leave beyond the returned k (hence they are underscores).
-</pre>
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Constraints:
 
-<ul>
-	<li><code>0 &lt;= nums.length &lt;= 100</code></li>
-	<li><code>0 &lt;= nums[i] &lt;= 50</code></li>
-	<li><code>0 &lt;= val &lt;= 100</code></li>
-</ul>
+	- `0 <= nums.length <= 100`
+
+	- `0 <= nums[i] <= 50`
+
+	- `0 <= val <= 100`
 
 ### Solution
 
@@ -649,33 +601,29 @@ var removeElement = function(nums, val) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string">Find the Index of the First Occurrence in a String</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given two strings <code>needle</code> and <code>haystack</code>, return the index of the first occurrence of <code>needle</code> in <code>haystack</code>, or <code>-1</code> if <code>needle</code> is not part of <code>haystack</code>.</p>
+Find the Index of the First Occurrence in a String
+https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+Given two strings `needle` and `haystack`, return the index of the first occurrence of `needle` in `haystack`, or `-1` if `needle` is not part of `haystack`.
 
-<pre>
-<strong>Input:</strong> haystack = &quot;sadbutsad&quot;, needle = &quot;sad&quot;
-<strong>Output:</strong> 0
-<strong>Explanation:</strong> &quot;sad&quot; occurs at index 0 and 6.
+Example 1:
+
+Input: haystack = "sadbutsad", needle = "sad"
+Output: 0
+Explanation: "sad" occurs at index 0 and 6.
 The first occurrence is at index 0, so we return 0.
-</pre>
 
-<p><strong class="example">Example 2:</strong></p>
+Example 2:
 
-<pre>
-<strong>Input:</strong> haystack = &quot;leetcode&quot;, needle = &quot;leeto&quot;
-<strong>Output:</strong> -1
-<strong>Explanation:</strong> &quot;leeto&quot; did not occur in &quot;leetcode&quot;, so we return -1.
-</pre>
+Input: haystack = "leetcode", needle = "leeto"
+Output: -1
+Explanation: "leeto" did not occur in "leetcode", so we return -1.
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Constraints:
 
-<ul>
-	<li><code>1 &lt;= haystack.length, needle.length &lt;= 10<sup>4</sup></code></li>
-	<li><code>haystack</code> and <code>needle</code> consist of only lowercase English characters.</li>
-</ul>
+	- `1 <= haystack.length, needle.length <= 10^4`
+
+	- `haystack` and `needle` consist of only lowercase English characters.
 
 ### Solution
 
@@ -701,41 +649,37 @@ var strStr = function(haystack, needle) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/search-insert-position">Search Insert Position</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.</p>
+Search Insert Position
+https://leetcode.com/problems/search-insert-position
 
-<p>You must&nbsp;write an algorithm with&nbsp;<code>O(log n)</code> runtime complexity.</p>
+Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+You must write an algorithm with `O(log n)` runtime complexity.
 
-<pre>
-<strong>Input:</strong> nums = [1,3,5,6], target = 5
-<strong>Output:</strong> 2
-</pre>
+Example 1:
 
-<p><strong class="example">Example 2:</strong></p>
+Input: nums = [1,3,5,6], target = 5
+Output: 2
 
-<pre>
-<strong>Input:</strong> nums = [1,3,5,6], target = 2
-<strong>Output:</strong> 1
-</pre>
+Example 2:
 
-<p><strong class="example">Example 3:</strong></p>
+Input: nums = [1,3,5,6], target = 2
+Output: 1
 
-<pre>
-<strong>Input:</strong> nums = [1,3,5,6], target = 7
-<strong>Output:</strong> 4
-</pre>
+Example 3:
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Input: nums = [1,3,5,6], target = 7
+Output: 4
 
-<ul>
-	<li><code>1 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>
-	<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>
-	<li><code>nums</code> contains <strong>distinct</strong> values sorted in <strong>ascending</strong> order.</li>
-	<li><code>-10<sup>4</sup> &lt;= target &lt;= 10<sup>4</sup></code></li>
-</ul>
+Constraints:
+
+	- `1 <= nums.length <= 10^4`
+
+	- `-10^4 <= nums[i] <= 10^4`
+
+	- `nums` contains distinct values sorted in ascending order.
+
+	- `-10^4 <= target <= 10^4`
 
 ### Solution
 
@@ -771,43 +715,38 @@ var searchInsert = function(nums, target) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/length-of-last-word">Length of Last Word</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given a string <code>s</code> consisting of words and spaces, return <em>the length of the <strong>last</strong> word in the string.</em></p>
+Length of Last Word
+https://leetcode.com/problems/length-of-last-word
 
-<p>A <strong>word</strong> is a maximal <span data-keyword="substring-nonempty">substring</span> consisting of non-space characters only.</p>
+Given a string `s` consisting of words and spaces, return the length of the last word in the string.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+A word is a maximal substring consisting of non-space characters only.
 
-<pre>
-<strong>Input:</strong> s = &quot;Hello World&quot;
-<strong>Output:</strong> 5
-<strong>Explanation:</strong> The last word is &quot;World&quot; with length 5.
-</pre>
+Example 1:
 
-<p><strong class="example">Example 2:</strong></p>
+Input: s = "Hello World"
+Output: 5
+Explanation: The last word is "World" with length 5.
 
-<pre>
-<strong>Input:</strong> s = &quot;   fly me   to   the moon  &quot;
-<strong>Output:</strong> 4
-<strong>Explanation:</strong> The last word is &quot;moon&quot; with length 4.
-</pre>
+Example 2:
 
-<p><strong class="example">Example 3:</strong></p>
+Input: s = "   fly me   to   the moon  "
+Output: 4
+Explanation: The last word is "moon" with length 4.
 
-<pre>
-<strong>Input:</strong> s = &quot;luffy is still joyboy&quot;
-<strong>Output:</strong> 6
-<strong>Explanation:</strong> The last word is &quot;joyboy&quot; with length 6.
-</pre>
+Example 3:
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Input: s = "luffy is still joyboy"
+Output: 6
+Explanation: The last word is "joyboy" with length 6.
 
-<ul>
-	<li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li>
-	<li><code>s</code> consists of only English letters and spaces <code>&#39; &#39;</code>.</li>
-	<li>There will be at least one word in <code>s</code>.</li>
-</ul>
+Constraints:
+
+	- `1 <= s.length <= 10^4`
+
+	- `s` consists of only English letters and spaces `' '`.
+
+	- There will be at least one word in `s`.
 
 ### Solution
 
@@ -828,49 +767,44 @@ var lengthOfLastWord = function(s) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/plus-one">Plus One</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>You are given a <strong>large integer</strong> represented as an integer array <code>digits</code>, where each <code>digits[i]</code> is the <code>i<sup>th</sup></code> digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading <code>0</code>&#39;s.</p>
+Plus One
+https://leetcode.com/problems/plus-one
 
-<p>Increment the large integer by one and return <em>the resulting array of digits</em>.</p>
+You are given a large integer represented as an integer array `digits`, where each `digits[i]` is the `i^th` digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading `0`'s.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+Increment the large integer by one and return the resulting array of digits.
 
-<pre>
-<strong>Input:</strong> digits = [1,2,3]
-<strong>Output:</strong> [1,2,4]
-<strong>Explanation:</strong> The array represents the integer 123.
+Example 1:
+
+Input: digits = [1,2,3]
+Output: [1,2,4]
+Explanation: The array represents the integer 123.
 Incrementing by one gives 123 + 1 = 124.
 Thus, the result should be [1,2,4].
-</pre>
 
-<p><strong class="example">Example 2:</strong></p>
+Example 2:
 
-<pre>
-<strong>Input:</strong> digits = [4,3,2,1]
-<strong>Output:</strong> [4,3,2,2]
-<strong>Explanation:</strong> The array represents the integer 4321.
+Input: digits = [4,3,2,1]
+Output: [4,3,2,2]
+Explanation: The array represents the integer 4321.
 Incrementing by one gives 4321 + 1 = 4322.
 Thus, the result should be [4,3,2,2].
-</pre>
 
-<p><strong class="example">Example 3:</strong></p>
+Example 3:
 
-<pre>
-<strong>Input:</strong> digits = [9]
-<strong>Output:</strong> [1,0]
-<strong>Explanation:</strong> The array represents the integer 9.
+Input: digits = [9]
+Output: [1,0]
+Explanation: The array represents the integer 9.
 Incrementing by one gives 9 + 1 = 10.
 Thus, the result should be [1,0].
-</pre>
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Constraints:
 
-<ul>
-	<li><code>1 &lt;= digits.length &lt;= 100</code></li>
-	<li><code>0 &lt;= digits[i] &lt;= 9</code></li>
-	<li><code>digits</code> does not contain any leading <code>0</code>&#39;s.</li>
-</ul>
+	- `1 <= digits.length <= 100`
+
+	- `0 <= digits[i] <= 9`
+
+	- `digits` does not contain any leading `0`'s.
 
 ### Solution
 
@@ -899,24 +833,28 @@ var plusOne = function(digits) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/add-binary">Add Binary</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given two binary strings <code>a</code> and <code>b</code>, return <em>their sum as a binary string</em>.</p>
+Add Binary
+https://leetcode.com/problems/add-binary
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
-<pre><strong>Input:</strong> a = "11", b = "1"
-<strong>Output:</strong> "100"
-</pre><p><strong class="example">Example 2:</strong></p>
-<pre><strong>Input:</strong> a = "1010", b = "1011"
-<strong>Output:</strong> "10101"
-</pre>
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Given two binary strings `a` and `b`, return their sum as a binary string.
 
-<ul>
-	<li><code>1 &lt;= a.length, b.length &lt;= 10<sup>4</sup></code></li>
-	<li><code>a</code> and <code>b</code> consist&nbsp;only of <code>&#39;0&#39;</code> or <code>&#39;1&#39;</code> characters.</li>
-	<li>Each string does not contain leading zeros except for the zero itself.</li>
-</ul>
+Example 1:
+
+Input: a = "11", b = "1"
+Output: "100"
+
+Example 2:
+
+Input: a = "1010", b = "1011"
+Output: "10101"
+
+Constraints:
+
+	- `1 <= a.length, b.length <= 10^4`
+
+	- `a` and `b` consist only of `'0'` or `'1'` characters.
+
+	- Each string does not contain leading zeros except for the zero itself.
 
 ### Solution
 
@@ -962,37 +900,30 @@ var addBinary = function(a, b) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/sqrtx">Sqrt(x)</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given a non-negative integer <code>x</code>, return <em>the square root of </em><code>x</code><em> rounded down to the nearest integer</em>. The returned integer should be <strong>non-negative</strong> as well.</p>
+Sqrt(x)
+https://leetcode.com/problems/sqrtx
 
-<p>You <strong>must not use</strong> any built-in exponent function or operator.</p>
+Given a non-negative integer `x`, return the square root of `x` rounded down to the nearest integer. The returned integer should be non-negative as well.
 
-<ul>
-	<li>For example, do not use <code>pow(x, 0.5)</code> in c++ or <code>x ** 0.5</code> in python.</li>
-</ul>
+You must not use any built-in exponent function or operator.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+	- For example, do not use `pow(x, 0.5)` in c++ or `x ** 0.5` in python.
 
-<pre>
-<strong>Input:</strong> x = 4
-<strong>Output:</strong> 2
-<strong>Explanation:</strong> The square root of 4 is 2, so we return 2.
-</pre>
+Example 1:
 
-<p><strong class="example">Example 2:</strong></p>
+Input: x = 4
+Output: 2
+Explanation: The square root of 4 is 2, so we return 2.
 
-<pre>
-<strong>Input:</strong> x = 8
-<strong>Output:</strong> 2
-<strong>Explanation:</strong> The square root of 8 is 2.82842..., and since we round it down to the nearest integer, 2 is returned.
-</pre>
+Example 2:
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Input: x = 8
+Output: 2
+Explanation: The square root of 8 is 2.82842..., and since we round it down to the nearest integer, 2 is returned.
 
-<ul>
-	<li><code>0 &lt;= x &lt;= 2<sup>31</sup> - 1</code></li>
-</ul>
+Constraints:
+
+	- `0 <= x <= 2^31 - 1`
 
 ### Solution
 
@@ -1036,38 +967,33 @@ var mySqrt = function(x) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/climbing-stairs">Climbing Stairs</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>You are climbing a staircase. It takes <code>n</code> steps to reach the top.</p>
+Climbing Stairs
+https://leetcode.com/problems/climbing-stairs
 
-<p>Each time you can either climb <code>1</code> or <code>2</code> steps. In how many distinct ways can you climb to the top?</p>
+You are climbing a staircase. It takes `n` steps to reach the top.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+Each time you can either climb `1` or `2` steps. In how many distinct ways can you climb to the top?
 
-<pre>
-<strong>Input:</strong> n = 2
-<strong>Output:</strong> 2
-<strong>Explanation:</strong> There are two ways to climb to the top.
+Example 1:
+
+Input: n = 2
+Output: 2
+Explanation: There are two ways to climb to the top.
 1. 1 step + 1 step
 2. 2 steps
-</pre>
 
-<p><strong class="example">Example 2:</strong></p>
+Example 2:
 
-<pre>
-<strong>Input:</strong> n = 3
-<strong>Output:</strong> 3
-<strong>Explanation:</strong> There are three ways to climb to the top.
+Input: n = 3
+Output: 3
+Explanation: There are three ways to climb to the top.
 1. 1 step + 1 step + 1 step
 2. 1 step + 2 steps
 3. 2 steps + 1 step
-</pre>
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Constraints:
 
-<ul>
-	<li><code>1 &lt;= n &lt;= 45</code></li>
-</ul>
+	- `1 <= n <= 45`
 
 ### Solution
 
@@ -1094,43 +1020,37 @@ var climbStairs = function(n) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/valid-palindrome">Valid Palindrome</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>A phrase is a <strong>palindrome</strong> if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.</p>
+Valid Palindrome
+https://leetcode.com/problems/valid-palindrome
 
-<p>Given a string <code>s</code>, return <code>true</code><em> if it is a <strong>palindrome</strong>, or </em><code>false</code><em> otherwise</em>.</p>
+A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+Given a string `s`, return `true` if it is a palindrome, or `false` otherwise.
 
-<pre>
-<strong>Input:</strong> s = &quot;A man, a plan, a canal: Panama&quot;
-<strong>Output:</strong> true
-<strong>Explanation:</strong> &quot;amanaplanacanalpanama&quot; is a palindrome.
-</pre>
+Example 1:
 
-<p><strong class="example">Example 2:</strong></p>
+Input: s = "A man, a plan, a canal: Panama"
+Output: true
+Explanation: "amanaplanacanalpanama" is a palindrome.
 
-<pre>
-<strong>Input:</strong> s = &quot;race a car&quot;
-<strong>Output:</strong> false
-<strong>Explanation:</strong> &quot;raceacar&quot; is not a palindrome.
-</pre>
+Example 2:
 
-<p><strong class="example">Example 3:</strong></p>
+Input: s = "race a car"
+Output: false
+Explanation: "raceacar" is not a palindrome.
 
-<pre>
-<strong>Input:</strong> s = &quot; &quot;
-<strong>Output:</strong> true
-<strong>Explanation:</strong> s is an empty string &quot;&quot; after removing non-alphanumeric characters.
+Example 3:
+
+Input: s = " "
+Output: true
+Explanation: s is an empty string "" after removing non-alphanumeric characters.
 Since an empty string reads the same forward and backward, it is a palindrome.
-</pre>
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Constraints:
 
-<ul>
-	<li><code>1 &lt;= s.length &lt;= 2 * 10<sup>5</sup></code></li>
-	<li><code>s</code> consists only of printable ASCII characters.</li>
-</ul>
+	- `1 <= s.length <= 2 * 10^5`
+
+	- `s` consists only of printable ASCII characters.
 
 ### Solution
 
@@ -1160,43 +1080,38 @@ var isPalindrome = function(s) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/single-number">Single Number</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given a <strong>non-empty</strong>&nbsp;array of integers <code>nums</code>, every element appears <em>twice</em> except for one. Find that single one.</p>
+Single Number
+https://leetcode.com/problems/single-number
 
-<p>You must&nbsp;implement a solution with a linear runtime complexity and use&nbsp;only constant&nbsp;extra space.</p>
+Given a non-empty array of integers `nums`, every element appears twice except for one. Find that single one.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+You must implement a solution with a linear runtime complexity and use only constant extra space.
 
-<div class="example-block">
-<p><strong>Input:</strong> <span class="example-io">nums = [2,2,1]</span></p>
+Example 1:
 
-<p><strong>Output:</strong> <span class="example-io">1</span></p>
-</div>
+Input: nums = [2,2,1]
 
-<p><strong class="example">Example 2:</strong></p>
+Output: 1
 
-<div class="example-block">
-<p><strong>Input:</strong> <span class="example-io">nums = [4,1,2,1,2]</span></p>
+Example 2:
 
-<p><strong>Output:</strong> <span class="example-io">4</span></p>
-</div>
+Input: nums = [4,1,2,1,2]
 
-<p><strong class="example">Example 3:</strong></p>
+Output: 4
 
-<div class="example-block">
-<p><strong>Input:</strong> <span class="example-io">nums = [1]</span></p>
+Example 3:
 
-<p><strong>Output:</strong> <span class="example-io">1</span></p>
-</div>
+Input: nums = [1]
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Output: 1
 
-<ul>
-	<li><code>1 &lt;= nums.length &lt;= 3 * 10<sup>4</sup></code></li>
-	<li><code>-3 * 10<sup>4</sup> &lt;= nums[i] &lt;= 3 * 10<sup>4</sup></code></li>
-	<li>Each element in the array appears twice except for one element which appears only once.</li>
-</ul>
+Constraints:
+
+	- `1 <= nums.length <= 3 * 10^4`
+
+	- `-3 * 10^4 <= nums[i] <= 3 * 10^4`
+
+	- Each element in the array appears twice except for one element which appears only once.
 
 ### Solution
 
@@ -1222,30 +1137,34 @@ var singleNumber = function(nums) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/majority-element">Majority Element</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given an array <code>nums</code> of size <code>n</code>, return <em>the majority element</em>.</p>
+Majority Element
+https://leetcode.com/problems/majority-element
 
-<p>The majority element is the element that appears more than <code>&lfloor;n / 2&rfloor;</code> times. You may assume that the majority element always exists in the array.</p>
+Given an array `nums` of size `n`, return the majority element.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
-<pre><strong>Input:</strong> nums = [3,2,3]
-<strong>Output:</strong> 3
-</pre><p><strong class="example">Example 2:</strong></p>
-<pre><strong>Input:</strong> nums = [2,2,1,1,1,2,2]
-<strong>Output:</strong> 2
-</pre>
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+The majority element is the element that appears more than `&lfloor;n / 2&rfloor;` times. You may assume that the majority element always exists in the array.
 
-<ul>
-	<li><code>n == nums.length</code></li>
-	<li><code>1 &lt;= n &lt;= 5 * 10<sup>4</sup></code></li>
-	<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
-	<li>The input is generated such that a majority element will exist in the array.</li>
-</ul>
+Example 1:
 
-<p>&nbsp;</p>
-<strong>Follow-up:</strong> Could you solve the problem in linear time and in <code>O(1)</code> space?
+Input: nums = [3,2,3]
+Output: 3
+
+Example 2:
+
+Input: nums = [2,2,1,1,1,2,2]
+Output: 2
+
+Constraints:
+
+	- `n == nums.length`
+
+	- `1 <= n <= 5 * 10^4`
+
+	- `-10^9 <= nums[i] <= 10^9`
+
+	- The input is generated such that a majority element will exist in the array.
+
+Follow-up: Could you solve the problem in linear time and in `O(1)` space?
 
 ### Solution
 
@@ -1278,48 +1197,42 @@ var majorityElement = function(nums) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/contains-duplicate">Contains Duplicate</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given an integer array <code>nums</code>, return <code>true</code> if any value appears <strong>at least twice</strong> in the array, and return <code>false</code> if every element is distinct.</p>
+Contains Duplicate
+https://leetcode.com/problems/contains-duplicate
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+Given an integer array `nums`, return `true` if any value appears at least twice in the array, and return `false` if every element is distinct.
 
-<div class="example-block">
-<p><strong>Input:</strong> <span class="example-io">nums = [1,2,3,1]</span></p>
+Example 1:
 
-<p><strong>Output:</strong> <span class="example-io">true</span></p>
+Input: nums = [1,2,3,1]
 
-<p><strong>Explanation:</strong></p>
+Output: true
 
-<p>The element 1 occurs at the indices 0 and 3.</p>
-</div>
+Explanation:
 
-<p><strong class="example">Example 2:</strong></p>
+The element 1 occurs at the indices 0 and 3.
 
-<div class="example-block">
-<p><strong>Input:</strong> <span class="example-io">nums = [1,2,3,4]</span></p>
+Example 2:
 
-<p><strong>Output:</strong> <span class="example-io">false</span></p>
+Input: nums = [1,2,3,4]
 
-<p><strong>Explanation:</strong></p>
+Output: false
 
-<p>All elements are distinct.</p>
-</div>
+Explanation:
 
-<p><strong class="example">Example 3:</strong></p>
+All elements are distinct.
 
-<div class="example-block">
-<p><strong>Input:</strong> <span class="example-io">nums = [1,1,1,3,3,4,3,2,4,2]</span></p>
+Example 3:
 
-<p><strong>Output:</strong> <span class="example-io">true</span></p>
-</div>
+Input: nums = [1,1,1,3,3,4,3,2,4,2]
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Output: true
 
-<ul>
-	<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>
-	<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
-</ul>
+Constraints:
+
+	- `1 <= nums.length <= 10^5`
+
+	- `-10^9 <= nums[i] <= 10^9`
 
 ### Solution
 
@@ -1347,38 +1260,33 @@ var containsDuplicate = function(nums) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/contains-duplicate-ii">Contains Duplicate II</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given an integer array <code>nums</code> and an integer <code>k</code>, return <code>true</code> <em>if there are two <strong>distinct indices</strong> </em><code>i</code><em> and </em><code>j</code><em> in the array such that </em><code>nums[i] == nums[j]</code><em> and </em><code>abs(i - j) &lt;= k</code>.</p>
+Contains Duplicate II
+https://leetcode.com/problems/contains-duplicate-ii
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+Given an integer array `nums` and an integer `k`, return `true` if there are two distinct indices `i` and `j` in the array such that `nums[i] == nums[j]` and `abs(i - j) <= k`.
 
-<pre>
-<strong>Input:</strong> nums = [1,2,3,1], k = 3
-<strong>Output:</strong> true
-</pre>
+Example 1:
 
-<p><strong class="example">Example 2:</strong></p>
+Input: nums = [1,2,3,1], k = 3
+Output: true
 
-<pre>
-<strong>Input:</strong> nums = [1,0,1,1], k = 1
-<strong>Output:</strong> true
-</pre>
+Example 2:
 
-<p><strong class="example">Example 3:</strong></p>
+Input: nums = [1,0,1,1], k = 1
+Output: true
 
-<pre>
-<strong>Input:</strong> nums = [1,2,3,1,2,3], k = 2
-<strong>Output:</strong> false
-</pre>
+Example 3:
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Input: nums = [1,2,3,1,2,3], k = 2
+Output: false
 
-<ul>
-	<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>
-	<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
-	<li><code>0 &lt;= k &lt;= 10<sup>5</sup></code></li>
-</ul>
+Constraints:
+
+	- `1 <= nums.length <= 10^5`
+
+	- `-10^9 <= nums[i] <= 10^9`
+
+	- `0 <= k <= 10^5`
 
 ### Solution
 
@@ -1390,35 +1298,30 @@ _No solution file found._
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/valid-anagram">Valid Anagram</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given two strings <code>s</code> and <code>t</code>, return <code>true</code> if <code>t</code> is an <span data-keyword="anagram">anagram</span> of <code>s</code>, and <code>false</code> otherwise.</p>
+Valid Anagram
+https://leetcode.com/problems/valid-anagram
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+Given two strings `s` and `t`, return `true` if `t` is an anagram of `s`, and `false` otherwise.
 
-<div class="example-block">
-<p><strong>Input:</strong> <span class="example-io">s = &quot;anagram&quot;, t = &quot;nagaram&quot;</span></p>
+Example 1:
 
-<p><strong>Output:</strong> <span class="example-io">true</span></p>
-</div>
+Input: s = "anagram", t = "nagaram"
 
-<p><strong class="example">Example 2:</strong></p>
+Output: true
 
-<div class="example-block">
-<p><strong>Input:</strong> <span class="example-io">s = &quot;rat&quot;, t = &quot;car&quot;</span></p>
+Example 2:
 
-<p><strong>Output:</strong> <span class="example-io">false</span></p>
-</div>
+Input: s = "rat", t = "car"
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Output: false
 
-<ul>
-	<li><code>1 &lt;= s.length, t.length &lt;= 5 * 10<sup>4</sup></code></li>
-	<li><code>s</code> and <code>t</code> consist of lowercase English letters.</li>
-</ul>
+Constraints:
 
-<p>&nbsp;</p>
-<p><strong>Follow up:</strong> What if the inputs contain Unicode characters? How would you adapt your solution to such a case?</p>
+	- `1 <= s.length, t.length <= 5 * 10^4`
+
+	- `s` and `t` consist of lowercase English letters.
+
+Follow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
 
 ### Solution
 
@@ -1452,28 +1355,30 @@ var isAnagram = function(s, t) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/move-zeroes">Move Zeroes</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given an integer array <code>nums</code>, move all <code>0</code>&#39;s to the end of it while maintaining the relative order of the non-zero elements.</p>
+Move Zeroes
+https://leetcode.com/problems/move-zeroes
 
-<p><strong>Note</strong> that you must do this in-place without making a copy of the array.</p>
+Given an integer array `nums`, move all `0`'s to the end of it while maintaining the relative order of the non-zero elements.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
-<pre><strong>Input:</strong> nums = [0,1,0,3,12]
-<strong>Output:</strong> [1,3,12,0,0]
-</pre><p><strong class="example">Example 2:</strong></p>
-<pre><strong>Input:</strong> nums = [0]
-<strong>Output:</strong> [0]
-</pre>
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Note that you must do this in-place without making a copy of the array.
 
-<ul>
-	<li><code>1 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>
-	<li><code>-2<sup>31</sup> &lt;= nums[i] &lt;= 2<sup>31</sup> - 1</code></li>
-</ul>
+Example 1:
 
-<p>&nbsp;</p>
-<strong>Follow up:</strong> Could you minimize the total number of operations done?
+Input: nums = [0,1,0,3,12]
+Output: [1,3,12,0,0]
+
+Example 2:
+
+Input: nums = [0]
+Output: [0]
+
+Constraints:
+
+	- `1 <= nums.length <= 10^4`
+
+	- `-2^31 <= nums[i] <= 2^31 - 1`
+
+Follow up: Could you minimize the total number of operations done?
 
 ### Solution
 
@@ -1505,25 +1410,28 @@ var moveZeroes = function(nums) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/reverse-string">Reverse String</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Write a function that reverses a string. The input string is given as an array of characters <code>s</code>.</p>
+Reverse String
+https://leetcode.com/problems/reverse-string
 
-<p>You must do this by modifying the input array <a href="https://en.wikipedia.org/wiki/In-place_algorithm" target="_blank">in-place</a> with <code>O(1)</code> extra memory.</p>
+Write a function that reverses a string. The input string is given as an array of characters `s`.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
-<pre><strong>Input:</strong> s = ["h","e","l","l","o"]
-<strong>Output:</strong> ["o","l","l","e","h"]
-</pre><p><strong class="example">Example 2:</strong></p>
-<pre><strong>Input:</strong> s = ["H","a","n","n","a","h"]
-<strong>Output:</strong> ["h","a","n","n","a","H"]
-</pre>
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+You must do this by modifying the input array in-place with `O(1)` extra memory.
 
-<ul>
-	<li><code>1 &lt;= s.length &lt;= 10<sup>5</sup></code></li>
-	<li><code>s[i]</code> is a <a href="https://en.wikipedia.org/wiki/ASCII#Printable_characters" target="_blank">printable ascii character</a>.</li>
-</ul>
+Example 1:
+
+Input: s = ["h","e","l","l","o"]
+Output: ["o","l","l","e","h"]
+
+Example 2:
+
+Input: s = ["H","a","n","n","a","h"]
+Output: ["h","a","n","n","a","H"]
+
+Constraints:
+
+	- `1 <= s.length <= 10^5`
+
+	- `s[i]` is a printable ascii character.
 
 ### Solution
 
@@ -1552,29 +1460,32 @@ var reverseString = function(s) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/is-subsequence">Is Subsequence</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given two strings <code>s</code> and <code>t</code>, return <code>true</code><em> if </em><code>s</code><em> is a <strong>subsequence</strong> of </em><code>t</code><em>, or </em><code>false</code><em> otherwise</em>.</p>
+Is Subsequence
+https://leetcode.com/problems/is-subsequence
 
-<p>A <strong>subsequence</strong> of a string is a new string that is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters. (i.e., <code>&quot;ace&quot;</code> is a subsequence of <code>&quot;<u>a</u>b<u>c</u>d<u>e</u>&quot;</code> while <code>&quot;aec&quot;</code> is not).</p>
+Given two strings `s` and `t`, return `true` if `s` is a subsequence of `t`, or `false` otherwise.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
-<pre><strong>Input:</strong> s = "abc", t = "ahbgdc"
-<strong>Output:</strong> true
-</pre><p><strong class="example">Example 2:</strong></p>
-<pre><strong>Input:</strong> s = "axc", t = "ahbgdc"
-<strong>Output:</strong> false
-</pre>
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+A subsequence of a string is a new string that is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters. (i.e., `"ace"` is a subsequence of `"abcde"` while `"aec"` is not).
 
-<ul>
-	<li><code>0 &lt;= s.length &lt;= 100</code></li>
-	<li><code>0 &lt;= t.length &lt;= 10<sup>4</sup></code></li>
-	<li><code>s</code> and <code>t</code> consist only of lowercase English letters.</li>
-</ul>
+Example 1:
 
-<p>&nbsp;</p>
-<strong>Follow up:</strong> Suppose there are lots of incoming <code>s</code>, say <code>s<sub>1</sub>, s<sub>2</sub>, ..., s<sub>k</sub></code> where <code>k &gt;= 10<sup>9</sup></code>, and you want to check one by one to see if <code>t</code> has its subsequence. In this scenario, how would you change your code?
+Input: s = "abc", t = "ahbgdc"
+Output: true
+
+Example 2:
+
+Input: s = "axc", t = "ahbgdc"
+Output: false
+
+Constraints:
+
+	- `0 <= s.length <= 100`
+
+	- `0 <= t.length <= 10^4`
+
+	- `s` and `t` consist only of lowercase English letters.
+
+Follow up: Suppose there are lots of incoming `s`, say `s1, s2, ..., sk` where `k >= 10^9`, and you want to check one by one to see if `t` has its subsequence. In this scenario, how would you change your code?
 
 ### Solution
 
@@ -1602,40 +1513,35 @@ var isSubsequence = function(s, t) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/add-strings">Add Strings</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given two non-negative integers, <code>num1</code> and <code>num2</code> represented as string, return <em>the sum of</em> <code>num1</code> <em>and</em> <code>num2</code> <em>as a string</em>.</p>
+Add Strings
+https://leetcode.com/problems/add-strings
 
-<p>You must solve the problem without using any built-in library for handling large integers (such as <code>BigInteger</code>). You must also not convert the inputs to integers directly.</p>
+Given two non-negative integers, `num1` and `num2` represented as string, return the sum of `num1` and `num2` as a string.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+You must solve the problem without using any built-in library for handling large integers (such as `BigInteger`). You must also not convert the inputs to integers directly.
 
-<pre>
-<strong>Input:</strong> num1 = &quot;11&quot;, num2 = &quot;123&quot;
-<strong>Output:</strong> &quot;134&quot;
-</pre>
+Example 1:
 
-<p><strong class="example">Example 2:</strong></p>
+Input: num1 = "11", num2 = "123"
+Output: "134"
 
-<pre>
-<strong>Input:</strong> num1 = &quot;456&quot;, num2 = &quot;77&quot;
-<strong>Output:</strong> &quot;533&quot;
-</pre>
+Example 2:
 
-<p><strong class="example">Example 3:</strong></p>
+Input: num1 = "456", num2 = "77"
+Output: "533"
 
-<pre>
-<strong>Input:</strong> num1 = &quot;0&quot;, num2 = &quot;0&quot;
-<strong>Output:</strong> &quot;0&quot;
-</pre>
+Example 3:
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Input: num1 = "0", num2 = "0"
+Output: "0"
 
-<ul>
-	<li><code>1 &lt;= num1.length, num2.length &lt;= 10<sup>4</sup></code></li>
-	<li><code>num1</code> and <code>num2</code> consist of only digits.</li>
-	<li><code>num1</code> and <code>num2</code> don&#39;t have any leading zeros except for the zero itself.</li>
-</ul>
+Constraints:
+
+	- `1 <= num1.length, num2.length <= 10^4`
+
+	- `num1` and `num2` consist of only digits.
+
+	- `num1` and `num2` don't have any leading zeros except for the zero itself.
 
 ### Solution
 
@@ -1657,27 +1563,30 @@ var addStrings = function(num1, num2) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array">Find All Numbers Disappeared in an Array</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given an array <code>nums</code> of <code>n</code> integers where <code>nums[i]</code> is in the range <code>[1, n]</code>, return <em>an array of all the integers in the range</em> <code>[1, n]</code> <em>that do not appear in</em> <code>nums</code>.</p>
+Find All Numbers Disappeared in an Array
+https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
-<pre><strong>Input:</strong> nums = [4,3,2,7,8,2,3,1]
-<strong>Output:</strong> [5,6]
-</pre><p><strong class="example">Example 2:</strong></p>
-<pre><strong>Input:</strong> nums = [1,1]
-<strong>Output:</strong> [2]
-</pre>
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Given an array `nums` of `n` integers where `nums[i]` is in the range `[1, n]`, return an array of all the integers in the range `[1, n]` that do not appear in `nums`.
 
-<ul>
-	<li><code>n == nums.length</code></li>
-	<li><code>1 &lt;= n &lt;= 10<sup>5</sup></code></li>
-	<li><code>1 &lt;= nums[i] &lt;= n</code></li>
-</ul>
+Example 1:
 
-<p>&nbsp;</p>
-<p><strong>Follow up:</strong> Could you do it without extra space and in <code>O(n)</code> runtime? You may assume the returned list does not count as extra space.</p>
+Input: nums = [4,3,2,7,8,2,3,1]
+Output: [5,6]
+
+Example 2:
+
+Input: nums = [1,1]
+Output: [2]
+
+Constraints:
+
+	- `n == nums.length`
+
+	- `1 <= n <= 10^5`
+
+	- `1 <= nums[i] <= n`
+
+Follow up: Could you do it without extra space and in `O(n)` runtime? You may assume the returned list does not count as extra space.
 
 ### Solution
 
@@ -1711,39 +1620,33 @@ var findDisappearedNumbers = function(nums) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/repeated-substring-pattern">Repeated Substring Pattern</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given a string <code>s</code>, check if it can be constructed by taking a substring of it and appending multiple copies of the substring together.</p>
+Repeated Substring Pattern
+https://leetcode.com/problems/repeated-substring-pattern
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+Given a string `s`, check if it can be constructed by taking a substring of it and appending multiple copies of the substring together.
 
-<pre>
-<strong>Input:</strong> s = &quot;abab&quot;
-<strong>Output:</strong> true
-<strong>Explanation:</strong> It is the substring &quot;ab&quot; twice.
-</pre>
+Example 1:
 
-<p><strong class="example">Example 2:</strong></p>
+Input: s = "abab"
+Output: true
+Explanation: It is the substring "ab" twice.
 
-<pre>
-<strong>Input:</strong> s = &quot;aba&quot;
-<strong>Output:</strong> false
-</pre>
+Example 2:
 
-<p><strong class="example">Example 3:</strong></p>
+Input: s = "aba"
+Output: false
 
-<pre>
-<strong>Input:</strong> s = &quot;abcabcabcabc&quot;
-<strong>Output:</strong> true
-<strong>Explanation:</strong> It is the substring &quot;abc&quot; four times or the substring &quot;abcabc&quot; twice.
-</pre>
+Example 3:
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Input: s = "abcabcabcabc"
+Output: true
+Explanation: It is the substring "abc" four times or the substring "abcabc" twice.
 
-<ul>
-	<li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li>
-	<li><code>s</code> consists of lowercase English letters.</li>
-</ul>
+Constraints:
+
+	- `1 <= s.length <= 10^4`
+
+	- `s` consists of lowercase English letters.
 
 ### Solution
 
@@ -1774,31 +1677,27 @@ var repeatedSubstringPattern = function(s) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/max-consecutive-ones">Max Consecutive Ones</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given a binary array <code>nums</code>, return <em>the maximum number of consecutive </em><code>1</code><em>&#39;s in the array</em>.</p>
+Max Consecutive Ones
+https://leetcode.com/problems/max-consecutive-ones
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+Given a binary array `nums`, return the maximum number of consecutive `1`'s in the array.
 
-<pre>
-<strong>Input:</strong> nums = [1,1,0,1,1,1]
-<strong>Output:</strong> 3
-<strong>Explanation:</strong> The first two digits or the last three digits are consecutive 1s. The maximum number of consecutive 1s is 3.
-</pre>
+Example 1:
 
-<p><strong class="example">Example 2:</strong></p>
+Input: nums = [1,1,0,1,1,1]
+Output: 3
+Explanation: The first two digits or the last three digits are consecutive 1s. The maximum number of consecutive 1s is 3.
 
-<pre>
-<strong>Input:</strong> nums = [1,0,1,1,0,1]
-<strong>Output:</strong> 2
-</pre>
+Example 2:
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Input: nums = [1,0,1,1,0,1]
+Output: 2
 
-<ul>
-	<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>
-	<li><code>nums[i]</code> is either <code>0</code> or <code>1</code>.</li>
-</ul>
+Constraints:
+
+	- `1 <= nums.length <= 10^5`
+
+	- `nums[i]` is either `0` or `1`.
 
 ### Solution
 
@@ -1830,27 +1729,30 @@ var findMaxConsecutiveOnes = function(nums) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/set-mismatch">Set Mismatch</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>You have a set of integers <code>s</code>, which originally contains all the numbers from <code>1</code> to <code>n</code>. Unfortunately, due to some error, one of the numbers in <code>s</code> got duplicated to another number in the set, which results in <strong>repetition of one</strong> number and <strong>loss of another</strong> number.</p>
+Set Mismatch
+https://leetcode.com/problems/set-mismatch
 
-<p>You are given an integer array <code>nums</code> representing the data status of this set after the error.</p>
+You have a set of integers `s`, which originally contains all the numbers from `1` to `n`. Unfortunately, due to some error, one of the numbers in `s` got duplicated to another number in the set, which results in repetition of one number and loss of another number.
 
-<p>Find the number that occurs twice and the number that is missing and return <em>them in the form of an array</em>.</p>
+You are given an integer array `nums` representing the data status of this set after the error.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
-<pre><strong>Input:</strong> nums = [1,2,2,4]
-<strong>Output:</strong> [2,3]
-</pre><p><strong class="example">Example 2:</strong></p>
-<pre><strong>Input:</strong> nums = [1,1]
-<strong>Output:</strong> [1,2]
-</pre>
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Find the number that occurs twice and the number that is missing and return them in the form of an array.
 
-<ul>
-	<li><code>2 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>
-	<li><code>1 &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>
-</ul>
+Example 1:
+
+Input: nums = [1,2,2,4]
+Output: [2,3]
+
+Example 2:
+
+Input: nums = [1,1]
+Output: [1,2]
+
+Constraints:
+
+	- `2 <= nums.length <= 10^4`
+
+	- `1 <= nums[i] <= 10^4`
 
 ### Solution
 
@@ -1888,50 +1790,43 @@ var findErrorNums = function(nums) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero">Number of Steps to Reduce a Number to Zero</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given an integer <code>num</code>, return <em>the number of steps to reduce it to zero</em>.</p>
+Number of Steps to Reduce a Number to Zero
+https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero
 
-<p>In one step, if the current number is even, you have to divide it by <code>2</code>, otherwise, you have to subtract <code>1</code> from it.</p>
+Given an integer `num`, return the number of steps to reduce it to zero.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+In one step, if the current number is even, you have to divide it by `2`, otherwise, you have to subtract `1` from it.
 
-<pre>
-<strong>Input:</strong> num = 14
-<strong>Output:</strong> 6
-<strong>Explanation:</strong>&nbsp;
-Step 1) 14 is even; divide by 2 and obtain 7.&nbsp;
+Example 1:
+
+Input: num = 14
+Output: 6
+Explanation:
+Step 1) 14 is even; divide by 2 and obtain 7.
 Step 2) 7 is odd; subtract 1 and obtain 6.
-Step 3) 6 is even; divide by 2 and obtain 3.&nbsp;
-Step 4) 3 is odd; subtract 1 and obtain 2.&nbsp;
-Step 5) 2 is even; divide by 2 and obtain 1.&nbsp;
+Step 3) 6 is even; divide by 2 and obtain 3.
+Step 4) 3 is odd; subtract 1 and obtain 2.
+Step 5) 2 is even; divide by 2 and obtain 1.
 Step 6) 1 is odd; subtract 1 and obtain 0.
-</pre>
 
-<p><strong class="example">Example 2:</strong></p>
+Example 2:
 
-<pre>
-<strong>Input:</strong> num = 8
-<strong>Output:</strong> 4
-<strong>Explanation:</strong>&nbsp;
-Step 1) 8 is even; divide by 2 and obtain 4.&nbsp;
-Step 2) 4 is even; divide by 2 and obtain 2.&nbsp;
-Step 3) 2 is even; divide by 2 and obtain 1.&nbsp;
+Input: num = 8
+Output: 4
+Explanation:
+Step 1) 8 is even; divide by 2 and obtain 4.
+Step 2) 4 is even; divide by 2 and obtain 2.
+Step 3) 2 is even; divide by 2 and obtain 1.
 Step 4) 1 is odd; subtract 1 and obtain 0.
-</pre>
 
-<p><strong class="example">Example 3:</strong></p>
+Example 3:
 
-<pre>
-<strong>Input:</strong> num = 123
-<strong>Output:</strong> 12
-</pre>
+Input: num = 123
+Output: 12
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Constraints:
 
-<ul>
-	<li><code>0 &lt;= num &lt;= 10<sup>6</sup></code></li>
-</ul>
+	- `0 <= num <= 10^6`
 
 ### Solution
 
@@ -1957,45 +1852,39 @@ var numberOfSteps = function(num) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number">How Many Numbers Are Smaller Than the Current Number</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given the array <code>nums</code>, for each <code>nums[i]</code> find out how many numbers in the array are smaller than it. That is, for each <code>nums[i]</code> you have to count the number of valid <code>j&#39;s</code>&nbsp;such that&nbsp;<code>j != i</code> <strong>and</strong> <code>nums[j] &lt; nums[i]</code>.</p>
+How Many Numbers Are Smaller Than the Current Number
+https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number
 
-<p>Return the answer in an array.</p>
+Given the array `nums`, for each `nums[i]` find out how many numbers in the array are smaller than it. That is, for each `nums[i]` you have to count the number of valid `j's` such that `j != i` and `nums[j] < nums[i]`.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+Return the answer in an array.
 
-<pre>
-<strong>Input:</strong> nums = [8,1,2,2,3]
-<strong>Output:</strong> [4,0,1,1,3]
-<strong>Explanation:</strong> 
-For nums[0]=8 there exist four smaller numbers than it (1, 2, 2 and 3). 
+Example 1:
+
+Input: nums = [8,1,2,2,3]
+Output: [4,0,1,1,3]
+Explanation:
+For nums[0]=8 there exist four smaller numbers than it (1, 2, 2 and 3).
 For nums[1]=1 does not exist any smaller number than it.
-For nums[2]=2 there exist one smaller number than it (1). 
-For nums[3]=2 there exist one smaller number than it (1). 
+For nums[2]=2 there exist one smaller number than it (1).
+For nums[3]=2 there exist one smaller number than it (1).
 For nums[4]=3 there exist three smaller numbers than it (1, 2 and 2).
-</pre>
 
-<p><strong class="example">Example 2:</strong></p>
+Example 2:
 
-<pre>
-<strong>Input:</strong> nums = [6,5,4,8]
-<strong>Output:</strong> [2,1,0,3]
-</pre>
+Input: nums = [6,5,4,8]
+Output: [2,1,0,3]
 
-<p><strong class="example">Example 3:</strong></p>
+Example 3:
 
-<pre>
-<strong>Input:</strong> nums = [7,7,7,7]
-<strong>Output:</strong> [0,0,0,0]
-</pre>
+Input: nums = [7,7,7,7]
+Output: [0,0,0,0]
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Constraints:
 
-<ul>
-	<li><code>2 &lt;= nums.length &lt;= 500</code></li>
-	<li><code>0 &lt;= nums[i] &lt;= 100</code></li>
-</ul>
+	- `2 <= nums.length <= 500`
+
+	- `0 <= nums[i] <= 100`
 
 ### Solution
 
@@ -2026,47 +1915,41 @@ var smallerNumbersThanCurrent = function(nums) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop">Final Prices With a Special Discount in a Shop</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>You are given an integer array <code>prices</code> where <code>prices[i]</code> is the price of the <code>i<sup>th</sup></code> item in a shop.</p>
+Final Prices With a Special Discount in a Shop
+https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop
 
-<p>There is a special discount for items in the shop. If you buy the <code>i<sup>th</sup></code> item, then you will receive a discount equivalent to <code>prices[j]</code> where <code>j</code> is the minimum index such that <code>j &gt; i</code> and <code>prices[j] &lt;= prices[i]</code>. Otherwise, you will not receive any discount at all.</p>
+You are given an integer array `prices` where `prices[i]` is the price of the `i^th` item in a shop.
 
-<p>Return an integer array <code>answer</code> where <code>answer[i]</code> is the final price you will pay for the <code>i<sup>th</sup></code> item of the shop, considering the special discount.</p>
+There is a special discount for items in the shop. If you buy the `i^th` item, then you will receive a discount equivalent to `prices[j]` where `j` is the minimum index such that `j > i` and `prices[j] <= prices[i]`. Otherwise, you will not receive any discount at all.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+Return an integer array `answer` where `answer[i]` is the final price you will pay for the `i^th` item of the shop, considering the special discount.
 
-<pre>
-<strong>Input:</strong> prices = [8,4,6,2,3]
-<strong>Output:</strong> [4,2,4,2,3]
-<strong>Explanation:</strong> 
+Example 1:
+
+Input: prices = [8,4,6,2,3]
+Output: [4,2,4,2,3]
+Explanation:
 For item 0 with price[0]=8 you will receive a discount equivalent to prices[1]=4, therefore, the final price you will pay is 8 - 4 = 4.
 For item 1 with price[1]=4 you will receive a discount equivalent to prices[3]=2, therefore, the final price you will pay is 4 - 2 = 2.
 For item 2 with price[2]=6 you will receive a discount equivalent to prices[3]=2, therefore, the final price you will pay is 6 - 2 = 4.
 For items 3 and 4 you will not receive any discount at all.
-</pre>
 
-<p><strong class="example">Example 2:</strong></p>
+Example 2:
 
-<pre>
-<strong>Input:</strong> prices = [1,2,3,4,5]
-<strong>Output:</strong> [1,2,3,4,5]
-<strong>Explanation:</strong> In this case, for all items, you will not receive any discount at all.
-</pre>
+Input: prices = [1,2,3,4,5]
+Output: [1,2,3,4,5]
+Explanation: In this case, for all items, you will not receive any discount at all.
 
-<p><strong class="example">Example 3:</strong></p>
+Example 3:
 
-<pre>
-<strong>Input:</strong> prices = [10,1,1,6]
-<strong>Output:</strong> [9,0,1,6]
-</pre>
+Input: prices = [10,1,1,6]
+Output: [9,0,1,6]
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Constraints:
 
-<ul>
-	<li><code>1 &lt;= prices.length &lt;= 500</code></li>
-	<li><code>1 &lt;= prices[i] &lt;= 1000</code></li>
-</ul>
+	- `1 <= prices.length <= 500`
+
+	- `1 <= prices[i] <= 1000`
 
 ### Solution
 
@@ -2102,41 +1985,36 @@ var finalPrices = function(prices) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/shuffle-the-array">Shuffle the Array</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given the array <code>nums</code> consisting of <code>2n</code> elements in the form <code>[x<sub>1</sub>,x<sub>2</sub>,...,x<sub>n</sub>,y<sub>1</sub>,y<sub>2</sub>,...,y<sub>n</sub>]</code>.</p>
+Shuffle the Array
+https://leetcode.com/problems/shuffle-the-array
 
-<p><em>Return the array in the form</em> <code>[x<sub>1</sub>,y<sub>1</sub>,x<sub>2</sub>,y<sub>2</sub>,...,x<sub>n</sub>,y<sub>n</sub>]</code>.</p>
+Given the array `nums` consisting of `2n` elements in the form `[x1,x2,...,xn,y1,y2,...,yn]`.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+Return the array in the form `[x1,y1,x2,y2,...,xn,yn]`.
 
-<pre>
-<strong>Input:</strong> nums = [2,5,1,3,4,7], n = 3
-<strong>Output:</strong> [2,3,5,4,1,7] 
-<strong>Explanation:</strong> Since x<sub>1</sub>=2, x<sub>2</sub>=5, x<sub>3</sub>=1, y<sub>1</sub>=3, y<sub>2</sub>=4, y<sub>3</sub>=7 then the answer is [2,3,5,4,1,7].
-</pre>
+Example 1:
 
-<p><strong class="example">Example 2:</strong></p>
+Input: nums = [2,5,1,3,4,7], n = 3
+Output: [2,3,5,4,1,7]
+Explanation: Since x1=2, x2=5, x3=1, y1=3, y2=4, y3=7 then the answer is [2,3,5,4,1,7].
 
-<pre>
-<strong>Input:</strong> nums = [1,2,3,4,4,3,2,1], n = 4
-<strong>Output:</strong> [1,4,2,3,3,2,4,1]
-</pre>
+Example 2:
 
-<p><strong class="example">Example 3:</strong></p>
+Input: nums = [1,2,3,4,4,3,2,1], n = 4
+Output: [1,4,2,3,3,2,4,1]
 
-<pre>
-<strong>Input:</strong> nums = [1,1,2,2], n = 2
-<strong>Output:</strong> [1,2,1,2]
-</pre>
+Example 3:
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Input: nums = [1,1,2,2], n = 2
+Output: [1,2,1,2]
 
-<ul>
-	<li><code>1 &lt;= n &lt;= 500</code></li>
-	<li><code>nums.length == 2n</code></li>
-	<li><code>1 &lt;= nums[i] &lt;= 10^3</code></li>
-</ul>
+Constraints:
+
+	- `1 <= n <= 500`
+
+	- `nums.length == 2n`
+
+	- `1 <= nums[i] <= 10^3`
 
 ### Solution
 
@@ -2163,39 +2041,35 @@ var shuffle = function(nums, n) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/running-sum-of-1d-array">Running Sum of 1d Array</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given an array <code>nums</code>. We define a running sum of an array as&nbsp;<code>runningSum[i] = sum(nums[0]&hellip;nums[i])</code>.</p>
+Running Sum of 1d Array
+https://leetcode.com/problems/running-sum-of-1d-array
 
-<p>Return the running sum of <code>nums</code>.</p>
+Given an array `nums`. We define a running sum of an array as `runningSum[i] = sum(nums[0]...nums[i])`.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+Return the running sum of `nums`.
 
-<pre>
-<strong>Input:</strong> nums = [1,2,3,4]
-<strong>Output:</strong> [1,3,6,10]
-<strong>Explanation:</strong> Running sum is obtained as follows: [1, 1+2, 1+2+3, 1+2+3+4].</pre>
+Example 1:
 
-<p><strong class="example">Example 2:</strong></p>
+Input: nums = [1,2,3,4]
+Output: [1,3,6,10]
+Explanation: Running sum is obtained as follows: [1, 1+2, 1+2+3, 1+2+3+4].
 
-<pre>
-<strong>Input:</strong> nums = [1,1,1,1,1]
-<strong>Output:</strong> [1,2,3,4,5]
-<strong>Explanation:</strong> Running sum is obtained as follows: [1, 1+1, 1+1+1, 1+1+1+1, 1+1+1+1+1].</pre>
+Example 2:
 
-<p><strong class="example">Example 3:</strong></p>
+Input: nums = [1,1,1,1,1]
+Output: [1,2,3,4,5]
+Explanation: Running sum is obtained as follows: [1, 1+1, 1+1+1, 1+1+1+1, 1+1+1+1+1].
 
-<pre>
-<strong>Input:</strong> nums = [3,1,2,10,1]
-<strong>Output:</strong> [3,4,6,16,17]
-</pre>
+Example 3:
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Input: nums = [3,1,2,10,1]
+Output: [3,4,6,16,17]
 
-<ul>
-	<li><code>1 &lt;= nums.length &lt;= 1000</code></li>
-	<li><code>-10^6&nbsp;&lt;= nums[i] &lt;=&nbsp;10^6</code></li>
-</ul>
+Constraints:
+
+	- `1 <= nums.length <= 1000`
+
+	- `-10^6 <= nums[i] <= 10^6`
 
 ### Solution
 
@@ -2218,49 +2092,46 @@ var runningSum = function(nums) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/richest-customer-wealth">Richest Customer Wealth</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>You are given an <code>m x n</code> integer grid <code>accounts</code> where <code>accounts[i][j]</code> is the amount of money the <code>i​​​​​<sup>​​​​​​th</sup>​​​​</code> customer has in the <code>j​​​​​<sup>​​​​​​th</sup></code>​​​​ bank. Return<em> the <strong>wealth</strong> that the richest customer has.</em></p>
+Richest Customer Wealth
+https://leetcode.com/problems/richest-customer-wealth
 
-<p>A customer&#39;s <strong>wealth</strong> is the amount of money they have in all their bank accounts. The richest customer is the customer that has the maximum <strong>wealth</strong>.</p>
+You are given an `m x n` integer grid `accounts` where `accounts[i][j]` is the amount of money the `i​​​​​^​​​​​​th​​​​` customer has in the `j​​​​​^​​​​​​th`​​​​ bank. Return the wealth that the richest customer has.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+A customer's wealth is the amount of money they have in all their bank accounts. The richest customer is the customer that has the maximum wealth.
 
-<pre>
-<strong>Input:</strong> accounts = [[1,2,3],[3,2,1]]
-<strong>Output:</strong> 6
-<strong>Explanation</strong><strong>:</strong>
-<code>1st customer has wealth = 1 + 2 + 3 = 6
-</code><code>2nd customer has wealth = 3 + 2 + 1 = 6
-</code>Both customers are considered the richest with a wealth of 6 each, so return 6.
-</pre>
+Example 1:
 
-<p><strong class="example">Example 2:</strong></p>
+Input: accounts = [[1,2,3],[3,2,1]]
+Output: 6
+Explanation:
+`1st customer has wealth = 1 + 2 + 3 = 6
+``2nd customer has wealth = 3 + 2 + 1 = 6
+`Both customers are considered the richest with a wealth of 6 each, so return 6.
 
-<pre>
-<strong>Input:</strong> accounts = [[1,5],[7,3],[3,5]]
-<strong>Output:</strong> 10
-<strong>Explanation</strong>: 
+Example 2:
+
+Input: accounts = [[1,5],[7,3],[3,5]]
+Output: 10
+Explanation:
 1st customer has wealth = 6
-2nd customer has wealth = 10 
+2nd customer has wealth = 10
 3rd customer has wealth = 8
-The 2nd customer is the richest with a wealth of 10.</pre>
+The 2nd customer is the richest with a wealth of 10.
 
-<p><strong class="example">Example 3:</strong></p>
+Example 3:
 
-<pre>
-<strong>Input:</strong> accounts = [[2,8,7],[7,1,3],[1,9,5]]
-<strong>Output:</strong> 17
-</pre>
+Input: accounts = [[2,8,7],[7,1,3],[1,9,5]]
+Output: 17
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Constraints:
 
-<ul>
-	<li><code>m ==&nbsp;accounts.length</code></li>
-	<li><code>n ==&nbsp;accounts[i].length</code></li>
-	<li><code>1 &lt;= m, n &lt;= 50</code></li>
-	<li><code>1 &lt;= accounts[i][j] &lt;= 100</code></li>
-</ul>
+	- `m == accounts.length`
+
+	- `n == accounts[i].length`
+
+	- `1 <= m, n <= 50`
+
+	- `1 <= accounts[i][j] <= 100`
 
 ### Solution
 
@@ -2294,33 +2165,29 @@ var maximumWealth = function(accounts) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/check-if-the-sentence-is-pangram">Check if the Sentence Is Pangram</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>A <strong>pangram</strong> is a sentence where every letter of the English alphabet appears at least once.</p>
+Check if the Sentence Is Pangram
+https://leetcode.com/problems/check-if-the-sentence-is-pangram
 
-<p>Given a string <code>sentence</code> containing only lowercase English letters, return<em> </em><code>true</code><em> if </em><code>sentence</code><em> is a <strong>pangram</strong>, or </em><code>false</code><em> otherwise.</em></p>
+A pangram is a sentence where every letter of the English alphabet appears at least once.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+Given a string `sentence` containing only lowercase English letters, return `true` if `sentence` is a pangram, or `false` otherwise.
 
-<pre>
-<strong>Input:</strong> sentence = &quot;thequickbrownfoxjumpsoverthelazydog&quot;
-<strong>Output:</strong> true
-<strong>Explanation:</strong> sentence contains at least one of every letter of the English alphabet.
-</pre>
+Example 1:
 
-<p><strong class="example">Example 2:</strong></p>
+Input: sentence = "thequickbrownfoxjumpsoverthelazydog"
+Output: true
+Explanation: sentence contains at least one of every letter of the English alphabet.
 
-<pre>
-<strong>Input:</strong> sentence = &quot;leetcode&quot;
-<strong>Output:</strong> false
-</pre>
+Example 2:
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Input: sentence = "leetcode"
+Output: false
 
-<ul>
-	<li><code>1 &lt;= sentence.length &lt;= 1000</code></li>
-	<li><code>sentence</code> consists of lowercase English letters.</li>
-</ul>
+Constraints:
+
+	- `1 <= sentence.length <= 1000`
+
+	- `sentence` consists of lowercase English letters.
 
 ### Solution
 
@@ -2347,40 +2214,38 @@ var checkIfPangram = function(sentence) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/concatenation-of-array">Concatenation of Array</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given an integer array <code>nums</code> of length <code>n</code>, you want to create an array <code>ans</code> of length <code>2n</code> where <code>ans[i] == nums[i]</code> and <code>ans[i + n] == nums[i]</code> for <code>0 &lt;= i &lt; n</code> (<strong>0-indexed</strong>).</p>
+Concatenation of Array
+https://leetcode.com/problems/concatenation-of-array
 
-<p>Specifically, <code>ans</code> is the <strong>concatenation</strong> of two <code>nums</code> arrays.</p>
+Given an integer array `nums` of length `n`, you want to create an array `ans` of length `2n` where `ans[i] == nums[i]` and `ans[i + n] == nums[i]` for `0 <= i < n` (0-indexed).
 
-<p>Return <em>the array </em><code>ans</code>.</p>
+Specifically, `ans` is the concatenation of two `nums` arrays.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+Return the array `ans`.
 
-<pre>
-<strong>Input:</strong> nums = [1,2,1]
-<strong>Output:</strong> [1,2,1,1,2,1]
-<strong>Explanation:</strong> The array ans is formed as follows:
+Example 1:
+
+Input: nums = [1,2,1]
+Output: [1,2,1,1,2,1]
+Explanation: The array ans is formed as follows:
 - ans = [nums[0],nums[1],nums[2],nums[0],nums[1],nums[2]]
-- ans = [1,2,1,1,2,1]</pre>
+- ans = [1,2,1,1,2,1]
 
-<p><strong class="example">Example 2:</strong></p>
+Example 2:
 
-<pre>
-<strong>Input:</strong> nums = [1,3,2,1]
-<strong>Output:</strong> [1,3,2,1,1,3,2,1]
-<strong>Explanation:</strong> The array ans is formed as follows:
+Input: nums = [1,3,2,1]
+Output: [1,3,2,1,1,3,2,1]
+Explanation: The array ans is formed as follows:
 - ans = [nums[0],nums[1],nums[2],nums[3],nums[0],nums[1],nums[2],nums[3]]
 - ans = [1,3,2,1,1,3,2,1]
-</pre>
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Constraints:
 
-<ul>
-	<li><code>n == nums.length</code></li>
-	<li><code>1 &lt;= n &lt;= 1000</code></li>
-	<li><code>1 &lt;= nums[i] &lt;= 1000</code></li>
-</ul>
+	- `n == nums.length`
+
+	- `1 <= n <= 1000`
+
+	- `1 <= nums[i] <= 1000`
 
 ### Solution
 
@@ -2400,53 +2265,49 @@ var getConcatenation = function(nums) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/number-of-strings-that-appear-as-substrings-in-word">Number of Strings That Appear as Substrings in Word</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given an array of strings <code>patterns</code> and a string <code>word</code>, return <em>the <strong>number</strong> of strings in </em><code>patterns</code><em> that exist as a <strong>substring</strong> in </em><code>word</code>.</p>
+Number of Strings That Appear as Substrings in Word
+https://leetcode.com/problems/number-of-strings-that-appear-as-substrings-in-word
 
-<p>A <strong>substring</strong> is a contiguous sequence of characters within a string.</p>
+Given an array of strings `patterns` and a string `word`, return the number of strings in `patterns` that exist as a substring in `word`.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+A substring is a contiguous sequence of characters within a string.
 
-<pre>
-<strong>Input:</strong> patterns = [&quot;a&quot;,&quot;abc&quot;,&quot;bc&quot;,&quot;d&quot;], word = &quot;abc&quot;
-<strong>Output:</strong> 3
-<strong>Explanation:</strong>
-- &quot;a&quot; appears as a substring in &quot;<u>a</u>bc&quot;.
-- &quot;abc&quot; appears as a substring in &quot;<u>abc</u>&quot;.
-- &quot;bc&quot; appears as a substring in &quot;a<u>bc</u>&quot;.
-- &quot;d&quot; does not appear as a substring in &quot;abc&quot;.
+Example 1:
+
+Input: patterns = ["a","abc","bc","d"], word = "abc"
+Output: 3
+Explanation:
+- "a" appears as a substring in "abc".
+- "abc" appears as a substring in "abc".
+- "bc" appears as a substring in "abc".
+- "d" does not appear as a substring in "abc".
 3 of the strings in patterns appear as a substring in word.
-</pre>
 
-<p><strong class="example">Example 2:</strong></p>
+Example 2:
 
-<pre>
-<strong>Input:</strong> patterns = [&quot;a&quot;,&quot;b&quot;,&quot;c&quot;], word = &quot;aaaaabbbbb&quot;
-<strong>Output:</strong> 2
-<strong>Explanation:</strong>
-- &quot;a&quot; appears as a substring in &quot;a<u>a</u>aaabbbbb&quot;.
-- &quot;b&quot; appears as a substring in &quot;aaaaabbbb<u>b</u>&quot;.
-- &quot;c&quot; does not appear as a substring in &quot;aaaaabbbbb&quot;.
+Input: patterns = ["a","b","c"], word = "aaaaabbbbb"
+Output: 2
+Explanation:
+- "a" appears as a substring in "aaaaabbbbb".
+- "b" appears as a substring in "aaaaabbbbb".
+- "c" does not appear as a substring in "aaaaabbbbb".
 2 of the strings in patterns appear as a substring in word.
-</pre>
 
-<p><strong class="example">Example 3:</strong></p>
+Example 3:
 
-<pre>
-<strong>Input:</strong> patterns = [&quot;a&quot;,&quot;a&quot;,&quot;a&quot;], word = &quot;ab&quot;
-<strong>Output:</strong> 3
-<strong>Explanation:</strong> Each of the patterns appears as a substring in word &quot;<u>a</u>b&quot;.
-</pre>
+Input: patterns = ["a","a","a"], word = "ab"
+Output: 3
+Explanation: Each of the patterns appears as a substring in word "ab".
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Constraints:
 
-<ul>
-	<li><code>1 &lt;= patterns.length &lt;= 100</code></li>
-	<li><code>1 &lt;= patterns[i].length &lt;= 100</code></li>
-	<li><code>1 &lt;= word.length &lt;= 100</code></li>
-	<li><code>patterns[i]</code> and <code>word</code> consist of lowercase English letters.</li>
-</ul>
+	- `1 <= patterns.length <= 100`
+
+	- `1 <= patterns[i].length <= 100`
+
+	- `1 <= word.length <= 100`
+
+	- `patterns[i]` and `word` consist of lowercase English letters.
 
 ### Solution
 
@@ -2477,36 +2338,32 @@ var numOfStrings = function(patterns, word) {
 
 ### Problem
 
-<h2><a href="https://leetcode.com/problems/smallest-missing-integer-greater-than-sequential-prefix-sum">Smallest Missing Integer Greater Than Sequential Prefix Sum</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>You are given a <strong>0-indexed</strong> array of integers <code>nums</code>.</p>
+Smallest Missing Integer Greater Than Sequential Prefix Sum
+https://leetcode.com/problems/smallest-missing-integer-greater-than-sequential-prefix-sum
 
-<p>A prefix <code>nums[0..i]</code> is <strong>sequential</strong> if, for all <code>1 &lt;= j &lt;= i</code>, <code>nums[j] = nums[j - 1] + 1</code>. In particular, the prefix consisting only of <code>nums[0]</code> is <strong>sequential</strong>.</p>
+You are given a 0-indexed array of integers `nums`.
 
-<p>Return <em>the <strong>smallest</strong> integer</em> <code>x</code> <em>missing from</em> <code>nums</code> <em>such that</em> <code>x</code> <em>is greater than or equal to the sum of the <strong>longest</strong> sequential prefix.</em></p>
+A prefix `nums[0..i]` is sequential if, for all `1 <= j <= i`, `nums[j] = nums[j - 1] + 1`. In particular, the prefix consisting only of `nums[0]` is sequential.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+Return the smallest integer `x` missing from `nums` such that `x` is greater than or equal to the sum of the longest sequential prefix.
 
-<pre>
-<strong>Input:</strong> nums = [1,2,3,2,5]
-<strong>Output:</strong> 6
-<strong>Explanation:</strong> The longest sequential prefix of nums is [1,2,3] with a sum of 6. 6 is not in the array, therefore 6 is the smallest missing integer greater than or equal to the sum of the longest sequential prefix.
-</pre>
+Example 1:
 
-<p><strong class="example">Example 2:</strong></p>
+Input: nums = [1,2,3,2,5]
+Output: 6
+Explanation: The longest sequential prefix of nums is [1,2,3] with a sum of 6. 6 is not in the array, therefore 6 is the smallest missing integer greater than or equal to the sum of the longest sequential prefix.
 
-<pre>
-<strong>Input:</strong> nums = [3,4,5,1,12,14,13]
-<strong>Output:</strong> 15
-<strong>Explanation:</strong> The longest sequential prefix of nums is [3,4,5] with a sum of 12. 12, 13, and 14 belong to the array while 15 does not. Therefore 15 is the smallest missing integer greater than or equal to the sum of the longest sequential prefix.
-</pre>
+Example 2:
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+Input: nums = [3,4,5,1,12,14,13]
+Output: 15
+Explanation: The longest sequential prefix of nums is [3,4,5] with a sum of 12. 12, 13, and 14 belong to the array while 15 does not. Therefore 15 is the smallest missing integer greater than or equal to the sum of the longest sequential prefix.
 
-<ul>
-	<li><code>1 &lt;= nums.length &lt;= 50</code></li>
-	<li><code>1 &lt;= nums[i] &lt;= 50</code></li>
-</ul>
+Constraints:
+
+	- `1 <= nums.length <= 50`
+
+	- `1 <= nums[i] <= 50`
 
 ### Solution
 

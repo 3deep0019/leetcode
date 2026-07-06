@@ -1,0 +1,2 @@
+# Prevents GitHub Pages from running Jekyll (can break SPA asset paths)
+name: .nojekyll

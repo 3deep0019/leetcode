@@ -38,3 +38,16 @@ Create a folder like `42-my-problem/` with:
 - `my-problem.js` — your reference solution (used for function signature + tests, not shown in UI)
 
 Then run `npm run problems` (or `npm run dev`, which runs it automatically).
+
+## GitHub Pages deploy
+
+1. Go to **Settings → Pages** in your GitHub repo
+2. Set **Source** to **GitHub Actions** (not "Deploy from branch")
+3. Push to `main` — the workflow in `.github/workflows/pages.yml` builds and deploys `docs/`
+
+If deploy fails with "Deployment failed, try again later":
+- Confirm Pages source is **GitHub Actions** only (disable branch-based deploy if enabled)
+- Re-run the workflow from the **Actions** tab
+- Check the **build** job uploaded `docs/index.html` successfully
+
+Site URL: `https://3deep0019.github.io/leetcode/`

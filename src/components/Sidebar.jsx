@@ -9,10 +9,13 @@ export default function Sidebar({
   selectedId,
   difficulty,
   search,
+  completedIds,
   onDifficultyChange,
   onSearchChange,
   onSelect,
 }) {
+  const completed = new Set(completedIds);
+
   return (
     <aside className="sidebar">
       <div className="sidebar-header">
@@ -47,10 +50,14 @@ export default function Sidebar({
             <button
               key={problem.id}
               type="button"
-              className={`problem-item ${selectedId === problem.id ? "selected" : ""}`}
+              className={`problem-item ${selectedId === problem.id ? "selected" : ""} ${
+                completed.has(problem.id) ? "completed" : ""
+              }`}
               onClick={() => onSelect(problem.id)}
             >
-              <span className="problem-number">{problem.number}</span>
+              <span className="problem-number">
+                {completed.has(problem.id) ? "✓" : problem.number}
+              </span>
               <span className="problem-title">{problem.title}</span>
               <span className={`problem-badge ${difficultyClass(problem.difficulty)}`}>
                 {problem.difficulty}

@@ -18,7 +18,7 @@ export default function App() {
   const [running, setRunning] = useState(false);
 
   useEffect(() => {
-    fetch("/problems.json")
+    fetch(`${import.meta.env.BASE_URL}problems.json`)
       .then((res) => {
         if (!res.ok) throw new Error("Run npm run problems to generate problems.json");
         return res.json();

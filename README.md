@@ -26,8 +26,8 @@ Opens a browser UI with:
 ```bash
 npm run problems   # regenerate public/problems.json from problem folders
 npm run compile    # regenerate compiled/easy.md, medium.md, hard.md and .js files
-npm run build      # build the UI for production
-npm run preview    # preview the production build
+npm run build      # build static site into docs/ (works with Live Server & GitHub Pages)
+npm run preview    # preview the production build locally
 ```
 
 ## Adding problems

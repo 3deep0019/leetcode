@@ -1926,6 +1926,19 @@
       "usesListNode": false,
       "mutatesInput": false,
       "cases": []
+    },
+    {
+      "id": "4135-concatenate-non-zero-digits-and-multiply-by-sum-i",
+      "number": 4135,
+      "title": "Concatenate Non-Zero Digits and Multiply by Sum I",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-i",
+      "description": "You are given an integer `n`.\n\nForm a new integer `x` by concatenating all the non-zero digits of `n` in their original order. If there are no non-zero digits, `x = 0`.\n\nLet `sum` be the sum of digits in `x`.\n\nReturn an integer representing the value of `x * sum`.\n\nExample 1:\n\nInput: n = 10203004\n\nOutput: 12340\n\nExplanation:\n\n\t- The non-zero digits are 1, 2, 3, and 4. Thus, `x = 1234`.\n\n\t- The sum of digits is `sum = 1 + 2 + 3 + 4 = 10`.\n\n\t- Therefore, the answer is `x * sum = 1234 * 10 = 12340`.\n\nExample 2:\n\nInput: n = 1000\n\nOutput: 1\n\nExplanation:\n\n\t- The non-zero digit is 1, so `x = 1` and `sum = 1`.\n\n\t- Therefore, the answer is `x * sum = 1 * 1 = 1`.\n\nConstraints:\n\n\t- `0 <= n <= 10^9`",
+      "functionName": "sumAndMultiply",
+      "starterCode": "/**\n * @param {number} n\n * @return {number}\n */\n\nglobalThis.sumAndMultiply = function(n) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
     }
   ]
 }

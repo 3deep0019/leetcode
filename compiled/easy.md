@@ -1,6 +1,6 @@
 # LeetCode Easy Problems
 
-39 problem(s)
+40 problem(s)
 
 ## 1-two-sum
 
@@ -62,6 +62,10 @@ var twoSum = function(nums, target) {
         }
     }
 };
+
+console.log(twoSum([2, 7, 11, 15], 9)); // Output: [0, 1]
+console.log(twoSum([3, 2, 4], 6)); // Output: [1, 2]
+console.log(twoSum([3, 3], 6)); // Output: [0, 1]
 ```
 
 ---
@@ -212,6 +216,12 @@ var romanToInt = function(s) {
 
     return total;
 };
+
+console.log(romanToInt("III")); // 3
+console.log(romanToInt("IV")); // 4
+console.log(romanToInt("IX")); // 9
+console.log(romanToInt("LVIII")); // 58
+console.log(romanToInt("MCMXCIV")); // 1994
 ```
 
 ### Notes
@@ -268,6 +278,9 @@ var longestCommonPrefix = function(strs) {
     }
     return prefix;
 };
+
+console.log(longestCommonPrefix(["flower", "flow", "flight"])) // "fl"
+console.log(longestCommonPrefix(["dog", "racecar", "car"])) // ""
 ```
 
 ---
@@ -350,9 +363,15 @@ var isValid = function(s) {
             }
         }
     }
-
+    
     return stack.length === 0;
 };
+
+console.log(isValid("()")); // true
+console.log(isValid("()[]{}")); // true
+console.log(isValid("(]")); // false
+console.log(isValid("([)]")); // false
+console.log(isValid("{[]}")); // true
 ```
 
 ### Notes
@@ -2389,5 +2408,85 @@ var missingInteger = function(nums) {
     return longestPrefixSum
 };
 ```
+
+---
+
+## 4135-concatenate-non-zero-digits-and-multiply-by-sum-i
+
+### Problem
+
+Concatenate Non-Zero Digits and Multiply by Sum I
+https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-i
+
+You are given an integer `n`.
+
+Form a new integer `x` by concatenating all the non-zero digits of `n` in their original order. If there are no non-zero digits, `x = 0`.
+
+Let `sum` be the sum of digits in `x`.
+
+Return an integer representing the value of `x * sum`.
+
+Example 1:
+
+Input: n = 10203004
+
+Output: 12340
+
+Explanation:
+
+	- The non-zero digits are 1, 2, 3, and 4. Thus, `x = 1234`.
+
+	- The sum of digits is `sum = 1 + 2 + 3 + 4 = 10`.
+
+	- Therefore, the answer is `x * sum = 1234 * 10 = 12340`.
+
+Example 2:
+
+Input: n = 1000
+
+Output: 1
+
+Explanation:
+
+	- The non-zero digit is 1, so `x = 1` and `sum = 1`.
+
+	- Therefore, the answer is `x * sum = 1 * 1 = 1`.
+
+Constraints:
+
+	- `0 <= n <= 10^9`
+
+### Solution
+
+```javascript
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var sumAndMultiply = function(n) {
+    let s = n.toString();
+
+    let newNumber = 0;
+    let digitSum = 0;
+
+    for(let ch of s){
+
+        if(ch !== '0'){
+
+            let digit = Number(ch);
+
+            newNumber = newNumber * 10 + digit;
+
+            digitSum += digit;
+        }
+    }
+
+    return newNumber * digitSum;
+};
+```
+
+### Notes
+
+<h2>concatenate-non-zero-digits-and-multiply-by-sum-i Notes</h2><hr>[ Time taken: 6m 32s ]
 
 ---

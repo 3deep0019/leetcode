@@ -36,6 +36,43 @@ function listToArray(head) {
 
 // --- Problems ---
 /*
+ * 42-trapping-rain-water
+ *
+ * Trapping Rain Water
+ * https://leetcode.com/problems/trapping-rain-water
+ * 
+ * Given `n` non-negative integers representing an elevation map where the width of each bar is `1`, compute how much water it can trap after raining.
+ * 
+ * Example 1:
+ * 
+ * Input: height = [0,1,0,2,1,0,1,3,2,1,2,1]
+ * Output: 6
+ * Explanation: The above elevation map (black section) is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped.
+ * 
+ * Example 2:
+ * 
+ * Input: height = [4,2,0,3,2,5]
+ * Output: 9
+ * 
+ * Constraints:
+ * 
+ * 	- `n == height.length`
+ * 
+ * 	- `1 <= n <= 2 * 10^4`
+ * 
+ * 	- `0 <= height[i] <= 10^5`
+ */
+
+/**
+ * @param {number[]} height
+ * @return {number}
+ */
+
+globalThis.trap = function(height) {
+  // Write your solution here
+};
+
+/*
  * 220-contains-duplicate-iii
  *
  * Contains Duplicate III
@@ -179,6 +216,280 @@ globalThis.countAnagrams = function(s) {
 };
 
 /*
+ * 3583-sorted-gcd-pair-queries
+ *
+ * Sorted GCD Pair Queries
+ * https://leetcode.com/problems/sorted-gcd-pair-queries
+ * 
+ * You are given an integer array `nums` of length `n` and an integer array `queries`.
+ * 
+ * Let `gcdPairs` denote an array obtained by calculating the GCD of all possible pairs `(nums[i], nums[j])`, where `0 <= i < j < n`, and then sorting these values in ascending order.
+ * 
+ * For each query `queries[i]`, you need to find the element at index `queries[i]` in `gcdPairs`.
+ * 
+ * Return an integer array `answer`, where `answer[i]` is the value at `gcdPairs[queries[i]]` for each query.
+ * 
+ * The term `gcd(a, b)` denotes the greatest common divisor of `a` and `b`.
+ * 
+ * Example 1:
+ * 
+ * Input: nums = [2,3,4], queries = [0,2,2]
+ * 
+ * Output: [1,2,2]
+ * 
+ * Explanation:
+ * 
+ * `gcdPairs = [gcd(nums[0], nums[1]), gcd(nums[0], nums[2]), gcd(nums[1], nums[2])] = [1, 2, 1]`.
+ * 
+ * After sorting in ascending order, `gcdPairs = [1, 1, 2]`.
+ * 
+ * So, the answer is `[gcdPairs[queries[0]], gcdPairs[queries[1]], gcdPairs[queries[2]]] = [1, 2, 2]`.
+ * 
+ * Example 2:
+ * 
+ * Input: nums = [4,4,2,1], queries = [5,3,1,0]
+ * 
+ * Output: [4,2,1,1]
+ * 
+ * Explanation:
+ * 
+ * `gcdPairs` sorted in ascending order is `[1, 1, 1, 2, 2, 4]`.
+ * 
+ * Example 3:
+ * 
+ * Input: nums = [2,2], queries = [0,0]
+ * 
+ * Output: [2,2]
+ * 
+ * Explanation:
+ * 
+ * `gcdPairs = [2]`.
+ * 
+ * Constraints:
+ * 
+ * 	- `2 <= n == nums.length <= 10^5`
+ * 
+ * 	- `1 <= nums[i] <= 5 * 10^4`
+ * 
+ * 	- `1 <= queries.length <= 10^5`
+ * 
+ * 	- `0 <= queries[i] < n * (n - 1) / 2`
+ */
+
+/**
+ * @param {number[]} nums
+ * @param {number[]} queries
+ * @return {number[]}
+ */
+
+globalThis.gcdValues = function(nums, queries) {
+  // Write your solution here
+};
+
+/*
+ * 3608-find-the-number-of-subsequences-with-equal-gcd
+ *
+ * Find the Number of Subsequences With Equal GCD
+ * https://leetcode.com/problems/find-the-number-of-subsequences-with-equal-gcd
+ * 
+ * You are given an integer array `nums`.
+ * 
+ * Your task is to find the number of pairs of non-empty subsequences `(seq1, seq2)` of `nums` that satisfy the following conditions:
+ * 
+ * 	- The subsequences `seq1` and `seq2` are disjoint, meaning no index of `nums` is common between them.
+ * 
+ * 	- The GCD of the elements of `seq1` is equal to the GCD of the elements of `seq2`.
+ * 
+ * Return the total number of such pairs.
+ * 
+ * Since the answer may be very large, return it modulo `10^9 + 7`.
+ * 
+ * Example 1:
+ * 
+ * Input: nums = [1,2,3,4]
+ * 
+ * Output: 10
+ * 
+ * Explanation:
+ * 
+ * The subsequence pairs which have the GCD of their elements equal to 1 are:
+ * 
+ * 	- `([1, 2, 3, 4], [1, 2, 3, 4])`
+ * 
+ * 	- `([1, 2, 3, 4], [1, 2, 3, 4])`
+ * 
+ * 	- `([1, 2, 3, 4], [1, 2, 3, 4])`
+ * 
+ * 	- `([1, 2, 3, 4], [1, 2, 3, 4])`
+ * 
+ * 	- `([1, 2, 3, 4], [1, 2, 3, 4])`
+ * 
+ * 	- `([1, 2, 3, 4], [1, 2, 3, 4])`
+ * 
+ * 	- `([1, 2, 3, 4], [1, 2, 3, 4])`
+ * 
+ * 	- `([1, 2, 3, 4], [1, 2, 3, 4])`
+ * 
+ * 	- `([1, 2, 3, 4], [1, 2, 3, 4])`
+ * 
+ * 	- `([1, 2, 3, 4], [1, 2, 3, 4])`
+ * 
+ * Example 2:
+ * 
+ * Input: nums = [10,20,30]
+ * 
+ * Output: 2
+ * 
+ * Explanation:
+ * 
+ * The subsequence pairs which have the GCD of their elements equal to 10 are:
+ * 
+ * 	- `([10, 20, 30], [10, 20, 30])`
+ * 
+ * 	- `([10, 20, 30], [10, 20, 30])`
+ * 
+ * Example 3:
+ * 
+ * Input: nums = [1,1,1,1]
+ * 
+ * Output: 50
+ * 
+ * Constraints:
+ * 
+ * 	- `1 <= nums.length <= 200`
+ * 
+ * 	- `1 <= nums[i] <= 200`
+ */
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+
+globalThis.subsequencePairCount = function(nums) {
+  // Write your solution here
+};
+
+/*
+ * 3852-path-existence-queries-in-a-graph-ii
+ *
+ * Path Existence Queries in a Graph II
+ * https://leetcode.com/problems/path-existence-queries-in-a-graph-ii
+ * 
+ * You are given an integer `n` representing the number of nodes in a graph, labeled from 0 to `n - 1`.
+ * 
+ * You are also given an integer array `nums` of length `n` and an integer `maxDiff`.
+ * 
+ * An undirected edge exists between nodes `i` and `j` if the absolute difference between `nums[i]` and `nums[j]` is at most `maxDiff` (i.e., `|nums[i] - nums[j]| <= maxDiff`).
+ * 
+ * You are also given a 2D integer array `queries`. For each `queries[i] = [ui, vi]`, find the minimum distance between nodes `ui` and `vi`. If no path exists between the two nodes, return -1 for that query.
+ * 
+ * Return an array `answer`, where `answer[i]` is the result of the `i^th` query.
+ * 
+ * Note: The edges between the nodes are unweighted.
+ * 
+ * Example 1:
+ * 
+ * Input: n = 5, nums = [1,8,3,4,2], maxDiff = 3, queries = [[0,3],[2,4]]
+ * 
+ * Output: [1,1]
+ * 
+ * Explanation:
+ * 
+ * The resulting graph is:
+ * 
+ * 			Query
+ * 			Shortest Path
+ * 			Minimum Distance
+ * 
+ * 			[0, 3]
+ * 			0 &rarr; 3
+ * 			1
+ * 
+ * 			[2, 4]
+ * 			2 &rarr; 4
+ * 			1
+ * 
+ * Thus, the output is `[1, 1]`.
+ * 
+ * Example 2:
+ * 
+ * Input: n = 5, nums = [5,3,1,9,10], maxDiff = 2, queries = [[0,1],[0,2],[2,3],[4,3]]
+ * 
+ * Output: [1,2,-1,1]
+ * 
+ * Explanation:
+ * 
+ * The resulting graph is:
+ * 
+ * 			Query
+ * 			Shortest Path
+ * 			Minimum Distance
+ * 
+ * 			[0, 1]
+ * 			0 &rarr; 1
+ * 			1
+ * 
+ * 			[0, 2]
+ * 			0 &rarr; 1 &rarr; 2
+ * 			2
+ * 
+ * 			[2, 3]
+ * 			None
+ * 			-1
+ * 
+ * 			[4, 3]
+ * 			3 &rarr; 4
+ * 			1
+ * 
+ * Thus, the output is `[1, 2, -1, 1]`.
+ * 
+ * Example 3:
+ * 
+ * Input: n = 3, nums = [3,6,1], maxDiff = 1, queries = [[0,0],[0,1],[1,2]]
+ * 
+ * Output: [0,-1,-1]
+ * 
+ * Explanation:
+ * 
+ * There are no edges between any two nodes because:
+ * 
+ * 	- Nodes 0 and 1: `|nums[0] - nums[1]| = |3 - 6| = 3 > 1`
+ * 
+ * 	- Nodes 0 and 2: `|nums[0] - nums[2]| = |3 - 1| = 2 > 1`
+ * 
+ * 	- Nodes 1 and 2: `|nums[1] - nums[2]| = |6 - 1| = 5 > 1`
+ * 
+ * Thus, no node can reach any other node, and the output is `[0, -1, -1]`.
+ * 
+ * Constraints:
+ * 
+ * 	- `1 <= n == nums.length <= 10^5`
+ * 
+ * 	- `0 <= nums[i] <= 10^5`
+ * 
+ * 	- `0 <= maxDiff <= 10^5`
+ * 
+ * 	- `1 <= queries.length <= 10^5`
+ * 
+ * 	- `queries[i] == [ui, vi]`
+ * 
+ * 	- `0 <= ui, vi < n`
+ */
+
+/**
+ * @param {number} n
+ * @param {number[]} nums
+ * @param {number} maxDiff
+ * @param {number[][]} queries
+ * @return {number[]}
+ */
+
+globalThis.pathExistenceQueries = function(n, nums, maxDiff, queries) {
+  // Write your solution here
+};
+
+/*
  * 3919-network-recovery-pathways
  *
  * Network Recovery Pathways
@@ -278,6 +589,46 @@ globalThis.findMaxPathScore = function(edges, online, k) {
 // --- Test runner (auto-generated) ---
 const PROBLEM_TESTS = [
   {
+    "id": "42-trapping-rain-water",
+    "fn": "trap",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": [
+      {
+        "args": [
+          [
+            0,
+            1,
+            0,
+            2,
+            1,
+            0,
+            1,
+            3,
+            2,
+            1,
+            2,
+            1
+          ]
+        ],
+        "expected": 6
+      },
+      {
+        "args": [
+          [
+            4,
+            2,
+            0,
+            3,
+            2,
+            5
+          ]
+        ],
+        "expected": 9
+      }
+    ]
+  },
+  {
     "id": "220-contains-duplicate-iii",
     "fn": "containsNearbyAlmostDuplicate",
     "usesListNode": false,
@@ -363,6 +714,27 @@ const PROBLEM_TESTS = [
   {
     "id": "2605-count-anagrams",
     "fn": "countAnagrams",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": []
+  },
+  {
+    "id": "3583-sorted-gcd-pair-queries",
+    "fn": "gcdValues",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": []
+  },
+  {
+    "id": "3608-find-the-number-of-subsequences-with-equal-gcd",
+    "fn": "subsequencePairCount",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": []
+  },
+  {
+    "id": "3852-path-existence-queries-in-a-graph-ii",
+    "fn": "pathExistenceQueries",
     "usesListNode": false,
     "mutatesInput": false,
     "cases": []

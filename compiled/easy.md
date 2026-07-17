@@ -1,6 +1,6 @@
 # LeetCode Easy Problems
 
-40 problem(s)
+44 problem(s)
 
 ## 1-two-sum
 
@@ -1079,16 +1079,15 @@ Constraints:
  * @return {boolean}
  */
 var isPalindrome = function(s) {
-    if (!s) return true;
-    s = s.toLowerCase().replace(/[^a-zA-Z0-9]/g, '');
-
-    let left = 0,
-        right = s.length - 1;
-    while (left < right) {
-        if (s[left] !== s[right]) return false;
+    s = s.replace(/[^a-zA-Z0-9]/g, "")
+    if(!s) return true;
+    let left = 0, right = s.length-1;
+    while(left<right){
+        if(s[left].toLowerCase() !== s[right].toLowerCase()) return false;
         left++;
         right--;
     }
+
     return true;
 };
 ```
@@ -1407,19 +1406,14 @@ Follow up: Could you minimize the total number of operations done?
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 var moveZeroes = function(nums) {
-    let insertPos = 0;
-
-    for (const num of nums) {
-        if (num !== 0) {
-            nums[insertPos] = num;
-            insertPos++;
+    let slow = 0;
+    for(let fast = 0;fast<nums.length;fast++){
+        if(nums[fast]!= 0){
+            [nums[slow], nums[fast]] = [nums[fast],nums[slow]]
+            slow++
         }
     }
-
-    while (insertPos < nums.length) {
-        nums[insertPos] = 0;
-        insertPos++;
-    }
+    return nums
 };
 ```
 
@@ -1744,6 +1738,66 @@ var findMaxConsecutiveOnes = function(nums) {
 
 ---
 
+## 643-maximum-average-subarray-i
+
+### Problem
+
+Maximum Average Subarray I
+https://leetcode.com/problems/maximum-average-subarray-i
+
+You are given an integer array `nums` consisting of `n` elements, and an integer `k`.
+
+Find a contiguous subarray whose length is equal to `k` that has the maximum average value and return this value. Any answer with a calculation error less than `10^-5` will be accepted.
+
+Example 1:
+
+Input: nums = [1,12,-5,-6,50,3], k = 4
+Output: 12.75000
+Explanation: Maximum average is (12 - 5 - 6 + 50) / 4 = 51 / 4 = 12.75
+
+Example 2:
+
+Input: nums = [5], k = 1
+Output: 5.00000
+
+Constraints:
+
+	- `n == nums.length`
+
+	- `1 <= k <= n <= 10^5`
+
+	- `-10^4 <= nums[i] <= 10^4`
+
+### Solution
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
+var findMaxAverage = function(nums, k) {
+    const n = nums.length;
+    if(n<k) return 0;
+
+    let windowSum = 0;
+    for(let i=0;i<k;i++){
+        windowSum+=nums[i];
+    }
+
+    let maxAvg = windowSum/k;
+
+    for(let i = k;i<n;i++){
+        windowSum += nums[i] - nums[i-k];
+        maxAvg = Math.max(maxAvg,windowSum/k)
+    }
+
+    return maxAvg
+};
+```
+
+---
+
 ## 645-set-mismatch
 
 ### Problem
@@ -1800,6 +1854,63 @@ var findErrorNums = function(nums) {
     }
 
     return [duplicate, missing];
+};
+```
+
+---
+
+## 1256-rank-transform-of-an-array
+
+### Problem
+
+Rank Transform of an Array
+https://leetcode.com/problems/rank-transform-of-an-array
+
+Given an array of integers `arr`, replace each element with its rank.
+
+The rank represents how large the element is. The rank has the following rules:
+
+	- Rank is an integer starting from 1.
+
+	- The larger the element, the larger the rank. If two elements are equal, their rank must be the same.
+
+	- Rank should be as small as possible.
+
+Example 1:
+
+Input: arr = [40,10,20,30]
+Output: [4,1,2,3]
+Explanation: 40 is the largest element. 10 is the smallest. 20 is the second smallest. 30 is the third smallest.
+
+Example 2:
+
+Input: arr = [100,100,100]
+Output: [1,1,1]
+Explanation: Same elements share the same rank.
+
+Example 3:
+
+Input: arr = [37,12,28,9,100,56,80,5,12]
+Output: [5,3,4,2,8,6,7,1,3]
+
+Constraints:
+
+	- `0 <= arr.length <= 10^5`
+
+	- `-10^9 <= arr[i] <= 10^9`
+
+### Solution
+
+```javascript
+/**
+ * @param {number[]} arr
+ * @return {number[]}
+ */
+var arrayRankTransform = function(arr) {
+    const uniqSorted = [...new Set(arr)].sort((a, b) => a - b);
+    const rankMap = new Map();
+    uniqSorted.forEach((v, i) => rankMap.set(v, i + 1))
+    return arr.map(v => rankMap.get(v));
 };
 ```
 
@@ -2107,6 +2218,95 @@ var runningSum = function(nums) {
 
 ---
 
+## 1755-defuse-the-bomb
+
+### Problem
+
+Defuse the Bomb
+https://leetcode.com/problems/defuse-the-bomb
+
+You have a bomb to defuse, and your time is running out! Your informer will provide you with a circular array `code` of length of `n` and a key `k`.
+
+To decrypt the code, you must replace every number. All the numbers are replaced simultaneously.
+
+	- If `k > 0`, replace the `i^th` number with the sum of the next `k` numbers.
+
+	- If `k < 0`, replace the `i^th` number with the sum of the previous -`k` numbers.
+
+	- If `k == 0`, replace the `i^th` number with `0`.
+
+As `code` is circular, the next element of `code[n-1]` is `code[0]`, and the previous element of `code[0]` is `code[n-1]`.
+
+Given the circular array `code` and an integer key `k`, return the decrypted code to defuse the bomb!
+
+Example 1:
+
+Input: code = [5,7,1,4], k = 3
+Output: [12,10,16,13]
+Explanation: Each number is replaced by the sum of the next 3 numbers. The decrypted code is [7+1+4, 1+4+5, 4+5+7, 5+7+1]. Notice that the numbers wrap around.
+
+Example 2:
+
+Input: code = [1,2,3,4], k = 0
+Output: [0,0,0,0]
+Explanation: When k is zero, the numbers are replaced by 0.
+
+Example 3:
+
+Input: code = [2,4,9,3], k = -2
+Output: [12,5,6,13]
+Explanation: The decrypted code is [3+9, 2+3, 4+2, 9+4]. Notice that the numbers wrap around again. If k is negative, the sum is of the previous numbers.
+
+Constraints:
+
+	- `n == code.length`
+
+	- `1 <= n <= 100`
+
+	- `1 <= code[i] <= 100`
+
+	- `-(n - 1) <= k <= n - 1`
+
+### Solution
+
+```javascript
+/**
+ * @param {number[]} code
+ * @param {number} k
+ * @return {number[]}
+ */
+var decrypt = function(code, k) {
+    let n = code.length;
+  let result = new Array(n).fill(0);
+
+  if (k === 0) return result;
+
+  let window = Math.abs(k);
+  let sum = 0;
+
+  let start = k > 0 ? 1 : n - window;
+  let end = k > 0 ? window : n - 1;
+
+  for (let i = start; i <= end; i++) {
+    sum += code[i % n];
+  }
+
+  for (let i = 0; i < n; i++) {
+    result[i] = sum;
+
+    sum -= code[start % n];
+    start++;
+
+    end++;
+    sum += code[end % n];
+  }
+
+  return result;
+};
+```
+
+---
+
 ## 1791-richest-customer-wealth
 
 ### Problem
@@ -2406,6 +2606,73 @@ var missingInteger = function(nums) {
         longestPrefixSum++;
     }
     return longestPrefixSum
+};
+```
+
+---
+
+## 3995-gcd-of-odd-and-even-sums
+
+### Problem
+
+GCD of Odd and Even Sums
+https://leetcode.com/problems/gcd-of-odd-and-even-sums
+
+You are given an integer `n`. Your task is to compute the GCD (greatest common divisor) of two values:
+
+	- `sumOdd`: the sum of the smallest `n` positive odd numbers.
+
+	- `sumEven`: the sum of the smallest `n` positive even numbers.
+
+Return the GCD of `sumOdd` and `sumEven`.
+
+Example 1:
+
+Input: n = 4
+
+Output: 4
+
+Explanation:
+
+	- Sum of the first 4 odd numbers `sumOdd = 1 + 3 + 5 + 7 = 16`
+
+	- Sum of the first 4 even numbers `sumEven = 2 + 4 + 6 + 8 = 20`
+
+Hence, `GCD(sumOdd, sumEven) = GCD(16, 20) = 4`.
+
+Example 2:
+
+Input: n = 5
+
+Output: 5
+
+Explanation:
+
+	- Sum of the first 5 odd numbers `sumOdd = 1 + 3 + 5 + 7 + 9 = 25`
+
+	- Sum of the first 5 even numbers `sumEven = 2 + 4 + 6 + 8 + 10 = 30`
+
+Hence, `GCD(sumOdd, sumEven) = GCD(25, 30) = 5`.
+
+Constraints:
+
+	- `1 <= n <= 10​​​​​​​00`
+
+### Solution
+
+```javascript
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var gcdOfOddEvenSums = function(n) {
+    let sumEven = n * (n + 1);
+    let sumOdd = n * n;
+    while (sumEven != sumOdd) {
+        if (sumEven > sumOdd) sumEven -= sumOdd;
+        else sumOdd -= sumEven;
+    }
+    return sumEven;
 };
 ```
 

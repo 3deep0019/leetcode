@@ -1306,6 +1306,46 @@ globalThis.findMaxConsecutiveOnes = function(nums) {
 };
 
 /*
+ * 643-maximum-average-subarray-i
+ *
+ * Maximum Average Subarray I
+ * https://leetcode.com/problems/maximum-average-subarray-i
+ * 
+ * You are given an integer array `nums` consisting of `n` elements, and an integer `k`.
+ * 
+ * Find a contiguous subarray whose length is equal to `k` that has the maximum average value and return this value. Any answer with a calculation error less than `10^-5` will be accepted.
+ * 
+ * Example 1:
+ * 
+ * Input: nums = [1,12,-5,-6,50,3], k = 4
+ * Output: 12.75000
+ * Explanation: Maximum average is (12 - 5 - 6 + 50) / 4 = 51 / 4 = 12.75
+ * 
+ * Example 2:
+ * 
+ * Input: nums = [5], k = 1
+ * Output: 5.00000
+ * 
+ * Constraints:
+ * 
+ * 	- `n == nums.length`
+ * 
+ * 	- `1 <= k <= n <= 10^5`
+ * 
+ * 	- `-10^4 <= nums[i] <= 10^4`
+ */
+
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
+
+globalThis.findMaxAverage = function(nums, k) {
+  // Write your solution here
+};
+
+/*
  * 645-set-mismatch
  *
  * Set Mismatch
@@ -1340,6 +1380,55 @@ globalThis.findMaxConsecutiveOnes = function(nums) {
  */
 
 globalThis.findErrorNums = function(nums) {
+  // Write your solution here
+};
+
+/*
+ * 1256-rank-transform-of-an-array
+ *
+ * Rank Transform of an Array
+ * https://leetcode.com/problems/rank-transform-of-an-array
+ * 
+ * Given an array of integers `arr`, replace each element with its rank.
+ * 
+ * The rank represents how large the element is. The rank has the following rules:
+ * 
+ * 	- Rank is an integer starting from 1.
+ * 
+ * 	- The larger the element, the larger the rank. If two elements are equal, their rank must be the same.
+ * 
+ * 	- Rank should be as small as possible.
+ * 
+ * Example 1:
+ * 
+ * Input: arr = [40,10,20,30]
+ * Output: [4,1,2,3]
+ * Explanation: 40 is the largest element. 10 is the smallest. 20 is the second smallest. 30 is the third smallest.
+ * 
+ * Example 2:
+ * 
+ * Input: arr = [100,100,100]
+ * Output: [1,1,1]
+ * Explanation: Same elements share the same rank.
+ * 
+ * Example 3:
+ * 
+ * Input: arr = [37,12,28,9,100,56,80,5,12]
+ * Output: [5,3,4,2,8,6,7,1,3]
+ * 
+ * Constraints:
+ * 
+ * 	- `0 <= arr.length <= 10^5`
+ * 
+ * 	- `-10^9 <= arr[i] <= 10^9`
+ */
+
+/**
+ * @param {number[]} arr
+ * @return {number[]}
+ */
+
+globalThis.arrayRankTransform = function(arr) {
   // Write your solution here
 };
 
@@ -1579,6 +1668,65 @@ globalThis.runningSum = function(nums) {
 };
 
 /*
+ * 1755-defuse-the-bomb
+ *
+ * Defuse the Bomb
+ * https://leetcode.com/problems/defuse-the-bomb
+ * 
+ * You have a bomb to defuse, and your time is running out! Your informer will provide you with a circular array `code` of length of `n` and a key `k`.
+ * 
+ * To decrypt the code, you must replace every number. All the numbers are replaced simultaneously.
+ * 
+ * 	- If `k > 0`, replace the `i^th` number with the sum of the next `k` numbers.
+ * 
+ * 	- If `k < 0`, replace the `i^th` number with the sum of the previous -`k` numbers.
+ * 
+ * 	- If `k == 0`, replace the `i^th` number with `0`.
+ * 
+ * As `code` is circular, the next element of `code[n-1]` is `code[0]`, and the previous element of `code[0]` is `code[n-1]`.
+ * 
+ * Given the circular array `code` and an integer key `k`, return the decrypted code to defuse the bomb!
+ * 
+ * Example 1:
+ * 
+ * Input: code = [5,7,1,4], k = 3
+ * Output: [12,10,16,13]
+ * Explanation: Each number is replaced by the sum of the next 3 numbers. The decrypted code is [7+1+4, 1+4+5, 4+5+7, 5+7+1]. Notice that the numbers wrap around.
+ * 
+ * Example 2:
+ * 
+ * Input: code = [1,2,3,4], k = 0
+ * Output: [0,0,0,0]
+ * Explanation: When k is zero, the numbers are replaced by 0.
+ * 
+ * Example 3:
+ * 
+ * Input: code = [2,4,9,3], k = -2
+ * Output: [12,5,6,13]
+ * Explanation: The decrypted code is [3+9, 2+3, 4+2, 9+4]. Notice that the numbers wrap around again. If k is negative, the sum is of the previous numbers.
+ * 
+ * Constraints:
+ * 
+ * 	- `n == code.length`
+ * 
+ * 	- `1 <= n <= 100`
+ * 
+ * 	- `1 <= code[i] <= 100`
+ * 
+ * 	- `-(n - 1) <= k <= n - 1`
+ */
+
+/**
+ * @param {number[]} code
+ * @param {number} k
+ * @return {number[]}
+ */
+
+globalThis.decrypt = function(code, k) {
+  // Write your solution here
+};
+
+/*
  * 1791-richest-customer-wealth
  *
  * Richest Customer Wealth
@@ -1810,6 +1958,62 @@ globalThis.numOfStrings = function(patterns, word) {
  */
 
 globalThis.missingInteger = function(nums) {
+  // Write your solution here
+};
+
+/*
+ * 3995-gcd-of-odd-and-even-sums
+ *
+ * GCD of Odd and Even Sums
+ * https://leetcode.com/problems/gcd-of-odd-and-even-sums
+ * 
+ * You are given an integer `n`. Your task is to compute the GCD (greatest common divisor) of two values:
+ * 
+ * 	- `sumOdd`: the sum of the smallest `n` positive odd numbers.
+ * 
+ * 	- `sumEven`: the sum of the smallest `n` positive even numbers.
+ * 
+ * Return the GCD of `sumOdd` and `sumEven`.
+ * 
+ * Example 1:
+ * 
+ * Input: n = 4
+ * 
+ * Output: 4
+ * 
+ * Explanation:
+ * 
+ * 	- Sum of the first 4 odd numbers `sumOdd = 1 + 3 + 5 + 7 = 16`
+ * 
+ * 	- Sum of the first 4 even numbers `sumEven = 2 + 4 + 6 + 8 = 20`
+ * 
+ * Hence, `GCD(sumOdd, sumEven) = GCD(16, 20) = 4`.
+ * 
+ * Example 2:
+ * 
+ * Input: n = 5
+ * 
+ * Output: 5
+ * 
+ * Explanation:
+ * 
+ * 	- Sum of the first 5 odd numbers `sumOdd = 1 + 3 + 5 + 7 + 9 = 25`
+ * 
+ * 	- Sum of the first 5 even numbers `sumEven = 2 + 4 + 6 + 8 + 10 = 30`
+ * 
+ * Hence, `GCD(sumOdd, sumEven) = GCD(25, 30) = 5`.
+ * 
+ * Constraints:
+ * 
+ * 	- `1 <= n <= 10​​​​​​​00`
+ */
+
+/**
+ * @param {number} n
+ * @return {number}
+ */
+
+globalThis.gcdOfOddEvenSums = function(n) {
   // Write your solution here
 };
 
@@ -2511,6 +2715,37 @@ const PROBLEM_TESTS = [
     ]
   },
   {
+    "id": "643-maximum-average-subarray-i",
+    "fn": "findMaxAverage",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": [
+      {
+        "args": [
+          [
+            1,
+            12,
+            -5,
+            -6,
+            50,
+            3
+          ],
+          4
+        ],
+        "expected": 12
+      },
+      {
+        "args": [
+          [
+            5
+          ],
+          1
+        ],
+        "expected": 5
+      }
+    ]
+  },
+  {
     "id": "645-set-mismatch",
     "fn": "findErrorNums",
     "usesListNode": false,
@@ -2540,6 +2775,70 @@ const PROBLEM_TESTS = [
         "expected": [
           1,
           2
+        ]
+      }
+    ]
+  },
+  {
+    "id": "1256-rank-transform-of-an-array",
+    "fn": "arrayRankTransform",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": [
+      {
+        "args": [
+          [
+            40,
+            10,
+            20,
+            30
+          ]
+        ],
+        "expected": [
+          4,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "args": [
+          [
+            100,
+            100,
+            100
+          ]
+        ],
+        "expected": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "args": [
+          [
+            37,
+            12,
+            28,
+            9,
+            100,
+            56,
+            80,
+            5,
+            12
+          ]
+        ],
+        "expected": [
+          5,
+          3,
+          4,
+          2,
+          8,
+          6,
+          7,
+          1,
+          3
         ]
       }
     ]
@@ -2820,6 +3119,65 @@ const PROBLEM_TESTS = [
     ]
   },
   {
+    "id": "1755-defuse-the-bomb",
+    "fn": "decrypt",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": [
+      {
+        "args": [
+          [
+            5,
+            7,
+            1,
+            4
+          ],
+          3
+        ],
+        "expected": [
+          12,
+          10,
+          16,
+          13
+        ]
+      },
+      {
+        "args": [
+          [
+            1,
+            2,
+            3,
+            4
+          ],
+          0
+        ],
+        "expected": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "args": [
+          [
+            2,
+            4,
+            9,
+            3
+          ],
+          -2
+        ],
+        "expected": [
+          12,
+          5,
+          6,
+          13
+        ]
+      }
+    ]
+  },
+  {
     "id": "1791-richest-customer-wealth",
     "fn": "maximumWealth",
     "usesListNode": false,
@@ -2977,6 +3335,13 @@ const PROBLEM_TESTS = [
         "expected": 15
       }
     ]
+  },
+  {
+    "id": "3995-gcd-of-odd-and-even-sums",
+    "fn": "gcdOfOddEvenSums",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": []
   },
   {
     "id": "4135-concatenate-non-zero-digits-and-multiply-by-sum-i",

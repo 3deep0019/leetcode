@@ -138,7 +138,9 @@ function listToArray(head) {
 
 function readmeToComment(readme, folderName) {
   const plain = htmlToPlainText(readme);
-  const lines = plain.split("\n").map((line) => " * " + line.replace(/\*\//g, "* /"));
+  const lines = plain
+    .split("\n")
+    .map((line) => " * " + line.replace(/\*\//g, "* /"));
   return ["/*", ` * ${folderName}`, " *", ...lines, " */"].join("\n");
 }
 
@@ -152,7 +154,7 @@ function buildJsProblemBlock(problem) {
       `// ${problem.folderName} — implement your solution below`,
       "// globalThis.myFunction = function(...) {",
       "//   // your code",
-      "// };"
+      "// };",
     );
   }
 
@@ -189,7 +191,7 @@ function buildJsFile(difficulty, problems) {
   const body = problems.map(buildJsProblemBlock).join("\n");
   const runner = RUNNER_TEMPLATE.replace(
     "__PROBLEM_TESTS__",
-    JSON.stringify(tests, null, 2)
+    JSON.stringify(tests, null, 2),
   );
 
   return header + body + "\n" + runner + "\n";
@@ -208,14 +210,18 @@ function compile() {
     const jsPath = path.join(OUTPUT_DIR, `${difficulty.toLowerCase()}.js`);
 
     const mdHeader = `# LeetCode ${difficulty} Problems\n\n${problems.length} problem(s)\n\n`;
-    fs.writeFileSync(mdPath, mdHeader + problems.map((p) => p.markdown).join("\n"), "utf8");
+    fs.writeFileSync(
+      mdPath,
+      mdHeader + problems.map((p) => p.markdown).join("\n"),
+      "utf8",
+    );
 
     fs.writeFileSync(jsPath, buildJsFile(difficulty, problems), "utf8");
     fs.chmodSync(jsPath, 0o755);
 
     const withTests = problems.filter((p) => p.examples.length > 0).length;
     console.log(
-      `Wrote ${mdPath} (${problems.length} problems) and ${jsPath} (${withTests} with auto-tests)`
+      `Wrote ${mdPath} (${problems.length} problems) and ${jsPath} (${withTests} with auto-tests)`,
     );
   }
 

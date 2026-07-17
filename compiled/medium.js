@@ -89,6 +89,98 @@ globalThis.addTwoNumbers = function(l1, l2) {
 };
 
 /*
+ * 11-container-with-most-water
+ *
+ * Container With Most Water
+ * https://leetcode.com/problems/container-with-most-water
+ * 
+ * You are given an integer array `height` of length `n`. There are `n` vertical lines drawn such that the two endpoints of the `i^th` line are `(i, 0)` and `(i, height[i])`.
+ * 
+ * Find two lines that together with the x-axis form a container, such that the container contains the most water.
+ * 
+ * Return the maximum amount of water a container can store.
+ * 
+ * Notice that you may not slant the container.
+ * 
+ * Example 1:
+ * 
+ * Input: height = [1,8,6,2,5,4,8,3,7]
+ * Output: 49
+ * Explanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.
+ * 
+ * Example 2:
+ * 
+ * Input: height = [1,1]
+ * Output: 1
+ * 
+ * Constraints:
+ * 
+ * 	- `n == height.length`
+ * 
+ * 	- `2 <= n <= 10^5`
+ * 
+ * 	- `0 <= height[i] <= 10^4`
+ */
+
+/**
+ * @param {number[]} height
+ * @return {number}
+ */
+
+globalThis.maxArea = function(height) {
+  // Write your solution here
+};
+
+/*
+ * 15-3sum
+ *
+ * 3Sum
+ * https://leetcode.com/problems/3sum
+ * 
+ * Given an integer array nums, return all the triplets `[nums[i], nums[j], nums[k]]` such that `i != j`, `i != k`, and `j != k`, and `nums[i] + nums[j] + nums[k] == 0`.
+ * 
+ * Notice that the solution set must not contain duplicate triplets.
+ * 
+ * Example 1:
+ * 
+ * Input: nums = [-1,0,1,2,-1,-4]
+ * Output: [[-1,-1,2],[-1,0,1]]
+ * Explanation:
+ * nums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.
+ * nums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.
+ * nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.
+ * The distinct triplets are [-1,0,1] and [-1,-1,2].
+ * Notice that the order of the output and the order of the triplets does not matter.
+ * 
+ * Example 2:
+ * 
+ * Input: nums = [0,1,1]
+ * Output: []
+ * Explanation: The only possible triplet does not sum up to 0.
+ * 
+ * Example 3:
+ * 
+ * Input: nums = [0,0,0]
+ * Output: [[0,0,0]]
+ * Explanation: The only possible triplet sums up to 0.
+ * 
+ * Constraints:
+ * 
+ * 	- `3 <= nums.length <= 3000`
+ * 
+ * 	- `-10^5 <= nums[i] <= 10^5`
+ */
+
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ */
+
+globalThis.threeSum = function(nums) {
+  // Write your solution here
+};
+
+/*
  * 49-group-anagrams
  *
  * Group Anagrams
@@ -137,6 +229,48 @@ globalThis.addTwoNumbers = function(l1, l2) {
  */
 
 globalThis.groupAnagrams = function(strs) {
+  // Write your solution here
+};
+
+/*
+ * 75-sort-colors
+ *
+ * Sort Colors
+ * https://leetcode.com/problems/sort-colors
+ * 
+ * Given an array `nums` with `n` objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.
+ * 
+ * We will use the integers `0`, `1`, and `2` to represent the color red, white, and blue, respectively.
+ * 
+ * You must solve this problem without using the library's sort function.
+ * 
+ * Example 1:
+ * 
+ * Input: nums = [2,0,2,1,1,0]
+ * Output: [0,0,1,1,2,2]
+ * 
+ * Example 2:
+ * 
+ * Input: nums = [2,0,1]
+ * Output: [0,1,2]
+ * 
+ * Constraints:
+ * 
+ * 	- `n == nums.length`
+ * 
+ * 	- `1 <= n <= 300`
+ * 
+ * 	- `nums[i]` is either `0`, `1`, or `2`.
+ * 
+ * Follow up: Could you come up with a one-pass algorithm using only constant extra space?
+ */
+
+/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+
+globalThis.sortColors = function(nums) {
   // Write your solution here
 };
 
@@ -201,6 +335,149 @@ globalThis.groupAnagrams = function(strs) {
  */
 
 globalThis.evalRPN = function(tokens) {
+  // Write your solution here
+};
+
+/*
+ * 167-two-sum-ii-input-array-is-sorted
+ *
+ * Two Sum II - Input Array Is Sorted
+ * https://leetcode.com/problems/two-sum-ii-input-array-is-sorted
+ * 
+ * Given a 1-indexed array of integers `numbers` that is already sorted in non-decreasing order, find two numbers such that they add up to a specific `target` number. Let these two numbers be `numbers[index1]` and `numbers[index2]` where `1 <= index1 < index2 <= numbers.length`.
+ * 
+ * Return the indices of the two numbers `index1` and `index2`, each incremented by one, as an integer array `[index1, index2]` of length 2.
+ * 
+ * The tests are generated such that there is exactly one solution. You may not use the same element twice.
+ * 
+ * Your solution must use only constant extra space.
+ * 
+ * Example 1:
+ * 
+ * Input: numbers = [2,7,11,15], target = 9
+ * Output: [1,2]
+ * Explanation: The sum of 2 and 7 is 9. Therefore, index1 = 1, index2 = 2. We return [1, 2].
+ * 
+ * Example 2:
+ * 
+ * Input: numbers = [2,3,4], target = 6
+ * Output: [1,3]
+ * Explanation: The sum of 2 and 4 is 6. Therefore index1 = 1, index2 = 3. We return [1, 3].
+ * 
+ * Example 3:
+ * 
+ * Input: numbers = [-1,0], target = -1
+ * Output: [1,2]
+ * Explanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We return [1, 2].
+ * 
+ * Constraints:
+ * 
+ * 	- `2 <= numbers.length <= 3 * 10^4`
+ * 
+ * 	- `-1000 <= numbers[i] <= 1000`
+ * 
+ * 	- `numbers` is sorted in non-decreasing order.
+ * 
+ * 	- `-1000 <= target <= 1000`
+ * 
+ * 	- The tests are generated such that there is exactly one solution.
+ */
+
+/**
+ * @param {number[]} numbers
+ * @param {number} target
+ * @return {number[]}
+ */
+
+globalThis.twoSum = function(numbers, target) {
+  // Write your solution here
+};
+
+/*
+ * 189-rotate-array
+ *
+ * Rotate Array
+ * https://leetcode.com/problems/rotate-array
+ * 
+ * Given an integer array `nums`, rotate the array to the right by `k` steps, where `k` is non-negative.
+ * 
+ * Example 1:
+ * 
+ * Input: nums = [1,2,3,4,5,6,7], k = 3
+ * Output: [5,6,7,1,2,3,4]
+ * Explanation:
+ * rotate 1 steps to the right: [7,1,2,3,4,5,6]
+ * rotate 2 steps to the right: [6,7,1,2,3,4,5]
+ * rotate 3 steps to the right: [5,6,7,1,2,3,4]
+ * 
+ * Example 2:
+ * 
+ * Input: nums = [-1,-100,3,99], k = 2
+ * Output: [3,99,-1,-100]
+ * Explanation:
+ * rotate 1 steps to the right: [99,-1,-100,3]
+ * rotate 2 steps to the right: [3,99,-1,-100]
+ * 
+ * Constraints:
+ * 
+ * 	- `1 <= nums.length <= 10^5`
+ * 
+ * 	- `-2^31 <= nums[i] <= 2^31 - 1`
+ * 
+ * 	- `0 <= k <= 10^5`
+ * 
+ * Follow up:
+ * 
+ * 	- Try to come up with as many solutions as you can. There are at least three different ways to solve this problem.
+ * 
+ * 	- Could you do it in-place with `O(1)` extra space?
+ */
+
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+
+globalThis.rotate = function(nums, k) {
+  // Write your solution here
+};
+
+/*
+ * 611-valid-triangle-number
+ *
+ * Valid Triangle Number
+ * https://leetcode.com/problems/valid-triangle-number
+ * 
+ * Given an integer array `nums`, return the number of triplets chosen from the array that can make triangles if we take them as side lengths of a triangle.
+ * 
+ * Example 1:
+ * 
+ * Input: nums = [2,2,3,4]
+ * Output: 3
+ * Explanation: Valid combinations are:
+ * 2,3,4 (using the first 2)
+ * 2,3,4 (using the second 2)
+ * 2,2,3
+ * 
+ * Example 2:
+ * 
+ * Input: nums = [4,2,3,4]
+ * Output: 4
+ * 
+ * Constraints:
+ * 
+ * 	- `1 <= nums.length <= 1000`
+ * 
+ * 	- `0 <= nums[i] <= 1000`
+ */
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+
+globalThis.triangleNumber = function(nums) {
   // Write your solution here
 };
 
@@ -355,6 +632,97 @@ globalThis.repeatedStringMatch = function(a, b) {
  */
 
 globalThis.dailyTemperatures = function(temperatures) {
+  // Write your solution here
+};
+
+/*
+ * 1138-grumpy-bookstore-owner
+ *
+ * Grumpy Bookstore Owner
+ * https://leetcode.com/problems/grumpy-bookstore-owner
+ * 
+ * There is a bookstore owner that has a store open for `n` minutes. You are given an integer array `customers` of length `n` where `customers[i]` is the number of the customers that enter the store at the start of the `i^th` minute and all those customers leave after the end of that minute.
+ * 
+ * During certain minutes, the bookstore owner is grumpy. You are given a binary array grumpy where `grumpy[i]` is `1` if the bookstore owner is grumpy during the `i^th` minute, and is `0` otherwise.
+ * 
+ * When the bookstore owner is grumpy, the customers entering during that minute are not satisfied. Otherwise, they are satisfied.
+ * 
+ * The bookstore owner knows a secret technique to remain not grumpy for `minutes` consecutive minutes, but this technique can only be used once.
+ * 
+ * Return the maximum number of customers that can be satisfied throughout the day.
+ * 
+ * Example 1:
+ * 
+ * Input: customers = [1,0,1,2,1,1,7,5], grumpy = [0,1,0,1,0,1,0,1], minutes = 3
+ * 
+ * Output: 16
+ * 
+ * Explanation:
+ * 
+ * The bookstore owner keeps themselves not grumpy for the last 3 minutes.
+ * 
+ * The maximum number of customers that can be satisfied = 1 + 1 + 1 + 1 + 7 + 5 = 16.
+ * 
+ * Example 2:
+ * 
+ * Input: customers = [1], grumpy = [0], minutes = 1
+ * 
+ * Output: 1
+ * 
+ * Constraints:
+ * 
+ * 	- `n == customers.length == grumpy.length`
+ * 
+ * 	- `1 <= minutes <= n <= 2 * 10^4`
+ * 
+ * 	- `0 <= customers[i] <= 1000`
+ * 
+ * 	- `grumpy[i]` is either `0` or `1`.
+ */
+
+/**
+ * @param {number[]} customers
+ * @param {number[]} grumpy
+ * @param {number} minutes
+ * @return {number}
+ */
+
+globalThis.maxSatisfied = function(customers, grumpy, minutes) {
+  // Write your solution here
+};
+
+/*
+ * 1212-sequential-digits
+ *
+ * Sequential Digits
+ * https://leetcode.com/problems/sequential-digits
+ * 
+ * An integer has sequential digits if and only if each digit in the number is one more than the previous digit.
+ * 
+ * Return a sorted list of all the integers in the range `[low, high]` inclusive that have sequential digits.
+ * 
+ * Example 1:
+ * 
+ * Input: low = 100, high = 300
+ * Output: [123,234]
+ * 
+ * Example 2:
+ * 
+ * Input: low = 1000, high = 13000
+ * Output: [1234,2345,3456,4567,5678,6789,12345]
+ * 
+ * Constraints:
+ * 
+ * 	- `10 <= low <= high <= 10^9`
+ */
+
+/**
+ * @param {number} low
+ * @param {number} high
+ * @return {number[]}
+ */
+
+globalThis.sequentialDigits = function(low, high) {
   // Write your solution here
 };
 
@@ -521,6 +889,59 @@ globalThis.buildArray = function(target, n) {
 };
 
 /*
+ * 2552-maximum-sum-of-distinct-subarrays-with-length-k
+ *
+ * Maximum Sum of Distinct Subarrays With Length K
+ * https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k
+ * 
+ * You are given an integer array `nums` and an integer `k`. Find the maximum subarray sum of all the subarrays of `nums` that meet the following conditions:
+ * 
+ * 	- The length of the subarray is `k`, and
+ * 
+ * 	- All the elements of the subarray are distinct.
+ * 
+ * Return the maximum subarray sum of all the subarrays that meet the conditions. If no subarray meets the conditions, return `0`.
+ * 
+ * A subarray is a contiguous non-empty sequence of elements within an array.
+ * 
+ * Example 1:
+ * 
+ * Input: nums = [1,5,4,2,9,9,9], k = 3
+ * Output: 15
+ * Explanation: The subarrays of nums with length 3 are:
+ * - [1,5,4] which meets the requirements and has a sum of 10.
+ * - [5,4,2] which meets the requirements and has a sum of 11.
+ * - [4,2,9] which meets the requirements and has a sum of 15.
+ * - [2,9,9] which does not meet the requirements because the element 9 is repeated.
+ * - [9,9,9] which does not meet the requirements because the element 9 is repeated.
+ * We return 15 because it is the maximum subarray sum of all the subarrays that meet the conditions
+ * 
+ * Example 2:
+ * 
+ * Input: nums = [4,4,4], k = 3
+ * Output: 0
+ * Explanation: The subarrays of nums with length 3 are:
+ * - [4,4,4] which does not meet the requirements because the element 4 is repeated.
+ * We return 0 because no subarrays meet the conditions.
+ * 
+ * Constraints:
+ * 
+ * 	- `1 <= k <= nums.length <= 10^5`
+ * 
+ * 	- `1 <= nums[i] <= 10^5`
+ */
+
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
+
+globalThis.maximumSubarraySum = function(nums, k) {
+  // Write your solution here
+};
+
+/*
  * 2582-minimum-score-of-a-path-between-two-cities
  *
  * Minimum Score of a Path Between Two Cities
@@ -581,6 +1002,52 @@ globalThis.buildArray = function(target, n) {
 globalThis.minScore = function(n, roads) {
   // Write your solution here
 };
+
+/*
+ * 2793-count-the-number-of-complete-components
+ *
+ * Count the Number of Complete Components
+ * https://leetcode.com/problems/count-the-number-of-complete-components
+ * 
+ * You are given an integer `n`. There is an undirected graph with `n` vertices, numbered from `0` to `n - 1`. You are given a 2D integer array `edges` where `edges[i] = [ai, bi]` denotes that there exists an undirected edge connecting vertices `ai` and `bi`.
+ * 
+ * Return the number of complete connected components of the graph.
+ * 
+ * A connected component is a subgraph of a graph in which there exists a path between any two vertices, and no vertex of the subgraph shares an edge with a vertex outside of the subgraph.
+ * 
+ * A connected component is said to be complete if there exists an edge between every pair of its vertices.
+ * 
+ * Example 1:
+ * 
+ * Input: n = 6, edges = [[0,1],[0,2],[1,2],[3,4]]
+ * Output: 3
+ * Explanation: From the picture above, one can see that all of the components of this graph are complete.
+ * 
+ * Example 2:
+ * 
+ * Input: n = 6, edges = [[0,1],[0,2],[1,2],[3,4],[3,5]]
+ * Output: 1
+ * Explanation: The component containing vertices 0, 1, and 2 is complete since there is an edge between every pair of two vertices. On the other hand, the component containing vertices 3, 4, and 5 is not complete since there is no edge between vertices 4 and 5. Thus, the number of complete components in this graph is 1.
+ * 
+ * Constraints:
+ * 
+ * 	- `1 <= n <= 50`
+ * 
+ * 	- `0 <= edges.length <= n * (n - 1) / 2`
+ * 
+ * 	- `edges[i].length == 2`
+ * 
+ * 	- `0 <= ai, bi <= n - 1`
+ * 
+ * 	- `ai != bi`
+ * 
+ * 	- There are no repeated edges.
+ */
+
+// 2793-count-the-number-of-complete-components — implement your solution below
+// globalThis.myFunction = function(...) {
+//   // your code
+// };
 
 /*
  * 2914-find-the-safest-path-in-a-grid
@@ -721,6 +1188,85 @@ globalThis.findSafeWalk = function(grid, health) {
 };
 
 /*
+ * 3838-path-existence-queries-in-a-graph-i
+ *
+ * Path Existence Queries in a Graph I
+ * https://leetcode.com/problems/path-existence-queries-in-a-graph-i
+ * 
+ * You are given an integer `n` representing the number of nodes in a graph, labeled from 0 to `n - 1`.
+ * 
+ * You are also given an integer array `nums` of length `n` sorted in non-decreasing order, and an integer `maxDiff`.
+ * 
+ * An undirected edge exists between nodes `i` and `j` if the absolute difference between `nums[i]` and `nums[j]` is at most `maxDiff` (i.e., `|nums[i] - nums[j]| <= maxDiff`).
+ * 
+ * You are also given a 2D integer array `queries`. For each `queries[i] = [ui, vi]`, determine whether there exists a path between nodes `ui` and `vi`.
+ * 
+ * Return a boolean array `answer`, where `answer[i]` is `true` if there exists a path between `ui` and `vi` in the `i^th` query and `false` otherwise.
+ * 
+ * Example 1:
+ * 
+ * Input: n = 2, nums = [1,3], maxDiff = 1, queries = [[0,0],[0,1]]
+ * 
+ * Output: [true,false]
+ * 
+ * Explanation:
+ * 
+ * 	- Query `[0,0]`: Node 0 has a trivial path to itself.
+ * 
+ * 	- Query `[0,1]`: There is no edge between Node 0 and Node 1 because `|nums[0] - nums[1]| = |1 - 3| = 2`, which is greater than `maxDiff`.
+ * 
+ * 	- Thus, the final answer after processing all the queries is `[true, false]`.
+ * 
+ * Example 2:
+ * 
+ * Input: n = 4, nums = [2,5,6,8], maxDiff = 2, queries = [[0,1],[0,2],[1,3],[2,3]]
+ * 
+ * Output: [false,false,true,true]
+ * 
+ * Explanation:
+ * 
+ * The resulting graph is:
+ * 
+ * 	- Query `[0,1]`: There is no edge between Node 0 and Node 1 because `|nums[0] - nums[1]| = |2 - 5| = 3`, which is greater than `maxDiff`.
+ * 
+ * 	- Query `[0,2]`: There is no edge between Node 0 and Node 2 because `|nums[0] - nums[2]| = |2 - 6| = 4`, which is greater than `maxDiff`.
+ * 
+ * 	- Query `[1,3]`: There is a path between Node 1 and Node 3 through Node 2 since `|nums[1] - nums[2]| = |5 - 6| = 1` and `|nums[2] - nums[3]| = |6 - 8| = 2`, both of which are within `maxDiff`.
+ * 
+ * 	- Query `[2,3]`: There is an edge between Node 2 and Node 3 because `|nums[2] - nums[3]| = |6 - 8| = 2`, which is equal to `maxDiff`.
+ * 
+ * 	- Thus, the final answer after processing all the queries is `[false, false, true, true]`.
+ * 
+ * Constraints:
+ * 
+ * 	- `1 <= n == nums.length <= 10^5`
+ * 
+ * 	- `0 <= nums[i] <= 10^5`
+ * 
+ * 	- `nums` is sorted in non-decreasing order.
+ * 
+ * 	- `0 <= maxDiff <= 10^5`
+ * 
+ * 	- `1 <= queries.length <= 10^5`
+ * 
+ * 	- `queries[i] == [ui, vi]`
+ * 
+ * 	- `0 <= ui, vi < n`
+ */
+
+/**
+ * @param {number} n
+ * @param {number[]} nums
+ * @param {number} maxDiff
+ * @param {number[][]} queries
+ * @return {boolean[]}
+ */
+
+globalThis.pathExistenceQueries = function(n, nums, maxDiff, queries) {
+  // Write your solution here
+};
+
+/*
  * 4136-concatenate-non-zero-digits-and-multiply-by-sum-ii
  *
  * Concatenate Non-Zero Digits and Multiply by Sum II
@@ -830,6 +1376,125 @@ globalThis.findSafeWalk = function(grid, health) {
 //   // your code
 // };
 
+/*
+ * 4242-sum-of-gcd-of-formed-pairs
+ *
+ * Sum of GCD of Formed Pairs
+ * https://leetcode.com/problems/sum-of-gcd-of-formed-pairs
+ * 
+ * You are given an integer array `nums` of length `n`.
+ * 
+ * Construct an array `prefixGcd` where for each index `i`:
+ * 
+ * 	- Let `mxi = max(nums[0], nums[1], ..., nums[i])`.
+ * 
+ * 	- `prefixGcd[i] = gcd(nums[i], mxi)`.
+ * 
+ * After constructing `prefixGcd`:
+ * 
+ * 	- Sort `prefixGcd` in non-decreasing order.
+ * 
+ * 	- Form pairs by taking the smallest unpaired element and the largest unpaired element.
+ * 
+ * 	- Repeat this process until no more pairs can be formed.
+ * 
+ * 	- For each formed pair, compute the `gcd` of the two elements.
+ * 
+ * 	- If `n` is odd, the middle element in the `prefixGcd` array remains unpaired and should be ignored.
+ * 
+ * Return an integer denoting the sum of the GCD values of all formed pairs.
+ * 
+ * The term `gcd(a, b)` denotes the greatest common divisor of `a` and `b`.
+ * 
+ * Example 1:
+ * 
+ * Input: nums = [2,6,4]
+ * 
+ * Output: 2
+ * 
+ * Explanation:
+ * 
+ * Construct `prefixGcd`:
+ * 
+ * 			`i`
+ * 			`nums[i]`
+ * 			`mxi`
+ * 			`prefixGcd[i]`
+ * 
+ * 			0
+ * 			2
+ * 			2
+ * 			2
+ * 
+ * 			1
+ * 			6
+ * 			6
+ * 			6
+ * 
+ * 			2
+ * 			4
+ * 			6
+ * 			2
+ * 
+ * `prefixGcd = [2, 6, 2]`. After sorting, it forms `[2, 2, 6]`.
+ * 
+ * Pair the smallest and largest elements: `gcd(2, 6) = 2`. The remaining middle element 2 is ignored. Thus, the sum is 2.
+ * 
+ * Example 2:
+ * 
+ * Input: nums = [3,6,2,8]
+ * 
+ * Output: 5
+ * 
+ * Explanation:
+ * 
+ * Construct `prefixGcd`:
+ * 
+ * 			`i`
+ * 			`nums[i]`
+ * 			`mxi`
+ * 			`prefixGcd[i]`
+ * 
+ * 			0
+ * 			3
+ * 			3
+ * 			3
+ * 
+ * 			1
+ * 			6
+ * 			6
+ * 			6
+ * 
+ * 			2
+ * 			2
+ * 			6
+ * 			2
+ * 
+ * 			3
+ * 			8
+ * 			8
+ * 			8
+ * 
+ * `prefixGcd = [3, 6, 2, 8]`. After sorting, it forms `[2, 3, 6, 8]`.
+ * 
+ * Form pairs: `gcd(2, 8) = 2` and `gcd(3, 6) = 3`. Thus, the sum is `2 + 3 = 5`.
+ * 
+ * Constraints:
+ * 
+ * 	- `1 <= n == nums.length <= 10^5`
+ * 
+ * 	- `1 <= nums[i] <= 10^​​​​​​​9`
+ */
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+
+globalThis.gcdSum = function(nums) {
+  // Write your solution here
+};
+
 // --- Test runner (auto-generated) ---
 const PROBLEM_TESTS = [
   {
@@ -902,6 +1567,97 @@ const PROBLEM_TESTS = [
     ]
   },
   {
+    "id": "11-container-with-most-water",
+    "fn": "maxArea",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": [
+      {
+        "args": [
+          [
+            1,
+            8,
+            6,
+            2,
+            5,
+            4,
+            8,
+            3,
+            7
+          ]
+        ],
+        "expected": 49
+      },
+      {
+        "args": [
+          [
+            1,
+            1
+          ]
+        ],
+        "expected": 1
+      }
+    ]
+  },
+  {
+    "id": "15-3sum",
+    "fn": "threeSum",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": [
+      {
+        "args": [
+          [
+            -1,
+            0,
+            1,
+            2,
+            -1,
+            -4
+          ]
+        ],
+        "expected": [
+          [
+            -1,
+            -1,
+            2
+          ],
+          [
+            -1,
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "args": [
+          [
+            0,
+            1,
+            1
+          ]
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "expected": [
+          [
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    ]
+  },
+  {
     "id": "49-group-anagrams",
     "fn": "groupAnagrams",
     "usesListNode": false,
@@ -909,11 +1665,181 @@ const PROBLEM_TESTS = [
     "cases": []
   },
   {
+    "id": "75-sort-colors",
+    "fn": "sortColors",
+    "usesListNode": false,
+    "mutatesInput": true,
+    "cases": [
+      {
+        "args": [
+          [
+            2,
+            0,
+            2,
+            1,
+            1,
+            0
+          ]
+        ],
+        "expected": [
+          0,
+          0,
+          1,
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "args": [
+          [
+            2,
+            0,
+            1
+          ]
+        ],
+        "expected": [
+          0,
+          1,
+          2
+        ]
+      }
+    ]
+  },
+  {
     "id": "150-evaluate-reverse-polish-notation",
     "fn": "evalRPN",
     "usesListNode": false,
     "mutatesInput": false,
     "cases": []
+  },
+  {
+    "id": "167-two-sum-ii-input-array-is-sorted",
+    "fn": "twoSum",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": [
+      {
+        "args": [
+          [
+            2,
+            7,
+            11,
+            15
+          ],
+          9
+        ],
+        "expected": [
+          1,
+          2
+        ]
+      },
+      {
+        "args": [
+          [
+            2,
+            3,
+            4
+          ],
+          6
+        ],
+        "expected": [
+          1,
+          3
+        ]
+      },
+      {
+        "args": [
+          [
+            -1,
+            0
+          ],
+          -1
+        ],
+        "expected": [
+          1,
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": "189-rotate-array",
+    "fn": "rotate",
+    "usesListNode": false,
+    "mutatesInput": true,
+    "cases": [
+      {
+        "args": [
+          [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          3
+        ],
+        "expected": [
+          5,
+          6,
+          7,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "args": [
+          [
+            -1,
+            -100,
+            3,
+            99
+          ],
+          2
+        ],
+        "expected": [
+          3,
+          99,
+          -1,
+          -100
+        ]
+      }
+    ]
+  },
+  {
+    "id": "611-valid-triangle-number",
+    "fn": "triangleNumber",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": [
+      {
+        "args": [
+          [
+            2,
+            2,
+            3,
+            4
+          ]
+        ],
+        "expected": 3
+      },
+      {
+        "args": [
+          [
+            4,
+            2,
+            3,
+            4
+          ]
+        ],
+        "expected": 4
+      }
+    ]
   },
   {
     "id": "636-exclusive-time-of-functions",
@@ -1019,6 +1945,46 @@ const PROBLEM_TESTS = [
     ]
   },
   {
+    "id": "1138-grumpy-bookstore-owner",
+    "fn": "maxSatisfied",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": []
+  },
+  {
+    "id": "1212-sequential-digits",
+    "fn": "sequentialDigits",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": [
+      {
+        "args": [
+          100,
+          300
+        ],
+        "expected": [
+          123,
+          234
+        ]
+      },
+      {
+        "args": [
+          1000,
+          13000
+        ],
+        "expected": [
+          1234,
+          2345,
+          3456,
+          4567,
+          5678,
+          6789,
+          12345
+        ]
+      }
+    ]
+  },
+  {
     "id": "1222-remove-covered-intervals",
     "fn": "removeCoveredIntervals",
     "usesListNode": false,
@@ -1073,6 +2039,40 @@ const PROBLEM_TESTS = [
     "usesListNode": false,
     "mutatesInput": false,
     "cases": []
+  },
+  {
+    "id": "2552-maximum-sum-of-distinct-subarrays-with-length-k",
+    "fn": "maximumSubarraySum",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": [
+      {
+        "args": [
+          [
+            1,
+            5,
+            4,
+            2,
+            9,
+            9,
+            9
+          ],
+          3
+        ],
+        "expected": 15
+      },
+      {
+        "args": [
+          [
+            4,
+            4,
+            4
+          ],
+          3
+        ],
+        "expected": 0
+      }
+    ]
   },
   {
     "id": "2582-minimum-score-of-a-path-between-two-cities",
@@ -1130,6 +2130,66 @@ const PROBLEM_TESTS = [
           ]
         ],
         "expected": 2
+      }
+    ]
+  },
+  {
+    "id": "2793-count-the-number-of-complete-components",
+    "fn": "countCompleteComponents",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": [
+      {
+        "args": [
+          6,
+          [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        ],
+        "expected": 3
+      },
+      {
+        "args": [
+          6,
+          [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ]
+        ],
+        "expected": 1
       }
     ]
   },
@@ -1224,8 +2284,22 @@ const PROBLEM_TESTS = [
     "cases": []
   },
   {
+    "id": "3838-path-existence-queries-in-a-graph-i",
+    "fn": "pathExistenceQueries",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": []
+  },
+  {
     "id": "4136-concatenate-non-zero-digits-and-multiply-by-sum-ii",
     "fn": "MOD",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": []
+  },
+  {
+    "id": "4242-sum-of-gcd-of-formed-pairs",
+    "fn": "gcdSum",
     "usesListNode": false,
     "mutatesInput": false,
     "cases": []

@@ -164,6 +164,45 @@
       ]
     },
     {
+      "id": "11-container-with-most-water",
+      "number": 11,
+      "title": "Container With Most Water",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/container-with-most-water",
+      "description": "You are given an integer array `height` of length `n`. There are `n` vertical lines drawn such that the two endpoints of the `i^th` line are `(i, 0)` and `(i, height[i])`.\n\nFind two lines that together with the x-axis form a container, such that the container contains the most water.\n\nReturn the maximum amount of water a container can store.\n\nNotice that you may not slant the container.\n\nExample 1:\n\nInput: height = [1,8,6,2,5,4,8,3,7]\nOutput: 49\nExplanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.\n\nExample 2:\n\nInput: height = [1,1]\nOutput: 1\n\nConstraints:\n\n\t- `n == height.length`\n\n\t- `2 <= n <= 10^5`\n\n\t- `0 <= height[i] <= 10^4`",
+      "functionName": "maxArea",
+      "starterCode": "/**\n * @param {number[]} height\n * @return {number}\n */\n\nglobalThis.maxArea = function(height) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              1,
+              8,
+              6,
+              2,
+              5,
+              4,
+              8,
+              3,
+              7
+            ]
+          ],
+          "expected": 49
+        },
+        {
+          "args": [
+            [
+              1,
+              1
+            ]
+          ],
+          "expected": 1
+        }
+      ]
+    },
+    {
       "id": "13-roman-to-integer",
       "number": 13,
       "title": "Roman to Integer",
@@ -188,6 +227,70 @@
       "usesListNode": false,
       "mutatesInput": false,
       "cases": []
+    },
+    {
+      "id": "15-3sum",
+      "number": 15,
+      "title": "3Sum",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/3sum",
+      "description": "Given an integer array nums, return all the triplets `[nums[i], nums[j], nums[k]]` such that `i != j`, `i != k`, and `j != k`, and `nums[i] + nums[j] + nums[k] == 0`.\n\nNotice that the solution set must not contain duplicate triplets.\n\nExample 1:\n\nInput: nums = [-1,0,1,2,-1,-4]\nOutput: [[-1,-1,2],[-1,0,1]]\nExplanation:\nnums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.\nnums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.\nnums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.\nThe distinct triplets are [-1,0,1] and [-1,-1,2].\nNotice that the order of the output and the order of the triplets does not matter.\n\nExample 2:\n\nInput: nums = [0,1,1]\nOutput: []\nExplanation: The only possible triplet does not sum up to 0.\n\nExample 3:\n\nInput: nums = [0,0,0]\nOutput: [[0,0,0]]\nExplanation: The only possible triplet sums up to 0.\n\nConstraints:\n\n\t- `3 <= nums.length <= 3000`\n\n\t- `-10^5 <= nums[i] <= 10^5`",
+      "functionName": "threeSum",
+      "starterCode": "/**\n * @param {number[]} nums\n * @return {number[][]}\n */\n\nglobalThis.threeSum = function(nums) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              -1,
+              0,
+              1,
+              2,
+              -1,
+              -4
+            ]
+          ],
+          "expected": [
+            [
+              -1,
+              -1,
+              2
+            ],
+            [
+              -1,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "args": [
+            [
+              0,
+              1,
+              1
+            ]
+          ],
+          "expected": []
+        },
+        {
+          "args": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        }
+      ]
     },
     {
       "id": "20-valid-parentheses",
@@ -403,6 +506,52 @@
       ]
     },
     {
+      "id": "42-trapping-rain-water",
+      "number": 42,
+      "title": "Trapping Rain Water",
+      "difficulty": "Hard",
+      "url": "https://leetcode.com/problems/trapping-rain-water",
+      "description": "Given `n` non-negative integers representing an elevation map where the width of each bar is `1`, compute how much water it can trap after raining.\n\nExample 1:\n\nInput: height = [0,1,0,2,1,0,1,3,2,1,2,1]\nOutput: 6\nExplanation: The above elevation map (black section) is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped.\n\nExample 2:\n\nInput: height = [4,2,0,3,2,5]\nOutput: 9\n\nConstraints:\n\n\t- `n == height.length`\n\n\t- `1 <= n <= 2 * 10^4`\n\n\t- `0 <= height[i] <= 10^5`",
+      "functionName": "trap",
+      "starterCode": "/**\n * @param {number[]} height\n * @return {number}\n */\n\nglobalThis.trap = function(height) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              0,
+              1,
+              0,
+              2,
+              1,
+              0,
+              1,
+              3,
+              2,
+              1,
+              2,
+              1
+            ]
+          ],
+          "expected": 6
+        },
+        {
+          "args": [
+            [
+              4,
+              2,
+              0,
+              3,
+              2,
+              5
+            ]
+          ],
+          "expected": 9
+        }
+      ]
+    },
+    {
       "id": "49-group-anagrams",
       "number": 49,
       "title": "Group Anagrams",
@@ -564,6 +713,54 @@
       ]
     },
     {
+      "id": "75-sort-colors",
+      "number": 75,
+      "title": "Sort Colors",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/sort-colors",
+      "description": "Given an array `nums` with `n` objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.\n\nWe will use the integers `0`, `1`, and `2` to represent the color red, white, and blue, respectively.\n\nYou must solve this problem without using the library's sort function.\n\nExample 1:\n\nInput: nums = [2,0,2,1,1,0]\nOutput: [0,0,1,1,2,2]\n\nExample 2:\n\nInput: nums = [2,0,1]\nOutput: [0,1,2]\n\nConstraints:\n\n\t- `n == nums.length`\n\n\t- `1 <= n <= 300`\n\n\t- `nums[i]` is either `0`, `1`, or `2`.\n\nFollow up: Could you come up with a one-pass algorithm using only constant extra space?",
+      "functionName": "sortColors",
+      "starterCode": "/**\n * @param {number[]} nums\n * @return {void} Do not return anything, modify nums in-place instead.\n */\n\nglobalThis.sortColors = function(nums) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": true,
+      "cases": [
+        {
+          "args": [
+            [
+              2,
+              0,
+              2,
+              1,
+              1,
+              0
+            ]
+          ],
+          "expected": [
+            0,
+            0,
+            1,
+            1,
+            2,
+            2
+          ]
+        },
+        {
+          "args": [
+            [
+              2,
+              0,
+              1
+            ]
+          ],
+          "expected": [
+            0,
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
       "id": "125-valid-palindrome",
       "number": 125,
       "title": "Valid Palindrome",
@@ -603,6 +800,62 @@
       "cases": []
     },
     {
+      "id": "167-two-sum-ii-input-array-is-sorted",
+      "number": 167,
+      "title": "Two Sum II - Input Array Is Sorted",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted",
+      "description": "Given a 1-indexed array of integers `numbers` that is already sorted in non-decreasing order, find two numbers such that they add up to a specific `target` number. Let these two numbers be `numbers[index1]` and `numbers[index2]` where `1 <= index1 < index2 <= numbers.length`.\n\nReturn the indices of the two numbers `index1` and `index2`, each incremented by one, as an integer array `[index1, index2]` of length 2.\n\nThe tests are generated such that there is exactly one solution. You may not use the same element twice.\n\nYour solution must use only constant extra space.\n\nExample 1:\n\nInput: numbers = [2,7,11,15], target = 9\nOutput: [1,2]\nExplanation: The sum of 2 and 7 is 9. Therefore, index1 = 1, index2 = 2. We return [1, 2].\n\nExample 2:\n\nInput: numbers = [2,3,4], target = 6\nOutput: [1,3]\nExplanation: The sum of 2 and 4 is 6. Therefore index1 = 1, index2 = 3. We return [1, 3].\n\nExample 3:\n\nInput: numbers = [-1,0], target = -1\nOutput: [1,2]\nExplanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We return [1, 2].\n\nConstraints:\n\n\t- `2 <= numbers.length <= 3 * 10^4`\n\n\t- `-1000 <= numbers[i] <= 1000`\n\n\t- `numbers` is sorted in non-decreasing order.\n\n\t- `-1000 <= target <= 1000`\n\n\t- The tests are generated such that there is exactly one solution.",
+      "functionName": "twoSum",
+      "starterCode": "/**\n * @param {number[]} numbers\n * @param {number} target\n * @return {number[]}\n */\n\nglobalThis.twoSum = function(numbers, target) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              2,
+              7,
+              11,
+              15
+            ],
+            9
+          ],
+          "expected": [
+            1,
+            2
+          ]
+        },
+        {
+          "args": [
+            [
+              2,
+              3,
+              4
+            ],
+            6
+          ],
+          "expected": [
+            1,
+            3
+          ]
+        },
+        {
+          "args": [
+            [
+              -1,
+              0
+            ],
+            -1
+          ],
+          "expected": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
       "id": "169-majority-element",
       "number": 169,
       "title": "Majority Element",
@@ -637,6 +890,60 @@
             ]
           ],
           "expected": 2
+        }
+      ]
+    },
+    {
+      "id": "189-rotate-array",
+      "number": 189,
+      "title": "Rotate Array",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/rotate-array",
+      "description": "Given an integer array `nums`, rotate the array to the right by `k` steps, where `k` is non-negative.\n\nExample 1:\n\nInput: nums = [1,2,3,4,5,6,7], k = 3\nOutput: [5,6,7,1,2,3,4]\nExplanation:\nrotate 1 steps to the right: [7,1,2,3,4,5,6]\nrotate 2 steps to the right: [6,7,1,2,3,4,5]\nrotate 3 steps to the right: [5,6,7,1,2,3,4]\n\nExample 2:\n\nInput: nums = [-1,-100,3,99], k = 2\nOutput: [3,99,-1,-100]\nExplanation:\nrotate 1 steps to the right: [99,-1,-100,3]\nrotate 2 steps to the right: [3,99,-1,-100]\n\nConstraints:\n\n\t- `1 <= nums.length <= 10^5`\n\n\t- `-2^31 <= nums[i] <= 2^31 - 1`\n\n\t- `0 <= k <= 10^5`\n\nFollow up:\n\n\t- Try to come up with as many solutions as you can. There are at least three different ways to solve this problem.\n\n\t- Could you do it in-place with `O(1)` extra space?",
+      "functionName": "rotate",
+      "starterCode": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {void} Do not return anything, modify nums in-place instead.\n */\n\nglobalThis.rotate = function(nums, k) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": true,
+      "cases": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            3
+          ],
+          "expected": [
+            5,
+            6,
+            7,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "args": [
+            [
+              -1,
+              -100,
+              3,
+              99
+            ],
+            2
+          ],
+          "expected": [
+            3,
+            99,
+            -1,
+            -100
+          ]
         }
       ]
     },
@@ -953,6 +1260,42 @@
       ]
     },
     {
+      "id": "611-valid-triangle-number",
+      "number": 611,
+      "title": "Valid Triangle Number",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/valid-triangle-number",
+      "description": "Given an integer array `nums`, return the number of triplets chosen from the array that can make triangles if we take them as side lengths of a triangle.\n\nExample 1:\n\nInput: nums = [2,2,3,4]\nOutput: 3\nExplanation: Valid combinations are:\n2,3,4 (using the first 2)\n2,3,4 (using the second 2)\n2,2,3\n\nExample 2:\n\nInput: nums = [4,2,3,4]\nOutput: 4\n\nConstraints:\n\n\t- `1 <= nums.length <= 1000`\n\n\t- `0 <= nums[i] <= 1000`",
+      "functionName": "triangleNumber",
+      "starterCode": "/**\n * @param {number[]} nums\n * @return {number}\n */\n\nglobalThis.triangleNumber = function(nums) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              2,
+              2,
+              3,
+              4
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            [
+              4,
+              2,
+              3,
+              4
+            ]
+          ],
+          "expected": 4
+        }
+      ]
+    },
+    {
       "id": "636-exclusive-time-of-functions",
       "number": 636,
       "title": "Exclusive Time of Functions",
@@ -989,6 +1332,43 @@
             7,
             1
           ]
+        }
+      ]
+    },
+    {
+      "id": "643-maximum-average-subarray-i",
+      "number": 643,
+      "title": "Maximum Average Subarray I",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/maximum-average-subarray-i",
+      "description": "You are given an integer array `nums` consisting of `n` elements, and an integer `k`.\n\nFind a contiguous subarray whose length is equal to `k` that has the maximum average value and return this value. Any answer with a calculation error less than `10^-5` will be accepted.\n\nExample 1:\n\nInput: nums = [1,12,-5,-6,50,3], k = 4\nOutput: 12.75000\nExplanation: Maximum average is (12 - 5 - 6 + 50) / 4 = 51 / 4 = 12.75\n\nExample 2:\n\nInput: nums = [5], k = 1\nOutput: 5.00000\n\nConstraints:\n\n\t- `n == nums.length`\n\n\t- `1 <= k <= n <= 10^5`\n\n\t- `-10^4 <= nums[i] <= 10^4`",
+      "functionName": "findMaxAverage",
+      "starterCode": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\n\nglobalThis.findMaxAverage = function(nums, k) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              1,
+              12,
+              -5,
+              -6,
+              50,
+              3
+            ],
+            4
+          ],
+          "expected": 12
+        },
+        {
+          "args": [
+            [
+              5
+            ],
+            1
+          ],
+          "expected": 5
         }
       ]
     },
@@ -1114,6 +1494,58 @@
       ]
     },
     {
+      "id": "1138-grumpy-bookstore-owner",
+      "number": 1138,
+      "title": "Grumpy Bookstore Owner",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/grumpy-bookstore-owner",
+      "description": "There is a bookstore owner that has a store open for `n` minutes. You are given an integer array `customers` of length `n` where `customers[i]` is the number of the customers that enter the store at the start of the `i^th` minute and all those customers leave after the end of that minute.\n\nDuring certain minutes, the bookstore owner is grumpy. You are given a binary array grumpy where `grumpy[i]` is `1` if the bookstore owner is grumpy during the `i^th` minute, and is `0` otherwise.\n\nWhen the bookstore owner is grumpy, the customers entering during that minute are not satisfied. Otherwise, they are satisfied.\n\nThe bookstore owner knows a secret technique to remain not grumpy for `minutes` consecutive minutes, but this technique can only be used once.\n\nReturn the maximum number of customers that can be satisfied throughout the day.\n\nExample 1:\n\nInput: customers = [1,0,1,2,1,1,7,5], grumpy = [0,1,0,1,0,1,0,1], minutes = 3\n\nOutput: 16\n\nExplanation:\n\nThe bookstore owner keeps themselves not grumpy for the last 3 minutes.\n\nThe maximum number of customers that can be satisfied = 1 + 1 + 1 + 1 + 7 + 5 = 16.\n\nExample 2:\n\nInput: customers = [1], grumpy = [0], minutes = 1\n\nOutput: 1\n\nConstraints:\n\n\t- `n == customers.length == grumpy.length`\n\n\t- `1 <= minutes <= n <= 2 * 10^4`\n\n\t- `0 <= customers[i] <= 1000`\n\n\t- `grumpy[i]` is either `0` or `1`.",
+      "functionName": "maxSatisfied",
+      "starterCode": "/**\n * @param {number[]} customers\n * @param {number[]} grumpy\n * @param {number} minutes\n * @return {number}\n */\n\nglobalThis.maxSatisfied = function(customers, grumpy, minutes) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "1212-sequential-digits",
+      "number": 1212,
+      "title": "Sequential Digits",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/sequential-digits",
+      "description": "An integer has sequential digits if and only if each digit in the number is one more than the previous digit.\n\nReturn a sorted list of all the integers in the range `[low, high]` inclusive that have sequential digits.\n\nExample 1:\n\nInput: low = 100, high = 300\nOutput: [123,234]\n\nExample 2:\n\nInput: low = 1000, high = 13000\nOutput: [1234,2345,3456,4567,5678,6789,12345]\n\nConstraints:\n\n\t- `10 <= low <= high <= 10^9`",
+      "functionName": "sequentialDigits",
+      "starterCode": "/**\n * @param {number} low\n * @param {number} high\n * @return {number[]}\n */\n\nglobalThis.sequentialDigits = function(low, high) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            100,
+            300
+          ],
+          "expected": [
+            123,
+            234
+          ]
+        },
+        {
+          "args": [
+            1000,
+            13000
+          ],
+          "expected": [
+            1234,
+            2345,
+            3456,
+            4567,
+            5678,
+            6789,
+            12345
+          ]
+        }
+      ]
+    },
+    {
       "id": "1222-remove-covered-intervals",
       "number": 1222,
       "title": "Remove Covered Intervals",
@@ -1210,6 +1642,76 @@
           "expected": [
             0,
             0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1256-rank-transform-of-an-array",
+      "number": 1256,
+      "title": "Rank Transform of an Array",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/rank-transform-of-an-array",
+      "description": "Given an array of integers `arr`, replace each element with its rank.\n\nThe rank represents how large the element is. The rank has the following rules:\n\n\t- Rank is an integer starting from 1.\n\n\t- The larger the element, the larger the rank. If two elements are equal, their rank must be the same.\n\n\t- Rank should be as small as possible.\n\nExample 1:\n\nInput: arr = [40,10,20,30]\nOutput: [4,1,2,3]\nExplanation: 40 is the largest element. 10 is the smallest. 20 is the second smallest. 30 is the third smallest.\n\nExample 2:\n\nInput: arr = [100,100,100]\nOutput: [1,1,1]\nExplanation: Same elements share the same rank.\n\nExample 3:\n\nInput: arr = [37,12,28,9,100,56,80,5,12]\nOutput: [5,3,4,2,8,6,7,1,3]\n\nConstraints:\n\n\t- `0 <= arr.length <= 10^5`\n\n\t- `-10^9 <= arr[i] <= 10^9`",
+      "functionName": "arrayRankTransform",
+      "starterCode": "/**\n * @param {number[]} arr\n * @return {number[]}\n */\n\nglobalThis.arrayRankTransform = function(arr) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              40,
+              10,
+              20,
+              30
+            ]
+          ],
+          "expected": [
+            4,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "args": [
+            [
+              100,
+              100,
+              100
+            ]
+          ],
+          "expected": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "args": [
+            [
+              37,
+              12,
+              28,
+              9,
+              100,
+              56,
+              80,
+              5,
+              12
+            ]
+          ],
+          "expected": [
+            5,
+            3,
+            4,
+            2,
+            8,
+            6,
+            7,
+            1,
+            3
           ]
         }
       ]
@@ -1546,6 +2048,71 @@
       ]
     },
     {
+      "id": "1755-defuse-the-bomb",
+      "number": 1755,
+      "title": "Defuse the Bomb",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/defuse-the-bomb",
+      "description": "You have a bomb to defuse, and your time is running out! Your informer will provide you with a circular array `code` of length of `n` and a key `k`.\n\nTo decrypt the code, you must replace every number. All the numbers are replaced simultaneously.\n\n\t- If `k > 0`, replace the `i^th` number with the sum of the next `k` numbers.\n\n\t- If `k < 0`, replace the `i^th` number with the sum of the previous -`k` numbers.\n\n\t- If `k == 0`, replace the `i^th` number with `0`.\n\nAs `code` is circular, the next element of `code[n-1]` is `code[0]`, and the previous element of `code[0]` is `code[n-1]`.\n\nGiven the circular array `code` and an integer key `k`, return the decrypted code to defuse the bomb!\n\nExample 1:\n\nInput: code = [5,7,1,4], k = 3\nOutput: [12,10,16,13]\nExplanation: Each number is replaced by the sum of the next 3 numbers. The decrypted code is [7+1+4, 1+4+5, 4+5+7, 5+7+1]. Notice that the numbers wrap around.\n\nExample 2:\n\nInput: code = [1,2,3,4], k = 0\nOutput: [0,0,0,0]\nExplanation: When k is zero, the numbers are replaced by 0.\n\nExample 3:\n\nInput: code = [2,4,9,3], k = -2\nOutput: [12,5,6,13]\nExplanation: The decrypted code is [3+9, 2+3, 4+2, 9+4]. Notice that the numbers wrap around again. If k is negative, the sum is of the previous numbers.\n\nConstraints:\n\n\t- `n == code.length`\n\n\t- `1 <= n <= 100`\n\n\t- `1 <= code[i] <= 100`\n\n\t- `-(n - 1) <= k <= n - 1`",
+      "functionName": "decrypt",
+      "starterCode": "/**\n * @param {number[]} code\n * @param {number} k\n * @return {number[]}\n */\n\nglobalThis.decrypt = function(code, k) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              5,
+              7,
+              1,
+              4
+            ],
+            3
+          ],
+          "expected": [
+            12,
+            10,
+            16,
+            13
+          ]
+        },
+        {
+          "args": [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            0
+          ],
+          "expected": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "args": [
+            [
+              2,
+              4,
+              9,
+              3
+            ],
+            -2
+          ],
+          "expected": [
+            12,
+            5,
+            6,
+            13
+          ]
+        }
+      ]
+    },
+    {
       "id": "1791-richest-customer-wealth",
       "number": 1791,
       "title": "Richest Customer Wealth",
@@ -1695,6 +2262,46 @@
       "cases": []
     },
     {
+      "id": "2552-maximum-sum-of-distinct-subarrays-with-length-k",
+      "number": 2552,
+      "title": "Maximum Sum of Distinct Subarrays With Length K",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k",
+      "description": "You are given an integer array `nums` and an integer `k`. Find the maximum subarray sum of all the subarrays of `nums` that meet the following conditions:\n\n\t- The length of the subarray is `k`, and\n\n\t- All the elements of the subarray are distinct.\n\nReturn the maximum subarray sum of all the subarrays that meet the conditions. If no subarray meets the conditions, return `0`.\n\nA subarray is a contiguous non-empty sequence of elements within an array.\n\nExample 1:\n\nInput: nums = [1,5,4,2,9,9,9], k = 3\nOutput: 15\nExplanation: The subarrays of nums with length 3 are:\n- [1,5,4] which meets the requirements and has a sum of 10.\n- [5,4,2] which meets the requirements and has a sum of 11.\n- [4,2,9] which meets the requirements and has a sum of 15.\n- [2,9,9] which does not meet the requirements because the element 9 is repeated.\n- [9,9,9] which does not meet the requirements because the element 9 is repeated.\nWe return 15 because it is the maximum subarray sum of all the subarrays that meet the conditions\n\nExample 2:\n\nInput: nums = [4,4,4], k = 3\nOutput: 0\nExplanation: The subarrays of nums with length 3 are:\n- [4,4,4] which does not meet the requirements because the element 4 is repeated.\nWe return 0 because no subarrays meet the conditions.\n\nConstraints:\n\n\t- `1 <= k <= nums.length <= 10^5`\n\n\t- `1 <= nums[i] <= 10^5`",
+      "functionName": "maximumSubarraySum",
+      "starterCode": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\n\nglobalThis.maximumSubarraySum = function(nums, k) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              1,
+              5,
+              4,
+              2,
+              9,
+              9,
+              9
+            ],
+            3
+          ],
+          "expected": 15
+        },
+        {
+          "args": [
+            [
+              4,
+              4,
+              4
+            ],
+            3
+          ],
+          "expected": 0
+        }
+      ]
+    },
+    {
       "id": "2582-minimum-score-of-a-path-between-two-cities",
       "number": 2582,
       "title": "Minimum Score of a Path Between Two Cities",
@@ -1771,6 +2378,72 @@
       "usesListNode": false,
       "mutatesInput": false,
       "cases": []
+    },
+    {
+      "id": "2793-count-the-number-of-complete-components",
+      "number": 2793,
+      "title": "Count the Number of Complete Components",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/count-the-number-of-complete-components",
+      "description": "You are given an integer `n`. There is an undirected graph with `n` vertices, numbered from `0` to `n - 1`. You are given a 2D integer array `edges` where `edges[i] = [ai, bi]` denotes that there exists an undirected edge connecting vertices `ai` and `bi`.\n\nReturn the number of complete connected components of the graph.\n\nA connected component is a subgraph of a graph in which there exists a path between any two vertices, and no vertex of the subgraph shares an edge with a vertex outside of the subgraph.\n\nA connected component is said to be complete if there exists an edge between every pair of its vertices.\n\nExample 1:\n\nInput: n = 6, edges = [[0,1],[0,2],[1,2],[3,4]]\nOutput: 3\nExplanation: From the picture above, one can see that all of the components of this graph are complete.\n\nExample 2:\n\nInput: n = 6, edges = [[0,1],[0,2],[1,2],[3,4],[3,5]]\nOutput: 1\nExplanation: The component containing vertices 0, 1, and 2 is complete since there is an edge between every pair of two vertices. On the other hand, the component containing vertices 3, 4, and 5 is not complete since there is no edge between vertices 4 and 5. Thus, the number of complete components in this graph is 1.\n\nConstraints:\n\n\t- `1 <= n <= 50`\n\n\t- `0 <= edges.length <= n * (n - 1) / 2`\n\n\t- `edges[i].length == 2`\n\n\t- `0 <= ai, bi <= n - 1`\n\n\t- `ai != bi`\n\n\t- There are no repeated edges.",
+      "functionName": "countCompleteComponents",
+      "starterCode": null,
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            6,
+            [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4
+              ]
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            6,
+            [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                3,
+                5
+              ]
+            ]
+          ],
+          "expected": 1
+        }
+      ]
     },
     {
       "id": "2914-find-the-safest-path-in-a-grid",
@@ -1915,6 +2588,58 @@
       "cases": []
     },
     {
+      "id": "3583-sorted-gcd-pair-queries",
+      "number": 3583,
+      "title": "Sorted GCD Pair Queries",
+      "difficulty": "Hard",
+      "url": "https://leetcode.com/problems/sorted-gcd-pair-queries",
+      "description": "You are given an integer array `nums` of length `n` and an integer array `queries`.\n\nLet `gcdPairs` denote an array obtained by calculating the GCD of all possible pairs `(nums[i], nums[j])`, where `0 <= i < j < n`, and then sorting these values in ascending order.\n\nFor each query `queries[i]`, you need to find the element at index `queries[i]` in `gcdPairs`.\n\nReturn an integer array `answer`, where `answer[i]` is the value at `gcdPairs[queries[i]]` for each query.\n\nThe term `gcd(a, b)` denotes the greatest common divisor of `a` and `b`.\n\nExample 1:\n\nInput: nums = [2,3,4], queries = [0,2,2]\n\nOutput: [1,2,2]\n\nExplanation:\n\n`gcdPairs = [gcd(nums[0], nums[1]), gcd(nums[0], nums[2]), gcd(nums[1], nums[2])] = [1, 2, 1]`.\n\nAfter sorting in ascending order, `gcdPairs = [1, 1, 2]`.\n\nSo, the answer is `[gcdPairs[queries[0]], gcdPairs[queries[1]], gcdPairs[queries[2]]] = [1, 2, 2]`.\n\nExample 2:\n\nInput: nums = [4,4,2,1], queries = [5,3,1,0]\n\nOutput: [4,2,1,1]\n\nExplanation:\n\n`gcdPairs` sorted in ascending order is `[1, 1, 1, 2, 2, 4]`.\n\nExample 3:\n\nInput: nums = [2,2], queries = [0,0]\n\nOutput: [2,2]\n\nExplanation:\n\n`gcdPairs = [2]`.\n\nConstraints:\n\n\t- `2 <= n == nums.length <= 10^5`\n\n\t- `1 <= nums[i] <= 5 * 10^4`\n\n\t- `1 <= queries.length <= 10^5`\n\n\t- `0 <= queries[i] < n * (n - 1) / 2`",
+      "functionName": "gcdValues",
+      "starterCode": "/**\n * @param {number[]} nums\n * @param {number[]} queries\n * @return {number[]}\n */\n\nglobalThis.gcdValues = function(nums, queries) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "3608-find-the-number-of-subsequences-with-equal-gcd",
+      "number": 3608,
+      "title": "Find the Number of Subsequences With Equal GCD",
+      "difficulty": "Hard",
+      "url": "https://leetcode.com/problems/find-the-number-of-subsequences-with-equal-gcd",
+      "description": "You are given an integer array `nums`.\n\nYour task is to find the number of pairs of non-empty subsequences `(seq1, seq2)` of `nums` that satisfy the following conditions:\n\n\t- The subsequences `seq1` and `seq2` are disjoint, meaning no index of `nums` is common between them.\n\n\t- The GCD of the elements of `seq1` is equal to the GCD of the elements of `seq2`.\n\nReturn the total number of such pairs.\n\nSince the answer may be very large, return it modulo `10^9 + 7`.\n\nExample 1:\n\nInput: nums = [1,2,3,4]\n\nOutput: 10\n\nExplanation:\n\nThe subsequence pairs which have the GCD of their elements equal to 1 are:\n\n\t- `([1, 2, 3, 4], [1, 2, 3, 4])`\n\n\t- `([1, 2, 3, 4], [1, 2, 3, 4])`\n\n\t- `([1, 2, 3, 4], [1, 2, 3, 4])`\n\n\t- `([1, 2, 3, 4], [1, 2, 3, 4])`\n\n\t- `([1, 2, 3, 4], [1, 2, 3, 4])`\n\n\t- `([1, 2, 3, 4], [1, 2, 3, 4])`\n\n\t- `([1, 2, 3, 4], [1, 2, 3, 4])`\n\n\t- `([1, 2, 3, 4], [1, 2, 3, 4])`\n\n\t- `([1, 2, 3, 4], [1, 2, 3, 4])`\n\n\t- `([1, 2, 3, 4], [1, 2, 3, 4])`\n\nExample 2:\n\nInput: nums = [10,20,30]\n\nOutput: 2\n\nExplanation:\n\nThe subsequence pairs which have the GCD of their elements equal to 10 are:\n\n\t- `([10, 20, 30], [10, 20, 30])`\n\n\t- `([10, 20, 30], [10, 20, 30])`\n\nExample 3:\n\nInput: nums = [1,1,1,1]\n\nOutput: 50\n\nConstraints:\n\n\t- `1 <= nums.length <= 200`\n\n\t- `1 <= nums[i] <= 200`",
+      "functionName": "subsequencePairCount",
+      "starterCode": "/**\n * @param {number[]} nums\n * @return {number}\n */\n\nglobalThis.subsequencePairCount = function(nums) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "3838-path-existence-queries-in-a-graph-i",
+      "number": 3838,
+      "title": "Path Existence Queries in a Graph I",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/path-existence-queries-in-a-graph-i",
+      "description": "You are given an integer `n` representing the number of nodes in a graph, labeled from 0 to `n - 1`.\n\nYou are also given an integer array `nums` of length `n` sorted in non-decreasing order, and an integer `maxDiff`.\n\nAn undirected edge exists between nodes `i` and `j` if the absolute difference between `nums[i]` and `nums[j]` is at most `maxDiff` (i.e., `|nums[i] - nums[j]| <= maxDiff`).\n\nYou are also given a 2D integer array `queries`. For each `queries[i] = [ui, vi]`, determine whether there exists a path between nodes `ui` and `vi`.\n\nReturn a boolean array `answer`, where `answer[i]` is `true` if there exists a path between `ui` and `vi` in the `i^th` query and `false` otherwise.\n\nExample 1:\n\nInput: n = 2, nums = [1,3], maxDiff = 1, queries = [[0,0],[0,1]]\n\nOutput: [true,false]\n\nExplanation:\n\n\t- Query `[0,0]`: Node 0 has a trivial path to itself.\n\n\t- Query `[0,1]`: There is no edge between Node 0 and Node 1 because `|nums[0] - nums[1]| = |1 - 3| = 2`, which is greater than `maxDiff`.\n\n\t- Thus, the final answer after processing all the queries is `[true, false]`.\n\nExample 2:\n\nInput: n = 4, nums = [2,5,6,8], maxDiff = 2, queries = [[0,1],[0,2],[1,3],[2,3]]\n\nOutput: [false,false,true,true]\n\nExplanation:\n\nThe resulting graph is:\n\n\t- Query `[0,1]`: There is no edge between Node 0 and Node 1 because `|nums[0] - nums[1]| = |2 - 5| = 3`, which is greater than `maxDiff`.\n\n\t- Query `[0,2]`: There is no edge between Node 0 and Node 2 because `|nums[0] - nums[2]| = |2 - 6| = 4`, which is greater than `maxDiff`.\n\n\t- Query `[1,3]`: There is a path between Node 1 and Node 3 through Node 2 since `|nums[1] - nums[2]| = |5 - 6| = 1` and `|nums[2] - nums[3]| = |6 - 8| = 2`, both of which are within `maxDiff`.\n\n\t- Query `[2,3]`: There is an edge between Node 2 and Node 3 because `|nums[2] - nums[3]| = |6 - 8| = 2`, which is equal to `maxDiff`.\n\n\t- Thus, the final answer after processing all the queries is `[false, false, true, true]`.\n\nConstraints:\n\n\t- `1 <= n == nums.length <= 10^5`\n\n\t- `0 <= nums[i] <= 10^5`\n\n\t- `nums` is sorted in non-decreasing order.\n\n\t- `0 <= maxDiff <= 10^5`\n\n\t- `1 <= queries.length <= 10^5`\n\n\t- `queries[i] == [ui, vi]`\n\n\t- `0 <= ui, vi < n`",
+      "functionName": "pathExistenceQueries",
+      "starterCode": "/**\n * @param {number} n\n * @param {number[]} nums\n * @param {number} maxDiff\n * @param {number[][]} queries\n * @return {boolean[]}\n */\n\nglobalThis.pathExistenceQueries = function(n, nums, maxDiff, queries) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "3852-path-existence-queries-in-a-graph-ii",
+      "number": 3852,
+      "title": "Path Existence Queries in a Graph II",
+      "difficulty": "Hard",
+      "url": "https://leetcode.com/problems/path-existence-queries-in-a-graph-ii",
+      "description": "You are given an integer `n` representing the number of nodes in a graph, labeled from 0 to `n - 1`.\n\nYou are also given an integer array `nums` of length `n` and an integer `maxDiff`.\n\nAn undirected edge exists between nodes `i` and `j` if the absolute difference between `nums[i]` and `nums[j]` is at most `maxDiff` (i.e., `|nums[i] - nums[j]| <= maxDiff`).\n\nYou are also given a 2D integer array `queries`. For each `queries[i] = [ui, vi]`, find the minimum distance between nodes `ui` and `vi`. If no path exists between the two nodes, return -1 for that query.\n\nReturn an array `answer`, where `answer[i]` is the result of the `i^th` query.\n\nNote: The edges between the nodes are unweighted.\n\nExample 1:\n\nInput: n = 5, nums = [1,8,3,4,2], maxDiff = 3, queries = [[0,3],[2,4]]\n\nOutput: [1,1]\n\nExplanation:\n\nThe resulting graph is:\n\n\t\t\tQuery\n\t\t\tShortest Path\n\t\t\tMinimum Distance\n\n\t\t\t[0, 3]\n\t\t\t0 &rarr; 3\n\t\t\t1\n\n\t\t\t[2, 4]\n\t\t\t2 &rarr; 4\n\t\t\t1\n\nThus, the output is `[1, 1]`.\n\nExample 2:\n\nInput: n = 5, nums = [5,3,1,9,10], maxDiff = 2, queries = [[0,1],[0,2],[2,3],[4,3]]\n\nOutput: [1,2,-1,1]\n\nExplanation:\n\nThe resulting graph is:\n\n\t\t\tQuery\n\t\t\tShortest Path\n\t\t\tMinimum Distance\n\n\t\t\t[0, 1]\n\t\t\t0 &rarr; 1\n\t\t\t1\n\n\t\t\t[0, 2]\n\t\t\t0 &rarr; 1 &rarr; 2\n\t\t\t2\n\n\t\t\t[2, 3]\n\t\t\tNone\n\t\t\t-1\n\n\t\t\t[4, 3]\n\t\t\t3 &rarr; 4\n\t\t\t1\n\nThus, the output is `[1, 2, -1, 1]`.\n\nExample 3:\n\nInput: n = 3, nums = [3,6,1], maxDiff = 1, queries = [[0,0],[0,1],[1,2]]\n\nOutput: [0,-1,-1]\n\nExplanation:\n\nThere are no edges between any two nodes because:\n\n\t- Nodes 0 and 1: `|nums[0] - nums[1]| = |3 - 6| = 3 > 1`\n\n\t- Nodes 0 and 2: `|nums[0] - nums[2]| = |3 - 1| = 2 > 1`\n\n\t- Nodes 1 and 2: `|nums[1] - nums[2]| = |6 - 1| = 5 > 1`\n\nThus, no node can reach any other node, and the output is `[0, -1, -1]`.\n\nConstraints:\n\n\t- `1 <= n == nums.length <= 10^5`\n\n\t- `0 <= nums[i] <= 10^5`\n\n\t- `0 <= maxDiff <= 10^5`\n\n\t- `1 <= queries.length <= 10^5`\n\n\t- `queries[i] == [ui, vi]`\n\n\t- `0 <= ui, vi < n`",
+      "functionName": "pathExistenceQueries",
+      "starterCode": "/**\n * @param {number} n\n * @param {number[]} nums\n * @param {number} maxDiff\n * @param {number[][]} queries\n * @return {number[]}\n */\n\nglobalThis.pathExistenceQueries = function(n, nums, maxDiff, queries) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
       "id": "3919-network-recovery-pathways",
       "number": 3919,
       "title": "Network Recovery Pathways",
@@ -1923,6 +2648,19 @@
       "description": "You are given a directed acyclic graph of `n` nodes numbered from 0 to `n &minus; 1`. This is represented by a 2D array edges of length `m`, where edges[i] = [ui, vi, costi] indicates a one‑way communication from node ui to node vi with a recovery cost of costi.\n\nSome nodes may be offline. You are given a boolean array online where online[i] = true means node i is online. Nodes 0 and `n &minus; 1` are always online.\n\nA path from 0 to `n &minus; 1` is valid if:\n\n\t- All intermediate nodes on the path are online.\n\n\tThe total recovery cost of all edges on the path does not exceed `k`.\n\nFor each valid path, define its score as the minimum edge‑cost along that path.\n\nReturn the maximum path score (i.e., the largest minimum-edge cost) among all valid paths. If no valid path exists, return -1.\n\nExample 1:\n\nInput: edges = [[0,1,5],[1,3,10],[0,2,3],[2,3,4]], online = [true,true,true,true], k = 10\n\nOutput: 3\n\nExplanation:\n\nThe graph has two possible routes from node 0 to node 3:\n\nPath `0 &rarr; 1 &rarr; 3`\n\nTotal cost = `5 + 10 = 15`, which exceeds k (`15 > 10`), so this path is invalid.\n\nPath `0 &rarr; 2 &rarr; 3`\n\nTotal cost = `3 + 4 = 7 <= k`, so this path is valid.\n\nThe minimum edge‐cost along this path is `min(3, 4) = 3`.\n\nThere are no other valid paths. Hence, the maximum among all valid path‐scores is 3.\n\nExample 2:\n\nInput: edges = [[0,1,7],[1,4,5],[0,2,6],[2,3,6],[3,4,2],[2,4,6]], online = [true,true,true,false,true], k = 12\n\nOutput: 6\n\nExplanation:\n\nNode 3 is offline, so any path passing through 3 is invalid.\n\nConsider the remaining routes from 0 to 4:\n\nPath `0 &rarr; 1 &rarr; 4`\n\nTotal cost = `7 + 5 = 12 <= k`, so this path is valid.\n\nThe minimum edge‐cost along this path is `min(7, 5) = 5`.\n\nPath `0 &rarr; 2 &rarr; 3 &rarr; 4`\n\nNode 3 is offline, so this path is invalid regardless of cost.\n\nPath `0 &rarr; 2 &rarr; 4`\n\nTotal cost = `6 + 6 = 12 <= k`, so this path is valid.\n\nThe minimum edge‐cost along this path is `min(6, 6) = 6`.\n\nAmong the two valid paths, their scores are 5 and 6. Therefore, the answer is 6.\n\nConstraints:\n\n\tn == online.length\n\t2 <= n <= 5 * 10^4\n\t0 <= m == edges.length <= `min(10^5, n * (n - 1) / 2)`\n\tedges[i] = [ui, vi, costi]\n\t0 <= ui, vi < n\n\tui != vi\n\t0 <= costi <= 10^9\n\t0 <= k <= 5 * 10^13\n\tonline[i] is either true or false, and both online[0] and online[n &minus; 1] are true.\n\tThe given graph is a directed acyclic graph.",
       "functionName": "findMaxPathScore",
       "starterCode": "/**\n * @param {number[][]} edges\n * @param {boolean[]} online\n * @param {number} k\n * @return {number}\n */\n\nglobalThis.findMaxPathScore = function(edges, online, k) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "3995-gcd-of-odd-and-even-sums",
+      "number": 3995,
+      "title": "GCD of Odd and Even Sums",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/gcd-of-odd-and-even-sums",
+      "description": "You are given an integer `n`. Your task is to compute the GCD (greatest common divisor) of two values:\n\n\t- `sumOdd`: the sum of the smallest `n` positive odd numbers.\n\n\t- `sumEven`: the sum of the smallest `n` positive even numbers.\n\nReturn the GCD of `sumOdd` and `sumEven`.\n\nExample 1:\n\nInput: n = 4\n\nOutput: 4\n\nExplanation:\n\n\t- Sum of the first 4 odd numbers `sumOdd = 1 + 3 + 5 + 7 = 16`\n\n\t- Sum of the first 4 even numbers `sumEven = 2 + 4 + 6 + 8 = 20`\n\nHence, `GCD(sumOdd, sumEven) = GCD(16, 20) = 4`.\n\nExample 2:\n\nInput: n = 5\n\nOutput: 5\n\nExplanation:\n\n\t- Sum of the first 5 odd numbers `sumOdd = 1 + 3 + 5 + 7 + 9 = 25`\n\n\t- Sum of the first 5 even numbers `sumEven = 2 + 4 + 6 + 8 + 10 = 30`\n\nHence, `GCD(sumOdd, sumEven) = GCD(25, 30) = 5`.\n\nConstraints:\n\n\t- `1 <= n <= 10​​​​​​​00`",
+      "functionName": "gcdOfOddEvenSums",
+      "starterCode": "/**\n * @param {number} n\n * @return {number}\n */\n\nglobalThis.gcdOfOddEvenSums = function(n) {\n  // Write your solution here\n};",
       "usesListNode": false,
       "mutatesInput": false,
       "cases": []

@@ -2690,6 +2690,19 @@
       "usesListNode": false,
       "mutatesInput": false,
       "cases": []
+    },
+    {
+      "id": "4242-sum-of-gcd-of-formed-pairs",
+      "number": 4242,
+      "title": "Sum of GCD of Formed Pairs",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/sum-of-gcd-of-formed-pairs",
+      "description": "You are given an integer array `nums` of length `n`.\n\nConstruct an array `prefixGcd` where for each index `i`:\n\n\t- Let `mxi = max(nums[0], nums[1], ..., nums[i])`.\n\n\t- `prefixGcd[i] = gcd(nums[i], mxi)`.\n\nAfter constructing `prefixGcd`:\n\n\t- Sort `prefixGcd` in non-decreasing order.\n\n\t- Form pairs by taking the smallest unpaired element and the largest unpaired element.\n\n\t- Repeat this process until no more pairs can be formed.\n\n\t- For each formed pair, compute the `gcd` of the two elements.\n\n\t- If `n` is odd, the middle element in the `prefixGcd` array remains unpaired and should be ignored.\n\nReturn an integer denoting the sum of the GCD values of all formed pairs.\n\nThe term `gcd(a, b)` denotes the greatest common divisor of `a` and `b`.\n\nExample 1:\n\nInput: nums = [2,6,4]\n\nOutput: 2\n\nExplanation:\n\nConstruct `prefixGcd`:\n\n\t\t\t`i`\n\t\t\t`nums[i]`\n\t\t\t`mxi`\n\t\t\t`prefixGcd[i]`\n\n\t\t\t0\n\t\t\t2\n\t\t\t2\n\t\t\t2\n\n\t\t\t1\n\t\t\t6\n\t\t\t6\n\t\t\t6\n\n\t\t\t2\n\t\t\t4\n\t\t\t6\n\t\t\t2\n\n`prefixGcd = [2, 6, 2]`. After sorting, it forms `[2, 2, 6]`.\n\nPair the smallest and largest elements: `gcd(2, 6) = 2`. The remaining middle element 2 is ignored. Thus, the sum is 2.\n\nExample 2:\n\nInput: nums = [3,6,2,8]\n\nOutput: 5\n\nExplanation:\n\nConstruct `prefixGcd`:\n\n\t\t\t`i`\n\t\t\t`nums[i]`\n\t\t\t`mxi`\n\t\t\t`prefixGcd[i]`\n\n\t\t\t0\n\t\t\t3\n\t\t\t3\n\t\t\t3\n\n\t\t\t1\n\t\t\t6\n\t\t\t6\n\t\t\t6\n\n\t\t\t2\n\t\t\t2\n\t\t\t6\n\t\t\t2\n\n\t\t\t3\n\t\t\t8\n\t\t\t8\n\t\t\t8\n\n`prefixGcd = [3, 6, 2, 8]`. After sorting, it forms `[2, 3, 6, 8]`.\n\nForm pairs: `gcd(2, 8) = 2` and `gcd(3, 6) = 3`. Thus, the sum is `2 + 3 = 5`.\n\nConstraints:\n\n\t- `1 <= n == nums.length <= 10^5`\n\n\t- `1 <= nums[i] <= 10^​​​​​​​9`",
+      "functionName": "gcdSum",
+      "starterCode": "/**\n * @param {number[]} nums\n * @return {number}\n */\n\nglobalThis.gcdSum = function(nums) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
     }
   ]
 }

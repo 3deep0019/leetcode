@@ -3,15 +3,21 @@
  * @return {number}
  */
 var maxProduct = function(nums) {
-    const n = nums.length;
-    let max = 0;
-    for (let i = 0; i < n; i++) {
-        for (let j = i + 1; j < n; j++) {
-        const product = (nums[i] - 1) * (nums[j] - 1);
-        if (product > max) {
-            max = product;
-        }
+    let mx1 = 0;
+    let mx2 = 0;
+
+    for (const x of nums) {
+
+        if (x >= mx1) {
+
+            mx2 = mx1;
+            mx1 = x;
+
+        } else if (x > mx2) {
+
+            mx2 = x;
         }
     }
-    return max;
+
+    return (mx1 - 1) * (mx2 - 1);
 };

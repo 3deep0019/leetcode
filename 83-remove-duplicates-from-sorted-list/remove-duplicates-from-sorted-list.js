@@ -10,19 +10,16 @@
  * @return {ListNode}
  */
 var deleteDuplicates = function(head) {
-    let loco = new ListNode();
-    let current = loco;
-    const map = new Map();
-    while (head) {
-        if (!map.has(head.val)) {
-        map.set(head.val, 1);
-        current.next = head;
-        current = current.next;
-        }
-        head = head.next;
+    if (!head) return head;
+
+  let temp = head;
+  while (temp) {
+    if (temp.next && temp.val === temp.next.val) {
+      temp.next = temp.next.next;
+    } else {
+      temp = temp.next;
     }
+  }
 
-    current.next = null;
-
-    return loco.next;
+  return head;
 };

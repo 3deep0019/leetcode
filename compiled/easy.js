@@ -774,6 +774,225 @@ globalThis.climbStairs = function(n) {
 };
 
 /*
+ * 83-remove-duplicates-from-sorted-list
+ *
+ * Remove Duplicates from Sorted List
+ * https://leetcode.com/problems/remove-duplicates-from-sorted-list
+ * 
+ * Given the `head` of a sorted linked list, delete all duplicates such that each element appears only once. Return the linked list sorted as well.
+ * 
+ * Example 1:
+ * 
+ * Input: head = [1,1,2]
+ * Output: [1,2]
+ * 
+ * Example 2:
+ * 
+ * Input: head = [1,1,2,3,3]
+ * Output: [1,2,3]
+ * 
+ * Constraints:
+ * 
+ * 	- The number of nodes in the list is in the range `[0, 300]`.
+ * 
+ * 	- `-100 <= Node.val <= 100`
+ * 
+ * 	- The list is guaranteed to be sorted in ascending order.
+ */
+
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+
+globalThis.deleteDuplicates = function(head) {
+  // Write your solution here
+};
+
+/*
+ * 88-merge-sorted-array
+ *
+ * Merge Sorted Array
+ * https://leetcode.com/problems/merge-sorted-array
+ * 
+ * You are given two integer arrays `nums1` and `nums2`, sorted in non-decreasing order, and two integers `m` and `n`, representing the number of elements in `nums1` and `nums2` respectively.
+ * 
+ * Merge `nums1` and `nums2` into a single array sorted in non-decreasing order.
+ * 
+ * The final sorted array should not be returned by the function, but instead be stored inside the array `nums1`. To accommodate this, `nums1` has a length of `m + n`, where the first `m` elements denote the elements that should be merged, and the last `n` elements are set to `0` and should be ignored. `nums2` has a length of `n`.
+ * 
+ * Example 1:
+ * 
+ * Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+ * Output: [1,2,2,3,5,6]
+ * Explanation: The arrays we are merging are [1,2,3] and [2,5,6].
+ * The result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.
+ * 
+ * Example 2:
+ * 
+ * Input: nums1 = [1], m = 1, nums2 = [], n = 0
+ * Output: [1]
+ * Explanation: The arrays we are merging are [1] and [].
+ * The result of the merge is [1].
+ * 
+ * Example 3:
+ * 
+ * Input: nums1 = [0], m = 0, nums2 = [1], n = 1
+ * Output: [1]
+ * Explanation: The arrays we are merging are [] and [1].
+ * The result of the merge is [1].
+ * Note that because m = 0, there are no elements in nums1. The 0 is only there to ensure the merge result can fit in nums1.
+ * 
+ * Constraints:
+ * 
+ * 	- `nums1.length == m + n`
+ * 
+ * 	- `nums2.length == n`
+ * 
+ * 	- `0 <= m, n <= 200`
+ * 
+ * 	- `1 <= m + n <= 200`
+ * 
+ * 	- `-10^9 <= nums1[i], nums2[j] <= 10^9`
+ * 
+ * Follow up: Can you come up with an algorithm that runs in `O(m + n)` time?
+ */
+
+/**
+ * @param {number[]} nums1
+ * @param {number} m
+ * @param {number[]} nums2
+ * @param {number} n
+ * @return {void} Do not return anything, modify nums1 in-place instead.
+ */
+
+globalThis.merge = function(nums1, m, nums2, n) {
+  // Write your solution here
+};
+
+/*
+ * 94-binary-tree-inorder-traversal
+ *
+ * Binary Tree Inorder Traversal
+ * https://leetcode.com/problems/binary-tree-inorder-traversal
+ * 
+ * Given the `root` of a binary tree, return the inorder traversal of its nodes' values.
+ * 
+ * Example 1:
+ * 
+ * Input: root = [1,null,2,3]
+ * 
+ * Output: [1,3,2]
+ * 
+ * Explanation:
+ * 
+ * Example 2:
+ * 
+ * Input: root = [1,2,3,4,5,null,8,null,null,6,7,9]
+ * 
+ * Output: [4,2,6,5,7,1,3,9,8]
+ * 
+ * Explanation:
+ * 
+ * Example 3:
+ * 
+ * Input: root = []
+ * 
+ * Output: []
+ * 
+ * Example 4:
+ * 
+ * Input: root = [1]
+ * 
+ * Output: [1]
+ * 
+ * Constraints:
+ * 
+ * 	- The number of nodes in the tree is in the range `[0, 100]`.
+ * 
+ * 	- `-100 <= Node.val <= 100`
+ * 
+ * Follow up: Recursive solution is trivial, could you do it iteratively?
+ */
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+
+globalThis.inorderTraversal = function(root) {
+  // Write your solution here
+};
+
+/*
+ * 100-same-tree
+ *
+ * Same Tree
+ * https://leetcode.com/problems/same-tree
+ * 
+ * Given the roots of two binary trees `p` and `q`, write a function to check if they are the same or not.
+ * 
+ * Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.
+ * 
+ * Example 1:
+ * 
+ * Input: p = [1,2,3], q = [1,2,3]
+ * Output: true
+ * 
+ * Example 2:
+ * 
+ * Input: p = [1,2], q = [1,null,2]
+ * Output: false
+ * 
+ * Example 3:
+ * 
+ * Input: p = [1,2,1], q = [1,1,2]
+ * Output: false
+ * 
+ * Constraints:
+ * 
+ * 	- The number of nodes in both trees is in the range `[0, 100]`.
+ * 
+ * 	- `-10^4 <= Node.val <= 10^4`
+ */
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+
+/**
+ * @param {TreeNode} p
+ * @param {TreeNode} q
+ * @return {boolean}
+ */
+
+globalThis.isSameTree = function(p, q) {
+  // Write your solution here
+};
+
+/*
  * 125-valid-palindrome
  *
  * Valid Palindrome
@@ -1306,6 +1525,45 @@ globalThis.findMaxConsecutiveOnes = function(nums) {
 };
 
 /*
+ * 628-maximum-product-of-three-numbers
+ *
+ * Maximum Product of Three Numbers
+ * https://leetcode.com/problems/maximum-product-of-three-numbers
+ * 
+ * Given an integer array `nums`, find three numbers whose product is maximum and return the maximum product.
+ * 
+ * Example 1:
+ * 
+ * Input: nums = [1,2,3]
+ * Output: 6
+ * 
+ * Example 2:
+ * 
+ * Input: nums = [1,2,3,4]
+ * Output: 24
+ * 
+ * Example 3:
+ * 
+ * Input: nums = [-1,-2,-3]
+ * Output: -6
+ * 
+ * Constraints:
+ * 
+ * 	- `3 <= nums.length <= 10^4`
+ * 
+ * 	- `-1000 <= nums[i] <= 1000`
+ */
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+
+globalThis.maximumProduct = function(nums) {
+  // Write your solution here
+};
+
+/*
  * 643-maximum-average-subarray-i
  *
  * Maximum Average Subarray I
@@ -1384,6 +1642,101 @@ globalThis.findErrorNums = function(nums) {
 };
 
 /*
+ * 789-kth-largest-element-in-a-stream
+ *
+ * Kth Largest Element in a Stream
+ * https://leetcode.com/problems/kth-largest-element-in-a-stream
+ * 
+ * You are part of a university admissions office and need to keep track of the `kth` highest test score from applicants in real-time. This helps to determine cut-off marks for interviews and admissions dynamically as new applicants submit their scores.
+ * 
+ * You are tasked to implement a class which, for a given integer `k`, maintains a stream of test scores and continuously returns the `k`th highest test score after a new score has been submitted. More specifically, we are looking for the `k`th highest score in the sorted list of all scores.
+ * 
+ * Implement the `KthLargest` class:
+ * 
+ * 	- `KthLargest(int k, int[] nums)` Initializes the object with the integer `k` and the stream of test scores `nums`.
+ * 
+ * 	- `int add(int val)` Adds a new test score `val` to the stream and returns the element representing the `k^th` largest element in the pool of test scores so far.
+ * 
+ * Example 1:
+ * 
+ * Input:
+ * 
+ * ["KthLargest", "add", "add", "add", "add", "add"]
+ * 
+ * [[3, [4, 5, 8, 2]], [3], [5], [10], [9], [4]]
+ * 
+ * Output: [null, 4, 5, 5, 8, 8]
+ * 
+ * Explanation:
+ * 
+ * KthLargest kthLargest = new KthLargest(3, [4, 5, 8, 2]);
+ * 
+ * kthLargest.add(3); // return 4
+ * 
+ * kthLargest.add(5); // return 5
+ * 
+ * kthLargest.add(10); // return 5
+ * 
+ * kthLargest.add(9); // return 8
+ * 
+ * kthLargest.add(4); // return 8
+ * 
+ * Example 2:
+ * 
+ * Input:
+ * 
+ * ["KthLargest", "add", "add", "add", "add"]
+ * 
+ * [[4, [7, 7, 7, 7, 8, 3]], [2], [10], [9], [9]]
+ * 
+ * Output: [null, 7, 7, 7, 8]
+ * 
+ * Explanation:
+ * 
+ * KthLargest kthLargest = new KthLargest(4, [7, 7, 7, 7, 8, 3]);
+ * 
+ * kthLargest.add(2); // return 7
+ * 
+ * kthLargest.add(10); // return 7
+ * 
+ * kthLargest.add(9); // return 7
+ * 
+ * kthLargest.add(9); // return 8
+ * 
+ * Constraints:
+ * 
+ * 	- `0 <= nums.length <= 10^4`
+ * 
+ * 	- `1 <= k <= nums.length + 1`
+ * 
+ * 	- `-10^4 <= nums[i] <= 10^4`
+ * 
+ * 	- `-10^4 <= val <= 10^4`
+ * 
+ * 	- At most `10^4` calls will be made to `add`.
+ */
+
+/**
+ * @param {number} k
+ * @param {number[]} nums
+ */
+
+/** 
+ * @param {number} val
+ * @return {number}
+ */
+
+/** 
+ * Your KthLargest object will be instantiated and called as such:
+ * var obj = new KthLargest(k, nums)
+ * var param_1 = obj.add(val)
+ */
+
+globalThis.KthLargest = function(k, nums) {
+  // Write your solution here
+};
+
+/*
  * 1256-rank-transform-of-an-array
  *
  * Rank Transform of an Array
@@ -1429,6 +1782,64 @@ globalThis.findErrorNums = function(nums) {
  */
 
 globalThis.arrayRankTransform = function(arr) {
+  // Write your solution here
+};
+
+/*
+ * 1386-shift-2d-grid
+ *
+ * Shift 2D Grid
+ * https://leetcode.com/problems/shift-2d-grid
+ * 
+ * Given a 2D `grid` of size `m x n` and an integer `k`. You need to shift the `grid` `k` times.
+ * 
+ * In one shift operation:
+ * 
+ * 	- Element at `grid[i][j]` moves to `grid[i][j + 1]`.
+ * 
+ * 	- Element at `grid[i][n - 1]` moves to `grid[i + 1][0]`.
+ * 
+ * 	- Element at `grid[m - 1][n - 1]` moves to `grid[0][0]`.
+ * 
+ * Return the 2D grid after applying shift operation `k` times.
+ * 
+ * Example 1:
+ * 
+ * Input: `grid` = [[1,2,3],[4,5,6],[7,8,9]], k = 1
+ * Output: [[9,1,2],[3,4,5],[6,7,8]]
+ * 
+ * Example 2:
+ * 
+ * Input: `grid` = [[3,8,1,9],[19,7,2,5],[4,6,11,10],[12,0,21,13]], k = 4
+ * Output: [[12,0,21,13],[3,8,1,9],[19,7,2,5],[4,6,11,10]]
+ * 
+ * Example 3:
+ * 
+ * Input: `grid` = [[1,2,3],[4,5,6],[7,8,9]], k = 9
+ * Output: [[1,2,3],[4,5,6],[7,8,9]]
+ * 
+ * Constraints:
+ * 
+ * 	- `m == grid.length`
+ * 
+ * 	- `n == grid[i].length`
+ * 
+ * 	- `1 <= m <= 50`
+ * 
+ * 	- `1 <= n <= 50`
+ * 
+ * 	- `-1000 <= grid[i][j] <= 1000`
+ * 
+ * 	- `0 <= k <= 100`
+ */
+
+/**
+ * @param {number[][]} grid
+ * @param {number} k
+ * @return {number[][]}
+ */
+
+globalThis.shiftGrid = function(grid, k) {
   // Write your solution here
 };
 
@@ -1576,6 +1987,47 @@ globalThis.smallerNumbersThanCurrent = function(nums) {
  */
 
 globalThis.finalPrices = function(prices) {
+  // Write your solution here
+};
+
+/*
+ * 1574-maximum-product-of-two-elements-in-an-array
+ *
+ * Maximum Product of Two Elements in an Array
+ * https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array
+ * 
+ * Given the array of integers `nums`, you will choose two different indices `i` and `j` of that array. Return the maximum value of `(nums[i]-1)*(nums[j]-1)`.
+ * 
+ * Example 1:
+ * 
+ * Input: nums = [3,4,5,2]
+ * Output: 12
+ * Explanation: If you choose the indices i=1 and j=2 (indexed from 0), you will get the maximum value, that is, (nums[1]-1)*(nums[2]-1) = (4-1)*(5-1) = 3*4 = 12.
+ * 
+ * Example 2:
+ * 
+ * Input: nums = [1,5,4,5]
+ * Output: 16
+ * Explanation: Choosing the indices i=1 and j=3 (indexed from 0), you will get the maximum value of (5-1)*(5-1) = 16.
+ * 
+ * Example 3:
+ * 
+ * Input: nums = [3,7]
+ * Output: 12
+ * 
+ * Constraints:
+ * 
+ * 	- `2 <= nums.length <= 500`
+ * 
+ * 	- `1 <= nums[i] <= 10^3`
+ */
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+
+globalThis.maxProduct = function(nums) {
   // Write your solution here
 };
 
@@ -1922,6 +2374,59 @@ globalThis.numOfStrings = function(patterns, word) {
 };
 
 /*
+ * 2106-find-greatest-common-divisor-of-array
+ *
+ * Find Greatest Common Divisor of Array
+ * https://leetcode.com/problems/find-greatest-common-divisor-of-array
+ * 
+ * Given an integer array `nums`, return the greatest common divisor of the smallest number and largest number in `nums`.
+ * 
+ * The greatest common divisor of two numbers is the largest positive integer that evenly divides both numbers.
+ * 
+ * Example 1:
+ * 
+ * Input: nums = [2,5,6,9,10]
+ * Output: 2
+ * Explanation:
+ * The smallest number in nums is 2.
+ * The largest number in nums is 10.
+ * The greatest common divisor of 2 and 10 is 2.
+ * 
+ * Example 2:
+ * 
+ * Input: nums = [7,5,6,8,3]
+ * Output: 1
+ * Explanation:
+ * The smallest number in nums is 3.
+ * The largest number in nums is 8.
+ * The greatest common divisor of 3 and 8 is 1.
+ * 
+ * Example 3:
+ * 
+ * Input: nums = [3,3]
+ * Output: 3
+ * Explanation:
+ * The smallest number in nums is 3.
+ * The largest number in nums is 3.
+ * The greatest common divisor of 3 and 3 is 3.
+ * 
+ * Constraints:
+ * 
+ * 	- `2 <= nums.length <= 1000`
+ * 
+ * 	- `1 <= nums[i] <= 1000`
+ */
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+
+globalThis.findGCD = function(nums) {
+  // Write your solution here
+};
+
+/*
  * 3236-smallest-missing-integer-greater-than-sequential-prefix-sum
  *
  * Smallest Missing Integer Greater Than Sequential Prefix Sum
@@ -1958,6 +2463,180 @@ globalThis.numOfStrings = function(patterns, word) {
  */
 
 globalThis.missingInteger = function(nums) {
+  // Write your solution here
+};
+
+/*
+ * 3275-minimum-number-of-pushes-to-type-word-i
+ *
+ * Minimum Number of Pushes to Type Word I
+ * https://leetcode.com/problems/minimum-number-of-pushes-to-type-word-i
+ * 
+ * You are given a string `word` containing distinct lowercase English letters.
+ * 
+ * Telephone keypads have keys mapped with distinct collections of lowercase English letters, which can be used to form words by pushing them. For example, the key `2` is mapped with `["a","b","c"]`, we need to push the key one time to type `"a"`, two times to type `"b"`, and three times to type `"c"` .
+ * 
+ * It is allowed to remap the keys numbered `2` to `9` to distinct collections of letters. The keys can be remapped to any amount of letters, but each letter must be mapped to exactly one key. You need to find the minimum number of times the keys will be pushed to type the string `word`.
+ * 
+ * Return the minimum number of pushes needed to type `word` after remapping the keys.
+ * 
+ * An example mapping of letters to keys on a telephone keypad is given below. Note that `1`, `*`, `#`, and `0` do not map to any letters.
+ * 
+ * Example 1:
+ * 
+ * Input: word = "abcde"
+ * Output: 5
+ * Explanation: The remapped keypad given in the image provides the minimum cost.
+ * "a" -> one push on key 2
+ * "b" -> one push on key 3
+ * "c" -> one push on key 4
+ * "d" -> one push on key 5
+ * "e" -> one push on key 6
+ * Total cost is 1 + 1 + 1 + 1 + 1 = 5.
+ * It can be shown that no other mapping can provide a lower cost.
+ * 
+ * Example 2:
+ * 
+ * Input: word = "xycdefghij"
+ * Output: 12
+ * Explanation: The remapped keypad given in the image provides the minimum cost.
+ * "x" -> one push on key 2
+ * "y" -> two pushes on key 2
+ * "c" -> one push on key 3
+ * "d" -> two pushes on key 3
+ * "e" -> one push on key 4
+ * "f" -> one push on key 5
+ * "g" -> one push on key 6
+ * "h" -> one push on key 7
+ * "i" -> one push on key 8
+ * "j" -> one push on key 9
+ * Total cost is 1 + 2 + 1 + 2 + 1 + 1 + 1 + 1 + 1 + 1 = 12.
+ * It can be shown that no other mapping can provide a lower cost.
+ * 
+ * Constraints:
+ * 
+ * 	- `1 <= word.length <= 26`
+ * 
+ * 	- `word` consists of lowercase English letters.
+ * 
+ * 	- All letters in `word` are distinct.
+ */
+
+// 3275-minimum-number-of-pushes-to-type-word-i — implement your solution below
+// globalThis.myFunction = function(...) {
+//   // your code
+// };
+
+/*
+ * 3626-smallest-divisible-digit-product-i
+ *
+ * Smallest Divisible Digit Product I
+ * https://leetcode.com/problems/smallest-divisible-digit-product-i
+ * 
+ * You are given two integers `n` and `t`. Return the smallest number greater than or equal to `n` such that the product of its digits is divisible by `t`.
+ * 
+ * Example 1:
+ * 
+ * Input: n = 10, t = 2
+ * 
+ * Output: 10
+ * 
+ * Explanation:
+ * 
+ * The digit product of 10 is 0, which is divisible by 2, making it the smallest number greater than or equal to 10 that satisfies the condition.
+ * 
+ * Example 2:
+ * 
+ * Input: n = 15, t = 3
+ * 
+ * Output: 16
+ * 
+ * Explanation:
+ * 
+ * The digit product of 16 is 6, which is divisible by 3, making it the smallest number greater than or equal to 15 that satisfies the condition.
+ * 
+ * Constraints:
+ * 
+ * 	- `1 <= n <= 100`
+ * 
+ * 	- `1 <= t <= 10`
+ */
+
+/**
+ * @param {number} n
+ * @param {number} t
+ * @return {number}
+ */
+
+globalThis.smallestNumber = function(n, t) {
+  // Write your solution here
+};
+
+/*
+ * 3859-maximum-product-of-two-digits
+ *
+ * Maximum Product of Two Digits
+ * https://leetcode.com/problems/maximum-product-of-two-digits
+ * 
+ * You are given a positive integer `n`.
+ * 
+ * Return the maximum product of any two digits in `n`.
+ * 
+ * Note: You may use the same digit twice if it appears more than once in `n`.
+ * 
+ * Example 1:
+ * 
+ * Input: n = 31
+ * 
+ * Output: 3
+ * 
+ * Explanation:
+ * 
+ * 	- The digits of `n` are `[3, 1]`.
+ * 
+ * 	- The possible products of any two digits are: `3 * 1 = 3`.
+ * 
+ * 	- The maximum product is 3.
+ * 
+ * Example 2:
+ * 
+ * Input: n = 22
+ * 
+ * Output: 4
+ * 
+ * Explanation:
+ * 
+ * 	- The digits of `n` are `[2, 2]`.
+ * 
+ * 	- The possible products of any two digits are: `2 * 2 = 4`.
+ * 
+ * 	- The maximum product is 4.
+ * 
+ * Example 3:
+ * 
+ * Input: n = 124
+ * 
+ * Output: 8
+ * 
+ * Explanation:
+ * 
+ * 	- The digits of `n` are `[1, 2, 4]`.
+ * 
+ * 	- The possible products of any two digits are: `1 * 2 = 2`, `1 * 4 = 4`, `2 * 4 = 8`.
+ * 
+ * 	- The maximum product is 8.
+ * 
+ * Constraints:
+ * 
+ * 	- `10 <= n <= 10^9`
+ */
+
+/**
+ * @param {number} n
+ * @return {number}
+ */
+
+globalThis.maxProduct = function(n) {
   // Write your solution here
 };
 
@@ -2014,6 +2693,66 @@ globalThis.missingInteger = function(nums) {
  */
 
 globalThis.gcdOfOddEvenSums = function(n) {
+  // Write your solution here
+};
+
+/*
+ * 4107-find-missing-elements
+ *
+ * Find Missing Elements
+ * https://leetcode.com/problems/find-missing-elements
+ * 
+ * You are given an integer array `nums` consisting of unique integers.
+ * 
+ * Originally, `nums` contained every integer within a certain range. However, some integers might have gone missing from the array.
+ * 
+ * The smallest and largest integers of the original range are still present in `nums`.
+ * 
+ * Return a sorted list of all the missing integers in this range. If no integers are missing, return an empty list.
+ * 
+ * Example 1:
+ * 
+ * Input: nums = [1,4,2,5]
+ * 
+ * Output: [3]
+ * 
+ * Explanation:
+ * 
+ * The smallest integer is 1 and the largest is 5, so the full range should be `[1,2,3,4,5]`. Among these, only 3 is missing.
+ * 
+ * Example 2:
+ * 
+ * Input: nums = [7,8,6,9]
+ * 
+ * Output: []
+ * 
+ * Explanation:
+ * 
+ * The smallest integer is 6 and the largest is 9, so the full range is `[6,7,8,9]`. All integers are already present, so no integer is missing.
+ * 
+ * Example 3:
+ * 
+ * Input: nums = [5,1]
+ * 
+ * Output: [2,3,4]
+ * 
+ * Explanation:
+ * 
+ * The smallest integer is 1 and the largest is 5, so the full range should be `[1,2,3,4,5]`. The missing integers are 2, 3, and 4.
+ * 
+ * Constraints:
+ * 
+ * 	- `2 <= nums.length <= 100`
+ * 
+ * 	- `1 <= nums[i] <= 100`
+ */
+
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+
+globalThis.findMissingElements = function(nums) {
   // Write your solution here
 };
 
@@ -2459,6 +3198,165 @@ const PROBLEM_TESTS = [
     ]
   },
   {
+    "id": "83-remove-duplicates-from-sorted-list",
+    "fn": "deleteDuplicates",
+    "usesListNode": true,
+    "mutatesInput": false,
+    "cases": [
+      {
+        "args": [
+          [
+            1,
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          1,
+          2
+        ]
+      },
+      {
+        "args": [
+          [
+            1,
+            1,
+            2,
+            3,
+            3
+          ]
+        ],
+        "expected": [
+          1,
+          2,
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "id": "88-merge-sorted-array",
+    "fn": "merge",
+    "usesListNode": false,
+    "mutatesInput": true,
+    "cases": [
+      {
+        "args": [
+          [
+            1,
+            2,
+            3,
+            0,
+            0,
+            0
+          ],
+          3,
+          [
+            2,
+            5,
+            6
+          ],
+          3
+        ],
+        "expected": [
+          1,
+          2,
+          2,
+          3,
+          5,
+          6
+        ]
+      },
+      {
+        "args": [
+          [
+            1
+          ],
+          1,
+          [],
+          0
+        ],
+        "expected": [
+          1
+        ]
+      },
+      {
+        "args": [
+          [
+            0
+          ],
+          0,
+          [
+            1
+          ],
+          1
+        ],
+        "expected": [
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": "94-binary-tree-inorder-traversal",
+    "fn": "inorderTraversal",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": []
+  },
+  {
+    "id": "100-same-tree",
+    "fn": "isSameTree",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": [
+      {
+        "args": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        "expected": true
+      },
+      {
+        "args": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            null,
+            2
+          ]
+        ],
+        "expected": false
+      },
+      {
+        "args": [
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ]
+        ],
+        "expected": false
+      }
+    ]
+  },
+  {
     "id": "125-valid-palindrome",
     "fn": "isPalindrome",
     "usesListNode": false,
@@ -2715,6 +3613,45 @@ const PROBLEM_TESTS = [
     ]
   },
   {
+    "id": "628-maximum-product-of-three-numbers",
+    "fn": "maximumProduct",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": [
+      {
+        "args": [
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        "expected": 6
+      },
+      {
+        "args": [
+          [
+            1,
+            2,
+            3,
+            4
+          ]
+        ],
+        "expected": 24
+      },
+      {
+        "args": [
+          [
+            -1,
+            -2,
+            -3
+          ]
+        ],
+        "expected": -6
+      }
+    ]
+  },
+  {
     "id": "643-maximum-average-subarray-i",
     "fn": "findMaxAverage",
     "usesListNode": false,
@@ -2780,6 +3717,13 @@ const PROBLEM_TESTS = [
     ]
   },
   {
+    "id": "789-kth-largest-element-in-a-stream",
+    "fn": "KthLargest",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": []
+  },
+  {
     "id": "1256-rank-transform-of-an-array",
     "fn": "arrayRankTransform",
     "usesListNode": false,
@@ -2839,6 +3783,149 @@ const PROBLEM_TESTS = [
           7,
           1,
           3
+        ]
+      }
+    ]
+  },
+  {
+    "id": "1386-shift-2d-grid",
+    "fn": "shiftGrid",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": [
+      {
+        "args": [
+          [
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              6
+            ],
+            [
+              7,
+              8,
+              9
+            ]
+          ],
+          1
+        ],
+        "expected": [
+          [
+            9,
+            1,
+            2
+          ],
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "args": [
+          [
+            [
+              3,
+              8,
+              1,
+              9
+            ],
+            [
+              19,
+              7,
+              2,
+              5
+            ],
+            [
+              4,
+              6,
+              11,
+              10
+            ],
+            [
+              12,
+              0,
+              21,
+              13
+            ]
+          ],
+          4
+        ],
+        "expected": [
+          [
+            12,
+            0,
+            21,
+            13
+          ],
+          [
+            3,
+            8,
+            1,
+            9
+          ],
+          [
+            19,
+            7,
+            2,
+            5
+          ],
+          [
+            4,
+            6,
+            11,
+            10
+          ]
+        ]
+      },
+      {
+        "args": [
+          [
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              6
+            ],
+            [
+              7,
+              8,
+              9
+            ]
+          ],
+          9
+        ],
+        "expected": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            4,
+            5,
+            6
+          ],
+          [
+            7,
+            8,
+            9
+          ]
         ]
       }
     ]
@@ -2984,6 +4071,45 @@ const PROBLEM_TESTS = [
           1,
           6
         ]
+      }
+    ]
+  },
+  {
+    "id": "1574-maximum-product-of-two-elements-in-an-array",
+    "fn": "maxProduct",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": [
+      {
+        "args": [
+          [
+            3,
+            4,
+            5,
+            2
+          ]
+        ],
+        "expected": 12
+      },
+      {
+        "args": [
+          [
+            1,
+            5,
+            4,
+            5
+          ]
+        ],
+        "expected": 16
+      },
+      {
+        "args": [
+          [
+            3,
+            7
+          ]
+        ],
+        "expected": 12
       }
     ]
   },
@@ -3303,6 +4429,47 @@ const PROBLEM_TESTS = [
     "cases": []
   },
   {
+    "id": "2106-find-greatest-common-divisor-of-array",
+    "fn": "findGCD",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": [
+      {
+        "args": [
+          [
+            2,
+            5,
+            6,
+            9,
+            10
+          ]
+        ],
+        "expected": 2
+      },
+      {
+        "args": [
+          [
+            7,
+            5,
+            6,
+            8,
+            3
+          ]
+        ],
+        "expected": 1
+      },
+      {
+        "args": [
+          [
+            3,
+            3
+          ]
+        ],
+        "expected": 3
+      }
+    ]
+  },
+  {
     "id": "3236-smallest-missing-integer-greater-than-sequential-prefix-sum",
     "fn": "missingInteger",
     "usesListNode": false,
@@ -3337,8 +4504,36 @@ const PROBLEM_TESTS = [
     ]
   },
   {
+    "id": "3275-minimum-number-of-pushes-to-type-word-i",
+    "fn": null,
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": []
+  },
+  {
+    "id": "3626-smallest-divisible-digit-product-i",
+    "fn": "smallestNumber",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": []
+  },
+  {
+    "id": "3859-maximum-product-of-two-digits",
+    "fn": "maxProduct",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": []
+  },
+  {
     "id": "3995-gcd-of-odd-and-even-sums",
     "fn": "gcdOfOddEvenSums",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": []
+  },
+  {
+    "id": "4107-find-missing-elements",
+    "fn": "findMissingElements",
     "usesListNode": false,
     "mutatesInput": false,
     "cases": []

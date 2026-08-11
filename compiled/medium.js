@@ -275,6 +275,81 @@ globalThis.sortColors = function(nums) {
 };
 
 /*
+ * 146-lru-cache
+ *
+ * LRU Cache
+ * https://leetcode.com/problems/lru-cache
+ * 
+ * Design a data structure that follows the constraints of a Least Recently Used (LRU) cache.
+ * 
+ * Implement the `LRUCache` class:
+ * 
+ * 	- `LRUCache(int capacity)` Initialize the LRU cache with positive size `capacity`.
+ * 
+ * 	- `int get(int key)` Return the value of the `key` if the key exists, otherwise return `-1`.
+ * 
+ * 	- `void put(int key, int value)` Update the value of the `key` if the `key` exists. Otherwise, add the `key-value` pair to the cache. If the number of keys exceeds the `capacity` from this operation, evict the least recently used key.
+ * 
+ * The functions `get` and `put` must each run in `O(1)` average time complexity.
+ * 
+ * Example 1:
+ * 
+ * Input
+ * ["LRUCache", "put", "put", "get", "put", "get", "put", "get", "get", "get"]
+ * [[2], [1, 1], [2, 2], [1], [3, 3], [2], [4, 4], [1], [3], [4]]
+ * Output
+ * [null, null, null, 1, null, -1, null, -1, 3, 4]
+ * 
+ * Explanation
+ * LRUCache lRUCache = new LRUCache(2);
+ * lRUCache.put(1, 1); // cache is {1=1}
+ * lRUCache.put(2, 2); // cache is {1=1, 2=2}
+ * lRUCache.get(1);    // return 1
+ * lRUCache.put(3, 3); // LRU key was 2, evicts key 2, cache is {1=1, 3=3}
+ * lRUCache.get(2);    // returns -1 (not found)
+ * lRUCache.put(4, 4); // LRU key was 1, evicts key 1, cache is {4=4, 3=3}
+ * lRUCache.get(1);    // return -1 (not found)
+ * lRUCache.get(3);    // return 3
+ * lRUCache.get(4);    // return 4
+ * 
+ * Constraints:
+ * 
+ * 	- `1 <= capacity <= 3000`
+ * 
+ * 	- `0 <= key <= 10^4`
+ * 
+ * 	- `0 <= value <= 10^5`
+ * 
+ * 	- At most `2 * 10^5` calls will be made to `get` and `put`.
+ */
+
+/**
+ * @param {number} capacity
+ */
+
+/** 
+ * @param {number} key
+ * @return {number}
+ */
+
+/** 
+ * @param {number} key 
+ * @param {number} value
+ * @return {void}
+ */
+
+/** 
+ * Your LRUCache object will be instantiated and called as such:
+ * var obj = new LRUCache(capacity)
+ * var param_1 = obj.get(key)
+ * obj.put(key,value)
+ */
+
+globalThis.LRUCache = function(capacity) {
+  // Write your solution here
+};
+
+/*
  * 150-evaluate-reverse-polish-notation
  *
  * Evaluate Reverse Polish Notation
@@ -440,6 +515,50 @@ globalThis.twoSum = function(numbers, target) {
  */
 
 globalThis.rotate = function(nums, k) {
+  // Write your solution here
+};
+
+/*
+ * 486-predict-the-winner
+ *
+ * Predict the Winner
+ * https://leetcode.com/problems/predict-the-winner
+ * 
+ * You are given an integer array `nums`. Two players are playing a game with this array: player 1 and player 2.
+ * 
+ * Player 1 and player 2 take turns, with player 1 starting first. Both players start the game with a score of `0`. At each turn, the player takes one of the numbers from either end of the array (i.e., `nums[0]` or `nums[nums.length - 1]`) which reduces the size of the array by `1`. The player adds the chosen number to their score. The game ends when there are no more elements in the array.
+ * 
+ * Return `true` if Player 1 can win the game. If the scores of both players are equal, then player 1 is still the winner, and you should also return `true`. You may assume that both players are playing optimally.
+ * 
+ * Example 1:
+ * 
+ * Input: nums = [1,5,2]
+ * Output: false
+ * Explanation: Initially, player 1 can choose between 1 and 2.
+ * If he chooses 2 (or 1), then player 2 can choose from 1 (or 2) and 5. If player 2 chooses 5, then player 1 will be left with 1 (or 2).
+ * So, final score of player 1 is 1 + 2 = 3, and player 2 is 5.
+ * Hence, player 1 will never be the winner and you need to return false.
+ * 
+ * Example 2:
+ * 
+ * Input: nums = [1,5,233,7]
+ * Output: true
+ * Explanation: Player 1 first chooses 1. Then player 2 has to choose between 5 and 7. No matter which number player 2 choose, player 1 can choose 233.
+ * Finally, player 1 has more score (234) than player 2 (12), so you need to return True representing player1 can win.
+ * 
+ * Constraints:
+ * 
+ * 	- `1 <= nums.length <= 20`
+ * 
+ * 	- `0 <= nums[i] <= 10^7`
+ */
+
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
+
+globalThis.predictTheWinner = function(nums) {
   // Write your solution here
 };
 
@@ -636,6 +755,56 @@ globalThis.dailyTemperatures = function(temperatures) {
 };
 
 /*
+ * 909-stone-game
+ *
+ * Stone Game
+ * https://leetcode.com/problems/stone-game
+ * 
+ * Alice and Bob play a game with piles of stones. There are an even number of piles arranged in a row, and each pile has a positive integer number of stones `piles[i]`.
+ * 
+ * The objective of the game is to end with the most stones. The total number of stones across all the piles is odd, so there are no ties.
+ * 
+ * Alice and Bob take turns, with Alice starting first. Each turn, a player takes the entire pile of stones either from the beginning or from the end of the row. This continues until there are no more piles left, at which point the person with the most stones wins.
+ * 
+ * Assuming Alice and Bob play optimally, return `true` if Alice wins the game, or `false` if Bob wins.
+ * 
+ * Example 1:
+ * 
+ * Input: piles = [5,3,4,5]
+ * Output: true
+ * Explanation:
+ * Alice starts first, and can only take the first 5 or the last 5.
+ * Say she takes the first 5, so that the row becomes [3, 4, 5].
+ * If Bob takes 3, then the board is [4, 5], and Alice takes 5 to win with 10 points.
+ * If Bob takes the last 5, then the board is [3, 4], and Alice takes 4 to win with 9 points.
+ * This demonstrated that taking the first 5 was a winning move for Alice, so we return true.
+ * 
+ * Example 2:
+ * 
+ * Input: piles = [3,7,2,3]
+ * Output: true
+ * 
+ * Constraints:
+ * 
+ * 	- `2 <= piles.length <= 500`
+ * 
+ * 	- `piles.length` is even.
+ * 
+ * 	- `1 <= piles[i] <= 500`
+ * 
+ * 	- `sum(piles[i])` is odd.
+ */
+
+/**
+ * @param {number[]} piles
+ * @return {boolean}
+ */
+
+globalThis.stoneGame = function(piles) {
+  // Write your solution here
+};
+
+/*
  * 1138-grumpy-bookstore-owner
  *
  * Grumpy Bookstore Owner
@@ -688,6 +857,42 @@ globalThis.dailyTemperatures = function(temperatures) {
  */
 
 globalThis.maxSatisfied = function(customers, grumpy, minutes) {
+  // Write your solution here
+};
+
+/*
+ * 1159-smallest-subsequence-of-distinct-characters
+ *
+ * Smallest Subsequence of Distinct Characters
+ * https://leetcode.com/problems/smallest-subsequence-of-distinct-characters
+ * 
+ * Given a string `s`, return the lexicographically smallest subsequence of `s` that contains all the distinct characters of `s` exactly once.
+ * 
+ * Example 1:
+ * 
+ * Input: s = "bcabc"
+ * Output: "abc"
+ * 
+ * Example 2:
+ * 
+ * Input: s = "cbacdcbc"
+ * Output: "acdb"
+ * 
+ * Constraints:
+ * 
+ * 	- `1 <= s.length <= 1000`
+ * 
+ * 	- `s` consists of lowercase English letters.
+ * 
+ * Note: This question is the same as 316: https://leetcode.com/problems/remove-duplicate-letters/
+ */
+
+/**
+ * @param {string} s
+ * @return {string}
+ */
+
+globalThis.smallestSubsequence = function(s) {
   // Write your solution here
 };
 
@@ -766,6 +971,58 @@ globalThis.sequentialDigits = function(low, high) {
  */
 
 globalThis.removeCoveredIntervals = function(intervals) {
+  // Write your solution here
+};
+
+/*
+ * 1240-stone-game-ii
+ *
+ * Stone Game II
+ * https://leetcode.com/problems/stone-game-ii
+ * 
+ * Alice and Bob continue their games with piles of stones. There are a number of piles arranged in a row, and each pile has a positive integer number of stones `piles[i]`. The objective of the game is to end with the most stones.
+ * 
+ * Alice and Bob take turns, with Alice starting first.
+ * 
+ * On each player's turn, that player can take all the stones in the first `X` remaining piles, where `1 <= X <= 2M`. Then, we set `M = max(M, X)`. Initially, M = 1.
+ * 
+ * The game continues until all the stones have been taken.
+ * 
+ * Assuming Alice and Bob play optimally, return the maximum number of stones Alice can get.
+ * 
+ * Example 1:
+ * 
+ * Input: piles = [2,7,9,4,4]
+ * 
+ * Output: 10
+ * 
+ * Explanation:
+ * 
+ * 	- If Alice takes one pile at the beginning, Bob takes two piles, then Alice takes 2 piles again. Alice can get `2 + 4 + 4 = 10` stones in total.
+ * 
+ * 	- If Alice takes two piles at the beginning, then Bob can take all three piles left. In this case, Alice get `2 + 7 = 9` stones in total.
+ * 
+ * So we return 10 since it's larger.
+ * 
+ * Example 2:
+ * 
+ * Input: piles = [1,2,3,4,5,100]
+ * 
+ * Output: 104
+ * 
+ * Constraints:
+ * 
+ * 	- `1 <= piles.length <= 100`
+ * 
+ * 	- `1 <= piles[i] <= 10^4`
+ */
+
+/**
+ * @param {number[]} piles
+ * @return {number}
+ */
+
+globalThis.stoneGameII = function(piles) {
   // Write your solution here
 };
 
@@ -1115,6 +1372,80 @@ globalThis.maximumSafenessFactor = function(grid) {
 };
 
 /*
+ * 3276-minimum-number-of-pushes-to-type-word-ii
+ *
+ * Minimum Number of Pushes to Type Word II
+ * https://leetcode.com/problems/minimum-number-of-pushes-to-type-word-ii
+ * 
+ * You are given a string `word` containing lowercase English letters.
+ * 
+ * Telephone keypads have keys mapped with distinct collections of lowercase English letters, which can be used to form words by pushing them. For example, the key `2` is mapped with `["a","b","c"]`, we need to push the key one time to type `"a"`, two times to type `"b"`, and three times to type `"c"` .
+ * 
+ * It is allowed to remap the keys numbered `2` to `9` to distinct collections of letters. The keys can be remapped to any amount of letters, but each letter must be mapped to exactly one key. You need to find the minimum number of times the keys will be pushed to type the string `word`.
+ * 
+ * Return the minimum number of pushes needed to type `word` after remapping the keys.
+ * 
+ * An example mapping of letters to keys on a telephone keypad is given below. Note that `1`, `*`, `#`, and `0` do not map to any letters.
+ * 
+ * Example 1:
+ * 
+ * Input: word = "abcde"
+ * Output: 5
+ * Explanation: The remapped keypad given in the image provides the minimum cost.
+ * "a" -> one push on key 2
+ * "b" -> one push on key 3
+ * "c" -> one push on key 4
+ * "d" -> one push on key 5
+ * "e" -> one push on key 6
+ * Total cost is 1 + 1 + 1 + 1 + 1 = 5.
+ * It can be shown that no other mapping can provide a lower cost.
+ * 
+ * Example 2:
+ * 
+ * Input: word = "xyzxyzxyzxyz"
+ * Output: 12
+ * Explanation: The remapped keypad given in the image provides the minimum cost.
+ * "x" -> one push on key 2
+ * "y" -> one push on key 3
+ * "z" -> one push on key 4
+ * Total cost is 1 * 4 + 1 * 4 + 1 * 4 = 12
+ * It can be shown that no other mapping can provide a lower cost.
+ * Note that the key 9 is not mapped to any letter: it is not necessary to map letters to every key, but to map all the letters.
+ * 
+ * Example 3:
+ * 
+ * Input: word = "aabbccddeeffgghhiiiiii"
+ * Output: 24
+ * Explanation: The remapped keypad given in the image provides the minimum cost.
+ * "a" -> one push on key 2
+ * "b" -> one push on key 3
+ * "c" -> one push on key 4
+ * "d" -> one push on key 5
+ * "e" -> one push on key 6
+ * "f" -> one push on key 7
+ * "g" -> one push on key 8
+ * "h" -> two pushes on key 9
+ * "i" -> one push on key 9
+ * Total cost is 1 * 2 + 1 * 2 + 1 * 2 + 1 * 2 + 1 * 2 + 1 * 2 + 1 * 2 + 2 * 2 + 6 * 1 = 24.
+ * It can be shown that no other mapping can provide a lower cost.
+ * 
+ * Constraints:
+ * 
+ * 	- `1 <= word.length <= 10^5`
+ * 
+ * 	- `word` consists of lowercase English letters.
+ */
+
+/**
+ * @param {string} word
+ * @return {number}
+ */
+
+globalThis.minimumPushes = function(word) {
+  // Write your solution here
+};
+
+/*
  * 3558-find-a-safe-walk-through-a-grid
  *
  * Find a Safe Walk Through a Grid
@@ -1184,6 +1515,438 @@ globalThis.maximumSafenessFactor = function(grid) {
  */
 
 globalThis.findSafeWalk = function(grid, health) {
+  // Write your solution here
+};
+
+/*
+ * 3561-remove-methods-from-project
+ *
+ * Remove Methods From Project
+ * https://leetcode.com/problems/remove-methods-from-project
+ * 
+ * You are maintaining a project that has `n` methods numbered from `0` to `n - 1`.
+ * 
+ * You are given two integers `n` and `k`, and a 2D integer array `invocations`, where `invocations[i] = [ai, bi]` indicates that method `ai` invokes method `bi`.
+ * 
+ * There is a known bug in method `k`. Method `k`, along with any method invoked by it, either directly or indirectly, are considered suspicious and we aim to remove them.
+ * 
+ * A group of methods can only be removed if no method outside the group invokes any methods within it.
+ * 
+ * Return an array containing all the remaining methods after removing all the suspicious methods. You may return the answer in any order. If it is not possible to remove all the suspicious methods, none should be removed.
+ * 
+ * Example 1:
+ * 
+ * Input: n = 4, k = 1, invocations = [[1,2],[0,1],[3,2]]
+ * 
+ * Output: [0,1,2,3]
+ * 
+ * Explanation:
+ * 
+ * Method 2 and method 1 are suspicious, but they are directly invoked by methods 3 and 0, which are not suspicious. We return all elements without removing anything.
+ * 
+ * Example 2:
+ * 
+ * Input: n = 5, k = 0, invocations = [[1,2],[0,2],[0,1],[3,4]]
+ * 
+ * Output: [3,4]
+ * 
+ * Explanation:
+ * 
+ * Methods 0, 1, and 2 are suspicious and they are not directly invoked by any other method. We can remove them.
+ * 
+ * Example 3:
+ * 
+ * Input: n = 3, k = 2, invocations = [[1,2],[0,1],[2,0]]
+ * 
+ * Output: []
+ * 
+ * Explanation:
+ * 
+ * All methods are suspicious. We can remove them.
+ * 
+ * Constraints:
+ * 
+ * 	- `1 <= n <= 10^5`
+ * 
+ * 	- `0 <= k <= n - 1`
+ * 
+ * 	- `0 <= invocations.length <= 2 * 10^5`
+ * 
+ * 	- `invocations[i] == [ai, bi]`
+ * 
+ * 	- `0 <= ai, bi <= n - 1`
+ * 
+ * 	- `ai != bi`
+ * 
+ * 	- `invocations[i] != invocations[j]`
+ */
+
+/**
+ * @param {number} n
+ * @param {number} k
+ * @param {number[][]} invocations
+ * @return {number[]}
+ */
+
+globalThis.remainingMethods = function(n, k, invocations) {
+  // Write your solution here
+};
+
+/*
+ * 3584-find-the-lexicographically-smallest-valid-sequence
+ *
+ * Find the Lexicographically Smallest Valid Sequence
+ * https://leetcode.com/problems/find-the-lexicographically-smallest-valid-sequence
+ * 
+ * You are given two strings `word1` and `word2`.
+ * 
+ * A string `x` is called almost equal to `y` if you can change at most one character in `x` to make it identical to `y`.
+ * 
+ * A sequence of indices `seq` is called valid if:
+ * 
+ * 	- The indices are sorted in ascending order.
+ * 
+ * 	- Concatenating the characters at these indices in `word1` in the same order results in a string that is almost equal to `word2`.
+ * 
+ * Return an array of size `word2.length` representing the lexicographically smallest valid sequence of indices. If no such sequence of indices exists, return an empty array.
+ * 
+ * Note that the answer must represent the lexicographically smallest array, not the corresponding string formed by those indices.
+ * 
+ * Example 1:
+ * 
+ * Input: word1 = "vbcca", word2 = "abc"
+ * 
+ * Output: [0,1,2]
+ * 
+ * Explanation:
+ * 
+ * The lexicographically smallest valid sequence of indices is `[0, 1, 2]`:
+ * 
+ * 	- Change `word1[0]` to `'a'`.
+ * 
+ * 	- `word1[1]` is already `'b'`.
+ * 
+ * 	- `word1[2]` is already `'c'`.
+ * 
+ * Example 2:
+ * 
+ * Input: word1 = "bacdc", word2 = "abc"
+ * 
+ * Output: [1,2,4]
+ * 
+ * Explanation:
+ * 
+ * The lexicographically smallest valid sequence of indices is `[1, 2, 4]`:
+ * 
+ * 	- `word1[1]` is already `'a'`.
+ * 
+ * 	- Change `word1[2]` to `'b'`.
+ * 
+ * 	- `word1[4]` is already `'c'`.
+ * 
+ * Example 3:
+ * 
+ * Input: word1 = "aaaaaa", word2 = "aaabc"
+ * 
+ * Output: []
+ * 
+ * Explanation:
+ * 
+ * There is no valid sequence of indices.
+ * 
+ * Example 4:
+ * 
+ * Input: word1 = "abc", word2 = "ab"
+ * 
+ * Output: [0,1]
+ * 
+ * Constraints:
+ * 
+ * 	- `1 <= word2.length < word1.length <= 3 * 10^5`
+ * 
+ * 	- `word1` and `word2` consist only of lowercase English letters.
+ */
+
+/**
+ * @param {string} word1
+ * @param {string} word2
+ * @return {number[]}
+ */
+
+globalThis.validSequence = function(word1, word2) {
+  // Write your solution here
+};
+
+/*
+ * 3805-maximize-active-section-with-trade-i
+ *
+ * Maximize Active Section with Trade I
+ * https://leetcode.com/problems/maximize-active-section-with-trade-i
+ * 
+ * You are given a binary string `s` of length `n`, where:
+ * 
+ * 	- `'1'` represents an active section.
+ * 
+ * 	- `'0'` represents an inactive section.
+ * 
+ * You can perform at most one trade to maximize the number of active sections in `s`. In a trade, you:
+ * 
+ * 	- Convert a contiguous block of `'1'`s that is surrounded by `'0'`s to all `'0'`s.
+ * 
+ * 	- Afterward, convert a contiguous block of `'0'`s that is surrounded by `'1'`s to all `'1'`s.
+ * 
+ * Return the maximum number of active sections in `s` after making the optimal trade.
+ * 
+ * Note: Treat `s` as if it is augmented with a `'1'` at both ends, forming `t = '1' + s + '1'`. The augmented `'1'`s do not contribute to the final count.
+ * 
+ * Example 1:
+ * 
+ * Input: s = "01"
+ * 
+ * Output: 1
+ * 
+ * Explanation:
+ * 
+ * Because there is no block of `'1'`s surrounded by `'0'`s, no valid trade is possible. The maximum number of active sections is 1.
+ * 
+ * Example 2:
+ * 
+ * Input: s = "0100"
+ * 
+ * Output: 4
+ * 
+ * Explanation:
+ * 
+ * 	- String `"0100"` &rarr; Augmented to `"101001"`.
+ * 
+ * 	- Choose `"0100"`, convert `"101001"` &rarr; `"100001"` &rarr; `"111111"`.
+ * 
+ * 	- The final string without augmentation is `"1111"`. The maximum number of active sections is 4.
+ * 
+ * Example 3:
+ * 
+ * Input: s = "1000100"
+ * 
+ * Output: 7
+ * 
+ * Explanation:
+ * 
+ * 	- String `"1000100"` &rarr; Augmented to `"110001001"`.
+ * 
+ * 	- Choose `"000100"`, convert `"110001001"` &rarr; `"110000001"` &rarr; `"111111111"`.
+ * 
+ * 	- The final string without augmentation is `"1111111"`. The maximum number of active sections is 7.
+ * 
+ * Example 4:
+ * 
+ * Input: s = "01010"
+ * 
+ * Output: 4
+ * 
+ * Explanation:
+ * 
+ * 	- String `"01010"` &rarr; Augmented to `"1010101"`.
+ * 
+ * 	- Choose `"010"`, convert `"1010101"` &rarr; `"1000101"` &rarr; `"1111101"`.
+ * 
+ * 	- The final string without augmentation is `"11110"`. The maximum number of active sections is 4.
+ * 
+ * Constraints:
+ * 
+ * 	- `1 <= n == s.length <= 10^5`
+ * 
+ * 	- `s[i]` is either `'0'` or `'1'`
+ */
+
+/**
+ * @param {string} s
+ * @return {number}
+ */
+
+globalThis.maxActiveSectionsAfterTrade = function(s) {
+  // Write your solution here
+};
+
+/*
+ * 3812-smallest-palindromic-rearrangement-i
+ *
+ * Smallest Palindromic Rearrangement I
+ * https://leetcode.com/problems/smallest-palindromic-rearrangement-i
+ * 
+ * You are given a palindromic string `s`.
+ * 
+ * Return the lexicographically smallest palindromic permutation of `s`.
+ * 
+ * Example 1:
+ * 
+ * Input: s = "z"
+ * 
+ * Output: "z"
+ * 
+ * Explanation:
+ * 
+ * A string of only one character is already the lexicographically smallest palindrome.
+ * 
+ * Example 2:
+ * 
+ * Input: s = "babab"
+ * 
+ * Output: "abbba"
+ * 
+ * Explanation:
+ * 
+ * Rearranging `"babab"` &rarr; `"abbba"` gives the smallest lexicographic palindrome.
+ * 
+ * Example 3:
+ * 
+ * Input: s = "daccad"
+ * 
+ * Output: "acddca"
+ * 
+ * Explanation:
+ * 
+ * Rearranging `"daccad"` &rarr; `"acddca"` gives the smallest lexicographic palindrome.
+ * 
+ * Constraints:
+ * 
+ * 	- `1 <= s.length <= 10^5`
+ * 
+ * 	- `s` consists of lowercase English letters.
+ * 
+ * 	- `s` is guaranteed to be palindromic.
+ */
+
+/**
+ * @param {string} s
+ * @return {string}
+ */
+
+globalThis.smallestPalindrome = function(s) {
+  // Write your solution here
+};
+
+/*
+ * 3820-number-of-unique-xor-triplets-ii
+ *
+ * Number of Unique XOR Triplets II
+ * https://leetcode.com/problems/number-of-unique-xor-triplets-ii
+ * 
+ * You are given an integer array `nums`.
+ * 
+ * A XOR triplet is defined as the XOR of three elements `nums[i] XOR nums[j] XOR nums[k]` where `i <= j <= k`.
+ * 
+ * Return the number of unique XOR triplet values from all possible triplets `(i, j, k)`.
+ * 
+ * Example 1:
+ * 
+ * Input: nums = [1,3]
+ * 
+ * Output: 2
+ * 
+ * Explanation:
+ * 
+ * The possible XOR triplet values are:
+ * 
+ * 	`(0, 0, 0) &rarr; 1 XOR 1 XOR 1 = 1`
+ * 	`(0, 0, 1) &rarr; 1 XOR 1 XOR 3 = 3`
+ * 	`(0, 1, 1) &rarr; 1 XOR 3 XOR 3 = 1`
+ * 	`(1, 1, 1) &rarr; 3 XOR 3 XOR 3 = 3`
+ * 
+ * The unique XOR values are {1, 3}. Thus, the output is 2.
+ * 
+ * Example 2:
+ * 
+ * Input: nums = [6,7,8,9]
+ * 
+ * Output: 4
+ * 
+ * Explanation:
+ * 
+ * The possible XOR triplet values are {6, 7, 8, 9}. Thus, the output is 4.
+ * 
+ * Constraints:
+ * 
+ * 	- `1 <= nums.length <= 1500`
+ * 
+ * 	- `1 <= nums[i] <= 1500`
+ */
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+
+globalThis.uniqueXorTriplets = function(nums) {
+  // Write your solution here
+};
+
+/*
+ * 3824-number-of-unique-xor-triplets-i
+ *
+ * Number of Unique XOR Triplets I
+ * https://leetcode.com/problems/number-of-unique-xor-triplets-i
+ * 
+ * You are given an integer array `nums` of length `n`, where `nums` is a permutation of the numbers in the range `[1, n]`.
+ * 
+ * A XOR triplet is defined as the XOR of three elements `nums[i] XOR nums[j] XOR nums[k]` where `i <= j <= k`.
+ * 
+ * Return the number of unique XOR triplet values from all possible triplets `(i, j, k)`.
+ * 
+ * Example 1:
+ * 
+ * Input: nums = [1,2]
+ * 
+ * Output: 2
+ * 
+ * Explanation:
+ * 
+ * The possible XOR triplet values are:
+ * 
+ * 	- `(0, 0, 0) &rarr; 1 XOR 1 XOR 1 = 1`
+ * 
+ * 	- `(0, 0, 1) &rarr; 1 XOR 1 XOR 2 = 2`
+ * 
+ * 	- `(0, 1, 1) &rarr; 1 XOR 2 XOR 2 = 1`
+ * 
+ * 	- `(1, 1, 1) &rarr; 2 XOR 2 XOR 2 = 2`
+ * 
+ * The unique XOR values are `{1, 2}`, so the output is 2.
+ * 
+ * Example 2:
+ * 
+ * Input: nums = [3,1,2]
+ * 
+ * Output: 4
+ * 
+ * Explanation:
+ * 
+ * The possible XOR triplet values include:
+ * 
+ * 	- `(0, 0, 0) &rarr; 3 XOR 3 XOR 3 = 3`
+ * 
+ * 	- `(0, 0, 1) &rarr; 3 XOR 3 XOR 1 = 1`
+ * 
+ * 	- `(0, 0, 2) &rarr; 3 XOR 3 XOR 2 = 2`
+ * 
+ * 	- `(0, 1, 2) &rarr; 3 XOR 1 XOR 2 = 0`
+ * 
+ * The unique XOR values are `{0, 1, 2, 3}`, so the output is 4.
+ * 
+ * Constraints:
+ * 
+ * 	- `1 <= n == nums.length <= 10^5`
+ * 
+ * 	- `1 <= nums[i] <= n`
+ * 
+ * 	- `nums` is a permutation of integers from `1` to `n`.
+ */
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+
+globalThis.uniqueXorTriplets = function(nums) {
   // Write your solution here
 };
 
@@ -1707,6 +2470,13 @@ const PROBLEM_TESTS = [
     ]
   },
   {
+    "id": "146-lru-cache",
+    "fn": "LRUCache",
+    "usesListNode": false,
+    "mutatesInput": true,
+    "cases": []
+  },
+  {
     "id": "150-evaluate-reverse-polish-notation",
     "fn": "evalRPN",
     "usesListNode": false,
@@ -1808,6 +2578,35 @@ const PROBLEM_TESTS = [
           -1,
           -100
         ]
+      }
+    ]
+  },
+  {
+    "id": "486-predict-the-winner",
+    "fn": "predictTheWinner",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": [
+      {
+        "args": [
+          [
+            1,
+            5,
+            2
+          ]
+        ],
+        "expected": false
+      },
+      {
+        "args": [
+          [
+            1,
+            5,
+            233,
+            7
+          ]
+        ],
+        "expected": true
       }
     ]
   },
@@ -1945,8 +2744,45 @@ const PROBLEM_TESTS = [
     ]
   },
   {
+    "id": "909-stone-game",
+    "fn": "stoneGame",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": [
+      {
+        "args": [
+          [
+            5,
+            3,
+            4,
+            5
+          ]
+        ],
+        "expected": true
+      },
+      {
+        "args": [
+          [
+            3,
+            7,
+            2,
+            3
+          ]
+        ],
+        "expected": true
+      }
+    ]
+  },
+  {
     "id": "1138-grumpy-bookstore-owner",
     "fn": "maxSatisfied",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": []
+  },
+  {
+    "id": "1159-smallest-subsequence-of-distinct-characters",
+    "fn": "smallestSubsequence",
     "usesListNode": false,
     "mutatesInput": false,
     "cases": []
@@ -2025,6 +2861,13 @@ const PROBLEM_TESTS = [
         "expected": 1
       }
     ]
+  },
+  {
+    "id": "1240-stone-game-ii",
+    "fn": "stoneGameII",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": []
   },
   {
     "id": "1460-number-of-substrings-containing-all-three-characters",
@@ -2277,8 +3120,57 @@ const PROBLEM_TESTS = [
     ]
   },
   {
+    "id": "3276-minimum-number-of-pushes-to-type-word-ii",
+    "fn": "minimumPushes",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": []
+  },
+  {
     "id": "3558-find-a-safe-walk-through-a-grid",
     "fn": "findSafeWalk",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": []
+  },
+  {
+    "id": "3561-remove-methods-from-project",
+    "fn": "remainingMethods",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": []
+  },
+  {
+    "id": "3584-find-the-lexicographically-smallest-valid-sequence",
+    "fn": "validSequence",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": []
+  },
+  {
+    "id": "3805-maximize-active-section-with-trade-i",
+    "fn": "maxActiveSectionsAfterTrade",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": []
+  },
+  {
+    "id": "3812-smallest-palindromic-rearrangement-i",
+    "fn": "smallestPalindrome",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": []
+  },
+  {
+    "id": "3820-number-of-unique-xor-triplets-ii",
+    "fn": "uniqueXorTriplets",
+    "usesListNode": false,
+    "mutatesInput": false,
+    "cases": []
+  },
+  {
+    "id": "3824-number-of-unique-xor-triplets-i",
+    "fn": "uniqueXorTriplets",
     "usesListNode": false,
     "mutatesInput": false,
     "cases": []

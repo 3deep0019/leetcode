@@ -2,7 +2,6 @@
   "name": "leetcode-practice",
   "version": "1.0.1",
   "private": true,
-  "type": "module",
   "scripts": {
     "problems": "node scripts/generate-problems.js",
     "compile": "node compile-solutions.js",

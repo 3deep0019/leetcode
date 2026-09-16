@@ -944,6 +944,19 @@
       ]
     },
     {
+      "id": "115-distinct-subsequences",
+      "number": 115,
+      "title": "Distinct Subsequences",
+      "difficulty": "Hard",
+      "url": "https://leetcode.com/problems/distinct-subsequences",
+      "description": "Given two strings s and t, return the number of distinct subsequences of s which equals t.\n\nThe test cases are generated so that the answer fits on a 32-bit signed integer.\n\nExample 1:\n\nInput: s = \"rabbbit\", t = \"rabbit\"\nOutput: 3\nExplanation:\nAs shown below, there are 3 ways you can generate \"rabbit\" from s.\n`rabbbit`\n`rabbbit`\n`rabbbit`\n\nExample 2:\n\nInput: s = \"babgbag\", t = \"bag\"\nOutput: 5\nExplanation:\nAs shown below, there are 5 ways you can generate \"bag\" from s.\n`babgbag`\n`babgbag`\n`babgbag`\n`babgbag`\n`babgbag`\n\nConstraints:\n\n\t- `1 <= s.length, t.length <= 1000`\n\n\t- `s` and `t` consist of English letters.",
+      "functionName": "numDistinct",
+      "starterCode": "/**\n * @param {string} s\n * @param {string} t\n * @return {number}\n */\n\nglobalThis.numDistinct = function(s, t) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
       "id": "125-valid-palindrome",
       "number": 125,
       "title": "Valid Palindrome",
@@ -1090,6 +1103,32 @@
       ]
     },
     {
+      "id": "182-duplicate-emails",
+      "number": 182,
+      "title": "Duplicate Emails",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/duplicate-emails",
+      "description": "Table: `Person`\n\n+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| id          | int     |\n| email       | varchar |\n+-------------+---------+\nid is the primary key (column with unique values) for this table.\nEach row of this table contains an email. The emails will not contain uppercase letters.\n\nWrite a solution to report all the duplicate emails. Note that it's guaranteed that the email field is not NULL.\n\nReturn the result table in any order.\n\nThe result format is in the following example.\n\nExample 1:\n\nInput:\nPerson table:\n+----+---------+\n| id | email   |\n+----+---------+\n| 1  | a@b.com |\n| 2  | c@d.com |\n| 3  | a@b.com |\n+----+---------+\nOutput:\n+---------+\n| Email   |\n+---------+\n| a@b.com |\n+---------+\nExplanation: a@b.com is repeated two times.",
+      "functionName": null,
+      "starterCode": null,
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "183-customers-who-never-order",
+      "number": 183,
+      "title": "Customers Who Never Order",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/customers-who-never-order",
+      "description": "Table: `Customers`\n\n+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| id          | int     |\n| name        | varchar |\n+-------------+---------+\nid is the primary key (column with unique values) for this table.\nEach row of this table indicates the ID and name of a customer.\n\nTable: `Orders`\n\n+-------------+------+\n| Column Name | Type |\n+-------------+------+\n| id          | int  |\n| customerId  | int  |\n+-------------+------+\nid is the primary key (column with unique values) for this table.\ncustomerId is a foreign key (reference columns) of the ID from the Customers table.\nEach row of this table indicates the ID of an order and the ID of the customer who ordered it.\n\nWrite a solution to find all customers who never order anything.\n\nReturn the result table in any order.\n\nThe result format is in the following example.\n\nExample 1:\n\nInput:\nCustomers table:\n+----+-------+\n| id | name  |\n+----+-------+\n| 1  | Joe   |\n| 2  | Henry |\n| 3  | Sam   |\n| 4  | Max   |\n+----+-------+\nOrders table:\n+----+------------+\n| id | customerId |\n+----+------------+\n| 1  | 3          |\n| 2  | 1          |\n+----+------------+\nOutput:\n+-----------+\n| Customers |\n+-----------+\n| Henry     |\n| Max       |\n+-----------+",
+      "functionName": null,
+      "starterCode": null,
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
       "id": "189-rotate-array",
       "number": 189,
       "title": "Rotate Array",
@@ -1144,6 +1183,32 @@
       ]
     },
     {
+      "id": "196-delete-duplicate-emails",
+      "number": 196,
+      "title": "Delete Duplicate Emails",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/delete-duplicate-emails",
+      "description": "Table: `Person`\n\n+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| id          | int     |\n| email       | varchar |\n+-------------+---------+\nid is the primary key (column with unique values) for this table.\nEach row of this table contains an email. The emails will not contain uppercase letters.\n\nWrite a solution to delete all duplicate emails, keeping only one unique email with the smallest `id`.\n\nFor SQL users, please note that you are supposed to write a `DELETE` statement and not a `SELECT` one.\n\nFor Pandas users, please note that you are supposed to modify `Person` in place.\n\nAfter running your script, the answer shown is the `Person` table. The driver will first compile and run your piece of code and then show the `Person` table. The final order of the `Person` table does not matter.\n\nThe result format is in the following example.\n\nExample 1:\n\nInput:\nPerson table:\n+----+------------------+\n| id | email            |\n+----+------------------+\n| 1  | john@example.com |\n| 2  | bob@example.com  |\n| 3  | john@example.com |\n+----+------------------+\nOutput:\n+----+------------------+\n| id | email            |\n+----+------------------+\n| 1  | john@example.com |\n| 2  | bob@example.com  |\n+----+------------------+\nExplanation: john@example.com is repeated two times. We keep the row with the smallest Id = 1.",
+      "functionName": null,
+      "starterCode": null,
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "197-rising-temperature",
+      "number": 197,
+      "title": "Rising Temperature",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/rising-temperature",
+      "description": "Table: `Weather`\n\n+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| id            | int     |\n| recordDate    | date    |\n| temperature   | int     |\n+---------------+---------+\nid is the column with unique values for this table.\nThere are no different rows with the same recordDate.\nThis table contains information about the temperature on a certain day.\n\nWrite a solution to find all dates' `id` with higher temperatures compared to its previous dates (yesterday).\n\nReturn the result table in any order.\n\nThe result format is in the following example.\n\nExample 1:\n\nInput:\nWeather table:\n+----+------------+-------------+\n| id | recordDate | temperature |\n+----+------------+-------------+\n| 1  | 2015-01-01 | 10          |\n| 2  | 2015-01-02 | 25          |\n| 3  | 2015-01-03 | 20          |\n| 4  | 2015-01-04 | 30          |\n+----+------------+-------------+\nOutput:\n+----+\n| id |\n+----+\n| 2  |\n| 4  |\n+----+\nExplanation:\nIn 2015-01-02, the temperature was higher than the previous day (10 -> 25).\nIn 2015-01-04, the temperature was higher than the previous day (20 -> 30).",
+      "functionName": null,
+      "starterCode": null,
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
       "id": "217-contains-duplicate",
       "number": 217,
       "title": "Contains Duplicate",
@@ -1163,11 +1228,50 @@
       "difficulty": "Easy",
       "url": "https://leetcode.com/problems/contains-duplicate-ii",
       "description": "Given an integer array `nums` and an integer `k`, return `true` if there are two distinct indices `i` and `j` in the array such that `nums[i] == nums[j]` and `abs(i - j) <= k`.\n\nExample 1:\n\nInput: nums = [1,2,3,1], k = 3\nOutput: true\n\nExample 2:\n\nInput: nums = [1,0,1,1], k = 1\nOutput: true\n\nExample 3:\n\nInput: nums = [1,2,3,1,2,3], k = 2\nOutput: false\n\nConstraints:\n\n\t- `1 <= nums.length <= 10^5`\n\n\t- `-10^9 <= nums[i] <= 10^9`\n\n\t- `0 <= k <= 10^5`",
-      "functionName": null,
-      "starterCode": null,
+      "functionName": "containsNearbyDuplicate",
+      "starterCode": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {boolean}\n */\n\nglobalThis.containsNearbyDuplicate = function(nums, k) {\n  // Write your solution here\n};",
       "usesListNode": false,
       "mutatesInput": false,
-      "cases": []
+      "cases": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3,
+              1
+            ],
+            3
+          ],
+          "expected": true
+        },
+        {
+          "args": [
+            [
+              1,
+              0,
+              1,
+              1
+            ],
+            1
+          ],
+          "expected": true
+        },
+        {
+          "args": [
+            [
+              1,
+              2,
+              3,
+              1,
+              2,
+              3
+            ],
+            2
+          ],
+          "expected": false
+        }
+      ]
     },
     {
       "id": "220-contains-duplicate-iii",
@@ -1796,6 +1900,154 @@
       "cases": []
     },
     {
+      "id": "864-image-overlap",
+      "number": 864,
+      "title": "Image Overlap",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/image-overlap",
+      "description": "You are given two images, `img1` and `img2`, represented as binary, square matrices of size `n x n`. A binary matrix has only `0`s and `1`s as values.\n\nWe translate one image however we choose by sliding all the `1` bits left, right, up, and/or down any number of units. We then place it on top of the other image. We can then calculate the overlap by counting the number of positions that have a `1` in both images.\n\nNote also that a translation does not include any kind of rotation. Any `1` bits that are translated outside of the matrix borders are erased.\n\nReturn the largest possible overlap.\n\nExample 1:\n\nInput: img1 = [[1,1,0],[0,1,0],[0,1,0]], img2 = [[0,0,0],[0,1,1],[0,0,1]]\nOutput: 3\nExplanation: We translate img1 to right by 1 unit and down by 1 unit.\n\nThe number of positions that have a 1 in both images is 3 (shown in red).\n\nExample 2:\n\nInput: img1 = [[1]], img2 = [[1]]\nOutput: 1\n\nExample 3:\n\nInput: img1 = [[0]], img2 = [[0]]\nOutput: 0\n\nConstraints:\n\n\t- `n == img1.length == img1[i].length`\n\n\t- `n == img2.length == img2[i].length`\n\n\t- `1 <= n <= 30`\n\n\t- `img1[i][j]` is either `0` or `1`.\n\n\t- `img2[i][j]` is either `0` or `1`.",
+      "functionName": "largestOverlap",
+      "starterCode": "/**\n * @param {number[][]} img1\n * @param {number[][]} img2\n * @return {number}\n */\n\nglobalThis.largestOverlap = function(img1, img2) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              [
+                1,
+                1,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                1
+              ]
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            [
+              [
+                1
+              ]
+            ],
+            [
+              [
+                1
+              ]
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            [
+              [
+                0
+              ]
+            ],
+            [
+              [
+                0
+              ]
+            ]
+          ],
+          "expected": 0
+        }
+      ]
+    },
+    {
+      "id": "866-rectangle-overlap",
+      "number": 866,
+      "title": "Rectangle Overlap",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/rectangle-overlap",
+      "description": "An axis-aligned rectangle is represented as a list `[x1, y1, x2, y2]`, where `(x1, y1)` is the coordinate of its bottom-left corner, and `(x2, y2)` is the coordinate of its top-right corner. Its top and bottom edges are parallel to the X-axis, and its left and right edges are parallel to the Y-axis.\n\nTwo rectangles overlap if the area of their intersection is positive. To be clear, two rectangles that only touch at the corner or edges do not overlap.\n\nGiven two axis-aligned rectangles `rec1` and `rec2`, return `true` if they overlap, otherwise return `false`.\n\nExample 1:\n\nInput: rec1 = [0,0,2,2], rec2 = [1,1,3,3]\nOutput: true\n\nExample 2:\n\nInput: rec1 = [0,0,1,1], rec2 = [1,0,2,1]\nOutput: false\n\nExample 3:\n\nInput: rec1 = [0,0,1,1], rec2 = [2,2,3,3]\nOutput: false\n\nConstraints:\n\n\t- `rec1.length == 4`\n\n\t- `rec2.length == 4`\n\n\t- `-10^9 <= rec1[i], rec2[i] <= 10^9`\n\n\t- `rec1` and `rec2` represent a valid rectangle with a non-zero area.",
+      "functionName": "isRectangleOverlap",
+      "starterCode": "/**\n * @param {number[]} rec1\n * @param {number[]} rec2\n * @return {boolean}\n */\n\nglobalThis.isRectangleOverlap = function(rec1, rec2) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              0,
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              1,
+              3,
+              3
+            ]
+          ],
+          "expected": true
+        },
+        {
+          "args": [
+            [
+              0,
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              2,
+              1
+            ]
+          ],
+          "expected": false
+        },
+        {
+          "args": [
+            [
+              0,
+              0,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              3,
+              3
+            ]
+          ],
+          "expected": false
+        }
+      ]
+    },
+    {
       "id": "909-stone-game",
       "number": 909,
       "title": "Stone Game",
@@ -1832,6 +2084,19 @@
       ]
     },
     {
+      "id": "977-distinct-subsequences-ii",
+      "number": 977,
+      "title": "Distinct Subsequences II",
+      "difficulty": "Hard",
+      "url": "https://leetcode.com/problems/distinct-subsequences-ii",
+      "description": "Given a string s, return the number of distinct non-empty subsequences of `s`. Since the answer may be very large, return it modulo `10^9 + 7`.\n\nA subsequence of a string is a new string that is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters. (i.e., `\"ace\"` is a subsequence of `\"abcde\"` while `\"aec\"` is not.\n\nExample 1:\n\nInput: s = \"abc\"\nOutput: 7\nExplanation: The 7 distinct subsequences are \"a\", \"b\", \"c\", \"ab\", \"ac\", \"bc\", and \"abc\".\n\nExample 2:\n\nInput: s = \"aba\"\nOutput: 6\nExplanation: The 6 distinct subsequences are \"a\", \"b\", \"ab\", \"aa\", \"ba\", and \"aba\".\n\nExample 3:\n\nInput: s = \"aaa\"\nOutput: 3\nExplanation: The 3 distinct subsequences are \"a\", \"aa\" and \"aaa\".\n\nConstraints:\n\n\t- `1 <= s.length <= 2000`\n\n\t- `s` consists of lowercase English letters.",
+      "functionName": "distinctSubseqII",
+      "starterCode": "/**\n * @param {string} s\n * @return {number}\n */\n\nglobalThis.distinctSubseqII = function(s) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
       "id": "1138-grumpy-bookstore-owner",
       "number": 1138,
       "title": "Grumpy Bookstore Owner",
@@ -1853,6 +2118,19 @@
       "description": "Given a string `s`, return the lexicographically smallest subsequence of `s` that contains all the distinct characters of `s` exactly once.\n\nExample 1:\n\nInput: s = \"bcabc\"\nOutput: \"abc\"\n\nExample 2:\n\nInput: s = \"cbacdcbc\"\nOutput: \"acdb\"\n\nConstraints:\n\n\t- `1 <= s.length <= 1000`\n\n\t- `s` consists of lowercase English letters.\n\nNote: This question is the same as 316: https://leetcode.com/problems/remove-duplicate-letters/",
       "functionName": "smallestSubsequence",
       "starterCode": "/**\n * @param {string} s\n * @return {string}\n */\n\nglobalThis.smallestSubsequence = function(s) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "1179-game-play-analysis-i",
+      "number": 1179,
+      "title": "Game Play Analysis I",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/game-play-analysis-i",
+      "description": "Table: `Activity`\n\n+--------------+---------+\n| Column Name  | Type    |\n+--------------+---------+\n| player_id    | int     |\n| device_id    | int     |\n| event_date   | date    |\n| games_played | int     |\n+--------------+---------+\n(player_id, event_date) is the primary key (combination of columns with unique values) of this table.\nThis table shows the activity of players of some games.\nEach row is a record of a player who logged in and played a number of games (possibly 0) before logging out on someday using some device.\n\nWrite a solution to find the first login date for each player.\n\nReturn the result table in any order.\n\nThe result format is in the following example.\n\nExample 1:\n\nInput:\nActivity table:\n+-----------+-----------+------------+--------------+\n| player_id | device_id | event_date | games_played |\n+-----------+-----------+------------+--------------+\n| 1         | 2         | 2016-03-01 | 5            |\n| 1         | 2         | 2016-05-02 | 6            |\n| 2         | 3         | 2017-06-25 | 1            |\n| 3         | 1         | 2016-03-02 | 0            |\n| 3         | 4         | 2018-07-03 | 5            |\n+-----------+-----------+------------+--------------+\nOutput:\n+-----------+-------------+\n| player_id | first_login |\n+-----------+-------------+\n| 1         | 2016-03-01  |\n| 2         | 2017-06-25  |\n| 3         | 2016-03-02  |\n+-----------+-------------+",
+      "functionName": null,
+      "starterCode": null,
       "usesListNode": false,
       "mutatesInput": false,
       "cases": []
@@ -2339,6 +2617,96 @@
       ]
     },
     {
+      "id": "1487-cinema-seat-allocation",
+      "number": 1487,
+      "title": "Cinema Seat Allocation",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/cinema-seat-allocation",
+      "description": "A cinema has `n` rows of seats, numbered from 1 to `n`. Each row has 10 seats, numbered from 1 to 10.\n\nYou are given a 2D integer array reservedSeats, where reservedSeats[i] = [rowi, seati] means that seat seati in row rowi is already reserved.\n\nA four-person group must be assigned to four seats in the same row. The group can be seated in one of the following seat blocks:\n\n\t- seats 2, 3, 4, 5\n\n\t- seats 4, 5, 6, 7\n\n\t- seats 6, 7, 8, 9\n\nA block can be used only if none of its seats are reserved. Each seat can be assigned to at most one group.\n\nReturn an integer denoting the maximum number of four-person groups that can be assigned.\n\nExample 1:\n\nInput: n = 3, reservedSeats = [[1,2],[1,3],[1,8],[2,6],[3,1],[3,10]]\nOutput: 4\nExplanation: The figure above shows an optimal allocation of four groups. Seats marked in blue are already reserved, and each set of four contiguous seats marked in orange is assigned to one group.\n\nExample 2:\n\nInput: n = 2, reservedSeats = [[2,1],[1,8],[2,6]]\nOutput: 2\n\nExample 3:\n\nInput: n = 4, reservedSeats = [[4,3],[1,4],[4,6],[1,7]]\nOutput: 4\n\nConstraints:\n\n\t- `1 <= n <= 10^9`\n\n\t- `1 <= reservedSeats.length <= min(10 * n, 10^4)`\n\n\t- `reservedSeats[i] == [rowi, seati]`\n\n\t- `1 <= rowi <= n`\n\n\t- `1 <= seati <= 10`\n\n\t- All `reservedSeats[i]` are distinct.",
+      "functionName": "maxNumberOfFamilies",
+      "starterCode": "/**\n * @param {number} n\n * @param {number[][]} reservedSeats\n * @return {number}\n */\n\nglobalThis.maxNumberOfFamilies = function(n, reservedSeats) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            3,
+            [
+              [
+                1,
+                2
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                1,
+                8
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                3,
+                1
+              ],
+              [
+                3,
+                10
+              ]
+            ]
+          ],
+          "expected": 4
+        },
+        {
+          "args": [
+            2,
+            [
+              [
+                2,
+                1
+              ],
+              [
+                1,
+                8
+              ],
+              [
+                2,
+                6
+              ]
+            ]
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            4,
+            [
+              [
+                4,
+                3
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                4,
+                6
+              ],
+              [
+                1,
+                7
+              ]
+            ]
+          ],
+          "expected": 4
+        }
+      ]
+    },
+    {
       "id": "1522-stone-game-iii",
       "number": 1522,
       "title": "Stone Game III",
@@ -2651,6 +3019,68 @@
       ]
     },
     {
+      "id": "1685-stone-game-v",
+      "number": 1685,
+      "title": "Stone Game V",
+      "difficulty": "Hard",
+      "url": "https://leetcode.com/problems/stone-game-v",
+      "description": "There are several stones arranged in a row, and each stone has an associated value which is an integer given in the array `stoneValue`.\n\nIn each round of the game, Alice divides the row into two non-empty rows (i.e. left row and right row), then Bob calculates the value of each row which is the sum of the values of all the stones in this row. Bob throws away the row which has the maximum value, and Alice's score increases by the value of the remaining row. If the value of the two rows are equal, Bob lets Alice decide which row will be thrown away. The next round starts with the remaining row.\n\nThe game ends when there is only one stone remaining. Alice's score is initially zero.\n\nReturn the maximum score that Alice can obtain.\n\nExample 1:\n\nInput: stoneValue = [6,2,3,4,5,5]\nOutput: 18\nExplanation: In the first round, Alice divides the row to [6,2,3], [4,5,5]. The left row has the value 11 and the right row has value 14. Bob throws away the right row and Alice's score is now 11.\nIn the second round Alice divides the row to [6], [2,3]. This time Bob throws away the left row and Alice's score becomes 16 (11 + 5).\nThe last round Alice has only one choice to divide the row which is [2], [3]. Bob throws away the right row and Alice's score is now 18 (16 + 2). The game ends because only one stone is remaining in the row.\n\nExample 2:\n\nInput: stoneValue = [7,7,7,7,7,7,7]\nOutput: 28\n\nExample 3:\n\nInput: stoneValue = [4]\nOutput: 0\n\nConstraints:\n\n\t- `1 <= stoneValue.length <= 500`\n\n\t- `1 <= stoneValue[i] <= 10^6`",
+      "functionName": "stoneGameV",
+      "starterCode": "/**\n * @param {number[]} stoneValue\n * @return {number}\n */\n\nglobalThis.stoneGameV = function(stoneValue) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              6,
+              2,
+              3,
+              4,
+              5,
+              5
+            ]
+          ],
+          "expected": 18
+        },
+        {
+          "args": [
+            [
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7
+            ]
+          ],
+          "expected": 28
+        },
+        {
+          "args": [
+            [
+              4
+            ]
+          ],
+          "expected": 0
+        }
+      ]
+    },
+    {
+      "id": "1725-number-of-sets-of-k-non-overlapping-line-segments",
+      "number": 1725,
+      "title": "Number of Sets of K Non-Overlapping Line Segments",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/number-of-sets-of-k-non-overlapping-line-segments",
+      "description": "Given `n` points on a 1-D plane, where the `i^th` point (from `0` to `n-1`) is at `x = i`, find the number of ways we can draw exactly `k` non-overlapping line segments such that each segment covers two or more points. The endpoints of each segment must have integral coordinates. The `k` line segments do not have to cover all `n` points, and they are allowed to share endpoints.\n\nReturn the number of ways we can draw `k` non-overlapping line segments. Since this number can be huge, return it modulo `10^9 + 7`.\n\nExample 1:\n\nInput: n = 4, k = 2\nOutput: 5\nExplanation: The two line segments are shown in red and blue.\nThe image above shows the 5 different ways {(0,2),(2,3)}, {(0,1),(1,3)}, {(0,1),(2,3)}, {(1,2),(2,3)}, {(0,1),(1,2)}.\n\nExample 2:\n\nInput: n = 3, k = 1\nOutput: 3\nExplanation: The 3 ways are {(0,1)}, {(0,2)}, {(1,2)}.\n\nExample 3:\n\nInput: n = 30, k = 7\nOutput: 796297179\nExplanation: The total number of possible ways to draw 7 line segments is 3796297200. Taking this number modulo 10^9 + 7 gives us 796297179.\n\nConstraints:\n\n\t- `2 <= n <= 1000`\n\n\t- `1 <= k <= n-1`",
+      "functionName": null,
+      "starterCode": null,
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
       "id": "1755-defuse-the-bomb",
       "number": 1755,
       "title": "Defuse the Bomb",
@@ -2801,6 +3231,68 @@
       "cases": []
     },
     {
+      "id": "2002-stone-game-viii",
+      "number": 2002,
+      "title": "Stone Game VIII",
+      "difficulty": "Hard",
+      "url": "https://leetcode.com/problems/stone-game-viii",
+      "description": "Alice and Bob take turns playing a game, with Alice starting first.\n\nThere are `n` stones arranged in a row. On each player's turn, while the number of stones is more than one, they will do the following:\n\n\t- Choose an integer `x > 1`, and remove the leftmost `x` stones from the row.\n\n\t- Add the sum of the removed stones' values to the player's score.\n\n\t- Place a new stone, whose value is equal to that sum, on the left side of the row.\n\nThe game stops when only one stone is left in the row.\n\nThe score difference between Alice and Bob is `(Alice's score - Bob's score)`. Alice's goal is to maximize the score difference, and Bob's goal is the minimize the score difference.\n\nGiven an integer array `stones` of length `n` where `stones[i]` represents the value of the `i^th` stone from the left, return the score difference between Alice and Bob if they both play optimally.\n\nExample 1:\n\nInput: stones = [-1,2,-3,4,-5]\nOutput: 5\nExplanation:\n- Alice removes the first 4 stones, adds (-1) + 2 + (-3) + 4 = 2 to her score, and places a stone of\n  value 2 on the left. stones = [2,-5].\n- Bob removes the first 2 stones, adds 2 + (-5) = -3 to his score, and places a stone of value -3 on\n  the left. stones = [-3].\nThe difference between their scores is 2 - (-3) = 5.\n\nExample 2:\n\nInput: stones = [7,-6,5,10,5,-2,-6]\nOutput: 13\nExplanation:\n- Alice removes all stones, adds 7 + (-6) + 5 + 10 + 5 + (-2) + (-6) = 13 to her score, and places a\n  stone of value 13 on the left. stones = [13].\nThe difference between their scores is 13 - 0 = 13.\n\nExample 3:\n\nInput: stones = [-10,-12]\nOutput: -22\nExplanation:\n- Alice can only make one move, which is to remove both stones. She adds (-10) + (-12) = -22 to her\n  score and places a stone of value -22 on the left. stones = [-22].\nThe difference between their scores is (-22) - 0 = -22.\n\nConstraints:\n\n\t- `n == stones.length`\n\n\t- `2 <= n <= 10^5`\n\n\t- `-10^4 <= stones[i] <= 10^4`",
+      "functionName": "stoneGameVIII",
+      "starterCode": "/**\n * @param {number[]} stones\n * @return {number}\n */\n\nglobalThis.stoneGameVIII = function(stones) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              -1,
+              2,
+              -3,
+              4,
+              -5
+            ]
+          ],
+          "expected": 5
+        },
+        {
+          "args": [
+            [
+              7,
+              -6,
+              5,
+              10,
+              5,
+              -2,
+              -6
+            ]
+          ],
+          "expected": 13
+        },
+        {
+          "args": [
+            [
+              -10,
+              -12
+            ]
+          ],
+          "expected": -22
+        }
+      ]
+    },
+    {
+      "id": "2039-sum-game",
+      "number": 2039,
+      "title": "Sum Game",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/sum-game",
+      "description": "Alice and Bob take turns playing a game, with Alice starting first.\n\nYou are given a string `num` of even length consisting of digits and `'?'` characters. On each turn, a player will do the following if there is still at least one `'?'` in `num`:\n\n\t- Choose an index `i` where `num[i] == '?'`.\n\n\t- Replace `num[i]` with any digit between `'0'` and `'9'`.\n\nThe game ends when there are no more `'?'` characters in `num`.\n\nFor Bob to win, the sum of the digits in the first half of `num` must be equal to the sum of the digits in the second half. For Alice to win, the sums must not be equal.\n\n\t- For example, if the game ended with `num = \"243801\"`, then Bob wins because `2+4+3 = 8+0+1`. If the game ended with `num = \"243803\"`, then Alice wins because `2+4+3 != 8+0+3`.\n\nAssuming Alice and Bob play optimally, return `true` if Alice will win and `false` if Bob will win.\n\nExample 1:\n\nInput: num = \"5023\"\nOutput: false\nExplanation: There are no moves to be made.\nThe sum of the first half is equal to the sum of the second half: 5 + 0 = 2 + 3.\n\nExample 2:\n\nInput: num = \"25??\"\nOutput: true\nExplanation: Alice can replace one of the '?'s with '9' and it will be impossible for Bob to make the sums equal.\n\nExample 3:\n\nInput: num = \"?3295???\"\nOutput: false\nExplanation: It can be proven that Bob will always win. One possible outcome is:\n- Alice replaces the first '?' with '9'. num = \"93295???\".\n- Bob replaces one of the '?' in the right half with '9'. num = \"932959??\".\n- Alice replaces one of the '?' in the right half with '2'. num = \"9329592?\".\n- Bob replaces the last '?' in the right half with '7'. num = \"93295927\".\nBob wins because 9 + 3 + 2 + 9 = 5 + 9 + 2 + 7.\n\nConstraints:\n\n\t- `2 <= num.length <= 10^5`\n\n\t- `num.length` is even.\n\n\t- `num` consists of only digits and `'?'`.",
+      "functionName": "sumGame",
+      "starterCode": "/**\n * @param {string} num\n * @return {boolean}\n */\n\nglobalThis.sumGame = function(num) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
       "id": "2058-concatenation-of-array",
       "number": 2058,
       "title": "Concatenation of Array",
@@ -2912,6 +3404,212 @@
       ]
     },
     {
+      "id": "2156-stone-game-ix",
+      "number": 2156,
+      "title": "Stone Game IX",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/stone-game-ix",
+      "description": "Alice and Bob continue their games with stones. There is a row of n stones, and each stone has an associated value. You are given an integer array `stones`, where `stones[i]` is the value of the `i^th` stone.\n\nAlice and Bob take turns, with Alice starting first. On each turn, the player may remove any stone from `stones`. The player who removes a stone loses if the sum of the values of all removed stones is divisible by `3`. Bob will win automatically if there are no remaining stones (even if it is Alice's turn).\n\nAssuming both players play optimally, return `true` if Alice wins and `false` if Bob wins.\n\nExample 1:\n\nInput: stones = [2,1]\nOutput: true\nExplanation: The game will be played as follows:\n- Turn 1: Alice can remove either stone.\n- Turn 2: Bob removes the remaining stone.\nThe sum of the removed stones is 1 + 2 = 3 and is divisible by 3. Therefore, Bob loses and Alice wins the game.\n\nExample 2:\n\nInput: stones = [2]\nOutput: false\nExplanation: Alice will remove the only stone, and the sum of the values on the removed stones is 2.\nSince all the stones are removed and the sum of values is not divisible by 3, Bob wins the game.\n\nExample 3:\n\nInput: stones = [5,1,2,4,3]\nOutput: false\nExplanation: Bob will always win. One possible way for Bob to win is shown below:\n- Turn 1: Alice can remove the second stone with value 1. Sum of removed stones = 1.\n- Turn 2: Bob removes the fifth stone with value 3. Sum of removed stones = 1 + 3 = 4.\n- Turn 3: Alices removes the fourth stone with value 4. Sum of removed stones = 1 + 3 + 4 = 8.\n- Turn 4: Bob removes the third stone with value 2. Sum of removed stones = 1 + 3 + 4 + 2 = 10.\n- Turn 5: Alice removes the first stone with value 5. Sum of removed stones = 1 + 3 + 4 + 2 + 5 = 15.\nAlice loses the game because the sum of the removed stones (15) is divisible by 3. Bob wins the game.\n\nConstraints:\n\n\t- `1 <= stones.length <= 10^5`\n\n\t- `1 <= stones[i] <= 10^4`",
+      "functionName": "stoneGameIX",
+      "starterCode": "/**\n * @param {number[]} stones\n * @return {boolean}\n */\n\nglobalThis.stoneGameIX = function(stones) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              2,
+              1
+            ]
+          ],
+          "expected": true
+        },
+        {
+          "args": [
+            [
+              2
+            ]
+          ],
+          "expected": false
+        },
+        {
+          "args": [
+            [
+              5,
+              1,
+              2,
+              4,
+              3
+            ]
+          ],
+          "expected": false
+        }
+      ]
+    },
+    {
+      "id": "2182-find-the-minimum-and-maximum-number-of-nodes-between-critical-points",
+      "number": 2182,
+      "title": "Find the Minimum and Maximum Number of Nodes Between Critical Points",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points",
+      "description": "A critical point in a linked list is defined as either a local maxima or a local minima.\n\nA node is a local maxima if the current node has a value strictly greater than the previous node and the next node.\n\nA node is a local minima if the current node has a value strictly smaller than the previous node and the next node.\n\nNote that a node can only be a local maxima/minima if there exists both a previous node and a next node.\n\nGiven a linked list `head`, return an array of length 2 containing `[minDistance, maxDistance]` where `minDistance` is the minimum distance between any two distinct critical points and `maxDistance` is the maximum distance between any two distinct critical points. If there are fewer than two critical points, return `[-1, -1]`.\n\nExample 1:\n\nInput: head = [3,1]\nOutput: [-1,-1]\nExplanation: There are no critical points in [3,1].\n\nExample 2:\n\nInput: head = [5,3,1,2,5,1,2]\nOutput: [1,3]\nExplanation: There are three critical points:\n- [5,3,1,2,5,1,2]: The third node is a local minima because 1 is less than 3 and 2.\n- [5,3,1,2,5,1,2]: The fifth node is a local maxima because 5 is greater than 2 and 1.\n- [5,3,1,2,5,1,2]: The sixth node is a local minima because 1 is less than 5 and 2.\nThe minimum distance is between the fifth and the sixth node. minDistance = 6 - 5 = 1.\nThe maximum distance is between the third and the sixth node. maxDistance = 6 - 3 = 3.\n\nExample 3:\n\nInput: head = [1,3,2,2,3,2,2,2,7]\nOutput: [3,3]\nExplanation: There are two critical points:\n- [1,3,2,2,3,2,2,2,7]: The second node is a local maxima because 3 is greater than 1 and 2.\n- [1,3,2,2,3,2,2,2,7]: The fifth node is a local maxima because 3 is greater than 2 and 2.\nBoth the minimum and maximum distances are between the second and the fifth node.\nThus, minDistance and maxDistance is 5 - 2 = 3.\nNote that the last node is not considered a local maxima because it does not have a next node.\n\nConstraints:\n\n\t- The number of nodes in the list is in the range `[2, 10^5]`.\n\n\t- `1 <= Node.val <= 10^5`",
+      "functionName": "nodesBetweenCriticalPoints",
+      "starterCode": "/**\n * Definition for singly-linked list.\n * function ListNode(val, next) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.next = (next===undefined ? null : next)\n * }\n */\n\n/**\n * @param {ListNode} head\n * @return {number[]}\n */\n\nglobalThis.nodesBetweenCriticalPoints = function(head) {\n  // Write your solution here\n};",
+      "usesListNode": true,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              3,
+              1
+            ]
+          ],
+          "expected": [
+            -1,
+            -1
+          ]
+        },
+        {
+          "args": [
+            [
+              5,
+              3,
+              1,
+              2,
+              5,
+              1,
+              2
+            ]
+          ],
+          "expected": [
+            1,
+            3
+          ]
+        },
+        {
+          "args": [
+            [
+              1,
+              3,
+              2,
+              2,
+              3,
+              2,
+              2,
+              2,
+              7
+            ]
+          ],
+          "expected": [
+            3,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2212-removing-minimum-and-maximum-from-array",
+      "number": 2212,
+      "title": "Removing Minimum and Maximum From Array",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/removing-minimum-and-maximum-from-array",
+      "description": "You are given a 0-indexed array of distinct integers `nums`.\n\nThere is an element in `nums` that has the lowest value and an element that has the highest value. We call them the minimum and maximum respectively. Your goal is to remove both these elements from the array.\n\nA deletion is defined as either removing an element from the front of the array or removing an element from the back of the array.\n\nReturn the minimum number of deletions it would take to remove both the minimum and maximum element from the array.\n\nExample 1:\n\nInput: nums = [2,10,7,5,4,1,8,6]\nOutput: 5\nExplanation:\nThe minimum element in the array is nums[5], which is 1.\nThe maximum element in the array is nums[1], which is 10.\nWe can remove both the minimum and maximum by removing 2 elements from the front and 3 elements from the back.\nThis results in 2 + 3 = 5 deletions, which is the minimum number possible.\n\nExample 2:\n\nInput: nums = [0,-4,19,1,8,-2,-3,5]\nOutput: 3\nExplanation:\nThe minimum element in the array is nums[1], which is -4.\nThe maximum element in the array is nums[2], which is 19.\nWe can remove both the minimum and maximum by removing 3 elements from the front.\nThis results in only 3 deletions, which is the minimum number possible.\n\nExample 3:\n\nInput: nums = [101]\nOutput: 1\nExplanation:\nThere is only one element in the array, which makes it both the minimum and maximum element.\nWe can remove it with 1 deletion.\n\nConstraints:\n\n\t- `1 <= nums.length <= 10^5`\n\n\t- `-10^5 <= nums[i] <= 10^5`\n\n\t- The integers in `nums` are distinct.",
+      "functionName": "minimumDeletions",
+      "starterCode": "/**\n * @param {number[]} nums\n * @return {number}\n */\n\nglobalThis.minimumDeletions = function(nums) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              2,
+              10,
+              7,
+              5,
+              4,
+              1,
+              8,
+              6
+            ]
+          ],
+          "expected": 5
+        },
+        {
+          "args": [
+            [
+              0,
+              -4,
+              19,
+              1,
+              8,
+              -2,
+              -3,
+              5
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            [
+              101
+            ]
+          ],
+          "expected": 1
+        }
+      ]
+    },
+    {
+      "id": "2319-longest-substring-of-one-repeating-character",
+      "number": 2319,
+      "title": "Longest Substring of One Repeating Character",
+      "difficulty": "Hard",
+      "url": "https://leetcode.com/problems/longest-substring-of-one-repeating-character",
+      "description": "You are given a 0-indexed string `s`. You are also given a 0-indexed string `queryCharacters` of length `k` and a 0-indexed array of integer indices `queryIndices` of length `k`, both of which are used to describe `k` queries.\n\nThe `i^th` query updates the character in `s` at index `queryIndices[i]` to the character `queryCharacters[i]`.\n\nReturn an array `lengths` of length `k` where `lengths[i]` is the length of the longest substring of `s` consisting of only one repeating character after the `i^th` query is performed.\n\nExample 1:\n\nInput: s = \"babacc\", queryCharacters = \"bcb\", queryIndices = [1,3,3]\nOutput: [3,3,4]\nExplanation:\n- 1^st query updates s = \"bbbacc\". The longest substring consisting of one repeating character is \"bbb\" with length 3.\n- 2^nd query updates s = \"bbbccc\".\n  The longest substring consisting of one repeating character can be \"bbb\" or \"ccc\" with length 3.\n- 3^rd query updates s = \"bbbbcc\". The longest substring consisting of one repeating character is \"bbbb\" with length 4.\nThus, we return [3,3,4].\n\nExample 2:\n\nInput: s = \"abyzz\", queryCharacters = \"aa\", queryIndices = [2,1]\nOutput: [2,3]\nExplanation:\n- 1^st query updates s = \"abazz\". The longest substring consisting of one repeating character is \"zz\" with length 2.\n- 2^nd query updates s = \"aaazz\". The longest substring consisting of one repeating character is \"aaa\" with length 3.\nThus, we return [2,3].\n\nConstraints:\n\n\t- `1 <= s.length <= 10^5`\n\n\t- `s` consists of lowercase English letters.\n\n\t- `k == queryCharacters.length == queryIndices.length`\n\n\t- `1 <= k <= 10^5`\n\n\t- `queryCharacters` consists of lowercase English letters.\n\n\t- `0 <= queryIndices[i] < s.length`",
+      "functionName": "longestRepeating",
+      "starterCode": "/**\n * @param {string} s\n * @param {string} queryCharacters\n * @param {number[]} queryIndices\n * @return {number[]}\n */\n\nglobalThis.longestRepeating = function(s, queryCharacters, queryIndices) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "2347-count-nodes-equal-to-average-of-subtree",
+      "number": 2347,
+      "title": "Count Nodes Equal to Average of Subtree",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree",
+      "description": "Given the `root` of a binary tree, return the number of nodes where the value of the node is equal to the average of the values in its subtree.\n\nNote:\n\n\t- The average of `n` elements is the sum of the `n` elements divided by `n` and rounded down to the nearest integer.\n\n\t- A subtree of `root` is a tree consisting of `root` and all of its descendants.\n\nExample 1:\n\nInput: root = [4,8,5,0,1,null,6]\nOutput: 5\nExplanation:\nFor the node with value 4: The average of its subtree is (4 + 8 + 5 + 0 + 1 + 6) / 6 = 24 / 6 = 4.\nFor the node with value 5: The average of its subtree is (5 + 6) / 2 = 11 / 2 = 5.\nFor the node with value 0: The average of its subtree is 0 / 1 = 0.\nFor the node with value 1: The average of its subtree is 1 / 1 = 1.\nFor the node with value 6: The average of its subtree is 6 / 1 = 6.\n\nExample 2:\n\nInput: root = [1]\nOutput: 1\nExplanation: For the node with value 1: The average of its subtree is 1 / 1 = 1.\n\nConstraints:\n\n\t- The number of nodes in the tree is in the range `[1, 1000]`.\n\n\t- `0 <= Node.val <= 1000`",
+      "functionName": "averageOfSubtree",
+      "starterCode": "/**\n * Definition for a binary tree node.\n * function TreeNode(val, left, right) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.left = (left===undefined ? null : left)\n *     this.right = (right===undefined ? null : right)\n * }\n */\n\n/**\n * @param {TreeNode} root\n * @return {number}\n */\n\nglobalThis.averageOfSubtree = function(root) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              4,
+              8,
+              5,
+              0,
+              1,
+              null,
+              6
+            ]
+          ],
+          "expected": 5
+        },
+        {
+          "args": [
+            [
+              1
+            ]
+          ],
+          "expected": 1
+        }
+      ]
+    },
+    {
       "id": "2552-maximum-sum-of-distinct-subarrays-with-length-k",
       "number": 2552,
       "title": "Maximum Sum of Distinct Subarrays With Length K",
@@ -2950,6 +3648,19 @@
           "expected": 0
         }
       ]
+    },
+    {
+      "id": "2559-maximum-number-of-non-overlapping-palindrome-substrings",
+      "number": 2559,
+      "title": "Maximum Number of Non-overlapping Palindrome Substrings",
+      "difficulty": "Hard",
+      "url": "https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings",
+      "description": "You are given a string `s` and a positive integer `k`.\n\nSelect a set of non-overlapping substrings from the string `s` that satisfy the following conditions:\n\n\t- The length of each substring is at least `k`.\n\n\t- Each substring is a palindrome.\n\nReturn the maximum number of substrings in an optimal selection.\n\nA substring is a contiguous sequence of characters within a string.\n\nExample 1:\n\nInput: s = \"abaccdbbd\", k = 3\nOutput: 2\nExplanation: We can select the substrings underlined in s = \"abaccdbbd\". Both \"aba\" and \"dbbd\" are palindromes and have a length of at least k = 3.\nIt can be shown that we cannot find a selection with more than two valid substrings.\n\nExample 2:\n\nInput: s = \"adbcda\", k = 2\nOutput: 0\nExplanation: There is no palindrome substring of length at least 2 in the string.\n\nConstraints:\n\n\t- `1 <= k <= s.length <= 2000`\n\n\t- `s` consists of lowercase English letters.",
+      "functionName": "maxPalindromes",
+      "starterCode": "/**\n * @param {string} s\n * @param {number} k\n * @return {number}\n */\n\nglobalThis.maxPalindromes = function(s, k) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
     },
     {
       "id": "2582-minimum-score-of-a-path-between-two-cities",
@@ -3185,6 +3896,153 @@
       ]
     },
     {
+      "id": "3150-shortest-and-lexicographically-smallest-beautiful-string",
+      "number": 3150,
+      "title": "Shortest and Lexicographically Smallest Beautiful String",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/shortest-and-lexicographically-smallest-beautiful-string",
+      "description": "You are given a binary string `s` and a positive integer `k`.\n\nA substring of `s` is beautiful if the number of `1`'s in it is exactly `k`.\n\nLet `len` be the length of the shortest beautiful substring.\n\nReturn the lexicographically smallest beautiful substring of string `s` with length equal to `len`. If `s` doesn't contain a beautiful substring, return an empty string.\n\nA string `a` is lexicographically larger than a string `b` (of the same length) if in the first position where `a` and `b` differ, `a` has a character strictly larger than the corresponding character in `b`.\n\n\t- For example, `\"abcd\"` is lexicographically larger than `\"abcc\"` because the first position they differ is at the fourth character, and `d` is greater than `c`.\n\nExample 1:\n\nInput: s = \"100011001\", k = 3\nOutput: \"11001\"\nExplanation: There are 7 beautiful substrings in this example:\n1. The substring \"100011001\".\n2. The substring \"100011001\".\n3. The substring \"100011001\".\n4. The substring \"100011001\".\n5. The substring \"100011001\".\n6. The substring \"100011001\".\n7. The substring \"100011001\".\nThe length of the shortest beautiful substring is 5.\nThe lexicographically smallest beautiful substring with length 5 is the substring \"11001\".\n\nExample 2:\n\nInput: s = \"1011\", k = 2\nOutput: \"11\"\nExplanation: There are 3 beautiful substrings in this example:\n1. The substring \"1011\".\n2. The substring \"1011\".\n3. The substring \"1011\".\nThe length of the shortest beautiful substring is 2.\nThe lexicographically smallest beautiful substring with length 2 is the substring \"11\".\n\nExample 3:\n\nInput: s = \"000\", k = 1\nOutput: \"\"\nExplanation: There are no beautiful substrings in this example.\n\nConstraints:\n\n\t- `1 <= s.length <= 100`\n\n\t- `1 <= k <= s.length`",
+      "functionName": "shortestBeautifulSubstring",
+      "starterCode": "/**\n * @param {string} s\n * @param {number} k\n * @return {string}\n */\n\nglobalThis.shortestBeautifulSubstring = function(s, k) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "3219-make-lexicographically-smallest-array-by-swapping-elements",
+      "number": 3219,
+      "title": "Make Lexicographically Smallest Array by Swapping Elements",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/make-lexicographically-smallest-array-by-swapping-elements",
+      "description": "You are given a 0-indexed array of positive integers `nums` and a positive integer `limit`.\n\nIn one operation, you can choose any two indices `i` and `j` and swap `nums[i]` and `nums[j]` if `|nums[i] - nums[j]| <= limit`.\n\nReturn the lexicographically smallest array that can be obtained by performing the operation any number of times.\n\nAn array `a` is lexicographically smaller than an array `b` if in the first position where `a` and `b` differ, array `a` has an element that is less than the corresponding element in `b`. For example, the array `[2,10,3]` is lexicographically smaller than the array `[10,2,3]` because they differ at index `0` and `2 < 10`.\n\nExample 1:\n\nInput: nums = [1,5,3,9,8], limit = 2\nOutput: [1,3,5,8,9]\nExplanation: Apply the operation 2 times:\n- Swap nums[1] with nums[2]. The array becomes [1,3,5,9,8]\n- Swap nums[3] with nums[4]. The array becomes [1,3,5,8,9]\nWe cannot obtain a lexicographically smaller array by applying any more operations.\nNote that it may be possible to get the same result by doing different operations.\n\nExample 2:\n\nInput: nums = [1,7,6,18,2,1], limit = 3\nOutput: [1,6,7,18,1,2]\nExplanation: Apply the operation 3 times:\n- Swap nums[1] with nums[2]. The array becomes [1,6,7,18,2,1]\n- Swap nums[0] with nums[4]. The array becomes [2,6,7,18,1,1]\n- Swap nums[0] with nums[5]. The array becomes [1,6,7,18,1,2]\nWe cannot obtain a lexicographically smaller array by applying any more operations.\n\nExample 3:\n\nInput: nums = [1,7,28,19,10], limit = 3\nOutput: [1,7,28,19,10]\nExplanation: [1,7,28,19,10] is the lexicographically smallest array we can obtain because we cannot apply the operation on any two indices.\n\nConstraints:\n\n\t- `1 <= nums.length <= 10^5`\n\n\t- `1 <= nums[i] <= 10^9`\n\n\t- `1 <= limit <= 10^9`",
+      "functionName": "lexicographicallySmallestArray",
+      "starterCode": "/**\n * @param {number[]} nums\n * @param {number} limit\n * @return {number[]}\n */\n\nglobalThis.lexicographicallySmallestArray = function(nums, limit) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              1,
+              5,
+              3,
+              9,
+              8
+            ],
+            2
+          ],
+          "expected": [
+            1,
+            3,
+            5,
+            8,
+            9
+          ]
+        },
+        {
+          "args": [
+            [
+              1,
+              7,
+              6,
+              18,
+              2,
+              1
+            ],
+            3
+          ],
+          "expected": [
+            1,
+            6,
+            7,
+            18,
+            1,
+            2
+          ]
+        },
+        {
+          "args": [
+            [
+              1,
+              7,
+              28,
+              19,
+              10
+            ],
+            3
+          ],
+          "expected": [
+            1,
+            7,
+            28,
+            19,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3225-length-of-longest-subarray-with-at-most-k-frequency",
+      "number": 3225,
+      "title": "Length of Longest Subarray With at Most K Frequency",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/length-of-longest-subarray-with-at-most-k-frequency",
+      "description": "You are given an integer array `nums` and an integer `k`.\n\nThe frequency of an element `x` is the number of times it occurs in an array.\n\nAn array is called good if the frequency of each element in this array is less than or equal to `k`.\n\nReturn the length of the longest good subarray of `nums`.\n\nA subarray is a contiguous non-empty sequence of elements within an array.\n\nExample 1:\n\nInput: nums = [1,2,3,1,2,3,1,2], k = 2\nOutput: 6\nExplanation: The longest possible good subarray is [1,2,3,1,2,3] since the values 1, 2, and 3 occur at most twice in this subarray. Note that the subarrays [2,3,1,2,3,1] and [3,1,2,3,1,2] are also good.\nIt can be shown that there are no good subarrays with length more than 6.\n\nExample 2:\n\nInput: nums = [1,2,1,2,1,2,1,2], k = 1\nOutput: 2\nExplanation: The longest possible good subarray is [1,2] since the values 1 and 2 occur at most once in this subarray. Note that the subarray [2,1] is also good.\nIt can be shown that there are no good subarrays with length more than 2.\n\nExample 3:\n\nInput: nums = [5,5,5,5,5,5,5], k = 4\nOutput: 4\nExplanation: The longest possible good subarray is [5,5,5,5] since the value 5 occurs 4 times in this subarray.\nIt can be shown that there are no good subarrays with length more than 4.\n\nConstraints:\n\n\t- `1 <= nums.length <= 10^5`\n\n\t- `1 <= nums[i] <= 10^9`\n\n\t- `1 <= k <= nums.length`",
+      "functionName": "maxSubarrayLength",
+      "starterCode": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\n\nglobalThis.maxSubarrayLength = function(nums, k) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3,
+              1,
+              2,
+              3,
+              1,
+              2
+            ],
+            2
+          ],
+          "expected": 6
+        },
+        {
+          "args": [
+            [
+              1,
+              2,
+              1,
+              2,
+              1,
+              2,
+              1,
+              2
+            ],
+            1
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            [
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5
+            ],
+            4
+          ],
+          "expected": 4
+        }
+      ]
+    },
+    {
       "id": "3236-smallest-missing-integer-greater-than-sequential-prefix-sum",
       "number": 3236,
       "title": "Smallest Missing Integer Greater Than Sequential Prefix Sum",
@@ -3231,8 +4089,8 @@
       "difficulty": "Easy",
       "url": "https://leetcode.com/problems/minimum-number-of-pushes-to-type-word-i",
       "description": "You are given a string `word` containing distinct lowercase English letters.\n\nTelephone keypads have keys mapped with distinct collections of lowercase English letters, which can be used to form words by pushing them. For example, the key `2` is mapped with `[\"a\",\"b\",\"c\"]`, we need to push the key one time to type `\"a\"`, two times to type `\"b\"`, and three times to type `\"c\"` .\n\nIt is allowed to remap the keys numbered `2` to `9` to distinct collections of letters. The keys can be remapped to any amount of letters, but each letter must be mapped to exactly one key. You need to find the minimum number of times the keys will be pushed to type the string `word`.\n\nReturn the minimum number of pushes needed to type `word` after remapping the keys.\n\nAn example mapping of letters to keys on a telephone keypad is given below. Note that `1`, `*`, `#`, and `0` do not map to any letters.\n\nExample 1:\n\nInput: word = \"abcde\"\nOutput: 5\nExplanation: The remapped keypad given in the image provides the minimum cost.\n\"a\" -> one push on key 2\n\"b\" -> one push on key 3\n\"c\" -> one push on key 4\n\"d\" -> one push on key 5\n\"e\" -> one push on key 6\nTotal cost is 1 + 1 + 1 + 1 + 1 = 5.\nIt can be shown that no other mapping can provide a lower cost.\n\nExample 2:\n\nInput: word = \"xycdefghij\"\nOutput: 12\nExplanation: The remapped keypad given in the image provides the minimum cost.\n\"x\" -> one push on key 2\n\"y\" -> two pushes on key 2\n\"c\" -> one push on key 3\n\"d\" -> two pushes on key 3\n\"e\" -> one push on key 4\n\"f\" -> one push on key 5\n\"g\" -> one push on key 6\n\"h\" -> one push on key 7\n\"i\" -> one push on key 8\n\"j\" -> one push on key 9\nTotal cost is 1 + 2 + 1 + 2 + 1 + 1 + 1 + 1 + 1 + 1 = 12.\nIt can be shown that no other mapping can provide a lower cost.\n\nConstraints:\n\n\t- `1 <= word.length <= 26`\n\n\t- `word` consists of lowercase English letters.\n\n\t- All letters in `word` are distinct.",
-      "functionName": null,
-      "starterCode": null,
+      "functionName": "minimumPushes",
+      "starterCode": "/**\n * @param {string} word\n * @return {number}\n */\n\nglobalThis.minimumPushes = function(word) {\n  // Write your solution here\n};",
       "usesListNode": false,
       "mutatesInput": false,
       "cases": []
@@ -3246,6 +4104,76 @@
       "description": "You are given a string `word` containing lowercase English letters.\n\nTelephone keypads have keys mapped with distinct collections of lowercase English letters, which can be used to form words by pushing them. For example, the key `2` is mapped with `[\"a\",\"b\",\"c\"]`, we need to push the key one time to type `\"a\"`, two times to type `\"b\"`, and three times to type `\"c\"` .\n\nIt is allowed to remap the keys numbered `2` to `9` to distinct collections of letters. The keys can be remapped to any amount of letters, but each letter must be mapped to exactly one key. You need to find the minimum number of times the keys will be pushed to type the string `word`.\n\nReturn the minimum number of pushes needed to type `word` after remapping the keys.\n\nAn example mapping of letters to keys on a telephone keypad is given below. Note that `1`, `*`, `#`, and `0` do not map to any letters.\n\nExample 1:\n\nInput: word = \"abcde\"\nOutput: 5\nExplanation: The remapped keypad given in the image provides the minimum cost.\n\"a\" -> one push on key 2\n\"b\" -> one push on key 3\n\"c\" -> one push on key 4\n\"d\" -> one push on key 5\n\"e\" -> one push on key 6\nTotal cost is 1 + 1 + 1 + 1 + 1 = 5.\nIt can be shown that no other mapping can provide a lower cost.\n\nExample 2:\n\nInput: word = \"xyzxyzxyzxyz\"\nOutput: 12\nExplanation: The remapped keypad given in the image provides the minimum cost.\n\"x\" -> one push on key 2\n\"y\" -> one push on key 3\n\"z\" -> one push on key 4\nTotal cost is 1 * 4 + 1 * 4 + 1 * 4 = 12\nIt can be shown that no other mapping can provide a lower cost.\nNote that the key 9 is not mapped to any letter: it is not necessary to map letters to every key, but to map all the letters.\n\nExample 3:\n\nInput: word = \"aabbccddeeffgghhiiiiii\"\nOutput: 24\nExplanation: The remapped keypad given in the image provides the minimum cost.\n\"a\" -> one push on key 2\n\"b\" -> one push on key 3\n\"c\" -> one push on key 4\n\"d\" -> one push on key 5\n\"e\" -> one push on key 6\n\"f\" -> one push on key 7\n\"g\" -> one push on key 8\n\"h\" -> two pushes on key 9\n\"i\" -> one push on key 9\nTotal cost is 1 * 2 + 1 * 2 + 1 * 2 + 1 * 2 + 1 * 2 + 1 * 2 + 1 * 2 + 2 * 2 + 6 * 1 = 24.\nIt can be shown that no other mapping can provide a lower cost.\n\nConstraints:\n\n\t- `1 <= word.length <= 10^5`\n\n\t- `word` consists of lowercase English letters.",
       "functionName": "minimumPushes",
       "starterCode": "/**\n * @param {string} word\n * @return {number}\n */\n\nglobalThis.minimumPushes = function(word) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "3347-distribute-elements-into-two-arrays-i",
+      "number": 3347,
+      "title": "Distribute Elements Into Two Arrays I",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/distribute-elements-into-two-arrays-i",
+      "description": "You are given a 1-indexed array of distinct integers `nums` of length `n`.\n\nYou need to distribute all the elements of `nums` between two arrays `arr1` and `arr2` using `n` operations. In the first operation, append `nums[1]` to `arr1`. In the second operation, append `nums[2]` to `arr2`. Afterwards, in the `i^th` operation:\n\n\t- If the last element of `arr1` is greater than the last element of `arr2`, append `nums[i]` to `arr1`. Otherwise, append `nums[i]` to `arr2`.\n\nThe array `result` is formed by concatenating the arrays `arr1` and `arr2`. For example, if `arr1 == [1,2,3]` and `arr2 == [4,5,6]`, then `result = [1,2,3,4,5,6]`.\n\nReturn the array `result`.\n\nExample 1:\n\nInput: nums = [2,1,3]\nOutput: [2,3,1]\nExplanation: After the first 2 operations, arr1 = [2] and arr2 = [1].\nIn the 3^rd operation, as the last element of arr1 is greater than the last element of arr2 (2 > 1), append nums[3] to arr1.\nAfter 3 operations, arr1 = [2,3] and arr2 = [1].\nHence, the array result formed by concatenation is [2,3,1].\n\nExample 2:\n\nInput: nums = [5,4,3,8]\nOutput: [5,3,4,8]\nExplanation: After the first 2 operations, arr1 = [5] and arr2 = [4].\nIn the 3^rd operation, as the last element of arr1 is greater than the last element of arr2 (5 > 4), append nums[3] to arr1, hence arr1 becomes [5,3].\nIn the 4^th operation, as the last element of arr2 is greater than the last element of arr1 (4 > 3), append nums[4] to arr2, hence arr2 becomes [4,8].\nAfter 4 operations, arr1 = [5,3] and arr2 = [4,8].\nHence, the array result formed by concatenation is [5,3,4,8].\n\nConstraints:\n\n\t- `3 <= n <= 50`\n\n\t- `1 <= nums[i] <= 100`\n\n\t- All elements in `nums` are distinct.",
+      "functionName": "resultArray",
+      "starterCode": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\n\nglobalThis.resultArray = function(nums) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": [
+        {
+          "args": [
+            [
+              2,
+              1,
+              3
+            ]
+          ],
+          "expected": [
+            2,
+            3,
+            1
+          ]
+        },
+        {
+          "args": [
+            [
+              5,
+              4,
+              3,
+              8
+            ]
+          ],
+          "expected": [
+            5,
+            3,
+            4,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3349-maximum-length-substring-with-two-occurrences",
+      "number": 3349,
+      "title": "Maximum Length Substring With Two Occurrences",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/maximum-length-substring-with-two-occurrences",
+      "description": "Given a string `s`, return the maximum length of a substring such that it contains at most two occurrences of each character.\n\nExample 1:\n\nInput: s = \"bcbbbcba\"\n\nOutput: 4\n\nExplanation:\n\nThe following substring has a length of 4 and contains at most two occurrences of each character: `\"bcbbbcba\"`.\n\nExample 2:\n\nInput: s = \"aaaa\"\n\nOutput: 2\n\nExplanation:\n\nThe following substring has a length of 2 and contains at most two occurrences of each character: `\"aaaa\"`.\n\nConstraints:\n\n\t- `2 <= s.length <= 100`\n\n\t- `s` consists only of lowercase English letters.",
+      "functionName": "maximumLengthSubstring",
+      "starterCode": "/**\n * @param {string} s\n * @return {number}\n */\n\nglobalThis.maximumLengthSubstring = function(s) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "3375-kth-smallest-amount-with-single-denomination-combination",
+      "number": 3375,
+      "title": "Kth Smallest Amount With Single Denomination Combination",
+      "difficulty": "Hard",
+      "url": "https://leetcode.com/problems/kth-smallest-amount-with-single-denomination-combination",
+      "description": "You are given an integer array `coins` representing coins of different denominations and an integer `k`.\n\nYou have an infinite number of coins of each denomination. However, you are not allowed to combine coins of different denominations.\n\nReturn the `k^th` smallest amount that can be made using these coins.\n\nExample 1:\n\nInput: coins = [3,6,9], k = 3\n\nOutput:  9\n\nExplanation: The given coins can make the following amounts:\n\nCoin 3 produces multiples of 3: 3, 6, 9, 12, 15, etc.\n\nCoin 6 produces multiples of 6: 6, 12, 18, 24, etc.\n\nCoin 9 produces multiples of 9: 9, 18, 27, 36, etc.\n\nAll of the coins combined produce: 3, 6, 9, 12, 15, etc.\n\nExample 2:\n\nInput: coins = [5,2], k = 7\n\nOutput: 12\n\nExplanation: The given coins can make the following amounts:\n\nCoin 5 produces multiples of 5: 5, 10, 15, 20, etc.\n\nCoin 2 produces multiples of 2: 2, 4, 6, 8, 10, 12, etc.\n\nAll of the coins combined produce: 2, 4, 5, 6, 8, 10, 12, 14, 15, etc.\n\nConstraints:\n\n\t- `1 <= coins.length <= 15`\n\n\t- `1 <= coins[i] <= 25`\n\n\t- `1 <= k <= 2 * 10^9`\n\n\t- `coins` contains pairwise distinct integers.",
+      "functionName": "findKthSmallest",
+      "starterCode": "/**\n * @param {number[]} coins\n * @param {number} k\n * @return {number}\n */\n\nglobalThis.findKthSmallest = function(coins, k) {\n  // Write your solution here\n};",
       "usesListNode": false,
       "mutatesInput": false,
       "cases": []
@@ -3272,6 +4200,19 @@
       "description": "You are maintaining a project that has `n` methods numbered from `0` to `n - 1`.\n\nYou are given two integers `n` and `k`, and a 2D integer array `invocations`, where `invocations[i] = [ai, bi]` indicates that method `ai` invokes method `bi`.\n\nThere is a known bug in method `k`. Method `k`, along with any method invoked by it, either directly or indirectly, are considered suspicious and we aim to remove them.\n\nA group of methods can only be removed if no method outside the group invokes any methods within it.\n\nReturn an array containing all the remaining methods after removing all the suspicious methods. You may return the answer in any order. If it is not possible to remove all the suspicious methods, none should be removed.\n\nExample 1:\n\nInput: n = 4, k = 1, invocations = [[1,2],[0,1],[3,2]]\n\nOutput: [0,1,2,3]\n\nExplanation:\n\nMethod 2 and method 1 are suspicious, but they are directly invoked by methods 3 and 0, which are not suspicious. We return all elements without removing anything.\n\nExample 2:\n\nInput: n = 5, k = 0, invocations = [[1,2],[0,2],[0,1],[3,4]]\n\nOutput: [3,4]\n\nExplanation:\n\nMethods 0, 1, and 2 are suspicious and they are not directly invoked by any other method. We can remove them.\n\nExample 3:\n\nInput: n = 3, k = 2, invocations = [[1,2],[0,1],[2,0]]\n\nOutput: []\n\nExplanation:\n\nAll methods are suspicious. We can remove them.\n\nConstraints:\n\n\t- `1 <= n <= 10^5`\n\n\t- `0 <= k <= n - 1`\n\n\t- `0 <= invocations.length <= 2 * 10^5`\n\n\t- `invocations[i] == [ai, bi]`\n\n\t- `0 <= ai, bi <= n - 1`\n\n\t- `ai != bi`\n\n\t- `invocations[i] != invocations[j]`",
       "functionName": "remainingMethods",
       "starterCode": "/**\n * @param {number} n\n * @param {number} k\n * @param {number[][]} invocations\n * @return {number[]}\n */\n\nglobalThis.remainingMethods = function(n, k, invocations) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "3562-maximum-score-of-non-overlapping-intervals",
+      "number": 3562,
+      "title": "Maximum Score of Non-overlapping Intervals",
+      "difficulty": "Hard",
+      "url": "https://leetcode.com/problems/maximum-score-of-non-overlapping-intervals",
+      "description": "You are given a 2D integer array `intervals`, where `intervals[i] = [li, ri, weighti]`. Interval `i` starts at position `li` and ends at `ri`, and has a weight of `weighti`. You can choose up to 4 non-overlapping intervals. The score of the chosen intervals is defined as the total sum of their weights.\n\nReturn the lexicographically smallest array of at most 4 indices from `intervals` with maximum score, representing your choice of non-overlapping intervals.\n\nTwo intervals are said to be non-overlapping if they do not share any points. In particular, intervals sharing a left or right boundary are considered overlapping.\n\nExample 1:\n\nInput: intervals = [[1,3,2],[4,5,2],[1,5,5],[6,9,3],[6,7,1],[8,9,1]]\n\nOutput: [2,3]\n\nExplanation:\n\nYou can choose the intervals with indices 2, and 3 with respective weights of 5, and 3.\n\nExample 2:\n\nInput: intervals = [[5,8,1],[6,7,7],[4,7,3],[9,10,6],[7,8,2],[11,14,3],[3,5,5]]\n\nOutput: [1,3,5,6]\n\nExplanation:\n\nYou can choose the intervals with indices 1, 3, 5, and 6 with respective weights of 7, 6, 3, and 5.\n\nConstraints:\n\n\t- `1 <= intevals.length <= 5 * 10^4`\n\n\t- `intervals[i].length == 3`\n\n\t- `intervals[i] = [li, ri, weighti]`\n\n\t- `1 <= li <= ri <= 10^9`\n\n\t- `1 <= weighti <= 10^9`",
+      "functionName": "maximumWeight",
+      "starterCode": "/**\n * @param {number[][]} intervals\n * @return {number[]}\n */\n\nglobalThis.maximumWeight = function(intervals) {\n  // Write your solution here\n};",
       "usesListNode": false,
       "mutatesInput": false,
       "cases": []
@@ -3337,6 +4278,19 @@
       "description": "You are given a string `num` which represents a positive integer, and an integer `t`.\n\nA number is called zero-free if none of its digits are 0.\n\nReturn a string representing the smallest zero-free number greater than or equal to `num` such that the product of its digits is divisible by `t`. If no such number exists, return `\"-1\"`.\n\nExample 1:\n\nInput: num = \"1234\", t = 256\n\nOutput: \"1488\"\n\nExplanation:\n\nThe smallest zero-free number that is greater than 1234 and has the product of its digits divisible by 256 is 1488, with the product of its digits equal to 256.\n\nExample 2:\n\nInput: num = \"12355\", t = 50\n\nOutput: \"12355\"\n\nExplanation:\n\n12355 is already zero-free and has the product of its digits divisible by 50, with the product of its digits equal to 150.\n\nExample 3:\n\nInput: num = \"11111\", t = 26\n\nOutput: \"-1\"\n\nExplanation:\n\nNo number greater than 11111 has the product of its digits divisible by 26.\n\nConstraints:\n\n\t- `2 <= num.length <= 2 * 10^5`\n\n\t- `num` consists only of digits in the range `['0', '9']`.\n\n\t- `num` does not contain leading zeros.\n\n\t- `1 <= t <= 10^14`",
       "functionName": "smallestNumber",
       "starterCode": "/**\n * @param {string} num\n * @param {number} t\n * @return {string}\n */\n\nglobalThis.smallestNumber = function (num, t) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "3799-unique-3-digit-even-numbers",
+      "number": 3799,
+      "title": "Unique 3-Digit Even Numbers",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/unique-3-digit-even-numbers",
+      "description": "You are given an array of digits called `digits`. Your task is to determine the number of distinct three-digit even numbers that can be formed using these digits.\n\nNote: Each copy of a digit can only be used once per number, and there may not be leading zeros.\n\nExample 1:\n\nInput: digits = [1,2,3,4]\n\nOutput: 12\n\nExplanation: The 12 distinct 3-digit even numbers that can be formed are 124, 132, 134, 142, 214, 234, 312, 314, 324, 342, 412, and 432. Note that 222 cannot be formed because there is only 1 copy of the digit 2.\n\nExample 2:\n\nInput: digits = [0,2,2]\n\nOutput: 2\n\nExplanation: The only 3-digit even numbers that can be formed are 202 and 220. Note that the digit 2 can be used twice because it appears twice in the array.\n\nExample 3:\n\nInput: digits = [6,6,6]\n\nOutput: 1\n\nExplanation: Only 666 can be formed.\n\nExample 4:\n\nInput: digits = [1,3,5]\n\nOutput: 0\n\nExplanation: No even 3-digit numbers can be formed.\n\nConstraints:\n\n\t- `3 <= digits.length <= 10`\n\n\t- `0 <= digits[i] <= 9`",
+      "functionName": "totalNumbers",
+      "starterCode": "/**\n * @param {number[]} digits\n * @return {number}\n */\n\nglobalThis.totalNumbers = function(digits) {\n  // Write your solution here\n};",
       "usesListNode": false,
       "mutatesInput": false,
       "cases": []
@@ -3459,6 +4413,32 @@
       "cases": []
     },
     {
+      "id": "3870-minimum-moves-to-clean-the-classroom",
+      "number": 3870,
+      "title": "Minimum Moves to Clean the Classroom",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/minimum-moves-to-clean-the-classroom",
+      "description": "You are given an `m x n` grid `classroom` where a student volunteer is tasked with cleaning up litter scattered around the room. Each cell in the grid is one of the following:\n\n\t- `'S'`: Starting position of the student\n\n\t- `'L'`: Litter that must be collected (once collected, the cell becomes empty)\n\n\t- `'R'`: Reset area that restores the student's energy to full capacity, regardless of their current energy level (can be used multiple times)\n\n\t- `'X'`: Obstacle the student cannot pass through\n\n\t- `'.'`: Empty space\n\nYou are also given an integer `energy`, representing the student's maximum energy capacity. The student starts with this energy from the starting position `'S'`.\n\nEach move to an adjacent cell (up, down, left, or right) costs 1 unit of energy. If the energy reaches 0, the student can only continue if they are on a reset area `'R'`, which resets the energy to its maximum capacity `energy`.\n\nReturn the minimum number of moves required to collect all litter items, or `-1` if it's impossible.\n\nExample 1:\n\nInput: classroom = [\"S.\", \"XL\"], energy = 2\n\nOutput: 2\n\nExplanation:\n\n\t- The student starts at cell (0, 0) with 2 units of energy.\n\n\t- Since cell `(1, 0)` contains an obstacle 'X', the student cannot move directly downward.\n\n\t- A valid sequence of moves to collect all litter is as follows:\n\n\t\tMove 1: From `(0, 0)` &rarr; `(0, 1)` with 1 unit of energy and 1 unit remaining.\n\n\t\t- Move 2: From `(0, 1)` &rarr; `(1, 1)` to collect the litter `'L'`.\n\n\t- The student collects all the litter using 2 moves. Thus, the output is 2.\n\nExample 2:\n\nInput: classroom = [\"LS\", \"RL\"], energy = 4\n\nOutput: 3\n\nExplanation:\n\n\t- The student starts at cell (0, 1) with 4 units of energy.\n\n\t- A valid sequence of moves to collect all litter is as follows:\n\n\t\tMove 1: From `(0, 1)` &rarr; `(0, 0)` to collect the first litter `'L'` with 1 unit of energy used and 3 units remaining.\n\n\t\t- Move 2: From `(0, 0)` &rarr; `(1, 0)` to `'R'` to reset and restore energy back to 4.\n\n\t\t- Move 3: From `(1, 0)` &rarr; `(1, 1)` to collect the second litter 'L'.\n\n\t- The student collects all the litter using 3 moves. Thus, the output is 3.\n\nExample 3:\n\nInput: classroom = [\"L.S\", \"RXL\"], energy = 3\n\nOutput: -1\n\nExplanation:\n\nNo valid path collects all `'L'`.\n\nConstraints:\n\n\t- `1 <= m == classroom.length <= 20`\n\n\t- `1 <= n == classroom[i].length <= 20`\n\n\t- `classroom[i][j]` is one of `'S'`, `'L'`, `'R'`, `'X'`, or `'.'`\n\n\t- `1 <= energy <= 50`\n\n\t- There is exactly one `'S'` in the grid.\n\n\t- There are at most 10 `'L'` cells in the grid.",
+      "functionName": "minMoves",
+      "starterCode": "/**\n * @param {string[]} classroom\n * @param {number} energy\n * @return {number}\n */\n\nglobalThis.minMoves = function(classroom, energy) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "3918-check-divisibility-by-digit-sum-and-product",
+      "number": 3918,
+      "title": "Check Divisibility by Digit Sum and Product",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/check-divisibility-by-digit-sum-and-product",
+      "description": "You are given a positive integer `n`. Determine whether `n` is divisible by the sum of the following two values:\n\n\t- The digit sum of `n` (the sum of its digits).\n\n\t- The digit product of `n` (the product of its digits).\n\nReturn `true` if `n` is divisible by this sum; otherwise, return `false`.\n\nExample 1:\n\nInput: n = 99\n\nOutput: true\n\nExplanation:\n\nSince 99 is divisible by the sum (9 + 9 = 18) plus product (9 * 9 = 81) of its digits (total 99), the output is true.\n\nExample 2:\n\nInput: n = 23\n\nOutput: false\n\nExplanation:\n\nSince 23 is not divisible by the sum (2 + 3 = 5) plus product (2 * 3 = 6) of its digits (total 11), the output is false.\n\nConstraints:\n\n\t- `1 <= n <= 10^6`",
+      "functionName": "checkDivisibility",
+      "starterCode": "/**\n * @param {number} n\n * @return {boolean}\n */\n\nglobalThis.checkDivisibility = function(n) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
       "id": "3919-network-recovery-pathways",
       "number": 3919,
       "title": "Network Recovery Pathways",
@@ -3480,6 +4460,58 @@
       "description": "You are given an integer `n`. Your task is to compute the GCD (greatest common divisor) of two values:\n\n\t- `sumOdd`: the sum of the smallest `n` positive odd numbers.\n\n\t- `sumEven`: the sum of the smallest `n` positive even numbers.\n\nReturn the GCD of `sumOdd` and `sumEven`.\n\nExample 1:\n\nInput: n = 4\n\nOutput: 4\n\nExplanation:\n\n\t- Sum of the first 4 odd numbers `sumOdd = 1 + 3 + 5 + 7 = 16`\n\n\t- Sum of the first 4 even numbers `sumEven = 2 + 4 + 6 + 8 = 20`\n\nHence, `GCD(sumOdd, sumEven) = GCD(16, 20) = 4`.\n\nExample 2:\n\nInput: n = 5\n\nOutput: 5\n\nExplanation:\n\n\t- Sum of the first 5 odd numbers `sumOdd = 1 + 3 + 5 + 7 + 9 = 25`\n\n\t- Sum of the first 5 even numbers `sumEven = 2 + 4 + 6 + 8 + 10 = 30`\n\nHence, `GCD(sumOdd, sumEven) = GCD(25, 30) = 5`.\n\nConstraints:\n\n\t- `1 <= n <= 10​​​​​​​00`",
       "functionName": "gcdOfOddEvenSums",
       "starterCode": "/**\n * @param {number} n\n * @return {number}\n */\n\nglobalThis.gcdOfOddEvenSums = function(n) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "4020-lexicographically-smallest-permutation-greater-than-target",
+      "number": 4020,
+      "title": "Lexicographically Smallest Permutation Greater Than Target",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/lexicographically-smallest-permutation-greater-than-target",
+      "description": "You are given two strings `s` and `target`, both having length `n`, consisting of lowercase English letters.\n\nReturn the lexicographically smallest permutation of `s` that is strictly greater than `target`. If no permutation of `s` is lexicographically strictly greater than `target`, return an empty string.\n\nA string `a` is lexicographically strictly greater than a string `b` (of the same length) if in the first position where `a` and `b` differ, string `a` has a letter that appears later in the alphabet than the corresponding letter in `b`.\n\nExample 1:\n\nInput: s = \"abc\", target = \"bba\"\n\nOutput: \"bca\"\n\nExplanation:\n\n\t- The permutations of `s` (in lexicographical order) are `\"abc\"`, `\"acb\"`, `\"bac\"`, `\"bca\"`, `\"cab\"`, and `\"cba\"`.\n\n\t- The lexicographically smallest permutation that is strictly greater than `target` is `\"bca\"`.\n\nExample 2:\n\nInput: s = \"leet\", target = \"code\"\n\nOutput: \"eelt\"\n\nExplanation:\n\n\t- The permutations of `s` (in lexicographical order) are `\"eelt\"`, `\"eetl\"`, `\"elet\"`, `\"elte\"`, `\"etel\"`, `\"etle\"`, `\"leet\"`, `\"lete\"`, `\"ltee\"`, `\"teel\"`, `\"tele\"`, and `\"tlee\"`.\n\n\t- The lexicographically smallest permutation that is strictly greater than `target` is `\"eelt\"`.\n\nExample 3:\n\nInput: s = \"baba\", target = \"bbaa\"\n\nOutput: \"\"\n\nExplanation:\n\n\t- The permutations of `s` (in lexicographical order) are `\"aabb\"`, `\"abab\"`, `\"abba\"`, `\"baab\"`, `\"baba\"`, and `\"bbaa\"`.\n\n\t- None of them is lexicographically strictly greater than `target`. Therefore, the answer is `\"\"`.\n\nConstraints:\n\n\t- `1 <= s.length == target.length <= 300`\n\n\t- `s` and `target` consist of only lowercase English letters.",
+      "functionName": "lexGreaterPermutation",
+      "starterCode": "/**\n * @param {string} s\n * @param {string} target\n * @return {string}\n */\n\nglobalThis.lexGreaterPermutation = function(s, target) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "4033-longest-subsequence-with-non-zero-bitwise-xor",
+      "number": 4033,
+      "title": "Longest Subsequence With Non-Zero Bitwise XOR",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/longest-subsequence-with-non-zero-bitwise-xor",
+      "description": "You are given an integer array `nums`.\n\nReturn the length of the longest subsequence in `nums` whose bitwise XOR is non-zero. If no such subsequence exists, return 0.\n\nExample 1:\n\nInput: nums = [1,2,3]\n\nOutput: 2\n\nExplanation:\n\nOne longest subsequence is `[2, 3]`. The bitwise XOR is computed as `2 XOR 3 = 1`, which is non-zero.\n\nExample 2:\n\nInput: nums = [2,3,4]\n\nOutput: 3\n\nExplanation:\n\nThe longest subsequence is `[2, 3, 4]`. The bitwise XOR is computed as `2 XOR 3 XOR 4 = 5`, which is non-zero.\n\nConstraints:\n\n\t- `1 <= nums.length <= 10^5`\n\n\t- `0 <= nums[i] <= 10^9`",
+      "functionName": "longestSubsequence",
+      "starterCode": "/**\n * @param {number[]} nums\n * @return {number}\n */\n\nglobalThis.longestSubsequence = function(nums) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "4037-lexicographically-smallest-palindromic-permutation-greater-than-target",
+      "number": 4037,
+      "title": "Lexicographically Smallest Palindromic Permutation Greater Than Target",
+      "difficulty": "Hard",
+      "url": "https://leetcode.com/problems/lexicographically-smallest-palindromic-permutation-greater-than-target",
+      "description": "You are given two strings `s` and `target`, each of length `n`, consisting of lowercase English letters.\n\nReturn the lexicographically smallest string that is both a palindromic permutation of `s` and strictly greater than `target`. If no such permutation exists, return an empty string.\n\nExample 1:\n\nInput: s = \"baba\", target = \"abba\"\n\nOutput: \"baab\"\n\nExplanation:\n\n\t- The palindromic permutations of `s` (in lexicographical order) are `\"abba\"` and `\"baab\"`.\n\n\t- The lexicographically smallest permutation that is strictly greater than `target` is `\"baab\"`.\n\nExample 2:\n\nInput: s = \"baba\", target = \"bbaa\"\n\nOutput: \"\"\n\nExplanation:\n\n\t- The palindromic permutations of `s` (in lexicographical order) are `\"abba\"` and `\"baab\"`.\n\n\t- None of them is lexicographically strictly greater than `target`. Therefore, the answer is `\"\"`.\n\nExample 3:\n\nInput: s = \"abc\", target = \"abb\"\n\nOutput: \"\"\n\nExplanation:\n\n`s` has no palindromic permutations. Therefore, the answer is `\"\"`.\n\nExample 4:\n\nInput: s = \"aac\", target = \"abb\"\n\nOutput: \"aca\"\n\nExplanation:\n\n\t- The only palindromic permutation of `s` is `\"aca\"`.\n\n\t- `\"aca\"` is strictly greater than `target`. Therefore, the answer is `\"aca\"`.\n\nConstraints:\n\n\t- `1 <= n == s.length == target.length <= 300`\n\n\t- `s` and `target` consist of only lowercase English letters.",
+      "functionName": "lexPalindromicPermutation",
+      "starterCode": "/**\n * @param {string} s\n * @param {string} target\n * @return {string}\n */\n\nglobalThis.lexPalindromicPermutation = function(s, target) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "4080-smallest-missing-multiple-of-k",
+      "number": 4080,
+      "title": "Smallest Missing Multiple of K",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/smallest-missing-multiple-of-k",
+      "description": "Given an integer array `nums` and an integer `k`, return the smallest positive multiple of `k` that is missing from `nums`.\n\nA multiple of `k` is any positive integer divisible by `k`.\n\nExample 1:\n\nInput: nums = [8,2,3,4,6], k = 2\n\nOutput: 10\n\nExplanation:\n\nThe multiples of `k = 2` are 2, 4, 6, 8, 10, 12... and the smallest multiple missing from `nums` is 10.\n\nExample 2:\n\nInput: nums = [1,4,7,10,15], k = 5\n\nOutput: 5\n\nExplanation:\n\nThe multiples of `k = 5` are 5, 10, 15, 20... and the smallest multiple missing from `nums` is 5.\n\nConstraints:\n\n\t- `1 <= nums.length <= 100`\n\n\t- `1 <= nums[i] <= 100`\n\n\t- `1 <= k <= 100`",
+      "functionName": "missingMultiple",
+      "starterCode": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\n\nglobalThis.missingMultiple = function(nums, k) {\n  // Write your solution here\n};",
       "usesListNode": false,
       "mutatesInput": false,
       "cases": []
@@ -3532,6 +4564,84 @@
       "description": "You are given an integer array `nums` of length `n`.\n\nConstruct an array `prefixGcd` where for each index `i`:\n\n\t- Let `mxi = max(nums[0], nums[1], ..., nums[i])`.\n\n\t- `prefixGcd[i] = gcd(nums[i], mxi)`.\n\nAfter constructing `prefixGcd`:\n\n\t- Sort `prefixGcd` in non-decreasing order.\n\n\t- Form pairs by taking the smallest unpaired element and the largest unpaired element.\n\n\t- Repeat this process until no more pairs can be formed.\n\n\t- For each formed pair, compute the `gcd` of the two elements.\n\n\t- If `n` is odd, the middle element in the `prefixGcd` array remains unpaired and should be ignored.\n\nReturn an integer denoting the sum of the GCD values of all formed pairs.\n\nThe term `gcd(a, b)` denotes the greatest common divisor of `a` and `b`.\n\nExample 1:\n\nInput: nums = [2,6,4]\n\nOutput: 2\n\nExplanation:\n\nConstruct `prefixGcd`:\n\n\t\t\t`i`\n\t\t\t`nums[i]`\n\t\t\t`mxi`\n\t\t\t`prefixGcd[i]`\n\n\t\t\t0\n\t\t\t2\n\t\t\t2\n\t\t\t2\n\n\t\t\t1\n\t\t\t6\n\t\t\t6\n\t\t\t6\n\n\t\t\t2\n\t\t\t4\n\t\t\t6\n\t\t\t2\n\n`prefixGcd = [2, 6, 2]`. After sorting, it forms `[2, 2, 6]`.\n\nPair the smallest and largest elements: `gcd(2, 6) = 2`. The remaining middle element 2 is ignored. Thus, the sum is 2.\n\nExample 2:\n\nInput: nums = [3,6,2,8]\n\nOutput: 5\n\nExplanation:\n\nConstruct `prefixGcd`:\n\n\t\t\t`i`\n\t\t\t`nums[i]`\n\t\t\t`mxi`\n\t\t\t`prefixGcd[i]`\n\n\t\t\t0\n\t\t\t3\n\t\t\t3\n\t\t\t3\n\n\t\t\t1\n\t\t\t6\n\t\t\t6\n\t\t\t6\n\n\t\t\t2\n\t\t\t2\n\t\t\t6\n\t\t\t2\n\n\t\t\t3\n\t\t\t8\n\t\t\t8\n\t\t\t8\n\n`prefixGcd = [3, 6, 2, 8]`. After sorting, it forms `[2, 3, 6, 8]`.\n\nForm pairs: `gcd(2, 8) = 2` and `gcd(3, 6) = 3`. Thus, the sum is `2 + 3 = 5`.\n\nConstraints:\n\n\t- `1 <= n == nums.length <= 10^5`\n\n\t- `1 <= nums[i] <= 10^​​​​​​​9`",
       "functionName": "gcdSum",
       "starterCode": "/**\n * @param {number[]} nums\n * @return {number}\n */\n\nglobalThis.gcdSum = function(nums) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "4245-count-commas-in-range",
+      "number": 4245,
+      "title": "Count Commas in Range",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/count-commas-in-range",
+      "description": "You are given an integer `n`.\n\nReturn the total number of commas used when writing all integers from `[1, n]` (inclusive) in standard number formatting.\n\nIn standard formatting:\n\n\t- A comma is inserted after every three digits from the right.\n\n\t- Numbers with fewer than 4 digits contain no commas.\n\nExample 1:\n\nInput: n = 1002\n\nOutput: 3\n\nExplanation:\n\nThe numbers `\"1,000\"`, `\"1,001\"`, and `\"1,002\"` each contain one comma, giving a total of 3.\n\nExample 2:\n\nInput: n = 998\n\nOutput: 0\n\nExplanation:\n\nAll numbers from 1 to 998 have fewer than four digits. Therefore, no commas are used.\n\nConstraints:\n\n\t- `1 <= n <= 10^5`",
+      "functionName": "countCommas",
+      "starterCode": "/**\n * @param {number} n\n * @return {number}\n */\n\nglobalThis.countCommas = function(n) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "4248-count-commas-in-range-ii",
+      "number": 4248,
+      "title": "Count Commas in Range II",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/count-commas-in-range-ii",
+      "description": "You are given an integer `n`.\n\nReturn the total number of commas used when writing all integers from `[1, n]` (inclusive) in standard number formatting.\n\nIn standard formatting:\n\n\t- A comma is inserted after every three digits from the right.\n\n\t- Numbers with fewer than 4 digits contain no commas.\n\nExample 1:\n\nInput: n = 1002\n\nOutput: 3\n\nExplanation:\n\nThe numbers `\"1,000\"`, `\"1,001\"`, and `\"1,002\"` each contain one comma, giving a total of 3.\n\nExample 2:\n\nInput: n = 998\n\nOutput: 0\n\nExplanation:\n\n​​​​​​​All numbers from 1 to 998 have fewer than four digits. Therefore, no commas are used.\n\nConstraints:\n\n\t- `1 <= n <= 10^15`",
+      "functionName": "countCommas",
+      "starterCode": "/**\n * @param {number} n\n * @return {number}\n */\n\nglobalThis.countCommas = function(n) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "4256-construct-uniform-parity-array-i",
+      "number": 4256,
+      "title": "Construct Uniform Parity Array I",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/construct-uniform-parity-array-i",
+      "description": "You are given an array `nums1` of `n` distinct integers.\n\nYou want to construct another array `nums2` of length `n` such that the elements in `nums2` are either all odd or all even.\n\nFor each index `i`, you must choose exactly one of the following (in any order):\n\n\t- `nums2[i] = nums1[i]`\n\n\t- `nums2[i] = nums1[i] - nums1[j]`, for an index `j != i`\n\nReturn `true` if it is possible to construct such an array, otherwise, return `false`.\n\nExample 1:\n\nInput: nums1 = [2,3]\n\nOutput: true\n\nExplanation:\n\n\t- Choose `nums2[0] = nums1[0] - nums1[1] = 2 - 3 = -1`.\n\n\t- Choose `nums2[1] = nums1[1] = 3`.\n\n\t- `nums2 = [-1, 3]`, and both elements are odd. Thus, the answer is `true`​​​​​​​.\n\nExample 2:\n\nInput: nums1 = [4,6]\n\nOutput: true\n\nExplanation:​​​​​​​\n\n\t- Choose `nums2[0] = nums1[0] = 4`.\n\n\t- Choose `nums2[1] = nums1[1] = 6`.\n\n\t- `nums2 = [4, 6]`, and all elements are even. Thus, the answer is `true`.\n\nConstraints:\n\n\t- `1 <= n == nums1.length <= 100`\n\n\t- `1 <= nums1[i] <= 100`\n\n\t- `nums1` consists of distinct integers.",
+      "functionName": "uniformArray",
+      "starterCode": "/**\n * @param {number[]} nums1\n * @return {boolean}\n */\n\nglobalThis.uniformArray = function(nums1) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "4258-construct-uniform-parity-array-ii",
+      "number": 4258,
+      "title": "Construct Uniform Parity Array II",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/construct-uniform-parity-array-ii",
+      "description": "You are given an array `nums1` of `n` distinct integers.\n\nYou want to construct another array `nums2` of length `n` such that the elements in `nums2` are either all odd or all even.\n\nFor each index `i`, you must choose exactly one of the following (in any order):\n\n\t- `nums2[i] = nums1[i]`​​​​​​​\n\n\t- `nums2[i] = nums1[i] - nums1[j]`, for an index `j != i`, such that `nums1[i] - nums1[j] >= 1`\n\nReturn `true` if it is possible to construct such an array, otherwise return `false`.\n\nExample 1:\n\nInput: nums1 = [1,4,7]\n\nOutput: true\n\nExplanation:​​​​​​​​​​​​​​\n\n\t- Set `nums2[0] = nums1[0] = 1`.\n\n\t- Set `nums2[1] = nums1[1] - nums1[0] = 4 - 1 = 3`.\n\n\t- Set `nums2[2] = nums1[2] = 7`.\n\n\t- `nums2 = [1, 3, 7]`, and all elements are odd. Thus, the answer is `true`.\n\nExample 2:\n\nInput: nums1 = [2,3]\n\nOutput: false\n\nExplanation:\n\nIt is not possible to construct `nums2` such that all elements have the same parity. Thus, the answer is `false`.\n\nExample 3:\n\nInput: nums1 = [4,6]\n\nOutput: true\n\nExplanation:\n\n\t- Set `nums2[0] = nums1[0] = 4`.\n\n\t- Set `nums2[1] = nums1[1] = 6`.\n\n\t- `nums2 = [4, 6]`, and all elements are even. Thus, the answer is `true`.\n\nConstraints:\n\n\t- `1 <= n == nums1.length <= 10^5`\n\n\t- `1 <= nums1[i] <= 10^9`\n\n\t- `nums1` consists of distinct integers.",
+      "functionName": null,
+      "starterCode": null,
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "4284-smallest-stable-index-i",
+      "number": 4284,
+      "title": "Smallest Stable Index I",
+      "difficulty": "Easy",
+      "url": "https://leetcode.com/problems/smallest-stable-index-i",
+      "description": "You are given an integer array `nums` of length `n` and an integer `k`.\n\nFor each index `i`, define its instability score as `max(nums[0..i]) - min(nums[i..n - 1])`.\n\nIn other words:\n\n\t- `max(nums[0..i])` is the largest value among the elements from index 0 to index `i`.\n\n\t- `min(nums[i..n - 1])` is the smallest value among the elements from index `i` to index `n - 1`.\n\nAn index `i` is called stable if its instability score is less than or equal to `k`.\n\nReturn the smallest stable index. If no such index exists, return -1.\n\nExample 1:\n\nInput: nums = [5,0,1,4], k = 3\n\nOutput: 3\n\nExplanation:\n\n\t- At index 0: The maximum in `[5]` is 5, and the minimum in `[5, 0, 1, 4]` is 0, so the instability score is `5 - 0 = 5`.\n\n\t- At index 1: The maximum in `[5, 0]` is 5, and the minimum in `[0, 1, 4]` is 0, so the instability score is `5 - 0 = 5`.\n\n\t- At index 2: The maximum in `[5, 0, 1]` is 5, and the minimum in `[1, 4]` is 1, so the instability score is `5 - 1 = 4`.\n\n\t- At index 3: The maximum in `[5, 0, 1, 4]` is 5, and the minimum in `[4]` is 4, so the instability score is `5 - 4 = 1`.\n\n\t- This is the first index with an instability score less than or equal to `k = 3`. Thus, the answer is 3.\n\nExample 2:\n\nInput: nums = [3,2,1], k = 1\n\nOutput: -1\n\nExplanation:\n\n\t- At index 0, the instability score is `3 - 1 = 2`.\n\n\t- At index 1, the instability score is `3 - 1 = 2`.\n\n\t- At index 2, the instability score is `3 - 1 = 2`.\n\n\t- None of these values is less than or equal to `k = 1`, so the answer is -1.\n\nExample 3:\n\nInput: nums = [0], k = 0\n\nOutput: 0\n\nExplanation:\n\nAt index 0, the instability score is `0 - 0 = 0`, which is less than or equal to `k = 0`. Therefore, the answer is 0.\n\nConstraints:\n\n\t- `1 <= nums.length <= 100`\n\n\t- `0 <= nums[i] <= 10^9`\n\n\t- `0 <= k <= 10^9`",
+      "functionName": "firstStableIndex",
+      "starterCode": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\n\nglobalThis.firstStableIndex = function(nums, k) {\n  // Write your solution here\n};",
+      "usesListNode": false,
+      "mutatesInput": false,
+      "cases": []
+    },
+    {
+      "id": "4285-smallest-stable-index-ii",
+      "number": 4285,
+      "title": "Smallest Stable Index II",
+      "difficulty": "Medium",
+      "url": "https://leetcode.com/problems/smallest-stable-index-ii",
+      "description": "You are given an integer array `nums` of length `n` and an integer `k`.\n\nFor each index `i`, define its instability score as `max(nums[0..i]) - min(nums[i..n - 1])`.\n\nIn other words:\n\n\t- `max(nums[0..i])` is the largest value among the elements from index 0 to index `i`.\n\n\t- `min(nums[i..n - 1])` is the smallest value among the elements from index `i` to index `n - 1`.\n\nAn index `i` is called stable if its instability score is less than or equal to `k`.\n\nReturn the smallest stable index. If no such index exists, return -1.\n\nExample 1:\n\nInput: nums = [5,0,1,4], k = 3\n\nOutput: 3\n\nExplanation:\n\n\t- At index 0: The maximum in `[5]` is 5, and the minimum in `[5, 0, 1, 4]` is 0, so the instability score is `5 - 0 = 5`.\n\n\t- At index 1: The maximum in `[5, 0]` is 5, and the minimum in `[0, 1, 4]` is 0, so the instability score is `5 - 0 = 5`.\n\n\t- At index 2: The maximum in `[5, 0, 1]` is 5, and the minimum in `[1, 4]` is 1, so the instability score is `5 - 1 = 4`.\n\n\t- At index 3: The maximum in `[5, 0, 1, 4]` is 5, and the minimum in `[4]` is 4, so the instability score is `5 - 4 = 1`.\n\n\t- This is the first index with an instability score less than or equal to `k = 3`. Thus, the answer is 3.\n\nExample 2:\n\nInput: nums = [3,2,1], k = 1\n\nOutput: -1\n\nExplanation:\n\n\t- At index 0, the instability score is `3 - 1 = 2`.\n\n\t- At index 1, the instability score is `3 - 1 = 2`.\n\n\t- At index 2, the instability score is `3 - 1 = 2`.\n\n\t- None of these values is less than or equal to `k = 1`, so the answer is -1.\n\nExample 3:\n\nInput: nums = [0], k = 0\n\nOutput: 0\n\nExplanation:\n\nAt index 0, the instability score is `0 - 0 = 0`, which is less than or equal to `k = 0`. Therefore, the answer is 0.\n\nConstraints:\n\n\t- `1 <= nums.length <= 10^5`\n\n\t- `0 <= nums[i] <= 10^9`\n\n\t- `0 <= k <= 10^9`",
+      "functionName": "firstStableIndex",
+      "starterCode": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\n\nglobalThis.firstStableIndex = function(nums, k) {\n  // Write your solution here\n};",
       "usesListNode": false,
       "mutatesInput": false,
       "cases": []

@@ -2,30 +2,24 @@
  * @param {string} s
  * @return {boolean}
  */
-var isValid = function(s) {
-    const stack = [];
-    const pairs = {
-        '(': ')',
-        '{': '}',
-        '[': ']'
-    };
+var isValid = function (s) {
+  const map = {
+    "(": ")",
+    "{": "}",
+    "[": "]",
+  };
 
-    for (let char of s) {
-        if (pairs[char]) {
-            stack.push(char);
-        } else {
-            const lastOpen = stack.pop();
-            if (pairs[lastOpen] !== char) {
-                return false;
-            }
-        }
+  const stack = [];
+  for (const _s of s) {
+    if (map[_s]) {
+      stack.push(_s);
+    } else {
+      const pop = stack.pop();
+      if (_s != map[pop]) {
+        return false;
+      }
     }
-    
-    return stack.length === 0;
-};
+  }
 
-console.log(isValid("()")); // true
-console.log(isValid("()[]{}")); // true
-console.log(isValid("(]")); // false
-console.log(isValid("([)]")); // false
-console.log(isValid("{[]}")); // true
+  return stack.length == 0;
+};

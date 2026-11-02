@@ -652,3 +652,39 @@ input {
     grid-template-rows: 36% 1fr;
   }
 }
+
+.pattern-select {
+  width: 100%;
+  margin-top: 12px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel-2);
+  color: var(--text);
+}
+
+.pattern-tag {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.solution-panel {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 0;
+  min-width: 0;
+}
+
+.solution-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 28px;
+  border-bottom: 1px solid var(--border);
+}

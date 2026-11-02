@@ -3,6 +3,7 @@ import Sidebar from "./components/Sidebar.jsx";
 import ProblemDescription from "./components/ProblemDescription.jsx";
 import CodeEditor from "./components/CodeEditor.jsx";
 import TestResults from "./components/TestResults.jsx";
+import Solutions from "./components/Solutions.jsx";
 import Dashboard from "./components/Dashboard.jsx";
 import UsernameModal from "./components/UsernameModal.jsx";
 import { getStarterCode, runProblemTests } from "./lib/runner.js";
@@ -185,6 +186,13 @@ export default function App() {
             >
               Dashboard
             </button>
+            <button
+              type="button"
+              className={`nav-btn ${view === "solutions" ? "active" : ""}`}
+              onClick={() => setView("solutions")}
+            >
+              Solutions
+            </button>
           </nav>
         </div>
         <div className="topbar-meta">
@@ -240,6 +248,12 @@ export default function App() {
               )}
             </main>
           </>
+        ) : view === "solutions" ? (
+          <Solutions
+            problems={problems}
+            completedIds={completedIds}
+            onPractice={handleSelectProblem}
+          />
         ) : (
           <main className="dashboard-panel">
             <Dashboard

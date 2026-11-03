@@ -688,3 +688,148 @@ input {
   padding: 20px 28px;
   border-bottom: 1px solid var(--border);
 }
+
+/* Playground */
+.playground {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+}
+
+.pg-controls {
+  display: flex;
+  gap: 8px;
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.pg-split {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+  min-width: 0;
+}
+
+.pg-split.pg-column {
+  flex-direction: column;
+}
+
+.pg-pane {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.pg-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--border);
+  background: var(--panel);
+}
+
+.pg-status {
+  color: var(--muted);
+  font-size: 12px;
+  align-self: center;
+}
+
+.pg-pane .monaco-wrapper {
+  flex: 1;
+  min-height: 0;
+}
+
+.pg-divider {
+  flex: 0 0 6px;
+  background: var(--border);
+  cursor: col-resize;
+}
+
+.pg-column > .pg-divider {
+  cursor: row-resize;
+}
+
+.pg-divider:hover {
+  background: var(--accent);
+}
+
+body.is-resizing {
+  user-select: none;
+}
+
+.pg-console {
+  background: #1e1e1e;
+}
+
+.console-output {
+  flex: 1;
+  overflow: auto;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 13px;
+}
+
+.console-empty {
+  padding: 16px;
+  color: var(--muted);
+}
+
+.console-row {
+  display: grid;
+  grid-template-columns: 24px 1fr auto;
+  gap: 6px;
+  align-items: start;
+  padding: 3px 12px 3px 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  color: #d4d4d4;
+}
+
+.console-text {
+  margin: 0;
+  font: inherit;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.console-icon {
+  text-align: center;
+}
+
+.console-line {
+  color: #8a8a8a;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.console-warn {
+  background: #332b00;
+  color: #ffd866;
+  border-bottom-color: #4d4200;
+}
+
+.console-error {
+  background: #2d0b0b;
+  color: #ff8a80;
+  border-bottom-color: #5c1a1a;
+}
+
+.console-info .console-icon {
+  color: #6cb6ff;
+}
+
+.console-debug {
+  color: #8a8a8a;
+}
+
+.pg-fullscreen {
+  margin-left: auto;
+}
+
+.playground:fullscreen {
+  background: var(--bg);
+}

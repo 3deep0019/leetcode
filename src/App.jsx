@@ -4,6 +4,7 @@ import ProblemDescription from "./components/ProblemDescription.jsx";
 import CodeEditor from "./components/CodeEditor.jsx";
 import TestResults from "./components/TestResults.jsx";
 import Solutions from "./components/Solutions.jsx";
+import Playground from "./components/Playground.jsx";
 import Dashboard from "./components/Dashboard.jsx";
 import UsernameModal from "./components/UsernameModal.jsx";
 import { getStarterCode, runProblemTests } from "./lib/runner.js";
@@ -193,6 +194,13 @@ export default function App() {
             >
               Solutions
             </button>
+            <button
+              type="button"
+              className={`nav-btn ${view === "playground" ? "active" : ""}`}
+              onClick={() => setView("playground")}
+            >
+              Playground
+            </button>
           </nav>
         </div>
         <div className="topbar-meta">
@@ -203,7 +211,7 @@ export default function App() {
         </div>
       </header>
 
-      <div className={`workspace ${view === "dashboard" ? "workspace-dashboard" : ""}`}>
+      <div className={`workspace ${view === "dashboard" || view === "playground" ? "workspace-dashboard" : ""}`}>
         {view === "practice" ? (
           <>
             <Sidebar
@@ -248,6 +256,8 @@ export default function App() {
               )}
             </main>
           </>
+        ) : view === "playground" ? (
+          <Playground />
         ) : view === "solutions" ? (
           <Solutions
             problems={problems}
